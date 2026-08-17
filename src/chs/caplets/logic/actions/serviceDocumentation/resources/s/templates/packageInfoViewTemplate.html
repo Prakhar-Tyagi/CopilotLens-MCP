@@ -1,0 +1,35 @@
+<% if (!selectedPackage) { %>
+    <div id="legend-view" class="auto-legend-view">
+        <div class="entry auto-entry"><%= mentor.publisher.languageTranslator.localize("ProjectsPageClickTip") %></div>
+        <div class="entry auto-entry"><%= mentor.publisher.languageTranslator.localize("ProjectsPageDoubleClickTip") %></div>
+    </div>
+<% } else { %>
+    <div id="package-info-view" class="auto-package-info-view">
+        <div class="name auto-title-label"><%= Utils.translate(selectedPackage.get("name")) %></div>
+        <div class="description auto-description" title='<%- (Utils.translate(selectedPackage.get("description")) ||
+        mentor.publisher.languageTranslator.localize("PackageDescriptionUnavailable")).replace(/</g, "<").replace(/>/g, ">") %>'>
+            <%- (Utils.translate(selectedPackage.get("description")) ||
+            mentor.publisher.languageTranslator.localize("PackageDescriptionUnavailable")).replace(/</g, "<").replace(/>/g, ">")%>
+        </div>
+        <div class="open-button auto-open"><span class="Open"><%= mentor.publisher.languageTranslator.localize("Open") %></span>
+        </div>
+    </div>
+<% } %>
+
+<script>
+    // Immediately execute the script when encountered
+    (function () {
+        // Get the content of the div
+        var descriptionElement = document.querySelector('.auto-description');
+
+        if (descriptionElement) {
+            var content = descriptionElement.textContent;
+
+            // Trim spaces inside the content
+            var trimmedContent = content.replace(/^\s+|\s+$/g, '').trim();
+
+            // Set the trimmed content back to the div
+            descriptionElement.textContent = trimmedContent;
+        }
+    })();
+</script>

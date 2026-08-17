@@ -1,0 +1,24 @@
+<div class="listPanel commonFaultCodes auto-list">
+    <div class="titlebar auto-list-header">
+        <span class="headingCount" style="display: block;">
+            <span class="headingCountNumber auto-item-count-label"><%=items.length%></span></span>
+        <span class="headerText auto-title-label"><%=title%></span>
+    </div>
+    <% _.each(items, function(item) {
+    %>
+    <% if(!expand){ %>
+    <div class="listItem auto-item" data-id="<%=mentor.publisher.languageTranslator.localize(item.get('mainText'))%>"
+         style="display: none;"> <%}else{%>
+        <div class="listItem auto-item"
+             data-id="<%=mentor.publisher.languageTranslator.localize(item.get('mainText'))%>"><%}%>
+            <span class="mainText auto-title-label"><%=mentor.publisher.languageTranslator.localize(item.get("mainText"))%></span>
+            <span class="collapseAll auto-collapse-list"
+                  title="<%=mentor.publisher.languageTranslator.localize('clicktocollapse')%>">[-]</span>
+            <br>
+            <% if(!expand){ %>
+        </div>
+        <%}else{%>
+    </div>
+    <%}%>
+    <% })%>
+</div>

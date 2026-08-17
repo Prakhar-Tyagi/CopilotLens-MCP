@@ -1,0 +1,889 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+
+**WARNING **  **WARNING **   **WARNING **
+Please do not directly use S1000D configuration files located in Capital Home/Publisher etc .  
+Files in these locations should be treated as samples. You must make a copy of these 
+configuration files and use them from an outside directory.
+
+Files located in capital home may be upgraded (and hence overwritten) during 
+future Capital release cycles
+
+
+ * Copyright 2015 Mentor Graphics Corporation. All Rights Reserved.
+ * <p>
+ * Recipients who obtain this code directly from Mentor Graphics use it solely
+ * for internal purposes to serve as example Java web services.
+ * This code may not be used in a commercial distribution. Recipients may
+ * duplicate the code provided that all notices are fully reproduced with
+ * and remain in the code. No part of this code may be modified, reproduced,
+ * translated, used, distributed, disclosed or provided to third parties
+ * without the prior written consent of Mentor Graphics, except as expressly
+ * authorized above.
+ * <p>
+ * THE CODE IS MADE AVAILABLE "AS IS" WITHOUT WARRANTY OR SUPPORT OF ANY KIND.
+ * MENTOR GRAPHICS OFFERS NO EXPRESS OR IMPLIED WARRANTIES AND SPECIFICALLY
+ * DISCLAIMS ANY WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
+ * OR WARRANTY OF NON-INFRINGEMENT. IN NO EVENT SHALL MENTOR GRAPHICS OR ITS
+ * LICENSORS BE LIABLE FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING LOST PROFITS OR SAVINGS) WHETHER BASED ON CONTRACT, TORT
+ * OR ANY OTHER LEGAL THEORY, EVEN IF MENTOR GRAPHICS OR ITS LICENSORS HAVE BEEN
+ * ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+ * <p>
+-->
+
+
+
+
+<!--
+This file contains sample/specimen control information for S1000D generation. 
+It will almost certainly require some small modifications for your production S1000D system.
+
+Note that S1000D control information can be defined in three different places:
+
+1) as properties of a diagram
+2) as properties of the project
+3) In this file ('CONTROL.XML')
+
+The system reads each property in order first from the diagram, then  the design, project, then this file. 
+Any property defined in a diagram takes precedence over property defined in the design.  
+Any property defined in a design takes precedence over property defined in the project.  
+Thirdly any property is not defined by the project will be read from this file. 
+Finally any property not defined in any of the three places will result in an error.
+
+This file format is chosen here to make it very easy to insert these records directly into Capital XML 
+files  (it uses the same format,)
+
+The Capital system is open ended and can be used for many types of smart system generation, not just S1000D.
+The only requirement for a property to be recognised by this system is that the property begins with an uppercase
+'S1000D'.  Hence you are free to use completely different property names even for a S1000D system.  We would not 
+recommend that, it could cause support issues and also require that you rewrite the mapping files. However, 
+it can be used very easily add additional properties interpreted during generation and mapping.
+
+
+Capital Property	            Meaning   					   Relavance      Example           
+
+S1000D.DC                     DisassemblyCode                  DMC            029  
+S1000D.DCV                    DisassemblyCodeVariant           DMC            A  
+S1000D.IC                     InformationCode                  DMC            000  
+S1000D.ICV                    InformationCodeVariant           DMC            Y  
+S1000D.ISSNUM                 IssueNumber2Digitcode            ICN            02  
+S1000D.MI                     ModelIdentificationCode          DMC&ICN        S1000DLIGHTING              
+S1000D.ORG                    OriginatorCodeNCAGE              ICN            AABCC  
+S1000D.RPC                    ResponsiblePartnerCompany        ICN            Y  
+S1000D.SDC                    SystemDifferenceCode             ICN            AAA  
+S1000D.SNS_LC                 LearnCode                        DMC&ICN        T45 
+S1000D.SNS_LEC                LearnEventCode                   DMC&ICN        C 
+S1000D.subSystemCode          SNSSubSystemCode                 DMC&ICN        3                
+S1000D.systemCode             SNSMainCode                      DMC&ICN        12               
+S1000D.subSubSystemCode       SNSSubSubSystemCode              DMC&ICN        4                
+S1000D.SEC                    SecurityClassification           ICN            1  
+S1000D.SQ                     SequentialNumber                 ICN            01  
+S1000D.VAR                    IllustrationVariance             ICN            A
+S1000D.assyCode               AssemblyCode                     dmI            56              
+S1000D.ACV                    AssemblyCodeVariant              ???            G
+S1000D.LC                     LocationCode                     dmI            R
+
+see note at end referring to the CLC codes.  
+S1000D.CLC            connectionListClass              always per device - NOT read from the project, design, or this file
+
+Typically we would expect  systemCode+subSystemCode+subSubSystemCode+assyCode lto be  12+3+4+56
+
+
+-->
+<S1000DControlInfo>
+
+    <!-- To be read by some S1000D tools such as Arbortext tools each module 
+	we have to insert some extra 'DOCTYPE'  text at the beginning of the XML for the DMC.
+	In this 'liturgical' section - and in this section alone - we use: 
+	   $ICN$ to stand for the full calculated ICN 
+	   $DMC$ to stand for the full calculated DMC 
+    The data in the liturgy  should begin immediately after the Cdata marker.
+	Please do not adjust the DOCTYPE liturgy stated here unless you fully understand the implications, S1000D
+	documentation systems are not tolerant of variation or mistakes, 
+
+Note that part of the liturgy the 'LiturgyRepeat' is repeated for each included diagram to create something like:
+
+<!DOCTYPE dmodule [
+<!ENTITY ICN-21-AAA-21-40-00-A-S4080-01-1-001-1-TC   SYSTEM "ICN-21-AAA-21-40-00-A-S4080-01-1-001-1-TC.cgm" NDATA cgm>
+<!ENTITY ICN-21-AAA-21-40-00-A-S4080-02-1-001-1-TC   SYSTEM "ICN-21-AAA-21-40-00-A-S4080-02-1-001-1-TC.cgm" NDATA cgm>
+<!ENTITY ICN-21-AAA-21-40-00-A-S4080-03-1-001-1-TC   SYSTEM "ICN-21-AAA-21-40-00-A-S4080-03-1-001-1-TC.cgm" NDATA cgm>
+<!ENTITY ICN-21-AAA-21-40-00-A-S4080-04-1-001-1-TC   SYSTEM "ICN-21-AAA-21-40-00-A-S4080-04-1-001-1-TC.cgm" NDATA cgm>
+<!NOTATION cgm PUBLIC "-//USA-DOD//NOTATION Computer Graphics Metafile//EN">
+]> 
+	
+	-->
+    <LiturgyHeader><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2013, v.4002-->
+<!DOCTYPE dmodule [
+]]>	
+    </LiturgyHeader>
+    <LiturgyRepeat><![CDATA[
+<!ENTITY $ICN$   SYSTEM "$ICN$.cgm" NDATA cgm>]]>	
+    </LiturgyRepeat>
+    <LiturgyFooter><![CDATA[<!NOTATION cgm PUBLIC "-//USA-DOD//NOTATION Computer Graphics Metafile//EN">
+]>]]>	
+    </LiturgyFooter>
+    <!--
+	
+	In the  default section we have chosen to supply all the defaults with a '!'  character -  that means they 
+	will need to be present in the project files and that a "!" charcater in a file name of refernce is an error .  
+	There is  no necessity to use the system in this way.  An alternative approach is to define real constants at 
+	this level.  Initially, and for small projects, that will work quite well. However for larger projects it can 
+	become difficult, even after examination of the log files, to understand why certain designs or diagrams have constants taken from this file.
+	
+	
+	-->
+    <Defaults>
+        <property name="S1000D.PMODEL" val="The model of our aircraft. Please Supply a value in control.xml" type="String" stability="editable"/>
+        <property name="S1000D.DC" val="!aa" type="String" stability="editable"/>
+        <property name="S1000D.DCV" val="!b" type="String" stability="editable"/>
+        <property name="S1000D.IC" val="!ccc" type="String" stability="editable"/>
+        <property name="S1000D.ICV" val="d" type="String" stability="editable"/>
+        <property name="S1000D.ISSNUM" val="!ee" type="String" stability="editable"/>
+        <property name="S1000D.MI" val="S1000DLIGHTING" type="String" stability="editable"/>
+        <property name="S1000D.ORG" val="!fffff" type="String" stability="editable"/>
+        <property name="S1000D.RPC" val="!e" type="String" stability="editable"/>
+        <property name="S1000D.SDC" val="!x" type="String" stability="editable"/>
+        <property name="S1000D.LC" val="!g" type="String" stability="editable"/>
+        <property name="S1000D.LEC" val="!h" type="String" stability="editable"/>
+        <property name="S1000D.subSystemCode" val="!k" type="String" stability="editable"/>        
+        <property name="S1000D.systemCode" val="!mm" type="String" stability="editable"/>        
+        <property name="S1000D.subSubSystemCode" val="!n" type="String" stability="editable"/>        
+        <property name="S1000D.SEC" val="!p" type="String" stability="editable"/>
+        <property name="S1000D.SQ" val="!qq" type="String" stability="editable"/>
+        <property name="S1000D.VAR" val="!r" type="String" stability="editable"/>
+        <property name="S1000D.inWork" val="!ss" type="String" stability="editable"/>
+        <property name="S1000D.assyCode" val="!tt" type="String" stability="editable"/>        
+        <property name="S1000D.ACV" val="!u" type="String" stability="editable"/>
+        <property name="S1000D.LC" val="!v" type="String" stability="editable"/>
+        <property name="S1000D.inWork" val="!w" type="String" stability="editable"/>
+        <!-- we would expect the follwing data to be set per diagram -  in some ways it makes little sense to have it set per project-->
+        <property name="S1000D.techName" val="some technical name" type="String" stability="editable"/>
+        <property name="S1000D.infoName" val="some information name" type="String" stability="editable"/>
+        <property name="S1000D.CLC" val="A TEST OF CLC" type="String" stability="editable"/>
+    </Defaults>
+    <isCleaningFiles val='n'/>
+    <isAddLearnCodes val='Y'/>
+    <isDMCPerDesign val='Y'/>
+	<!-- here we define the pattern used to create an ICN which is legal in your system. This pattern
+	Is subject to some alteration between S 1000 D systems. (In particular some systems have additional hyphens 
+	– this is noted as comments here.) Every item referred to in this pattern
+	must match with an item in the defaults given above or must be a literal constant-->
+    <Pattern>
+        <ICN>
+            <item const= 'ICN-'/>
+            <item val='MI'/>
+            <item const= '-'/>
+            <item val='SDC'/>
+            <item const= '-'/>
+            <item val='systemCode'/>            
+            <!--   <item const= '-'/> no hyphen -->
+            <item val='subSystemCode'/>            
+            <item val='subSubSystemCode'/>            
+            <!--    <item const= '-'/>   no hyphen -->
+            <item val='assyCode'/>            
+            <item const= '-'/>
+            <item val='RPC'/>
+            <item const= '-'/>
+            <item val='ORG'/>
+            <item const= '-'/>
+            <item val='SQ'/>
+            <item const= '-'/>
+            <item val='VAR'/>
+            <item const= '-'/>
+            <item val='ISSNUM'/>
+            <item const= '-'/>
+            <item val='SEC'/>
+        </ICN>
+        <DMC>
+            <item const= 'DMC-'/>
+            <item val='MI'/>
+            <item const= '-'/>
+            <item val='SDC'/>
+            <item const= '-'/>
+            <item val='systemCode'/>            
+            <item const= '-'/>
+            <item val='subSystemCode'/>            
+            <item val='subSubSystemCode'/>            
+            <item const= '-'/>
+            <item val='assyCode'/>            
+            <item const= '-'/>
+            <item val='DC'/>
+            <item val='DCV'/>
+            <item const= '-'/>
+            <item val='IC'/>
+            <item val='ICV'/>
+            <item const= '-'/>
+            <item val='LC'/>
+        </DMC>
+        <LearnCodes>
+		<!--
+            <item const= '-'/>
+            <item val='LC'/>
+            <item val='LEC'/>			
+			--> 
+        </LearnCodes>
+    </Pattern>
+	
+    <!-- CONTROL OF WHAT DISPLAYED ON THE CGM DIAGRAM.
+	
+	The SetOfDisplayAttributes node allows configuration of what is displayed on the CGM diagram.
+    
+	Setting up the system.
+	If there are no 'SetOfDisplayAttributes' nodes  then all attributes will be displayed. This is usually far too many, but is useful in determining which items are available for display.
+    Notice that DisplayAttributes includes both built-in 'attributes' (in Capital terminology) and custom added 'properties' (in capital terminology).
+	
+	If SetOfDisplayAttributes is present then the display is in the order specified here - otherwise it is simply in alphabetical order.
+	
+	Within  the SetOfDisplayAttributes please add a node for each attribute.  The attribute name  is case sensitive.
+	In these nodes if there is no 'skipWhen' when clause then the attribute is always displayed. 
+    Evaluation of the skipwhen clause is not case sensitive   
+    The word '$Null' in a skipWhen clause  (itself case sensitive) has special meaning .  '$Null' is interpreted  as not display if the attribute has zero length,  or is not present
+    To skip a numeric attribute the value '0.0' is most effective - that is assuming that zero is an attribute value of no interest.
+	The 'displayName' Attribute is optional.  If 'displayName'   is present then it replaces the name used as a key (in Capital) - see example belows.
+	
+	The attributes display may be customized according to the object type or values of attributes. We use  'AllDisplayAttributes' for this purpose. 
+	
+	The FIRST 'SetOfDisplayAttributes that has a valid 'ConditionsForApplicability' will be selected. 
+	Within ConditionsForApplicability ALL Rules must have valid criteria to be selected (AND logic) 
+	Within OptionalRuleGroup ANY Rule with valid criteria will cause selection (OR logic) 
+	ConditionsForApplicability/OptionalRuleGroup objects my be nested to any depth.
+	A rule must have a 'criteria'.  This is the case senstive name of the attibute or the reserved name '$ObjectType$' to see/test the raw object type. (For any given object its '$ObjectType$ will be resemble 'XLogicDiagramPinList, XLogicDiagramConductor, XLogicDiagramMultiCore'). 
+    Rules may test for equality, containment, or range (i.e. part numbers)
+	For equality use the attribute 'equals'   as in:  equals='SpecialValue'
+	For containment use the attribute 'contains'   as in:  contains='Conductor'
+	For range specify  minimum and maximum attributes.  (Range is strictly between bounds by default)
+	If the attribute isNumeric  is set to 'y' then range comparions are numeric (strictly between bounds.)
+	If the attribute includeBounds is set to 'y' then range comparions also include the range bound values 
+	If the attribute ignoreCase is set to 'y' then comparions for validity ignores case (default is to consider case in a ConditionsForApplicability.)
+	(To test on substrings use a plugin and prepare a Capital custom property with the subsset value).
+	
+	Use 'showChoiceInLog' to add details of the selection to the S1000D loging file. It will use 'name' on the SetOfDisplayAttributes 
+	in that logging report. 
+
+	To further enhance the display  Lookups defined in this file may be  applied on an attribute by attribute basis as in :	 
+	 <Item name='PartAssigned'  lookUp = 'customBoolean'/>
+	 This example translates the strings via the 'customBoolean' lookup example below.
+	 If the 'customBoolean' lookup does not exist the string values remain unchanged. 
+	 Else the string values are mapped as described in lookup comments below. 
+
+	-->
+    <AllDisplayAttributes showChoiceInLog='y'>
+	
+	       <SetOfDisplayAttributes name= 'RegTestSetOne'>
+            <ConditionsForApplicability>      
+                <OptionalRuleGroup>			
+                    <Rule criteria = 'XXX' equals='C'/>  
+                    <Rule criteria = 'YYY' minimum='4' maximum = '24' isNumeric = 'y' includeBounds='y'/>
+                </OptionalRuleGroup>						
+            </ConditionsForApplicability>
+			<Item constantText = 'ConditionsForApplicability is XXX=C Or (4 less than YYY less than 24)' />;
+			 <Item name='Name'/>
+			 <Item name='PartNumber'/>	
+			 <Item constantText='--------------------------'/> 
+             <Item name='XXX'/>			 
+             <Item name='YYY'/>			 
+        </SetOfDisplayAttributes>
+		
+		 <SetOfDisplayAttributes name= 'RegTestSetTwo'>
+            <ConditionsForApplicability>   
+                 <Rule criteria = 'XXX' minimum='C' maximum = 'D' includeBounds='y'/>
+            </ConditionsForApplicability>
+			<Item constantText = 'ConditionsForApplicability XXX between C and D' />;
+			 <Item name='Name'/>
+			 <Item name='PartNumber'/>
+            <Item constantText='--------------------------'/> 
+             <Item name='XXX'/>			 
+             <Item name='YYY'/>						 
+        </SetOfDisplayAttributes>
+		
+		 <SetOfDisplayAttributes name= 'RegTestSetThree'>
+            <ConditionsForApplicability>   
+               <Rule criteria = 'XXX' equals='a' ignoreCase='y'/>  
+            </ConditionsForApplicability>
+			<Item constantText = 'ConditionsForApplicability XXX ignoreCase is "a" ' />;
+			 <Item name='Name'/>
+			 <Item name='PartNumber'/>	
+             <Item constantText='--------------------------'/> 
+             <Item name='XXX'/>			 
+             <Item name='YYY'/>				 
+        </SetOfDisplayAttributes>
+	
+	    <SetOfDisplayAttributes name= 'SpecialSet'>
+            <ConditionsForApplicability>             			
+                    <Rule criteria = 'PartNumber' contains='SWCH'/>            
+            </ConditionsForApplicability>
+			<Item constantText = 'ConditionsForApplicability is SpecialSet' />;
+			 <Item name='Name'/>
+			 <Item name='PartNumber'/>
+			 <Item constantText = '==========================' />;
+			 <Item constantText = 'SWITCHES FROM SPECIAL RULE' />;
+			 <Item name='ColorCode' skipWhen = '$Null' lookUp = 'customColour'/>
+        </SetOfDisplayAttributes>
+		
+		<SetOfDisplayAttributes name= 'PlugConnectors'>
+            <ConditionsForApplicability>             		
+               <Rule criteria = '$ObjectType$' contains='PinList'/>
+               <Rule criteria = 'Plug' equals='true' ignoreCase='y'/>              
+            </ConditionsForApplicability>
+			 <Item name='Name'/>
+			 <Item name='PartNumber'/>
+			 <Item constantText = '=======P=L=U=G================' />;
+			 <Item constantText = 'PinList which is plug' />;
+			 <Item name='ColorCode' lookUp = 'customColour'/>
+        </SetOfDisplayAttributes>
+	
+	
+        <SetOfDisplayAttributes name= 'Connectors'>
+            <ConditionsForApplicability>
+                <OptionalRuleGroup>
+                    <!--Rule criteria = 'PartNumber' minimum='9197930000' maximum = '9197960000' isNumeric = 'y' includeBounds='y'/-->
+                    <Rule criteria = 'GroupName' equals='Connector' ignoreCase='y'/>
+                    <!-- Attribute not recognized Rule criteria = 'Connector usage' equals='Connector' ignoreCase='y'/-->
+                    <!--Rule criteria = '$ObjectType$' contains='PinList'/-->
+                    <Rule criteria = 'Plug' equals='true' ignoreCase='y'/>
+                    <Rule criteria = 'Inline' equals='true' ignoreCase='y'/>
+                </OptionalRuleGroup>
+            </ConditionsForApplicability>
+            <Item name='Name'/>
+            <Item constantText = 'Component Type:Connector'/>
+            <Item name='PartNumber'/>
+            <Item name ='Harness'/>
+        </SetOfDisplayAttributes>
+		
+        <SetOfDisplayAttributes name= 'PINLIST-MORE'>
+            <ConditionsForApplicability>
+                <Rule criteria = '$ObjectType$' contains='PinList'/>
+				<OptionalRuleGroup>
+                    <Rule criteria = 'TypeCode' contains='A'/>
+                    <Rule criteria = 'TypeCode' contains='B'/>
+                    <Rule criteria = 'TypeCode' contains='C'/>
+				</OptionalRuleGroup>
+            </ConditionsForApplicability>
+            <Item name='Name'/>
+            <Item constantText = 'Component Type:PINLIST-MORE A.B.C'/>
+            <Item name='PartNumber'/>
+            <Item name ='Harness'/>
+            <Item name='Name'/>
+			<Item name ='$ObjectType$'/>
+			<Item constantText = 'Device constant Text (E.g. Use as Separator) '/>;
+			<Item name='AnalysisModel' skipWhen = '$Null'/>
+			<Item name='ArchitecturalCost' skipWhen = "0.0"/>
+			<Item name='Assembly' skipWhen = '$Null'/>
+			<Item name='BOMID' skipWhen = '$Null'/>
+			<Item name='BackshellOrientation' skipWhen = '$Null'/>
+			<Item name='BackshellPlugRequired' skipWhen = '$Null'/>
+			<Item name='BundleOffset' skipWhen = '$Null'/>
+			<Item name='Bypass' rule='is' skipWhen = 'Null'/>
+			<Item name='ColorCode' skipWhen = '$Null' lookUp = 'customColour'/>
+			<Item name='ColorDescription' displayName='Color' skipWhen = '$Null'/>
+			<Item name='ConnectorCavity' skipWhen = '$Null'/>
+			<Item name='ConnectorGroup' skipWhen = '$Null'/>
+			<Item name='ContactMaterial' skipWhen = '$Null'/>
+			<Item name='Contact_Res' skipWhen = '$Null'/>
+			<Item name='CustomerMulticoreName' skipWhen = '$Null'/>
+			<Item name='CustomerName' skipWhen = '$Null'/>
+			<Item name='CustomerPartNumber' skipWhen = '$Null'/>
+			<Item name='CustomerWireNumber' skipWhen = '$Null'/>
+			<Item name='CutBackChangeTypeEnd1' skipWhen = '$Null'/>
+			<Item name='CutBackChangeTypeEnd2' skipWhen = '$Null'/>
+			<Item name='CutBackChangeValueEnd1' skipWhen = '$Null'/>
+			<Item name='CutBackChangeValueEnd2' skipWhen = '$Null'/>
+			<Item name='CutBackValueEnd1' skipWhen = '$Null'/>
+			<Item name='CutBackValueEnd2' skipWhen = '$Null'/>
+			<Item name='DC Res' skipWhen = '$Null'/>
+			<Item name='Datum' skipWhen = '$Null'/>
+			<Item name='DefaultName' skipWhen = '$Null' lookUp = 'customBoolean'/>
+			<Item name='Design' skipWhen = '$Null'/>
+			<Item name='DefaultTerminalMaterial' skipWhen = '$Null'/>
+			<Item name='DerivedFootprintType' displayName = 'Footprint' skipWhen = '$Null'/>
+			<Item name='DesignAbstraction' skipWhen = '$Null'/>
+			<Item name='Diode' skipWhen = '$Null'/>
+			<Item name='ElevatedKeywayOrientation' skipWhen = '$Null'/>
+			<Item name='Equipotential' skipWhen = '$Null'/>
+			<Item name='FootprintConnectorName' skipWhen = '$Null'/>
+			<Item name='FootprintDescription' skipWhen = '$Null'/>      
+			<Item name='Gen Term 1' skipWhen = '$Null'/>
+			<Item name='Gen Term 2' skipWhen = '$Null'/>
+			<Item name='GeneratedFunctionalModuleCodesExpression' skipWhen = '$Null'/>
+			<Item name='GeneratedName' skipWhen = '$Null'/>
+			<Item name='GeneratedProductionModuleCodesExpression' skipWhen = '$Null'/>
+			<Item name='Generator' skipWhen = '$Null'/>
+			<Item name='GeneratorAndControl' skipWhen = '$Null'/>
+			<Item name='GreaseRequired' skipWhen = '$Null'/>
+			<Item name='GroupName' skipWhen = '$Null'/>
+			<Item name='Harness' skipWhen = '$Null'/>
+			<Item name='IDC' skipWhen = '$Null'/>
+			<Item name='IMax' skipWhen = '$Null'/>
+			<Item name='IMin' skipWhen = '$Null'/>
+			<Item name='INominal' skipWhen = '$Null'/>
+			<Item name='IncludeOnBOM' skipWhen = '$Null'/>
+			<Item name='IncludeOnCutChart' skipWhen = '$Null'/>
+			<Item name='IndicatorType' skipWhen = '$Null'/>
+			<Item name='Inline' skipWhen = '$Null'/>
+			<Item name='InsulationType' skipWhen = '$Null'/>
+			<Item name='KeywayOrientation' skipWhen = '$Null'/>
+			<Item name='LengthChangeType' skipWhen = '$Null'/>
+			<Item name='LengthChangeValue' skipWhen = '$Null'/>
+			<Item name='LengthChangeskipWhen' skipWhen = "0.0"/>
+			<Item name='MC1' skipWhen = '$Null'/>
+			<Item name='MCadID' skipWhen = '$Null'/>
+			<Item name='MaterialCode' skipWhen = '$Null'/>
+			<Item name='MaterialDescription' skipWhen = '$Null'/>
+			<Item name='MinWireCSA' skipWhen = '$Null'/>
+			<Item name='ModifiedLength' skipWhen = "0.0"/>
+			<Item name='ModuleCode' skipWhen = '$Null'/>
+			<Item name='MulticoreNote' skipWhen = '$Null'/>
+			<Item name='NEG' skipWhen = '$Null'/>
+			<Item name='NameOverridden' skipWhen = 'True'/>
+			<Item name='OSColor' skipWhen = '$Null'/>
+			<Item name='OSMaterial' skipWhen = '$Null'/>
+			<Item name='OSSpec' skipWhen = '$Null'/>
+			<Item name='Option Socket' skipWhen = '$Null'/>
+			<Item name='Option Wire Negative' skipWhen = '$Null'/>
+			<Item name='Option Wire Pos' skipWhen = '$Null'/>
+			<Item name='OptionExpression' skipWhen = '$Null'/>
+			<Item name='OptionPlug' skipWhen = '$Null'/>
+			<Item name='Outside Diameter' skipWhen = "0.0"/>
+			<Item name='PartAssigned' skipWhen = 'False' lookUp = 'customBoolean'/>
+			<Item name='PartDescription' displayName = 'PartBeschreibung' skipWhen = '$Null'/>
+			<Item name='PartNumber' skipWhen = '$Null'/>
+			<Item name='PinGraphic' skipWhen = '$Null'/>
+			<Item name='PinGroup' skipWhen = '$Null'/>
+			<Item name='PinType' skipWhen = '$Null'/>
+			<Item name='Plug' skipWhen = '$Null'/>
+			<Item name='Plugged' skipWhen = '$Null'/>
+			<Item name='PlugsRequired' skipWhen = '$Null'/>
+			<Item name='PokeHome' skipWhen = 'True'/>
+			<Item name='Quantity' skipWhen = '$Null'/>
+			<Item name='Repositionable' skipWhen = '$Null'/>
+			<Item name='Sealed' skipWhen = '$Null'/>
+			<Item name='SealsRequired' skipWhen = '$Null'/>
+			<Item name='SharedObjectRevision' skipWhen = '$Null'/>
+			<Item name='SheathType' skipWhen = '$Null'/>
+			<Item name='ShieldWire' skipWhen = 'True'/>
+			<Item name='ShortDescription' displayName = 'Short Desc' skipWhen = '$Null'/>
+			<Item name='SupplierName' displayName = 'Supplier' skipWhen = '$Null'/>
+			<Item name='StrippingPin' skipWhen = '$Null'/>
+			<Item name='SupplierPartNumber' skipWhen = '$Null'/>
+			<Item name='TIMax' skipWhen = '$Null'/>
+			<Item name='TerminalMaterial' skipWhen = '$Null'/>
+			<Item name='Type' skipWhen = '$Null'/>
+			<Item name='TypeCode' skipWhen = '$Null'/>
+			<Item name='TypeDescription' skipWhen = '$Null'/>
+			<Item name='UnitOfMeasure' skipWhen = '$Null'/>
+			<Item name='UnmodifiedCutBackValueEnd1' skipWhen = '$Null'/>
+			<Item name='UnmodifiedCutBackValueEnd2' skipWhen = '$Null'/>
+			<Item name='UnmodifiedLength' skipWhen = "0.0"/>
+			<Item name='UserFunctionalModuleCodesExpression' skipWhen = '$Null'/>
+			<Item name='UserProductionModuleCodesExpression' skipWhen = '$Null'/>      
+			<Item name='V Max' skipWhen = '$Null'/>
+			<Item name='V Nominal' skipWhen = '$Null'/>
+			<Item name='V Out' skipWhen = '$Null'/>
+			<Item name='VMin' skipWhen = '$Null'/>
+			<Item name='VNominal' skipWhen = '$Null'/>
+			<Item name='VariantPosition' skipWhen = '$Null'/>
+			<Item name='Vf' skipWhen = '$Null'/>
+			<Item name='Vr' skipWhen = '$Null'/>
+			<Item name='Weight' skipWhen = '$Null'/>
+			<Item name='WireCSA'  skipWhen = '$Null'/>
+			<Item name='WireColor' displayName = 'Leitungsfarbe' skipWhen = '$Null' lookUp = 'customColour'/>
+			<Item name='WireLength' skipWhen = '$Null'/>
+			<Item name='WireMaterial' skipWhen = '$Null'/>
+			<Item name='WireNote' skipWhen = '$Null'/>
+			<Item name='WireSpec' skipWhen = '$Null'/>
+        </SetOfDisplayAttributes>
+        <SetOfDisplayAttributes name= 'Splice'>
+            <ConditionsForApplicability>
+                <Rule criteria = '$ObjectType$' contains='PinList'/>
+                <Rule criteria = 'Type' contains='Splice'/>
+            </ConditionsForApplicability>
+            <Item name='Name'/>
+            <Item constantText = 'Component Type:Splice'/>
+            <Item name='PartNumber'/>
+            <Item name ='Harness'/>
+        </SetOfDisplayAttributes>
+        <SetOfDisplayAttributes name= 'Device'>
+            <ConditionsForApplicability>
+                <Rule criteria = '$ObjectType$' contains='PinList'/>
+                <Rule criteria = 'GroupName' contains='Device'/>
+            </ConditionsForApplicability>
+            <Item name='Name'/>
+            <Item constantText = 'Component Type:Device'/>
+            <Item name='PartNumber'/>
+            <Item name ='Harness'/>
+        </SetOfDisplayAttributes>
+        <SetOfDisplayAttributes name= 'Set Conductor'>
+            <ConditionsForApplicability>
+                <Rule criteria = '$ObjectType$' contains='Conductor'/>
+            </ConditionsForApplicability>
+            <Item name='Name'/>
+            <Item name='PartNumber' skipWhen = '$Null'/>
+            <Item name='Harness' skipWhen = '$Null'/>
+            <Item name='WireColor' skipWhen = '$Null' lookUp = 'customColour'/>
+            <Item name='WireSpec' displayName = 'AWG' skipWhen = '$Null'/>
+            <Item name='WireLength' skipWhen = '$Null'/>
+            <!--The related item for this connector (which is the connected device)-->
+            <RelatedItem>			
+			     <SetOfDisplayAttributes name= 'Related Switch'>
+                    <ConditionsForApplicability>
+                          <Rule criteria = 'Device PartNumber' contains='SWCH'/>                             
+                    </ConditionsForApplicability>
+					<Item constantText = 'A Related Switch'/>
+                    <Item name='Name' displayName='Device Name'/>
+					<Item constantText = '======================'/>
+                    <Item name='PartNumber' displayName='Device PartNumber'/>
+                </SetOfDisplayAttributes>	
+                <SetOfDisplayAttributes name= 'Set Related PinList'>
+                    <ConditionsForApplicability>
+                        <Rule criteria = '$ObjectType$' contains='PinList'/>
+                    </ConditionsForApplicability>
+                    <Item name='Name' displayName='Device Name'/>
+                    <Item name='PartNumber' displayName='Device PartNumber'/>
+                </SetOfDisplayAttributes>
+            </RelatedItem>
+            <RelatedItemPrefixes>
+                <Prefix val = "To "/>
+                <Prefix val = "From "/>
+                <Prefix val = "3rd "/>
+                <Prefix val = "4th "/>
+            </RelatedItemPrefixes>
+			
+		 <Item name='ColorCode'/>
+		 <Item name='Design' skipWhen = '$Null' displayName ='On Design' />
+		 
+		 <!-- here is a typical  full set of possible attributes which you might be able to use.-->
+		 
+            <!--Item constantText = 'Device constant Text (E.g. Use as Separator) '/>;
+        <Item name='AnalysisModel' skipWhen = '$Null'/>
+        <Item name='ArchitecturalCost' skipWhen = "0.0"/>
+        <Item name='Assembly' skipWhen = '$Null'/>
+        <Item name='BOMID' skipWhen = '$Null'/>
+        <Item name='BackshellOrientation' skipWhen = '$Null'/>
+        <Item name='BackshellPlugRequired' skipWhen = '$Null'/>
+        <Item name='BundleOffset' skipWhen = '$Null'/>
+        <Item name='Bypass' rule='is' skipWhen = 'Null'/>
+        <Item name='ColorCode' skipWhen = '$Null'/>
+        <Item name='ColorDescription' displayName='Color' skipWhen = '$Null'/>
+        <Item name='ConnectorCavity' skipWhen = '$Null'/>
+        <Item name='ConnectorGroup' skipWhen = '$Null'/>
+        <Item name='ContactMaterial' skipWhen = '$Null'/>
+        <Item name='Contact_Res' skipWhen = '$Null'/>
+        <Item name='CustomerMulticoreName' skipWhen = '$Null'/>
+        <Item name='CustomerName' skipWhen = '$Null'/>
+        <Item name='CustomerPartNumber' skipWhen = '$Null'/>
+        <Item name='CustomerWireNumber' skipWhen = '$Null'/>
+        <Item name='CutBackChangeTypeEnd1' skipWhen = '$Null'/>
+        <Item name='CutBackChangeTypeEnd2' skipWhen = '$Null'/>
+        <Item name='CutBackChangeValueEnd1' skipWhen = '$Null'/>
+        <Item name='CutBackChangeValueEnd2' skipWhen = '$Null'/>
+        <Item name='CutBackValueEnd1' skipWhen = '$Null'/>
+        <Item name='CutBackValueEnd2' skipWhen = '$Null'/>
+        <Item name='DC Res' skipWhen = '$Null'/>
+        <Item name='Datum' skipWhen = '$Null'/>
+        <Item name='DefaultName' skipWhen = '$Null'/>
+        <Item name='Design' skipWhen = '$Null'/>
+        <Item name='DefaultTerminalMaterial' skipWhen = '$Null'/>
+        <Item name='DerivedFootprintType' displayName = 'Footprint' skipWhen = '$Null'/>
+        <Item name='DesignAbstraction' skipWhen = '$Null'/>
+        <Item name='Diode' skipWhen = '$Null'/>
+        <Item name='ElevatedKeywayOrientation' skipWhen = '$Null'/>
+        <Item name='Equipotential' skipWhen = '$Null'/>
+        <Item name='FootprintConnectorName' skipWhen = '$Null'/>
+        <Item name='FootprintDescription' skipWhen = '$Null'/>      
+        <Item name='Gen Term 1' skipWhen = '$Null'/>
+        <Item name='Gen Term 2' skipWhen = '$Null'/>
+        <Item name='GeneratedFunctionalModuleCodesExpression' skipWhen = '$Null'/>
+        <Item name='GeneratedName' skipWhen = '$Null'/>
+        <Item name='GeneratedProductionModuleCodesExpression' skipWhen = '$Null'/>
+        <Item name='Generator' skipWhen = '$Null'/>
+        <Item name='GeneratorAndControl' skipWhen = '$Null'/>
+        <Item name='GreaseRequired' skipWhen = '$Null'/>
+        <Item name='GroupName' skipWhen = '$Null'/>        
+        <Item name='IDC' skipWhen = '$Null'/>
+        <Item name='IMax' skipWhen = '$Null'/>
+        <Item name='IMin' skipWhen = '$Null'/>
+        <Item name='INominal' skipWhen = '$Null'/>
+        <Item name='IncludeOnBOM' skipWhen = '$Null'/>
+        <Item name='IncludeOnCutChart' skipWhen = '$Null'/>
+        <Item name='IndicatorType' skipWhen = '$Null'/>
+        <Item name='Inline' skipWhen = '$Null'/>
+        <Item name='InsulationType' skipWhen = '$Null'/>
+        <Item name='KeywayOrientation' skipWhen = '$Null'/>
+        <Item name='LengthChangeType' skipWhen = '$Null'/>
+        <Item name='LengthChangeValue' skipWhen = '$Null'/>
+        <Item name='LengthChangeskipWhen' skipWhen = "0.0"/>
+        <Item name='MC1' skipWhen = '$Null'/>
+        <Item name='MCadID' skipWhen = '$Null'/>
+        <Item name='MaterialCode' skipWhen = '$Null'/>
+        <Item name='MaterialDescription' skipWhen = '$Null'/>
+        <Item name='MinWireCSA' skipWhen = '$Null'/>
+        <Item name='ModifiedLength' skipWhen = "0.0"/>
+        <Item name='ModuleCode' skipWhen = '$Null'/>
+        <Item name='MulticoreNote' skipWhen = '$Null'/>
+        <Item name='NEG' skipWhen = '$Null'/>
+        <Item name='NameOverridden' skipWhen = 'True'/>
+        <Item name='OSColor' skipWhen = '$Null'/>
+        <Item name='OSMaterial' skipWhen = '$Null'/>
+        <Item name='OSSpec' skipWhen = '$Null'/>
+        <Item name='Option Socket' skipWhen = '$Null'/>
+        <Item name='Option Wire Negative' skipWhen = '$Null'/>
+        <Item name='Option Wire Pos' skipWhen = '$Null'/>
+        <Item name='OptionExpression' skipWhen = '$Null'/>
+        <Item name='OptionPlug' skipWhen = '$Null'/>
+        <Item name='Outside Diameter' skipWhen = "0.0"/>
+        <Item name='PartAssigned' skipWhen = 'False'/>
+        <Item name='PartDescription' displayName = 'PartBeschreibung' skipWhen = '$Null'/>        
+        <Item name='PinGraphic' skipWhen = '$Null'/>
+        <Item name='PinGroup' skipWhen = '$Null'/>
+        <Item name='PinType' skipWhen = '$Null'/>
+        <Item name='Plug' skipWhen = '$Null'/>
+        <Item name='Plugged' skipWhen = '$Null'/>
+        <Item name='PlugsRequired' skipWhen = '$Null'/>
+        <Item name='PokeHome' skipWhen = 'True'/>
+        <Item name='Quantity' skipWhen = '$Null'/>
+        <Item name='Repositionable' skipWhen = '$Null'/>
+        <Item name='Sealed' skipWhen = '$Null'/>
+        <Item name='SealsRequired' skipWhen = '$Null'/>
+        <Item name='SharedObjectRevision' skipWhen = '$Null'/>
+        <Item name='SheathType' skipWhen = '$Null'/>
+        <Item name='ShieldWire' skipWhen = 'True'/>
+        <Item name='ShortDescription' displayName = 'Short Desc' skipWhen = '$Null'/>
+        <Item name='SupplierName' displayName = 'Supplier' skipWhen = '$Null'/>
+        <Item name='StrippingPin' skipWhen = '$Null'/>
+        <Item name='SupplierPartNumber' skipWhen = '$Null'/>
+        <Item name='TIMax' skipWhen = '$Null'/>
+        <Item name='TerminalMaterial' skipWhen = '$Null'/>
+        <Item name='Type' skipWhen = '$Null'/>
+        <Item name='TypeCode' skipWhen = '$Null'/>
+        <Item name='TypeDescription' skipWhen = '$Null'/>
+        <Item name='UnitOfMeasure' skipWhen = '$Null'/>
+        <Item name='UnmodifiedCutBackValueEnd1' skipWhen = '$Null'/>
+        <Item name='UnmodifiedCutBackValueEnd2' skipWhen = '$Null'/>
+        <Item name='UnmodifiedLength' skipWhen = "0.0"/>
+        <Item name='UserFunctionalModuleCodesExpression' skipWhen = '$Null'/>
+        <Item name='UserProductionModuleCodesExpression' skipWhen = '$Null'/>      
+        <Item name='V Max' skipWhen = '$Null'/>
+        <Item name='V Nominal' skipWhen = '$Null'/>
+        <Item name='V Out' skipWhen = '$Null'/>
+        <Item name='VMin' skipWhen = '$Null'/>
+        <Item name='VNominal' skipWhen = '$Null'/>
+        <Item name='VariantPosition' skipWhen = '$Null'/>
+        <Item name='Vf' skipWhen = '$Null'/>
+        <Item name='Vr' skipWhen = '$Null'/>
+        <Item name='Weight' skipWhen = '$Null'/>
+        <Item name='WireCSA'  skipWhen = '$Null'/> 
+        <Item name='WireMaterial' skipWhen = '$Null'/>
+        <Item name='WireNote' skipWhen = '$Null'/-->
+        </SetOfDisplayAttributes>
+		
+		<!-- it is strongly recommended that you define a default set of display attributes,  This system will use that
+		If it cannot find an absolute match for anything else above. The default set could be empty – in which case nothing will be displayed.-->
+		
+		
+        <SetOfDisplayAttributes name= "Default Set">
+            <Item name='Name'/>
+            <Item name ='$ObjectType$'/>
+            <Item name='AnalysisModel' skipWhen = '$Null'/>
+            <Item name='ArchitecturalCost' skipWhen = "0.0"/>
+            <Item name='Assembly' skipWhen = '$Null'/>
+            <Item name='BOMID' skipWhen = '$Null'/>
+            <Item name='BackshellOrientation' skipWhen = '$Null'/>
+            <Item name='BackshellPlugRequired' skipWhen = '$Null'/>
+            <Item name='BundleOffset' skipWhen = '$Null'/>
+            <Item name='Bypass' rule='is' skipWhen = 'Null'/>
+            <Item name='ColorCode' skipWhen = '$Null'/>
+            <Item name='ColorDescription' displayName='Color' skipWhen = '$Null'/>
+            <Item name='ConnectorCavity' skipWhen = '$Null'/>
+            <Item name='ConnectorGroup' skipWhen = '$Null'/>
+            <Item name='ContactMaterial' skipWhen = '$Null'/>
+            <Item name='Contact_Res' skipWhen = '$Null'/>
+            <Item name='CustomerMulticoreName' skipWhen = '$Null'/>
+            <Item name='CustomerName' skipWhen = '$Null'/>
+            <Item name='CustomerPartNumber' skipWhen = '$Null'/>
+            <Item name='CustomerWireNumber' skipWhen = '$Null'/>
+            <Item name='CutBackChangeTypeEnd1' skipWhen = '$Null'/>
+            <Item name='CutBackChangeTypeEnd2' skipWhen = '$Null'/>
+            <Item name='CutBackChangeValueEnd1' skipWhen = '$Null'/>
+            <Item name='CutBackChangeValueEnd2' skipWhen = '$Null'/>
+            <Item name='CutBackValueEnd1' skipWhen = '$Null'/>
+            <Item name='CutBackValueEnd2' skipWhen = '$Null'/>
+            <Item name='DC Res' skipWhen = '$Null'/>
+            <Item name='Datum' skipWhen = '$Null'/>
+            <Item name='DefaultName' skipWhen = '$Null'/>
+            <Item name='Design' skipWhen = '$Null'/>
+            <Item name='DefaultTerminalMaterial' skipWhen = '$Null'/>
+            <Item name='DerivedFootprintType' displayName = 'Footprint' skipWhen = '$Null'/>
+            <Item name='DesignAbstraction' skipWhen = '$Null'/>
+            <Item name='Diode' skipWhen = '$Null'/>
+            <Item name='ElevatedKeywayOrientation' skipWhen = '$Null'/>
+            <Item name='Equipotential' skipWhen = '$Null'/>
+            <Item name='FootprintConnectorName' skipWhen = '$Null'/>
+            <Item name='FootprintDescription' skipWhen = '$Null'/>
+            <Item name='Gen Term 1' skipWhen = '$Null'/>
+            <Item name='Gen Term 2' skipWhen = '$Null'/>
+            <Item name='GeneratedFunctionalModuleCodesExpression' skipWhen = '$Null'/>
+            <Item name='GeneratedName' skipWhen = '$Null'/>
+            <Item name='GeneratedProductionModuleCodesExpression' skipWhen = '$Null'/>
+            <Item name='Generator' skipWhen = '$Null'/>
+            <Item name='GeneratorAndControl' skipWhen = '$Null'/>
+            <Item name='GreaseRequired' skipWhen = '$Null'/>
+            <Item name='GroupName' skipWhen = '$Null'/>
+            <Item name='Harness' skipWhen = '$Null'/>
+            <Item name='IDC' skipWhen = '$Null'/>
+            <Item name='IMax' skipWhen = '$Null'/>
+            <Item name='IMin' skipWhen = '$Null'/>
+            <Item name='INominal' skipWhen = '$Null'/>
+            <Item name='IncludeOnBOM' skipWhen = '$Null'/>
+            <Item name='IncludeOnCutChart' skipWhen = '$Null'/>
+            <Item name='IndicatorType' skipWhen = '$Null'/>
+            <Item name='Inline' skipWhen = '$Null'/>
+            <Item name='InsulationType' skipWhen = '$Null'/>
+            <Item name='KeywayOrientation' skipWhen = '$Null'/>
+            <Item name='LengthChangeType' skipWhen = '$Null'/>
+            <Item name='LengthChangeValue' skipWhen = '$Null'/>
+            <Item name='LengthChangeskipWhen' skipWhen = "0.0"/>
+            <Item name='MC1' skipWhen = '$Null'/>
+            <Item name='MCadID' skipWhen = '$Null'/>
+            <Item name='MaterialCode' skipWhen = '$Null'/>
+            <Item name='MaterialDescription' skipWhen = '$Null'/>
+            <Item name='MinWireCSA' skipWhen = '$Null'/>
+            <Item name='ModifiedLength' skipWhen = "0.0"/>
+            <Item name='ModuleCode' skipWhen = '$Null'/>
+            <Item name='MulticoreNote' skipWhen = '$Null'/>
+            <Item name='NEG' skipWhen = '$Null'/>
+            <Item name='NameOverridden' skipWhen = 'True'/>
+            <Item name='OSColor' skipWhen = '$Null'/>
+            <Item name='OSMaterial' skipWhen = '$Null'/>
+            <Item name='OSSpec' skipWhen = '$Null'/>
+            <Item name='Option Socket' skipWhen = '$Null'/>
+            <Item name='Option Wire Negative' skipWhen = '$Null'/>
+            <Item name='Option Wire Pos' skipWhen = '$Null'/>
+            <Item name='OptionExpression' skipWhen = '$Null'/>
+            <Item name='OptionPlug' skipWhen = '$Null'/>
+            <Item name='Outside Diameter' skipWhen = "0.0"/>
+            <Item name='PartAssigned' skipWhen = 'False'/>
+            <Item name='PartDescription' displayName = 'PartBeschreibung' skipWhen = '$Null'/>
+            <Item name='PartNumber' skipWhen = '$Null'/>
+            <Item name='PinGraphic' skipWhen = '$Null'/>
+            <Item name='PinGroup' skipWhen = '$Null'/>
+            <Item name='PinType' skipWhen = '$Null'/>
+            <Item name='Plug' skipWhen = '$Null'/>
+            <Item name='Plugged' skipWhen = '$Null'/>
+            <Item name='PlugsRequired' skipWhen = '$Null'/>
+            <Item name='PokeHome' skipWhen = 'True'/>
+            <Item name='Quantity' skipWhen = '$Null'/>
+            <Item name='Repositionable' skipWhen = '$Null'/>
+            <Item name='Sealed' skipWhen = '$Null'/>
+            <Item name='SealsRequired' skipWhen = '$Null'/>
+            <Item name='SharedObjectRevision' skipWhen = '$Null'/>
+            <Item name='SheathType' skipWhen = '$Null'/>
+            <Item name='ShieldWire' skipWhen = 'True'/>
+            <Item name='ShortDescription' displayName = 'Short Desc' skipWhen = '$Null'/>
+            <Item name='SupplierName' displayName = 'Supplier' skipWhen = '$Null'/>
+            <Item name='StrippingPin' skipWhen = '$Null'/>
+            <Item name='SupplierPartNumber' skipWhen = '$Null'/>
+            <Item name='TIMax' skipWhen = '$Null'/>
+            <Item name='TerminalMaterial' skipWhen = '$Null'/>
+            <Item name='Type' skipWhen = '$Null'/>
+            <Item name='TypeCode' skipWhen = '$Null'/>
+            <Item name='TypeDescription' skipWhen = '$Null'/>
+            <Item name='UnitOfMeasure' skipWhen = '$Null'/>
+            <Item name='UnmodifiedCutBackValueEnd1' skipWhen = '$Null'/>
+            <Item name='UnmodifiedCutBackValueEnd2' skipWhen = '$Null'/>
+            <Item name='UnmodifiedLength' skipWhen = "0.0"/>
+            <Item name='UserFunctionalModuleCodesExpression' skipWhen = '$Null'/>
+            <Item name='UserProductionModuleCodesExpression' skipWhen = '$Null'/>
+            <Item name='V Max' skipWhen = '$Null'/>
+            <Item name='V Nominal' skipWhen = '$Null'/>
+            <Item name='V Out' skipWhen = '$Null'/>
+            <Item name='VMin' skipWhen = '$Null'/>
+            <Item name='VNominal' skipWhen = '$Null'/>
+            <Item name='VariantPosition' skipWhen = '$Null'/>
+            <Item name='Vf' skipWhen = '$Null'/>
+            <Item name='Vr' skipWhen = '$Null'/>
+            <Item name='Weight' skipWhen = '$Null'/>
+            <Item name='WireCSA' skipWhen = '$Null'/>
+            <Item name='WireColor' displayName = 'Leitungsfarbe' skipWhen = '$Null'/>
+            <Item name='WireLength' skipWhen = '$Null'/>
+            <Item name='WireMaterial' skipWhen = '$Null'/>
+            <Item name='WireNote' skipWhen = '$Null'/>
+            <Item name='WireSpec' skipWhen = '$Null'/>
+        </SetOfDisplayAttributes>
+    </AllDisplayAttributes>
+	
+    <!-- In order to make the display neater we can add any number of lookups/
+	Lookups are applied by name on an attribute by attribute basis.
+	This example maps 'true' and 'false' to their equivalents.
+	These mappings uses exact matches.  If no match then the original string is returned.
+	These mappings are case sensitive
+	The mapping is applied AFTER the evaluation of the 'skipWhen' rule. This is a pure string to string mapping.	
+	For full scale language tranlsation it is better to use the Capital language feature -
+	then the language specified at generation will be applied. 
+	-->
+    <AttributeLookUps>
+        <lookUp name = 'customBoolean'>
+            <entry input='true' output = 'wahr'/>
+            <entry input='false' output = 'falsch'/>
+        </lookUp>
+        <lookUp name = 'customNumber'>
+            <entry input='0.0' output = '0'/>
+            <entry input='NaN' output = 'Not-A-Number'/>
+        </lookUp>
+		
+		 <lookUp name = 'customColour'>
+            <entry input='B' output = 'Glas (Blue)'/>
+            <entry input='R' output = 'Coch (Red)'/>
+            <entry input='Y/S' output = 'Melyn/Arian (Yellow Silver)'/>
+            <entry input='Y/U' output = 'Melyn/Llwyd (Yellow Uncoloured)'/>
+            <entry input='BL/ws' output = 'Bl/ws (coch ?) '/>
+        </lookUp>
+		
+    </AttributeLookUps>	
+
+    <!-- If ProduceAllDesignTypes is set to 'n' (- which is the default)  - then Publisher only consider wiring diagrams. 
+	If set to 'y' we consider all diagrams for potential CGM generation. 	
+	Publisher scoping is only applied if this flag is set to 'n.' If the flag is set to 'y' 
+	then  Publisher will always publish all diagrams in the project.-->
+    <ProduceAllDesignTypes val='n'/>
+	
+	
+		
+
+    <!-- note on S1000D.CLC property 
+	S1000D-A-03-09-0502-09E-040A-A  - Chap 3.9.5.2.9.4 defines a set of classes for electrical equipment.
+	The S1000D.CLC property needs to be added to each device on a logical diagram e.g. '16' for any kind of  ECU
+	
+	1  Connectors, single
+2  VR-/VP- Connectors, single
+3  VR-/VP- Connectors
+4  VE- Connectors, single
+5  VE- Connectors
+6  Earth bolts
+7  Terminal junction modules
+8  Terminal strips, single
+9  Terminal strips, double
+10  Relays, Contactors
+11  Bungs
+12  Splices
+13  Electrical equipment whose connected wires are not part of the 
+considered project wiring
+14  Bus bars
+15  Switches
+16  Electrical equipment with no internal logic
+17  Virtual connectors
+18  Electrical equipment with internal logic
+19  Terminals for bonding
+20  Connectors, data bus, single
+21  Data bus couplers
+23  Connectors, data bus
+25  Circuit breakers, fuses
+Markup element: <connectionListCla	
+	-->
+	
+	
+	
+	
+</S1000DControlInfo>

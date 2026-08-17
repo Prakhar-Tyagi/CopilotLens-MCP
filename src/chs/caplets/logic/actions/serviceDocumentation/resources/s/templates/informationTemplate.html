@@ -1,0 +1,22 @@
+<% if(items.length){ %>
+
+<div class="listPanel information auto-list">
+    <div class="titlebar auto-list-header">
+		<span class="headingCount" style="display: block;">
+			<span class="headingCountNumber auto-item-count-label"><%=items.length%></span></span>
+        <span class="headerText auto-title-label"><%=title%></span></div>
+    <% _.each(items, function(item) {
+    var name = mentor.publisher.LanguageFilteredProject.getLocalizedName(item.get("mainText"));
+    %>
+    <div class="listItem auto-item" data-id="<%=item.get('mainText')%>"
+    <% if(!expand){ %> style="display: none;" <%}%>>
+    <span class="mainText auto-title-label"><%=name%></span>
+    <span class="collapseAll auto-collapse-list"
+          title="<%=mentor.publisher.languageTranslator.localize('clicktocollapse')%>">[-]</span><span
+        class="popUp"></span>
+    <br>
+
+</div>
+<% });%>
+</div>
+<%}%>

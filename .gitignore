@@ -1,0 +1,16 @@
+# Demo repository clone (local test only)
+demo_project/
+
+# Local intelligence cache & temp files
+.copilotlens_cache.json
+*.log
+
+# Python cache & venv
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# IDE files
+.idea/
+.vscode/

@@ -1,0 +1,347 @@
+<comparisons>
+    <comparison applies-to="additional-component">
+        <value type="attribute" key="Name"/>
+        <value type="attribute" key="TypeCode"/>
+        <value type="attribute" key="PartNumber"/>
+        <value type="attribute" key="ShortDescription"/>
+        <value type="attribute" key="ColorCode"/>
+        <value type="attribute" key="MaterialCode"/>
+        <value type="attribute" key="OptionExpression"/>
+        <value type="attribute" key="Weight" numerical-precision="0.01"/>
+        <value type="computed" key="DerivativesAndModules"/>
+        <value type="computed" key="AnchorNode"/>
+        <value type="computed" key="Bundle"/>
+        <value type="computed" key="AnchorNodeOffset"/>
+        <value type="computed" key="AssociatedComponents"/>
+    </comparison>
+    <comparison applies-to="backshell">
+        <value type="attribute" key="Name"/>
+        <value type="attribute" key="TypeCode"/>
+        <value type="attribute" key="PartNumber"/>
+        <value type="attribute" key="ShortDescription"/>
+        <value type="attribute" key="ColorCode"/>
+        <value type="attribute" key="MaterialCode"/>
+        <value type="attribute" key="OptionExpression"/>
+        <value type="attribute" key="Weight" numerical-precision="0.01"/>
+        <value type="computed" key="DerivativesAndModules"/>
+        <value type="computed" key="AnchorNode"/>
+        <value type="computed" key="Bundle"/>
+        <value type="computed" key="AnchorNodeOffset"/>
+        <value type="computed" key="AssociatedComponents"/>
+    </comparison>
+    <comparison applies-to="connector">
+        <value type="attribute" key="Name"/>
+        <value type="attribute" key="TypeCode"/>
+        <value type="attribute" key="PartNumber"/>
+        <value type="attribute" key="ShortDescription"/>
+        <value type="attribute" key="ColorCode"/>
+        <value type="attribute" key="MaterialCode"/>
+        <value type="attribute" key="OptionExpression"/>
+        <value type="attribute" key="Weight" numerical-precision="0.01"/>
+        <value type="computed" key="DerivativesAndModules"/>
+        <value type="computed" key="AnchorNode"/>
+        <value type="computed" key="Bundle"/>
+        <value type="computed" key="AnchorNodeOffset"/>
+        <value type="computed" key="AssociatedComponents"/>
+    </comparison>
+    <comparison applies-to="device">
+        <value type="attribute" key="Name"/>
+        <value type="attribute" key="TypeCode"/>
+        <value type="attribute" key="PartNumber"/>
+        <value type="attribute" key="ShortDescription"/>
+        <value type="attribute" key="ColorCode"/>
+        <value type="attribute" key="MaterialCode"/>
+        <value type="attribute" key="OptionExpression"/>
+        <value type="attribute" key="Weight" numerical-precision="0.01"/>
+        <value type="computed" key="DerivativesAndModules"/>
+        <value type="computed" key="AnchorNode"/>
+        <value type="computed" key="Bundle"/>
+        <value type="computed" key="AnchorNodeOffset"/>
+        <value type="computed" key="AssociatedComponents"/>
+    </comparison>
+    <comparison applies-to="ring-terminal">
+        <value type="attribute" key="Name"/>
+        <value type="attribute" key="TypeCode"/>
+        <value type="attribute" key="PartNumber"/>
+        <value type="attribute" key="ShortDescription"/>
+        <value type="attribute" key="ColorCode"/>
+        <value type="attribute" key="MaterialCode"/>
+        <value type="attribute" key="OptionExpression"/>
+        <value type="attribute" key="Weight" numerical-precision="0.01"/>
+        <value type="computed" key="DerivativesAndModules"/>
+        <value type="computed" key="AnchorNode"/>
+        <value type="computed" key="Bundle"/>
+        <value type="computed" key="AnchorNodeOffset"/>
+        <value type="computed" key="AssociatedComponents"/>
+    </comparison>
+    <comparison applies-to="splice">
+        <value type="attribute" key="Name"/>
+        <value type="attribute" key="TypeCode"/>
+        <value type="attribute" key="PartNumber"/>
+        <value type="attribute" key="ShortDescription"/>
+        <value type="attribute" key="ColorCode"/>
+        <value type="attribute" key="MaterialCode"/>
+        <value type="attribute" key="OptionExpression"/>
+        <value type="attribute" key="Weight" numerical-precision="0.01"/>
+        <value type="computed" key="DerivativesAndModules"/>
+        <value type="computed" key="AnchorNode"/>
+        <value type="computed" key="Bundle"/>
+        <value type="computed" key="AnchorNodeOffset"/>
+        <value type="computed" key="AssociatedComponents"/>
+    </comparison>
+    <comparison applies-to="wire">
+        <value type="attribute" key="Name"/>
+        <value type="attribute" key="ShortDescription"/>
+        <value type="attribute" key="WireColor"/>
+        <value type="attribute" key="WireMaterial"/>
+        <value type="attribute" key="WireSpec"/>
+        <value type="attribute" key="WireCSA" numerical-precision="0.01"/>
+        <value type="attribute" key="PartNumber"/>
+        <value type="attribute" key="TypeCode"/>
+        <value type="attribute" key="Multicore"/>
+        <value type="computed" key="From"/>
+        <value type="computed" key="To"/>
+        <value type="computed" key="FromTerminal"/>
+        <value type="computed" key="ToTerminal"/>
+        <value type="computed" key="FromSeal"/>
+        <value type="computed" key="ToSeal"/>
+        <value type="attribute" key="TerminalMaterialSpecEnd1"/>
+        <value type="attribute" key="TerminalMaterialSpecEnd2"/>
+        <!--
+                <value type="attribute" key="TerminalPartSpecEnd1" name="{From Terminal}"/>
+                <value type="attribute" key="TerminalPartSpecEnd2" name="{To Terminal}"/>
+                <value type="attribute" key="SealPartSpecEnd1" name="{From Seal}"/>
+                <value type="attribute" key="SealPartSpecEnd2" name="{To Seal}"/>
+        -->
+        <value type="computed" key="FromComponents"/>
+        <value type="computed" key="ToComponents"/>
+        <value type="attribute" key="OptionExpression"/>
+        <value type="attribute" key="UnmodifiedLength" numerical-precision="0.01"/>
+        <value type="attribute" key="ModifiedLength" numerical-precision="0.01"/>
+        <value type="attribute" key="Weight" numerical-precision="0.01"/>
+        <value type="attribute" key="WireNote"/>
+        <value type="computed" key="DerivativesAndModules"/>
+    </comparison>
+    <comparison applies-to="net">
+        <value type="attribute" key="Name"/>
+        <value type="attribute" key="ShortDescription"/>
+        <value type="attribute" key="WireColor"/>
+        <value type="attribute" key="WireMaterial"/>
+        <value type="attribute" key="WireSpec"/>
+        <value type="attribute" key="WireCSA" numerical-precision="0.01"/>
+        <value type="attribute" key="PartNumber"/>
+        <value type="attribute" key="TypeCode"/>
+        <value type="attribute" key="Multicore"/>
+        <value type="computed" key="From"/>
+        <value type="computed" key="To"/>
+        <value type="attribute" key="OptionExpression"/>
+        <value type="attribute" key="Weight" numerical-precision="0.01"/>
+        <value type="computed" key="DerivativesAndModules"/>
+    </comparison>
+    <comparison applies-to="multicore">
+        <value type="attribute" key="Name"/>
+        <value type="attribute" key="ShortDescription"/>
+        <value type="attribute" key="OSColor"/>
+        <value type="attribute" key="OSMaterial"/>
+        <value type="attribute" key="OSSpec"/>
+        <value type="attribute" key="PartNumber"/>
+        <value type="attribute" key="TypeCode"/>
+        <value type="attribute" key="OptionExpression"/>
+        <value type="attribute" key="UnmodifiedLength" numerical-precision="0.01"/>
+        <value type="attribute" key="ModifiedLength" numerical-precision="0.01"/>
+        <value type="attribute" key="OutsideDiameter" numerical-precision="0.01"/>
+        <value type="attribute" key="Weight" numerical-precision="0.01"/>
+        <value type="attribute" key="MulticoreNote"/>
+        <value type="computed" key="Wires"/>
+        <value type="computed" key="DerivativesAndModules"/>
+    </comparison>
+    <comparison applies-to="overbraid">
+        <value type="attribute" key="Name"/>
+        <value type="attribute" key="ShortDescription"/>
+        <value type="attribute" key="OSColor"/>
+        <value type="attribute" key="OSMaterial"/>
+        <value type="attribute" key="OSSpec"/>
+        <value type="attribute" key="PartNumber"/>
+        <value type="attribute" key="TypeCode"/>
+        <value type="attribute" key="OptionExpression"/>
+        <value type="attribute" key="UnmodifiedLength" numerical-precision="0.01"/>
+        <value type="attribute" key="ModifiedLength" numerical-precision="0.01"/>
+        <value type="attribute" key="Weight" numerical-precision="0.01"/>
+        <value type="attribute" key="MulticoreNote"/>
+        <value type="computed" key="Wires"/>
+        <value type="computed" key="DerivativesAndModules"/>
+    </comparison>
+    <comparison applies-to="option">
+        <value type="attribute" key="Name"/>
+        <value type="computed" key="Folders"/>
+        <value type="computed" key="Includes"/>
+        <value type="computed" key="Excludes"/>
+    </comparison>
+    <comparison applies-to="derivative">
+        <value type="attribute" key="Name"/>
+        <value type="attribute" key="PartNumber"/>
+        <value type="attribute" key="Revision"/>
+        <value type="attribute" key="ShortDescription"/>
+        <value type="attribute" key="ReleaseLevel"/>
+        <value type="computed" key="ApplicableOptions"/>
+    </comparison>
+    <comparison applies-to="functional-module">
+        <value type="attribute" key="Name"/>
+        <value type="attribute" key="PartNumber"/>
+        <value type="attribute" key="Revision"/>
+        <value type="attribute" key="ShortDescripomtion"/>
+        <value type="attribute" key="ReleaseLevel"/>
+        <value type="computed" key="ApplicableModuleCodes"/>
+    </comparison>
+    <comparison applies-to="production-module">
+        <value type="attribute" key="Name"/>
+        <value type="attribute" key="PartNumber"/>
+        <value type="attribute" key="Revision"/>
+        <value type="attribute" key="ShortDescripomtion"/>
+        <value type="attribute" key="ReleaseLevel"/>
+        <value type="computed" key="ApplicableModuleCodes"/>
+    </comparison>
+    <comparison applies-to="functional-module-code">
+        <value type="attribute" key="Name"/>
+        <value type="computed" key="Includes"/>
+        <value type="computed" key="Excludes"/>
+    </comparison>
+    <comparison applies-to="production-module-code">
+        <value type="attribute" key="Name"/>
+        <value type="computed" key="Includes"/>
+        <value type="computed" key="Excludes"/>
+    </comparison>
+    <comparison applies-to="bundle">
+        <value type="attribute" key="Name"/>
+        <value type="attribute" key="Length" numerical-precision="0.01"/>
+        <value type="attribute" key="Width" numerical-precision="0.01"/>
+        <value type="attribute" key="WidthWithInsulations" numerical-precision="0.01"/>
+        <value type="attribute" key="NumberOfWires"/>
+        <value type="attribute" key="NumberOfMulticores"/>
+        <value type="computed" key="Start"/>
+        <value type="computed" key="End"/>
+        <value type="computed" key="Variant"/>
+    </comparison>
+    <comparison applies-to="clip">
+        <value type="attribute" key="Name"/>
+        <value type="attribute" key="PartNumber"/>
+        <value type="attribute" key="ClipType"/>
+        <value type="attribute" key="TypeCode"/>
+        <value type="attribute" key="ColorCode"/>
+        <value type="attribute" key="MaterialCode"/>
+        <value type="attribute" key="Orientation"/>
+        <value type="attribute" key="Weight" numerical-precision="0.01"/>
+        <value type="attribute" key="Assembly"/>
+        <value type="computed" key="AnchorNode"/>
+        <value type="computed" key="Bundle"/>
+        <value type="computed" key="AnchorNodeOffset"/>
+        <value type="computed" key="AssociatedComponents"/>
+    </comparison>
+    <comparison applies-to="grommet">
+        <value type="attribute" key="Name"/>
+        <value type="attribute" key="PartNumber"/>
+        <value type="attribute" key="TypeCode"/>
+        <value type="attribute" key="ColorCode"/>
+        <value type="attribute" key="MaterialCode"/>
+        <value type="attribute" key="Orientation"/>
+        <value type="attribute" key="Weight" numerical-precision="0.01"/>
+        <value type="attribute" key="Assembly"/>
+        <value type="computed" key="AnchorNode"/>
+        <value type="computed" key="Bundle"/>
+        <value type="computed" key="AnchorNodeOffset"/>
+        <value type="computed" key="AssociatedComponents"/>
+    </comparison>
+    <comparison applies-to="other-component">
+        <value type="attribute" key="Name"/>
+        <value type="attribute" key="PartNumber"/>
+        <value type="attribute" key="TypeCode"/>
+        <value type="attribute" key="ColorCode"/>
+        <value type="attribute" key="MaterialCode"/>
+        <value type="attribute" key="Weight" numerical-precision="0.01"/>
+        <value type="attribute" key="Assembly"/>
+        <value type="computed" key="AnchorNode"/>
+        <value type="computed" key="Bundle"/>
+        <value type="computed" key="AnchorNodeOffset"/>
+        <value type="computed" key="AssociatedComponents"/>
+    </comparison>
+    <comparison applies-to="multi-location-component">
+        <value type="attribute" key="Name"/>
+        <value type="computed" key="Locations"/>
+        <value type="attribute" key="PartNumber"/>
+        <value type="attribute" key="TypeCode"/>
+        <value type="attribute" key="ColorCode"/>
+        <value type="attribute" key="MaterialCode"/>
+        <value type="attribute" key="Quantity"/>
+        <value type="attribute" key="Weight" numerical-precision="0.01"/>
+        <value type="attribute" key="Assembly"/>
+        <value type="computed" key="AnchorNode"/>
+        <value type="computed" key="Bundle"/>
+        <value type="computed" key="AnchorNodeOffset"/>
+        <value type="computed" key="AssociatedComponents"/>
+    </comparison>
+    <comparison applies-to="insulation-run">
+        <value type="attribute" key="Name"/>
+        <value type="computed" key="Start"/>
+        <value type="computed" key="End"/>
+        <value type="attribute" key="InsulationCodeName"/>
+        <value type="computed" key="InsulationLayers"/>
+        <value type="computed" key="Bundles"/>
+        <value type="computed" key="AnchorNode"/>
+        <value type="computed" key="AnchorNodeOffset"/>
+    </comparison>
+    <comparison applies-to="insulation">
+        <value type="attribute" key="Name"/>
+        <value type="attribute" key="InsulationType"/>
+        <value type="attribute" key="PartNumber"/>
+        <value type="attribute" key="TypeCode"/>
+        <value type="attribute" key="ColorCode"/>
+        <value type="attribute" key="MaterialCode"/>
+        <value type="attribute" key="InsulatedLength" numerical-precision="0.01"/>
+        <value type="attribute" key="UnmodifiedLength" numerical-precision="0.01"/>
+        <value type="attribute" key="Weight" numerical-precision="0.01"/>
+        <value type="attribute" key="Width" numerical-precision="0.01"/>
+        <value type="attribute" key="Layer"/>
+        <value type="attribute" key="Assembly"/>
+        <value type="computed" key="AnchorNode"/>
+        <value type="computed" key="Bundle"/>
+        <value type="computed" key="AnchorNodeOffset"/>
+    </comparison>
+    <comparison applies-to="spot-tape">
+        <value type="attribute" key="Name"/>
+        <value type="attribute" key="PartNumber"/>
+        <value type="attribute" key="TypeCode"/>
+        <value type="attribute" key="ColorCode"/>
+        <value type="attribute" key="MaterialCode"/>
+        <value type="attribute" key="NumberOfOverlaps"/>
+        <value type="attribute" key="UnmodifiedLength" numerical-precision="0.01"/>
+        <value type="attribute" key="Weight" numerical-precision="0.01"/>
+        <value type="attribute" key="Width" numerical-precision="0.01"/>
+        <value type="attribute" key="Layer"/>
+        <value type="attribute" key="Assembly"/>
+        <value type="computed" key="AnchorNode"/>
+        <value type="computed" key="Bundle"/>
+        <value type="computed" key="AnchorNodeOffset"/>
+    </comparison>
+    <comparison applies-to="breakout-tape">
+        <value type="attribute" key="Name"/>
+        <value type="attribute" key="PartNumber"/>
+        <value type="attribute" key="TypeCode"/>
+        <value type="attribute" key="ColorCode"/>
+        <value type="attribute" key="MaterialCode"/>
+        <value type="attribute" key="TurnsAtBreakout"/>
+        <value type="attribute" key="TurnsOnBranch"/>
+        <value type="attribute" key="UnmodifiedLength" numerical-precision="0.01"/>
+        <value type="attribute" key="Weight" numerical-precision="0.01"/>
+        <value type="attribute" key="Width" numerical-precision="0.01"/>
+        <value type="attribute" key="Layer"/>
+        <value type="attribute" key="Assembly"/>
+        <value type="computed" key="AnchorNode"/>
+        <value type="computed" key="Bundle"/>
+    </comparison>
+    <comparison applies-to="terminal">
+        <value type="attribute" key="PartNumber"/>
+    </comparison>
+    <comparison applies-to="cavity-seal">
+        <value type="attribute" key="PartNumber"/>
+    </comparison>
+</comparisons>

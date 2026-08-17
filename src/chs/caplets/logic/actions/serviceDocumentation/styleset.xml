@@ -1,0 +1,1529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE systemstylingdata PUBLIC "-//Mentor Graphics Corporation//Project 2018.1//EN" "D:\MentorGraphics\Capital/dtd/project.dtd">
+<systemstylingdata>
+  <systemqueryexpressionmgr id="_1" modified="1" baseid="_1">
+    <queryExpression id="_2" name="Ground Device" modified="25" baseid="_2">
+      <filterContext>
+        <like>
+          <attributeVariable name="AnalysisModel"/>
+          <stringConstant value=".*ground"/>
+        </like>
+        <queryOperatorList>
+          <stringConstant value="Device"/>
+        </queryOperatorList>
+      </filterContext>
+    </queryExpression>
+  </systemqueryexpressionmgr>
+  <stylemgr id="_3" modified="1" baseid="_3">
+    <fontstyle id="_4" name="UID9c156c-13c1943a78e-f310c4a64d47e4652927a2fcf260f177_Logic_Default_NetConductor_VerticalDecorationStyle_null_Cross Reference_FontStyle_1_2" modified="1753" baseid="_4" font="Lucida Sans Unicode" style="plain" size="0.18" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_5" name="UIDeb9de7-15d55353c27-07717afe0e539292f93ff82340dd28d3_Logic_Default_WireConductor_VerticalDecorationStyle_Property_WIRE TYPE_FontStyle_1" modified="85" baseid="_5" font="Lucida Sans Unicode" style="plain" size="0.125" opaque="true">
+      <colordata>
+        <color value="black"/>
+      </colordata>
+    </fontstyle>
+    <fontstyle id="_6" name="UPGD_2013_1PRE_0_Default_BlockDeviceNameFontStyle_1_2" modified="1729" baseid="_6" font="Lucida Sans Unicode" style="bold" size="0.18" opaque="false">
+      <colordata>
+        <color value="black"/>
+      </colordata>
+    </fontstyle>
+    <fontstyle id="_7" name="UIDfe9ff6-13bbccdcbae-9b079c215b54b9186493dc43926bbceb_Logic_Default_SymbolGroundDevice_DecorationStyle_Attribute_Name_FontStyle_1_2" modified="1813" baseid="_7" font="Lucida Sans Unicode" style="plain" size="0.18" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_8" name="UID3b6cf9-15d506c6854-67af62e2993e74ee548491af58ead3c7_Logic_Default_PlugConnector_DecorationStyle_Property_CONN NAME_FontStyle_1" modified="124" baseid="_8" font="Lucida Sans Unicode" style="plain" size="0.15" opaque="false">
+      <colordata>
+        <color value="foreground"/>
+      </colordata>
+    </fontstyle>
+    <fontstyle id="_9" name="0b4b0128-0397-44de-b35c-a916bf117b23_2_2_2" modified="2284" baseid="_9" font="Lucida Sans Unicode" style="plain" size="0.18" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_10" name="6a6a55a8-0d2d-4b70-8ef1-60f1ba7ca697_1_2_2" modified="2262" baseid="_10" font="Lucida Sans Unicode" style="plain" size="0.18" opaque="true">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_11" name="UIDead31a-13c145b5610-f310c4a64d47e4652927a2fcf260f177_Logic_Default_WireConductor_HorizontalDecorationStyle_null_Cross Reference Text_FontStyle_1_2" modified="1777" baseid="_11" font="Lucida Sans Unicode" style="plain" size="0.1" opaque="false">
+      <colordata>
+        <color value="black"/>
+      </colordata>
+    </fontstyle>
+    <fontstyle id="_12" name="42d6358f-9c9a-44ff-8b0e-a7a3ff3dae5a_2_2_2" modified="2284" baseid="_12" font="Lucida Sans Unicode" style="plain" size="0.125" opaque="false">
+      <colordata>
+        <color value="black"/>
+      </colordata>
+    </fontstyle>
+    <fontstyle id="_13" name="01404bbf-fb71-4111-b4e5-308f1e3b69b8_2_2_2" modified="2284" baseid="_13" font="Lucida Sans Unicode" style="plain" size="0.18" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_14" name="UIDaa806a-14243ac54d3-9f0abf07d11e05c307e624d5ef59466c_Logic_Default_blockdevice_DecorationStyle_Attribute_Associated Design Name_FontStyle_1_2" modified="1717" baseid="_14" font="Lucida Sans Unicode" style="bolditalic" size="0.35" opaque="false">
+      <colordata>
+        <color value="blue"/>
+      </colordata>
+    </fontstyle>
+    <fontstyle id="_15" name="f0d1f1f6-7796-4794-b1e5-02eb7be5f186_2_2_2" modified="2284" baseid="_15" font="Lucida Sans Unicode" style="plain" size="0.18" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_16" name="1e36c5f7-859c-49b4-b658-60a2bcc93a10_2_2_2" modified="2284" baseid="_16" font="Lucida Sans Unicode" style="plain" size="0.18" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_17" name="7baa7e75-4471-4d49-a45e-4969d069b8b4_2_2_2" modified="2284" baseid="_17" font="Lucida Sans Unicode" style="plain" size="0.15" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_18" name="UIDb25397-13b46feee0b-abf0f31b234966dc6d8468acedeffa43_Logic_Default_InlinePlugConnectorPin_DecorationStyle_Attribute_Name_FontStyle_1_2_2" modified="2030" baseid="_18" font="Lucida Sans Unicode" style="plain" size="0.1" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_19" name="UID8f0838-162060c962a-969788c6d1133215a540c6b1de5aaa0d_Logic_AB_DS_SS_Device_DecorationStyle_CompositeText_&quot;Zone:&quot; + Zone_FontStyle_1" modified="44" baseid="_19" font="MS Gothic" style="italic" size="0.15" opaque="false">
+      <colordata>
+        <color value="#999999"/>
+      </colordata>
+    </fontstyle>
+    <fontstyle id="_20" name="UID9c156c-13c1943a701-f310c4a64d47e4652927a2fcf260f177_Logic_Default_NetConductor_HorizontalDecorationStyle_null_Cross Reference_FontStyle_1_2" modified="1754" baseid="_20" font="Lucida Sans Unicode" style="plain" size="0.15" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_21" name="UIDf4a436-1488f140b79-bca6c92f74070836cb1c6256cb1a48f1_Default_BlockDevicePinNameFontStyle_1_2" modified="1701" baseid="_21" font="Lucida Sans Unicode" style="plain" size="0.18" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_22" name="b6200cc8-9f50-49c5-b6bc-2777e27062c2_2_2_2" modified="2284" baseid="_22" font="Lucida Sans Unicode" style="plain" size="0.18" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_23" name="61af084f-58a0-488a-a632-e1980a5c9f2f_1_2_2" modified="2262" baseid="_23" font="Lucida Sans Unicode" style="plain" size="0.18" opaque="true">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_24" name="3db8697e-8c0c-4fdd-a66f-600413a2394e_2_2_2" modified="2284" baseid="_24" font="Lucida Sans Unicode" style="plain" size="0.18" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_25" name="20685a8e-a18d-4e82-b69e-8bb5c99e1466_2_2_2" modified="2284" baseid="_25" font="Lucida Sans Unicode" style="plain" size="0.15" opaque="false">
+      <colordata>
+        <color value="foreground"/>
+      </colordata>
+    </fontstyle>
+    <fontstyle id="_26" name="db20dbcd-1b32-4485-a4c4-0597edf35895_2_2_2" modified="2284" baseid="_26" font="Lucida Sans Unicode" style="plain" size="0.1" opaque="false">
+      <colordata>
+        <color value="black"/>
+      </colordata>
+    </fontstyle>
+    <fontstyle id="_27" name="eb35663c-f11d-40ba-8aed-02b5a8b3a9e4_2_2_2" modified="2284" baseid="_27" font="Lucida Sans Unicode" style="plain" size="0.18" opaque="true">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_28" name="UID8f0838-162060c79e4-969788c6d1133215a540c6b1de5aaa0d_Logic_AB_DS_SS_Device_DecorationStyle_Property_Function_FontStyle_1" modified="53" baseid="_28" font="Calibri" style="plain" size="0.15" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_29" name="UIDd612df-14d43351369-4d2248efc42d7b305d7b332438230384_Logic_Default_SymbolDevicePin_DecorationStyle_Attribute_Name_FontStyle_1_2" modified="1095" baseid="_29" font="Lucida Sans" style="plain" size="0.18" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_30" name="UIDff31c8-15d5466c707-07717afe0e539292f93ff82340dd28d3_Logic_Default_WireConductor_HorizontalDecorationStyle_Attribute_Wire Length_FontStyle_1" modified="101" baseid="_30" font="Lucida Sans Unicode" style="italic" size="0.125" opaque="true">
+      <colordata>
+        <color value="orange"/>
+      </colordata>
+    </fontstyle>
+    <fontstyle id="_31" name="b879d1a0-8308-4170-b9f6-51ab2ad65899_2_2" modified="2284" baseid="_31" font="Lucida Sans Unicode" style="plain" size="0.125" opaque="true">
+      <colordata>
+        <color value="foreground"/>
+      </colordata>
+    </fontstyle>
+    <fontstyle id="_32" name="ed7c3581-b0ce-4e77-a267-c2533c710130_2_2_2" modified="2284" baseid="_32" font="Lucida Sans Unicode" style="plain" size="0.1" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_33" name="UID038415-11e3ecda429-51e3cf11c613886801a3dfdf95efb632_Logic_Default_ShieldConductor_VerticalDecorationStyle_Attribute_Name_FontStyle_1_3_2" modified="2263" baseid="_33" font="Lucida Sans Unicode" style="plain" size="0.18" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_34" name="77d51574-c15e-41e1-a8c5-cf7b82dbe3df_2_2_2" modified="2284" baseid="_34" font="Lucida Sans Unicode" style="plain" size="0.18" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_35" name="71629945-e592-4806-b886-2c5fff93dd10_2_2_2" modified="2284" baseid="_35" font="Lucida Sans Unicode" style="plain" size="0.18" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_36" name="79a6ebe2-25a0-4374-b012-323ccffd2770_2_2_2" modified="2284" baseid="_36" font="Lucida Sans Unicode" style="plain" size="0.125" opaque="true">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_37" name="f23e9a32-4845-40d3-8ff9-27a335d40821_2_2_2" modified="2284" baseid="_37" font="Lucida Sans Unicode" style="plain" size="0.15" opaque="true">
+      <colordata>
+        <color value="black"/>
+      </colordata>
+    </fontstyle>
+    <fontstyle id="_38" name="UID868df2-1621c4bad7b-35856451a5227fcbe3e20e8860e9648c_Logic_AB_DS_SS_WireConductor_HorizontalDecorationStyle_CompositeText_&quot;(SC: &quot; + Separation Code + &quot;)&quot;_FontStyle_1" modified="42" baseid="_38" font="Lucida Sans Unicode" style="italic" size="0.125" opaque="true">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_39" name="fa63b4bf-7c15-49ac-91f2-ee43d7cef061_2_2_2" modified="2284" baseid="_39" font="Lucida Sans Unicode" style="plain" size="0.18" opaque="true">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_40" name="UIDead31a-13c145b6e5f-f310c4a64d47e4652927a2fcf260f177_Logic_Default_WireConductor_VerticalDecorationStyle_null_Cross Reference Text_FontStyle_1_2" modified="1769" baseid="_40" font="Lucida Sans Unicode" style="plain" size="0.1" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_41" name="2b8a3a78-32e2-4449-b456-ee4b44f6789e_2_2_2" modified="2284" baseid="_41" font="Lucida Sans Unicode" style="plain" size="0.125" opaque="false">
+      <colordata>
+        <color value="foreground"/>
+      </colordata>
+    </fontstyle>
+    <fontstyle id="_42" name="7f93ba16-9fe8-4742-8743-441cf5995fbc_2_2_2" modified="2284" baseid="_42" font="Lucida Sans Unicode" style="plain" size="0.18" opaque="true">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_43" name="42bfa024-f281-4ec4-8ec0-b4d68708afc5_2_2_2" modified="2284" baseid="_43" font="Lucida Sans Unicode" style="plain" size="0.18" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_44" name="UIDb74b43-15d5f09c307-f528764d624db129b32c21fbca0cb8d6_Logic_Default_WireConductor_HorizontalDecorationStyle_Property_EQUIPOT_FontStyle_1" modified="65" baseid="_44" font="Lucida Sans Unicode" style="plain" size="0.125" opaque="true">
+      <colordata>
+        <color value="brown"/>
+      </colordata>
+    </fontstyle>
+    <fontstyle id="_45" name="192d139b-98c4-4b41-86b7-d48897d03173_2_2_2" modified="2284" baseid="_45" font="Lucida Sans Unicode" style="bold" size="0.2" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_46" name="UIDff31c8-15d546573ab-07717afe0e539292f93ff82340dd28d3_Logic_Default_PlugConnectorPin_DecorationStyle_Property_PIN NAME_FontStyle_1" modified="120" baseid="_46" font="Lucida Sans Unicode" style="plain" size="0.125" opaque="false">
+      <colordata>
+        <color value="black"/>
+      </colordata>
+    </fontstyle>
+    <fontstyle id="_47" name="1dbf138f-ae9a-4d4a-b61f-b9b9fd894b47_2_2_2" modified="2284" baseid="_47" font="Lucida Sans Unicode" style="plain" size="0.18" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_48" name="b0afd970-f38a-4aad-9227-abf1c1116b63_2_2_2" modified="2284" baseid="_48" font="Lucida Sans Unicode" style="plain" size="0.18" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_49" name="b38911c0-a40a-4d7a-90d5-dfb72bdbe50b_2_2_2" modified="2284" baseid="_49" font="Lucida Sans Unicode" style="bold" size="0.2" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <fontstyle id="_50" name="UIDeb9de7-15d55353c29-07717afe0e539292f93ff82340dd28d3_Logic_Default_WireConductor_VerticalDecorationStyle_Attribute_Wire Length_FontStyle_1" modified="85" baseid="_50" font="Lucida Sans Unicode" style="plain" size="0.125" opaque="true">
+      <colordata>
+        <color value="orange"/>
+      </colordata>
+    </fontstyle>
+    <fontstyle id="_51" name="UIDff31c8-15d5466c564-07717afe0e539292f93ff82340dd28d3_Logic_Default_WireConductor_HorizontalDecorationStyle_Property_WIRE TYPE_FontStyle_1" modified="102" baseid="_51" font="Lucida Sans Unicode" style="plain" size="0.125" opaque="true">
+      <colordata>
+        <color value="black"/>
+      </colordata>
+    </fontstyle>
+    <fontstyle id="_52" name="4d20f3ec-8cb9-43cc-8ee7-0bd9eac6f4bf_2_2_2" modified="2284" baseid="_52" font="Lucida Sans Unicode" style="plain" size="0.125" opaque="false">
+      <colordata>
+        <color value="foreground"/>
+      </colordata>
+    </fontstyle>
+    <fontstyle id="_53" name="e97a01e1-87cf-4d53-971f-9793c82b5d72_2_2_2" modified="2284" baseid="_53" font="Lucida Sans Unicode" style="italic" size="0.14" opaque="false">
+      <colordata>
+        <color value="black"/>
+      </colordata>
+    </fontstyle>
+    <fontstyle id="_54" name="UIDfe9ff6-13bbccd4f8d-9b079c215b54b9186493dc43926bbceb_Logic_Default_SymbolDevice_DecorationStyle_Attribute_Name_FontStyle_1_2" modified="1815" baseid="_54" font="Lucida Sans Unicode" style="plain" size="0.18" opaque="false">
+      <colordata default="true"/>
+    </fontstyle>
+    <graphicsstyle id="_55" name="675574a8-b0bc-4ff1-83c5-5372d8d2cd39_InterconnectConnector_GraphicsStyle_2_2_2" modified="2284" baseid="_55" excludefromapplystyle="false">
+      <attribute thickness="2" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_56" name="b95ae3ad-eec0-47d8-984e-d0faa809a3a1_PlugConnectorPin_GraphicsStyle_2_2_2" modified="2284" baseid="_56" excludefromapplystyle="false">
+      <attribute thickness="1" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_57" name="687072c0-b35e-4dae-a2c6-f3c4051bf0ca_InlineJackConnector_GraphicsStyle_2_2_2" modified="2284" baseid="_57" excludefromapplystyle="false">
+      <attribute thickness="2" thicknessunit="logical" linestyle="solid" fillpattern="solid" opaque="false">
+        <fillforegroundcolor value="#fbe4e4"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_58" name="UIDf4a436-1488f140b79-bca6c92f74070836cb1c6256cb1a48f1_Default_BlockDevicePinGraphicsStyle_1_2" modified="1701" baseid="_58" excludefromapplystyle="false">
+      <attribute thickness="inherit" linestyle="inherit" fillpattern="inherit" opaque="false"/>
+    </graphicsstyle>
+    <graphicsstyle id="_59" name="8e2aeef1-42f9-4bc5-a248-23d8cf9c4dc0_PlugConnector_GraphicsStyle_2_2_2" modified="2284" baseid="_59" excludefromapplystyle="false">
+      <attribute thickness="1" thicknessunit="logical" linestyle="long_dash" fillpattern="solid" opaque="false">
+        <color value="foreground"/>
+        <fillforegroundcolor value="#ccffff"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_60" name="59c5fb40-3645-48eb-bf16-af641aed5023_highway_GraphicsStyle_1_2_2" modified="2262" baseid="_60" excludefromapplystyle="false">
+      <attribute thickness="8" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false"/>
+    </graphicsstyle>
+    <graphicsstyle id="_61" name="81034a1a-ad82-47fd-ac06-d4a85c72960d_PlugConnectorBackShellPin_GraphicsStyle_2_2_2" modified="2284" baseid="_61" excludefromapplystyle="false">
+      <attribute thickness="1" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_62" name="f7e04fb4-5a99-4efe-9a13-80c7d3d06de4_TwistCommercialMultiCoreIndicator_GraphicsStyle_2_2_2" modified="2284" baseid="_62" excludefromapplystyle="false">
+      <attribute thickness="2" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_63" name="70c8d9d1-c847-4829-8126-08093d124c04_JackConnector_GraphicsStyle_2_2_2" modified="2284" baseid="_63" excludefromapplystyle="false">
+      <attribute thickness="2" thicknessunit="logical" linestyle="solid" fillpattern="solid" opaque="false">
+        <color value="#003399"/>
+        <fillforegroundcolor value="#cbeded"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_64" name="f63c83c2-f708-4e4e-8b48-5aa9fb74e8b6_SymbolDevicePin_GraphicsStyle_2_2_2" modified="2284" baseid="_64" excludefromapplystyle="false">
+      <attribute thickness="inherit" linestyle="inherit" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_65" name="UIDb6cd19-115b19ca203-69e09d9a9a5b2afbe167959e473fb311__SymbolSplicePin_GraphicStyle_2_2_2" modified="2270" baseid="_65" excludefromapplystyle="false">
+      <attribute thickness="inherit" linestyle="inherit" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_66" name="9c0cc8f3-1204-4aca-8ef0-09b2011055e7_TwistMilitaryMultiCoreIndicator_GraphicsStyle_2_2_2" modified="2284" baseid="_66" excludefromapplystyle="false">
+      <attribute thickness="2" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_67" name="be616131-4648-4161-8c76-9ce58a8556a7_InlineInterconnectPlugConnector_GraphicsStyle_2_2_2" modified="2284" baseid="_67" excludefromapplystyle="false">
+      <attribute thickness="2" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_68" name="b9fe9581-7769-4f86-b331-a93e27710951_InlinePlugConnectorPin_GraphicsStyle_2_2_2" modified="2284" baseid="_68" excludefromapplystyle="false">
+      <attribute thickness="1" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_69" name="2867704b-0129-449e-b2b3-2bcd916435d1_ShieldConductor_GraphicsStyle_2_2_2" modified="2284" baseid="_69" excludefromapplystyle="false">
+      <attribute thickness="2" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_70" name="UPGD_1_108_0_Default_AssemblyGraphicsStyle_2_2_2" modified="2262" baseid="_70" excludefromapplystyle="false">
+      <attribute thickness="1" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false"/>
+    </graphicsstyle>
+    <graphicsstyle id="_71" name="c52357a6-2131-46c8-84a7-cef9ef6e900e_SplicePin_GraphicsStyle_2_2_2" modified="2284" baseid="_71" excludefromapplystyle="false">
+      <attribute thickness="1" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_72" name="0c8f6010-2c01-4973-8602-3da213b51208_InterconnectDevicePin_GraphicsStyle_2_2_2" modified="2284" baseid="_72" excludefromapplystyle="false">
+      <attribute thickness="inherit" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_73" name="_StackedPinGraphicsStyleUPGD_2011_1PRE_1_Default_1_2_2" modified="2262" baseid="_73" excludefromapplystyle="false">
+      <attribute thickness="inherit" linestyle="inherit" fillpattern="inherit" opaque="false"/>
+    </graphicsstyle>
+    <graphicsstyle id="_74" name="UID7bcd48-1323fce3998-f2525d14e3f58b293f1befc8c776ec19__SymbolSplice_GraphicStyle_1_3_2" modified="2307" baseid="_74" excludefromapplystyle="false">
+      <attribute thickness="inherit" linestyle="inherit" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_75" name="ff33c577-ff8c-47c4-b406-7f070d5adeca_SymbolDevice_GraphicsStyle_2_2_2" modified="2284" baseid="_75" excludefromapplystyle="false">
+      <attribute thickness="inherit" linestyle="inherit" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_76" name="64f56e9a-a5df-4661-9afc-79272a3d6537_Device_GraphicsStyle_2_2_2" modified="2284" baseid="_76" excludefromapplystyle="false">
+      <attribute thickness="1" thicknessunit="logical" linestyle="inherit" fillpattern="solid" opaque="false">
+        <color value="black"/>
+        <fillforegroundcolor value="#8eb0f4"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_77" name="3f95b898-09bc-4de1-bb64-b4a4dd59defa_JackConnectorPin_GraphicsStyle_2_2_2" modified="2284" baseid="_77" excludefromapplystyle="false">
+      <attribute thickness="1" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_78" name="UIDca7bf5-128cf9f3e40-dce36346373fe22c4c89adef3d964084__Splice_GraphicStyle_1_3_2" modified="2263" baseid="_78" excludefromapplystyle="false">
+      <attribute thickness="1" thicknessunit="logical" linestyle="inherit" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_79" name="1e7457bc-9f18-4ee1-85f5-6c55fe9d4e0a_WireConductor_GraphicsStyle_2_2_2" modified="2284" baseid="_79" excludefromapplystyle="false">
+      <attribute thickness="2" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false">
+        <color value="#6699ff"/>
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_80" name="1c53665d-701f-45f0-8cb3-f59d16f9b7f8_InlineInterconnectJackConnector_GraphicsStyle_2_2_2" modified="2284" baseid="_80" excludefromapplystyle="false">
+      <attribute thickness="2" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_81" name="4b1cefe1-5722-4d5d-a20f-ee2e238d81d4_SymbolGroundDevicePin_GraphicsStyle_2_2_2" modified="2284" baseid="_81" excludefromapplystyle="false">
+      <attribute thickness="inherit" linestyle="inherit" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_82" name="574b18b9-02e2-44b8-92b7-417bc6f6259f_DashedOvalMultiCoreIndicator_GraphicsStyle_2_2_2" modified="2284" baseid="_82" excludefromapplystyle="false">
+      <attribute thickness="2" thicknessunit="logical" linestyle="dashed" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_83" name="576fcd23-42da-4b4e-9915-5591fa818d8f_TwistZMultiCoreIndicator_GraphicsStyle_2_2_2" modified="2284" baseid="_83" excludefromapplystyle="false">
+      <attribute thickness="2" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_84" name="13f6c584-ce48-4c8a-b5b2-0a01d1637dd3_InlineJackConnectorBackShellPin_GraphicsStyle_2_2_2" modified="2284" baseid="_84" excludefromapplystyle="false">
+      <attribute thickness="1" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_85" name="1bb5e5ee-821c-4b63-9433-8183d1c85e50_InlineInterconnectJackConnectorPin_GraphicsStyle_2_2_2" modified="2284" baseid="_85" excludefromapplystyle="false">
+      <attribute thickness="inherit" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_86" name="af9bd611-f7fb-40bb-90ad-cd925a47b781_NetConductor_GraphicsStyle_2_2_2" modified="2284" baseid="_86" excludefromapplystyle="false">
+      <attribute thickness="2" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_87" name="be0b891b-9a11-43b6-afe1-eadb43afdca2_OvalMultiCoreIndicator_GraphicsStyle_2_2_2" modified="2284" baseid="_87" excludefromapplystyle="false">
+      <attribute thickness="2" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_88" name="UPGD_2013_1PRE_0_Default_BlockDeviceGraphicsStyle_1_2" modified="1729" baseid="_88" excludefromapplystyle="false">
+      <attribute thickness="2" thicknessunit="logical" linestyle="inherit" fillpattern="solid" opaque="false">
+        <color value="foreground"/>
+        <fillforegroundcolor value="#fce3e3"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_89" name="e0836288-6a01-4fc2-b753-180b42906988_InlinePlugConnector_GraphicsStyle_2_2_2" modified="2284" baseid="_89" excludefromapplystyle="false">
+      <attribute thickness="2" thicknessunit="logical" linestyle="solid" fillpattern="solid" opaque="false">
+        <color value="black"/>
+        <fillforegroundcolor value="#ccccff"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_90" name="c223bf11-2a5a-493b-aa08-6721415c4f43_CoaxMultiCoreIndicator_GraphicsStyle_2_2_2" modified="2284" baseid="_90" excludefromapplystyle="false">
+      <attribute thickness="2" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_91" name="f9501ba4-5d31-4c6f-9f9b-c528ef58115c_InterconnectDevice_GraphicsStyle_2_2_2" modified="2284" baseid="_91" excludefromapplystyle="false">
+      <attribute thickness="2" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_92" name="421b917d-22d7-44e7-85c0-aeac2c90fa1f_InlineJackConnectorPin_GraphicsStyle_2_2_2" modified="2284" baseid="_92" excludefromapplystyle="false">
+      <attribute thickness="1" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_93" name="932d0351-7b6d-4b8f-b17c-8a127c4c433f_InterconnectConnectorPin_GraphicsStyle_2_2_2" modified="2284" baseid="_93" excludefromapplystyle="false">
+      <attribute thickness="inherit" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_94" name="7fba9aa3-5961-4af8-a33f-80e985266bd6_InlinePlugConnectorBackShellPin_GraphicsStyle_2_2_2" modified="2284" baseid="_94" excludefromapplystyle="false">
+      <attribute thickness="1" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_95" name="8e6ed6b7-99d5-45e3-8b11-850d40451ecc_DeviceSideJackConnector_GraphicsStyle_2_2_2" modified="2284" baseid="_95" excludefromapplystyle="false">
+      <attribute thickness="2" thicknessunit="logical" linestyle="solid" fillpattern="none" opaque="false"/>
+    </graphicsstyle>
+    <graphicsstyle id="_96" name="9dfcfa3c-0126-4ccb-8028-059f5c90a7f4_InlineInterconnectPlugConnectorPin_GraphicsStyle_2_2_2" modified="2284" baseid="_96" excludefromapplystyle="false">
+      <attribute thickness="inherit" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_97" name="c9997ce4-de93-4928-b7d1-46f2b8977a4a_InterconnectConductor_GraphicsStyle_2_2_2" modified="2284" baseid="_97" excludefromapplystyle="false">
+      <attribute thickness="3" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_98" name="cb445c56-e5a3-4b26-8ad6-fc19d9713fd0_DevicePin_GraphicsStyle_2_2_2" modified="2284" baseid="_98" excludefromapplystyle="false">
+      <attribute thickness="1" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_99" name="41f23642-743e-4538-9a51-df2fdf62956a_JackConnectorBackShellPin_GraphicsStyle_2_2_2" modified="2284" baseid="_99" excludefromapplystyle="false">
+      <attribute thickness="1" thicknessunit="logical" linestyle="solid" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <graphicsstyle id="_100" name="def8ec9d-ce9d-4ff2-8edc-8d3922459cc8_SymbolGroundDevice_GraphicsStyle_2_2_2" modified="2284" baseid="_100" excludefromapplystyle="false">
+      <attribute thickness="inherit" linestyle="inherit" fillpattern="inherit" opaque="false">
+        <fillcolor value="#ffffff"/>
+        <fillforegroundcolor value="#000000"/>
+      </attribute>
+    </graphicsstyle>
+    <shapestyle id="_101" name="UID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__Splice_ShapeStyle_2_2_2" modified="2272" baseid="_101" type="splice">
+      <parameters>
+        <parameter type="center">
+          <glyph type="spliceMarker" name="circle"/>
+        </parameter>
+      </parameters>
+    </shapestyle>
+    <shapestyle id="_102" name="UPGD_2013_1PRE_0_Default_BlockDeviceShapeStyle_1_2" modified="1729" baseid="_102" type="blockdevice">
+      <parameters>
+        <parameter type="border" name="1.0"/>
+        <parameter type="top">
+          <glyph type="corner-TL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-TR" name="square"/>
+        </parameter>
+        <parameter type="bottom">
+          <glyph type="corner-BL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-BR" name="square"/>
+        </parameter>
+        <parameter type="bottom-broken">
+          <glyph type="corner-BL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="decoration" name="hbroken-small"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-BR" name="square"/>
+        </parameter>
+        <parameter type="pin">
+          <glyph type="decoration" name="vline"/>
+        </parameter>
+        <parameter type="pin-TL">
+          <glyph type="corner-TL" name="square"/>
+        </parameter>
+        <parameter type="pin-TR">
+          <glyph type="corner-TR" name="square"/>
+        </parameter>
+        <parameter type="pin-BL">
+          <glyph type="corner-BL" name="square"/>
+        </parameter>
+        <parameter type="pin-BR">
+          <glyph type="corner-BR" name="square"/>
+        </parameter>
+        <parameter type="nopin">
+          <glyph type="decoration" name="vline"/>
+        </parameter>
+        <parameter type="nopin-TL">
+          <glyph type="corner-TL" name="square"/>
+        </parameter>
+        <parameter type="nopin-TR">
+          <glyph type="corner-TR" name="square"/>
+        </parameter>
+        <parameter type="nopin-BL">
+          <glyph type="corner-BL" name="square"/>
+        </parameter>
+        <parameter type="nopin-BR">
+          <glyph type="corner-BR" name="square"/>
+        </parameter>
+      </parameters>
+    </shapestyle>
+    <shapestyle id="_103" name="UID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__Device_ShapeStyle_2_2_2" modified="2272" baseid="_103" type="device">
+      <parameters>
+        <parameter type="border" name="1.0"/>
+        <parameter type="top">
+          <glyph type="corner-TL" name="rounded"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-TR" name="rounded"/>
+        </parameter>
+        <parameter type="bottom">
+          <glyph type="corner-BL" name="rounded"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-BR" name="rounded"/>
+        </parameter>
+        <parameter type="bottom-broken">
+          <glyph type="corner-BL" name="diagonal"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="decoration" name="hbroken-small"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-BR" name="diagonal"/>
+        </parameter>
+        <parameter type="contact" name="male">
+          <glyph type="contact" name="male"/>
+        </parameter>
+        <parameter type="contact" name="male-coax">
+          <glyph type="contact" name="male-coax"/>
+        </parameter>
+        <parameter type="contact" name="female">
+          <glyph type="contact" name="female"/>
+        </parameter>
+        <parameter type="contact" name="female-coax">
+          <glyph type="contact" name="female-coax"/>
+        </parameter>
+        <parameter type="pin">
+          <glyph type="decoration" name="vline"/>
+        </parameter>
+        <parameter type="pin-TL">
+          <glyph type="corner-TL" name="square"/>
+        </parameter>
+        <parameter type="pin-TR">
+          <glyph type="corner-TR" name="square"/>
+        </parameter>
+        <parameter type="pin-BL">
+          <glyph type="corner-BL" name="square"/>
+        </parameter>
+        <parameter type="pin-BR">
+          <glyph type="corner-BR" name="square"/>
+        </parameter>
+        <parameter type="nopin">
+          <glyph type="decoration" name="vline"/>
+        </parameter>
+        <parameter type="nopin-TL">
+          <glyph type="corner-TL" name="square"/>
+        </parameter>
+        <parameter type="nopin-TR">
+          <glyph type="corner-TR" name="square"/>
+        </parameter>
+        <parameter type="nopin-BL">
+          <glyph type="corner-BL" name="square"/>
+        </parameter>
+        <parameter type="nopin-BR">
+          <glyph type="corner-BR" name="square"/>
+        </parameter>
+      </parameters>
+    </shapestyle>
+    <shapestyle id="_104" name="UID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__InterconnectDevice_ShapeStyle_2_2_2" modified="2272" baseid="_104" type="device">
+      <parameters>
+        <parameter type="border" name="1.0"/>
+        <parameter type="top">
+          <glyph type="corner-TL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-TR" name="square"/>
+        </parameter>
+        <parameter type="bottom">
+          <glyph type="corner-BL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-BR" name="square"/>
+        </parameter>
+        <parameter type="bottom-broken">
+          <glyph type="corner-BL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="decoration" name="hbroken-small"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-BR" name="square"/>
+        </parameter>
+        <parameter type="contact" name="male">
+          <glyph type="contact" name="male"/>
+        </parameter>
+        <parameter type="contact" name="male-coax">
+          <glyph type="contact" name="male-coax"/>
+        </parameter>
+        <parameter type="contact" name="female">
+          <glyph type="contact" name="female"/>
+        </parameter>
+        <parameter type="contact" name="female-coax">
+          <glyph type="contact" name="female-coax"/>
+        </parameter>
+        <parameter type="pin">
+          <glyph type="decoration" name="vline"/>
+        </parameter>
+        <parameter type="pin-TL">
+          <glyph type="corner-TL" name="square"/>
+        </parameter>
+        <parameter type="pin-TR">
+          <glyph type="corner-TR" name="square"/>
+        </parameter>
+        <parameter type="pin-BL">
+          <glyph type="corner-BL" name="square"/>
+        </parameter>
+        <parameter type="pin-BR">
+          <glyph type="corner-BR" name="square"/>
+        </parameter>
+        <parameter type="nopin">
+          <glyph type="decoration" name="vline"/>
+        </parameter>
+        <parameter type="nopin-TL">
+          <glyph type="corner-TL" name="square"/>
+        </parameter>
+        <parameter type="nopin-TR">
+          <glyph type="corner-TR" name="square"/>
+        </parameter>
+        <parameter type="nopin-BL">
+          <glyph type="corner-BL" name="square"/>
+        </parameter>
+        <parameter type="nopin-BR">
+          <glyph type="corner-BR" name="square"/>
+        </parameter>
+      </parameters>
+    </shapestyle>
+    <shapestyle id="_105" name="UID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__InlineJackConnector_ShapeStyle_2_2_2" modified="2272" baseid="_105" type="connector">
+      <parameters>
+        <parameter type="top">
+          <glyph type="corner-TL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-TR" name="square"/>
+        </parameter>
+        <parameter type="bottom">
+          <glyph type="corner-BL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-BR" name="square"/>
+        </parameter>
+        <parameter type="bottom-broken">
+          <glyph type="corner-BL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="decoration" name="hbroken-small"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-BR" name="square"/>
+        </parameter>
+        <parameter type="contact" name="male">
+          <glyph type="contact" name="male"/>
+        </parameter>
+        <parameter type="contact" name="male-coax">
+          <glyph type="contact" name="male-coax"/>
+        </parameter>
+        <parameter type="contact" name="female">
+          <glyph type="contact" name="female"/>
+        </parameter>
+        <parameter type="contact" name="female-coax">
+          <glyph type="contact" name="female-coax"/>
+        </parameter>
+        <parameter type="pin">
+          <glyph type="decoration" name="vline"/>
+          <glyph type="decoration" name="blank"/>
+          <glyph type="decoration" name="vline"/>
+        </parameter>
+        <parameter type="nopin">
+          <glyph type="decoration" name="vline"/>
+          <glyph type="decoration" name="blank"/>
+          <glyph type="decoration" name="vline"/>
+        </parameter>
+      </parameters>
+    </shapestyle>
+    <shapestyle id="_106" name="UID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__InterconnectConnector_ShapeStyle_2_2_2" modified="2272" baseid="_106" type="connector">
+      <parameters>
+        <parameter type="top">
+          <glyph type="corner-TL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-TR" name="rounded"/>
+        </parameter>
+        <parameter type="bottom">
+          <glyph type="corner-BL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-BR" name="rounded"/>
+        </parameter>
+        <parameter type="bottom-broken">
+          <glyph type="corner-BL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="decoration" name="hbroken-small"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-BR" name="square"/>
+        </parameter>
+        <parameter type="contact" name="male">
+          <glyph type="contact" name="male"/>
+        </parameter>
+        <parameter type="contact" name="male-coax">
+          <glyph type="contact" name="male-coax"/>
+        </parameter>
+        <parameter type="contact" name="female">
+          <glyph type="contact" name="female"/>
+        </parameter>
+        <parameter type="contact" name="female-coax">
+          <glyph type="contact" name="female-coax"/>
+        </parameter>
+        <parameter type="pin">
+          <glyph type="decoration" name="vline"/>
+          <glyph type="decoration" name="blank"/>
+          <glyph type="decoration" name="vline"/>
+        </parameter>
+        <parameter type="nopin">
+          <glyph type="decoration" name="vline"/>
+          <glyph type="decoration" name="blank"/>
+          <glyph type="decoration" name="vline"/>
+        </parameter>
+      </parameters>
+    </shapestyle>
+    <shapestyle id="_107" name="UID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__PlugConnector_ShapeStyle_2_2_2" modified="2272" baseid="_107" type="connector">
+      <parameters>
+        <parameter type="top">
+          <glyph type="corner-TL" name="diagonal"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-TR" name="rounded"/>
+        </parameter>
+        <parameter type="bottom">
+          <glyph type="corner-BL" name="diagonal"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-BR" name="rounded"/>
+        </parameter>
+        <parameter type="bottom-broken">
+          <glyph type="corner-BL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="decoration" name="hbroken-small"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-BR" name="square"/>
+        </parameter>
+        <parameter type="contact" name="male">
+          <glyph type="contact" name="male"/>
+        </parameter>
+        <parameter type="contact" name="male-coax">
+          <glyph type="contact" name="male-coax"/>
+        </parameter>
+        <parameter type="contact" name="female">
+          <glyph type="contact" name="female"/>
+        </parameter>
+        <parameter type="contact" name="female-coax">
+          <glyph type="contact" name="female-coax"/>
+        </parameter>
+        <parameter type="pin">
+          <glyph type="decoration" name="vline"/>
+          <glyph type="decoration" name="blank"/>
+          <glyph type="decoration" name="vline"/>
+        </parameter>
+        <parameter type="nopin">
+          <glyph type="decoration" name="vline"/>
+          <glyph type="decoration" name="blank"/>
+          <glyph type="decoration" name="vline"/>
+        </parameter>
+      </parameters>
+    </shapestyle>
+    <shapestyle id="_108" name="UID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__InlineInterconnectJackConnector_ShapeStyle_2_2_2" modified="2272" baseid="_108" type="connector">
+      <parameters>
+        <parameter type="top">
+          <glyph type="corner-TL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-TR" name="square"/>
+        </parameter>
+        <parameter type="bottom">
+          <glyph type="corner-BL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-BR" name="square"/>
+        </parameter>
+        <parameter type="bottom-broken">
+          <glyph type="corner-BL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="decoration" name="hbroken-small"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-BR" name="square"/>
+        </parameter>
+        <parameter type="contact" name="male">
+          <glyph type="contact" name="male"/>
+        </parameter>
+        <parameter type="contact" name="male-coax">
+          <glyph type="contact" name="male-coax"/>
+        </parameter>
+        <parameter type="contact" name="female">
+          <glyph type="contact" name="female"/>
+        </parameter>
+        <parameter type="contact" name="female-coax">
+          <glyph type="contact" name="female-coax"/>
+        </parameter>
+        <parameter type="pin">
+          <glyph type="decoration" name="vline"/>
+          <glyph type="decoration" name="blank"/>
+          <glyph type="decoration" name="vline"/>
+        </parameter>
+        <parameter type="nopin">
+          <glyph type="decoration" name="vline"/>
+          <glyph type="decoration" name="blank"/>
+          <glyph type="decoration" name="vline"/>
+        </parameter>
+      </parameters>
+    </shapestyle>
+    <shapestyle id="_109" name="UID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__JackConnector_ShapeStyle_2_2_2" modified="2272" baseid="_109" type="connector">
+      <parameters>
+        <parameter type="top">
+          <glyph type="corner-TL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-TR" name="square"/>
+        </parameter>
+        <parameter type="bottom">
+          <glyph type="corner-BL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-BR" name="square"/>
+        </parameter>
+        <parameter type="bottom-broken">
+          <glyph type="corner-BL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="decoration" name="hbroken-small"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-BR" name="square"/>
+        </parameter>
+        <parameter type="contact" name="male">
+          <glyph type="contact" name="male"/>
+        </parameter>
+        <parameter type="contact" name="male-coax">
+          <glyph type="contact" name="male-coax"/>
+        </parameter>
+        <parameter type="contact" name="female">
+          <glyph type="contact" name="female"/>
+        </parameter>
+        <parameter type="contact" name="female-coax">
+          <glyph type="contact" name="female-coax"/>
+        </parameter>
+        <parameter type="pin">
+          <glyph type="decoration" name="vline"/>
+          <glyph type="decoration" name="blank"/>
+          <glyph type="decoration" name="vline"/>
+        </parameter>
+        <parameter type="nopin">
+          <glyph type="decoration" name="vline"/>
+          <glyph type="decoration" name="blank"/>
+          <glyph type="decoration" name="vline"/>
+        </parameter>
+      </parameters>
+    </shapestyle>
+    <shapestyle id="_110" name="UID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__InlinePlugConnector_ShapeStyle_2_2_2" modified="2272" baseid="_110" type="connector">
+      <parameters>
+        <parameter type="top">
+          <glyph type="corner-TL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-TR" name="rounded"/>
+        </parameter>
+        <parameter type="bottom">
+          <glyph type="corner-BL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-BR" name="rounded"/>
+        </parameter>
+        <parameter type="bottom-broken">
+          <glyph type="corner-BL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="decoration" name="hbroken-small"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-BR" name="square"/>
+        </parameter>
+        <parameter type="contact" name="male">
+          <glyph type="contact" name="male"/>
+        </parameter>
+        <parameter type="contact" name="male-coax">
+          <glyph type="contact" name="male-coax"/>
+        </parameter>
+        <parameter type="contact" name="female">
+          <glyph type="contact" name="female"/>
+        </parameter>
+        <parameter type="contact" name="female-coax">
+          <glyph type="contact" name="female-coax"/>
+        </parameter>
+        <parameter type="pin">
+          <glyph type="decoration" name="vline"/>
+          <glyph type="decoration" name="blank"/>
+          <glyph type="decoration" name="vline"/>
+        </parameter>
+        <parameter type="nopin">
+          <glyph type="decoration" name="vline"/>
+          <glyph type="decoration" name="blank"/>
+          <glyph type="decoration" name="vline"/>
+        </parameter>
+      </parameters>
+    </shapestyle>
+    <shapestyle id="_111" name="UID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__InlineInterconnectPlugConnector_ShapeStyle_2_2_2" modified="2272" baseid="_111" type="connector">
+      <parameters>
+        <parameter type="top">
+          <glyph type="corner-TL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-TR" name="rounded"/>
+        </parameter>
+        <parameter type="bottom">
+          <glyph type="corner-BL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-BR" name="rounded"/>
+        </parameter>
+        <parameter type="bottom-broken">
+          <glyph type="corner-BL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="decoration" name="hbroken-small"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-BR" name="square"/>
+        </parameter>
+        <parameter type="contact" name="male">
+          <glyph type="contact" name="male"/>
+        </parameter>
+        <parameter type="contact" name="male-coax">
+          <glyph type="contact" name="male-coax"/>
+        </parameter>
+        <parameter type="contact" name="female">
+          <glyph type="contact" name="female"/>
+        </parameter>
+        <parameter type="contact" name="female-coax">
+          <glyph type="contact" name="female-coax"/>
+        </parameter>
+        <parameter type="pin">
+          <glyph type="decoration" name="vline"/>
+          <glyph type="decoration" name="blank"/>
+          <glyph type="decoration" name="vline"/>
+        </parameter>
+        <parameter type="nopin">
+          <glyph type="decoration" name="vline"/>
+          <glyph type="decoration" name="blank"/>
+          <glyph type="decoration" name="vline"/>
+        </parameter>
+      </parameters>
+    </shapestyle>
+    <shapestyle id="_112" name="UID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__DeviceSideJackConnector_ShapeStyle_2_2_2" modified="2272" baseid="_112" type="connector">
+      <parameters>
+        <parameter type="top">
+          <glyph type="corner-TL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-TR" name="square"/>
+        </parameter>
+        <parameter type="bottom">
+          <glyph type="corner-BL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-BR" name="square"/>
+        </parameter>
+        <parameter type="bottom-broken">
+          <glyph type="corner-BL" name="square"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="decoration" name="hbroken-small"/>
+          <glyph type="decoration" name="hline"/>
+          <glyph type="corner-BR" name="square"/>
+        </parameter>
+        <parameter type="contact" name="male">
+          <glyph type="contact" name="male"/>
+        </parameter>
+        <parameter type="contact" name="male-coax">
+          <glyph type="contact" name="male-coax"/>
+        </parameter>
+        <parameter type="contact" name="female">
+          <glyph type="contact" name="female"/>
+        </parameter>
+        <parameter type="contact" name="female-coax">
+          <glyph type="contact" name="female-coax"/>
+        </parameter>
+        <parameter type="pin">
+          <glyph type="decoration" name="vline"/>
+          <glyph type="decoration" name="blank"/>
+          <glyph type="decoration" name="vline"/>
+        </parameter>
+        <parameter type="nopin">
+          <glyph type="decoration" name="vline"/>
+          <glyph type="decoration" name="blank"/>
+          <glyph type="decoration" name="vline"/>
+        </parameter>
+      </parameters>
+    </shapestyle>
+    <logicdesignshapestyle id="_113" name="8278fb7e-c5de-465b-96c5-4576cf61141e_logicDesign_ShapeStyle_1_3_2" modified="2267" baseid="_113" type="logicaldesign">
+      <parameters>
+        <parameter type="ShowDuplicatesOnCrossRef" name="true"/>
+        <parameter type="OpaqueBoxMarginLeftRight" name="0"/>
+        <parameter type="OpaqueBoxMarginTopBottom" name="0"/>
+        <parameter type="OpaqueBoxType" name="FONT"/>
+        <parameter type="RoundingMethod" name="None"/>
+        <parameter type="DecimalPlaces" name="2"/>
+        <parameter type="DecimalDelimiter" name="FromLocale"/>
+        <parameter type="BalloonLineThickness" name="1"/>
+        <parameter type="RotationAngleRoundingValue" name="5"/>
+        <parameter type="NumOfRevisions" name="5"/>
+        <parameter type="EmptyDatumValue" name="-"/>
+        <parameter type="ConfigChar" name="X"/>
+      </parameters>
+      <librarysets>
+        <libraryset name="Default Library Set" value="Quick Start - Drafting">
+          <symbollibrary name="Quick Start - Drafting"/>
+        </libraryset>
+      </librarysets>
+    </logicdesignshapestyle>
+    <shapestyle id="_114" name="UID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__CoaxMultiCoreIndicator_ShapeStyle_2_2_2" modified="2272" baseid="_114" type="multicore">
+      <parameters>
+        <parameter type="top">
+          <glyph type="corner-TL" name="rounded"/>
+          <glyph type="corner-TR" name="rounded"/>
+        </parameter>
+        <parameter type="center">
+          <glyph type="decoration" name="vline"/>
+          <glyph type="decoration" name="vline"/>
+        </parameter>
+        <parameter type="bottom">
+          <glyph type="coax-BL" name="rounded"/>
+          <glyph type="coax-BR" name="rounded"/>
+        </parameter>
+        <parameter type="grouping" name="coaxial"/>
+        <parameter type="shield"/>
+      </parameters>
+    </shapestyle>
+    <shapestyle id="_115" name="UID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__TwistZMultiCoreIndicator_ShapeStyle_2_2_2" modified="2272" baseid="_115" type="multicore">
+      <parameters>
+        <parameter type="top">
+          <glyph type="Z-style" name="top"/>
+        </parameter>
+        <parameter type="center">
+          <glyph type="Z-style" name="middle"/>
+        </parameter>
+        <parameter type="bottom">
+          <glyph type="Z-style" name="bottom"/>
+        </parameter>
+        <parameter type="grouping" name="twisted"/>
+      </parameters>
+    </shapestyle>
+    <shapestyle id="_116" name="UID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__TwistCommercialMultiCoreIndicator_ShapeStyle_2_2_2" modified="2272" baseid="_116" type="multicore">
+      <parameters>
+        <parameter type="top">
+          <glyph type="corner-TL" name="rounded"/>
+          <glyph type="corner-TR" name="rounded"/>
+        </parameter>
+        <parameter type="center">
+          <glyph type="decoration" name="x"/>
+        </parameter>
+        <parameter type="bottom">
+          <glyph type="corner-BL" name="rounded"/>
+          <glyph type="corner-BR" name="rounded"/>
+        </parameter>
+        <parameter type="grouping" name="twisted"/>
+        <parameter type="repeating" name="true"/>
+      </parameters>
+    </shapestyle>
+    <shapestyle id="_117" name="UID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__OvalMultiCoreIndicator_ShapeStyle_2_2_2" modified="2272" baseid="_117" type="multicore">
+      <parameters>
+        <parameter type="top">
+          <glyph type="corner-TL" name="rounded"/>
+          <glyph type="corner-TR" name="rounded"/>
+        </parameter>
+        <parameter type="center">
+          <glyph type="decoration" name="vline"/>
+          <glyph type="decoration" name="vline"/>
+        </parameter>
+        <parameter type="bottom">
+          <glyph type="corner-BL" name="rounded"/>
+          <glyph type="corner-BR" name="rounded"/>
+        </parameter>
+        <parameter type="shield"/>
+      </parameters>
+    </shapestyle>
+    <shapestyle id="_118" name="UID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__DashedOvalMultiCoreIndicator_ShapeStyle_2_2_2" modified="2272" baseid="_118" type="multicore">
+      <parameters>
+        <parameter type="top">
+          <glyph type="corner-TL" name="dashed-rounded"/>
+          <glyph type="corner-TR" name="dashed-rounded"/>
+        </parameter>
+        <parameter type="center">
+          <glyph type="decoration" name="dashed-vline"/>
+          <glyph type="decoration" name="dashed-vline"/>
+        </parameter>
+        <parameter type="bottom">
+          <glyph type="corner-BL" name="dashed-rounded"/>
+          <glyph type="corner-BR" name="dashed-rounded"/>
+        </parameter>
+        <parameter type="overbraid"/>
+      </parameters>
+    </shapestyle>
+    <shapestyle id="_119" name="UID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__TwistMilitaryMultiCoreIndicator_ShapeStyle_2_2_2" modified="2272" baseid="_119" type="multicore">
+      <parameters>
+        <parameter type="top">
+          <glyph type="decoration" name="crossing-arrow-top"/>
+        </parameter>
+        <parameter type="center">
+          <glyph type="decoration" name="crossing-arrow"/>
+        </parameter>
+        <parameter type="grouping" name="twisted"/>
+        <parameter type="repeating" name="true"/>
+      </parameters>
+    </shapestyle>
+    <shapestyle id="_120" name="UID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__NetConductor_ShapeStyle_2_2_2" modified="2272" baseid="_120" type="conductor">
+      <parameters>
+        <parameter type="startStyle">
+          <glyph type="endLineStyle"/>
+        </parameter>
+        <parameter type="endStyle">
+          <glyph type="endLineStyle"/>
+        </parameter>
+      </parameters>
+    </shapestyle>
+    <shapestyle id="_121" name="UID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__InterconnectConductor_ShapeStyle_2_2_2" modified="2272" baseid="_121" type="conductor">
+      <parameters>
+        <parameter type="startStyle">
+          <glyph type="endLineStyle"/>
+        </parameter>
+        <parameter type="endStyle">
+          <glyph type="endLineStyle"/>
+        </parameter>
+      </parameters>
+    </shapestyle>
+    <shapestyle id="_122" name="UID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__WireConductor_ShapeStyle_2_2_2" modified="2272" baseid="_122" type="conductor">
+      <parameters>
+        <parameter type="startStyle">
+          <glyph type="endLineStyle"/>
+        </parameter>
+        <parameter type="endStyle">
+          <glyph type="endLineStyle"/>
+        </parameter>
+      </parameters>
+    </shapestyle>
+    <shapestyle id="_123" name="59c5fb40-3645-48eb-bf16-af641aed5023_highway_ShapeStyle_1_2_2" modified="2262" baseid="_123" type="conductor">
+      <parameters>
+        <parameter type="startStyle">
+          <glyph type="endLineStyle"/>
+        </parameter>
+        <parameter type="endStyle">
+          <glyph type="endLineStyle"/>
+        </parameter>
+      </parameters>
+    </shapestyle>
+    <shapestyle id="_124" name="UID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__ShieldConductor_ShapeStyle_2_2_2" modified="2272" baseid="_124" type="conductor">
+      <parameters>
+        <parameter type="startStyle">
+          <glyph type="endLineStyle"/>
+        </parameter>
+        <parameter type="endStyle">
+          <glyph type="endLineStyle"/>
+        </parameter>
+      </parameters>
+    </shapestyle>
+    <conditionalshapestyle id="_125" name="CSSUID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__DashedOvalMultiCoreIndicator_ShapeStyle_2_2_2" modified="2266" baseid="_125" isvisible="true" excludefromapplystyle="false">
+      <queryshapestyle queryname="" shapestyleref="_118"/>
+    </conditionalshapestyle>
+    <conditionalshapestyle id="_126" name="CSSUID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__TwistZMultiCoreIndicator_ShapeStyle_2_2_2" modified="2266" baseid="_126" isvisible="true" excludefromapplystyle="false">
+      <queryshapestyle queryname="" shapestyleref="_115"/>
+    </conditionalshapestyle>
+    <conditionalshapestyle id="_127" name="CSSUID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__InterconnectConductor_ShapeStyle_2_2_2" modified="2266" baseid="_127" isvisible="true" excludefromapplystyle="false">
+      <queryshapestyle queryname="" shapestyleref="_121"/>
+    </conditionalshapestyle>
+    <conditionalshapestyle id="_128" name="CSSUPGD_2013_1PRE_0_Default_BlockDeviceShapeStyle_1_2" modified="1728" baseid="_128" isvisible="true" excludefromapplystyle="false">
+      <queryshapestyle queryname="" shapestyleref="_102"/>
+    </conditionalshapestyle>
+    <conditionalshapestyle id="_129" name="CSSUID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__InterconnectConnector_ShapeStyle_2_2_2" modified="2266" baseid="_129" isvisible="true" excludefromapplystyle="false">
+      <queryshapestyle queryname="" shapestyleref="_106"/>
+    </conditionalshapestyle>
+    <conditionalshapestyle id="_130" name="CSSUID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__TwistCommercialMultiCoreIndicator_ShapeStyle_2_2_2" modified="2266" baseid="_130" isvisible="true" excludefromapplystyle="false">
+      <queryshapestyle queryname="" shapestyleref="_116"/>
+    </conditionalshapestyle>
+    <conditionalshapestyle id="_131" name="CSSUID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__TwistMilitaryMultiCoreIndicator_ShapeStyle_2_2_2" modified="2266" baseid="_131" isvisible="true" excludefromapplystyle="false">
+      <queryshapestyle queryname="" shapestyleref="_119"/>
+    </conditionalshapestyle>
+    <conditionalshapestyle id="_132" name="CSSUID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__NetConductor_ShapeStyle_2_2_2" modified="2266" baseid="_132" isvisible="true" excludefromapplystyle="false">
+      <queryshapestyle queryname="" shapestyleref="_120"/>
+    </conditionalshapestyle>
+    <conditionalshapestyle id="_133" name="CSSUID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__JackConnector_ShapeStyle_2_2_2" modified="2266" baseid="_133" isvisible="true" excludefromapplystyle="false">
+      <queryshapestyle queryname="" shapestyleref="_109"/>
+    </conditionalshapestyle>
+    <conditionalshapestyle id="_134" name="CSSUID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__InlineJackConnector_ShapeStyle_2_2_2" modified="2266" baseid="_134" isvisible="true" excludefromapplystyle="false">
+      <queryshapestyle queryname="" shapestyleref="_105"/>
+    </conditionalshapestyle>
+    <conditionalshapestyle id="_135" name="CSSUID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__CoaxMultiCoreIndicator_ShapeStyle_2_2_2" modified="2266" baseid="_135" isvisible="true" excludefromapplystyle="false">
+      <queryshapestyle queryname="" shapestyleref="_114"/>
+    </conditionalshapestyle>
+    <conditionalshapestyle id="_136" name="CSSUID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__WireConductor_ShapeStyle_2_2_2" modified="2266" baseid="_136" isvisible="true" excludefromapplystyle="false">
+      <queryshapestyle queryname="" shapestyleref="_122"/>
+    </conditionalshapestyle>
+    <conditionalshapestyle id="_137" name="CSSUID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__DeviceSideJackConnector_ShapeStyle_2_2_2" modified="2266" baseid="_137" isvisible="true" excludefromapplystyle="false">
+      <queryshapestyle queryname="" shapestyleref="_112"/>
+    </conditionalshapestyle>
+    <conditionalshapestyle id="_138" name="CSSUID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__PlugConnector_ShapeStyle_2_2_2" modified="2266" baseid="_138" isvisible="true" excludefromapplystyle="false">
+      <queryshapestyle queryname="" shapestyleref="_107"/>
+    </conditionalshapestyle>
+    <conditionalshapestyle id="_139" name="CSSUID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__InlinePlugConnector_ShapeStyle_2_2_2" modified="2266" baseid="_139" isvisible="true" excludefromapplystyle="false">
+      <queryshapestyle queryname="" shapestyleref="_110"/>
+    </conditionalshapestyle>
+    <conditionalshapestyle id="_140" name="CSSUID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__OvalMultiCoreIndicator_ShapeStyle_2_2_2" modified="2266" baseid="_140" isvisible="true" excludefromapplystyle="false">
+      <queryshapestyle queryname="" shapestyleref="_117"/>
+    </conditionalshapestyle>
+    <conditionalshapestyle id="_141" name="CSSUID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__InlineInterconnectPlugConnector_ShapeStyle_2_2_2" modified="2266" baseid="_141" isvisible="true" excludefromapplystyle="false">
+      <queryshapestyle queryname="" shapestyleref="_111"/>
+    </conditionalshapestyle>
+    <conditionalshapestyle id="_142" name="CSSUID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__InterconnectDevice_ShapeStyle_2_2_2" modified="2266" baseid="_142" isvisible="true" excludefromapplystyle="false">
+      <queryshapestyle queryname="" shapestyleref="_104"/>
+    </conditionalshapestyle>
+    <conditionalshapestyle id="_143" name="CSSUID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__Splice_ShapeStyle_2_2_2" modified="2266" baseid="_143" isvisible="true" excludefromapplystyle="false">
+      <queryshapestyle queryname="" shapestyleref="_101"/>
+    </conditionalshapestyle>
+    <conditionalshapestyle id="_144" name="CSSUID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__ShieldConductor_ShapeStyle_2_2_2" modified="2266" baseid="_144" isvisible="true" excludefromapplystyle="false">
+      <queryshapestyle queryname="" shapestyleref="_124"/>
+    </conditionalshapestyle>
+    <conditionalshapestyle id="_145" name="CSS59c5fb40-3645-48eb-bf16-af641aed5023_highway_ShapeStyle_1_2_2" modified="2261" baseid="_145" isvisible="true" excludefromapplystyle="false">
+      <queryshapestyle queryname="" shapestyleref="_123"/>
+    </conditionalshapestyle>
+    <conditionalshapestyle id="_146" name="CSSUID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__InlineInterconnectJackConnector_ShapeStyle_2_2_2" modified="2266" baseid="_146" isvisible="true" excludefromapplystyle="false">
+      <queryshapestyle queryname="" shapestyleref="_108"/>
+    </conditionalshapestyle>
+    <conditionalshapestyle id="_147" name="CSS8278fb7e-c5de-465b-96c5-4576cf61141e_logicDesign_ShapeStyle_1_3_2" modified="2266" baseid="_147" isvisible="true" excludefromapplystyle="false">
+      <queryshapestyle queryname="" shapestyleref="_113"/>
+    </conditionalshapestyle>
+    <conditionalshapestyle id="_148" name="CSSUID8d56fa-115a7fd5ff9-69e09d9a9a5b2afbe167959e473fb311__Device_ShapeStyle_2_2_2" modified="2266" baseid="_148" isvisible="true" excludefromapplystyle="false">
+      <queryshapestyle queryname="" shapestyleref="_103"/>
+    </conditionalshapestyle>
+    <decorationstyle id="_149" name="7fba9aa3-5961-4af8-a33f-80e985266bd6_InlinePlugConnectorBackShellPin_DecorationStyle_2_2_2" modified="2284" baseid="_149" type="pin">
+      <textdecoration id="_150" name="Name" baseid="_150" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="left" vjust="center" isvisible="true" isvisibilityoverridable="true" originhjust="left" originvjust="top" hoffset="0.0" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_13" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_151" name="9dfcfa3c-0126-4ccb-8028-059f5c90a7f4_InlineInterconnectPlugConnectorPin_DecorationStyle_2_2_2" modified="2284" baseid="_151" type="pin"/>
+    <decorationstyle id="_152" name="41f23642-743e-4538-9a51-df2fdf62956a_JackConnectorBackShellPin_DecorationStyle_2_2_2" modified="2284" baseid="_152" type="pin">
+      <textdecoration id="_153" name="Name" baseid="_153" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="right" vjust="center" isvisible="true" isvisibilityoverridable="true" originhjust="left" originvjust="top" hoffset="0.0" voffset="0.025" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_9" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_154" name="3f95b898-09bc-4de1-bb64-b4a4dd59defa_JackConnectorPin_DecorationStyle_2_2_2" modified="2284" baseid="_154" type="pin">
+      <textdecoration id="_155" name="Name" baseid="_155" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="right" vjust="center" isvisible="true" isvisibilityoverridable="true" originhjust="left" originvjust="top" hoffset="0.0" voffset="0.025" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_12" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_156" name="c52357a6-2131-46c8-84a7-cef9ef6e900e_SplicePin_DecorationStyle_2_2_2" modified="2284" baseid="_156" type="pin"/>
+    <decorationstyle id="_157" name="13f6c584-ce48-4c8a-b5b2-0a01d1637dd3_InlineJackConnectorBackShellPin_DecorationStyle_2_2_2" modified="2284" baseid="_157" type="pin">
+      <textdecoration id="_158" name="Name" baseid="_158" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="center" isvisible="true" isvisibilityoverridable="true" originhjust="left" originvjust="center" hoffset="0.0" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_32" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_159" name="0c8f6010-2c01-4973-8602-3da213b51208_InterconnectDevicePin_DecorationStyle_2_2_2" modified="2284" baseid="_159" type="pin">
+      <textdecoration id="_160" name="Name" baseid="_160" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="right" vjust="center" isvisible="true" isvisibilityoverridable="true" originhjust="middle" originvjust="center" hoffset="0.0" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_34" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_161" name="421b917d-22d7-44e7-85c0-aeac2c90fa1f_InlineJackConnectorPin_DecorationStyle_2_2_2" modified="2284" baseid="_161" type="pin">
+      <textdecoration id="_162" name="Name" baseid="_162" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="right" vjust="center" isvisible="true" isvisibilityoverridable="true" originhjust="middle" originvjust="center" hoffset="0.0" voffset="0.015" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_26" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_163" name="b95ae3ad-eec0-47d8-984e-d0faa809a3a1_PlugConnectorPin_DecorationStyle_2_2_2" modified="2284" baseid="_163" type="pin">
+      <textdecoration id="_164" name="PIN NAME" baseid="_164" type="property" decorativename="PIN NAME" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="right" vjust="center" isvisible="true" isvisibilityoverridable="false" originhjust="left" originvjust="top" hoffset="0.0" voffset="0.025" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_46" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+      <textdecoration id="_165" name="Name" baseid="_165" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="right" vjust="center" isvisible="true" isvisibilityoverridable="true" originhjust="left" originvjust="top" hoffset="0.0" voffset="0.025" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_53" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_166" name="1bb5e5ee-821c-4b63-9433-8183d1c85e50_InlineInterconnectJackConnectorPin_DecorationStyle_2_2_2" modified="2284" baseid="_166" type="pin"/>
+    <decorationstyle id="_167" name="b9fe9581-7769-4f86-b331-a93e27710951_InlinePlugConnectorPin_DecorationStyle_2_2_2" modified="2284" baseid="_167" type="pin">
+      <textdecoration id="_168" name="Name" baseid="_168" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="right" vjust="center" isvisible="true" isvisibilityoverridable="false" originhjust="middle" originvjust="center" hoffset="0.0" voffset="0.015" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_18" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_169" name="81034a1a-ad82-47fd-ac06-d4a85c72960d_PlugConnectorBackShellPin_DecorationStyle_2_2_2" modified="2284" baseid="_169" type="pin">
+      <textdecoration id="_170" name="Name" baseid="_170" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="right" vjust="center" isvisible="true" isvisibilityoverridable="true" originhjust="left" originvjust="top" hoffset="0.0" voffset="0.025" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_35" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_171" name="f63c83c2-f708-4e4e-8b48-5aa9fb74e8b6_SymbolDevicePin_DecorationStyle_2_2_2" modified="2284" baseid="_171" type="pin">
+      <textdecoration id="_172" name="Name" baseid="_172" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="left" vjust="bottom" isvisible="true" isvisibilityoverridable="false" originhjust="left" originvjust="top" hoffset="0.0" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_29" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_173" name="cb445c56-e5a3-4b26-8ad6-fc19d9713fd0_DevicePin_DecorationStyle_2_2_2" modified="2284" baseid="_173" type="pin">
+      <textdecoration id="_174" name="Name" baseid="_174" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="right" vjust="center" isvisible="true" isvisibilityoverridable="true" originhjust="left" originvjust="top" hoffset="-0.025" voffset="0.025" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_47" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_175" name="UIDb6cd19-115b19ca203-69e09d9a9a5b2afbe167959e473fb311__SymbolSplicePin_DecorationStyle_2_2_2" modified="2270" baseid="_175" type="pin"/>
+    <decorationstyle id="_176" name="4b1cefe1-5722-4d5d-a20f-ee2e238d81d4_SymbolGroundDevicePin_DecorationStyle_2_2_2" modified="2284" baseid="_176" type="pin"/>
+    <decorationstyle id="_177" name="932d0351-7b6d-4b8f-b17c-8a127c4c433f_InterconnectConnectorPin_DecorationStyle_2_2_2" modified="2284" baseid="_177" type="pin">
+      <textdecoration id="_178" name="Name" baseid="_178" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="right" vjust="center" isvisible="true" isvisibilityoverridable="true" originhjust="middle" originvjust="center" hoffset="0.0" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_43" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_179" name="def8ec9d-ce9d-4ff2-8edc-8d3922459cc8_SymbolGroundDevice_DecorationStyle_2_2_2" modified="2284" baseid="_179" type="pinlist">
+      <textdecoration id="_180" name="Name" baseid="_180" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="left" vjust="bottom" isvisible="true" isvisibilityoverridable="false" originhjust="left" originvjust="top" hoffset="0.0" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_7" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_181" name="8e2aeef1-42f9-4bc5-a248-23d8cf9c4dc0_PlugConnector_DecorationStyle_2_2_2" modified="2284" baseid="_181" type="pinlist">
+      <textdecoration id="_182" name="CONN NAME" baseid="_182" type="property" decorativename="CONN NAME" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="top" isvisible="true" isvisibilityoverridable="false" originhjust="middle" originvjust="bottom" hoffset="0.0" voffset="0.025" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_8" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+      <textdecoration id="_183" name="Name" baseid="_183" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="bottom" isvisible="true" isvisibilityoverridable="true" originhjust="middle" originvjust="top" hoffset="0.0" voffset="0.02" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_45" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_184" name="1c53665d-701f-45f0-8cb3-f59d16f9b7f8_InlineInterconnectJackConnector_DecorationStyle_2_2_2" modified="2284" baseid="_184" type="pinlist">
+      <textdecoration id="_185" name="Name" baseid="_185" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="left" vjust="top" isvisible="true" isvisibilityoverridable="true" originhjust="middle" originvjust="bottom" hoffset="0.0" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_24" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_186" name="f9501ba4-5d31-4c6f-9f9b-c528ef58115c_InterconnectDevice_DecorationStyle_2_2_2" modified="2284" baseid="_186" type="pinlist">
+      <textdecoration id="_187" name="Name" baseid="_187" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="top" isvisible="true" isvisibilityoverridable="true" originhjust="middle" originvjust="bottom" hoffset="0.0" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_48" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_188" name="e0836288-6a01-4fc2-b753-180b42906988_InlinePlugConnector_DecorationStyle_2_2_2" modified="2284" baseid="_188" type="pinlist">
+      <textdecoration id="_189" name="Name" baseid="_189" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="top" isvisible="true" isvisibilityoverridable="true" originhjust="middle" originvjust="bottom" hoffset="0.0" voffset="0.025" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_52" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_190" name="8e6ed6b7-99d5-45e3-8b11-850d40451ecc_DeviceSideJackConnector_DecorationStyle_2_2_2" modified="2284" baseid="_190" type="pinlist">
+      <textdecoration id="_191" name="Name" baseid="_191" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="top" isvisible="true" isvisibilityoverridable="true" originhjust="middle" originvjust="bottom" hoffset="0.0" voffset="0.025" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_16" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_192" name="ff33c577-ff8c-47c4-b406-7f070d5adeca_SymbolDevice_DecorationStyle_2_2_2" modified="2284" baseid="_192" type="pinlist">
+      <textdecoration id="_193" name="Name" baseid="_193" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="top" isvisible="true" isvisibilityoverridable="false" originhjust="middle" originvjust="bottom" hoffset="0.0" voffset="-0.1" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_54" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_194" name="675574a8-b0bc-4ff1-83c5-5372d8d2cd39_InterconnectConnector_DecorationStyle_2_2_2" modified="2284" baseid="_194" type="pinlist">
+      <textdecoration id="_195" name="Name" baseid="_195" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="left" vjust="top" isvisible="true" isvisibilityoverridable="true" originhjust="middle" originvjust="bottom" hoffset="0.0" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_15" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_196" name="687072c0-b35e-4dae-a2c6-f3c4051bf0ca_InlineJackConnector_DecorationStyle_2_2_2" modified="2284" baseid="_196" type="pinlist">
+      <textdecoration id="_197" name="Name" baseid="_197" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="top" isvisible="true" isvisibilityoverridable="true" originhjust="middle" originvjust="bottom" hoffset="0.0" voffset="0.025" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_41" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_198" name="70c8d9d1-c847-4829-8126-08093d124c04_JackConnector_DecorationStyle_2_2_2" modified="2284" baseid="_198" type="pinlist">
+      <textdecoration id="_199" name="Name" baseid="_199" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="right" vjust="top" isvisible="true" isvisibilityoverridable="true" originhjust="middle" originvjust="bottom" hoffset="0.0" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_25" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_200" name="be616131-4648-4161-8c76-9ce58a8556a7_InlineInterconnectPlugConnector_DecorationStyle_2_2_2" modified="2284" baseid="_200" type="pinlist">
+      <textdecoration id="_201" name="Name" baseid="_201" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="left" vjust="top" isvisible="true" isvisibilityoverridable="true" originhjust="middle" originvjust="bottom" hoffset="0.0" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_22" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_202" name="64f56e9a-a5df-4661-9afc-79272a3d6537_Device_DecorationStyle_2_2_2" modified="2284" baseid="_202" type="pinlist">
+      <compositetextdecoration id="_203" name="&quot;Zone:&quot; + Zone" baseid="_203" type="compositetext" decorativename="&quot;Zone:&quot; + Zone" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="top" isvisible="false" isvisibilityoverridable="false" originhjust="middle" originvjust="bottom" hoffset="0.0" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_19" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0">
+        <decorationpropertycomp>
+          <nametextcompentry value="Zone:"/>
+          <namepropertycompentry value="Zone"/>
+        </decorationpropertycomp>
+      </compositetextdecoration>
+      <textdecoration id="_204" name="Function" baseid="_204" type="property" decorativename="Function" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="bottom" isvisible="false" isvisibilityoverridable="false" originhjust="middle" originvjust="top" hoffset="0.0" voffset="0.02" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_28" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+      <symboldecoration id="_205" name="Chassis" baseid="_205" type="auxiliarysymbol" decorativename="Chassis" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="center" isvisible="true" isvisibilityoverridable="false" originhjust="middle" originvjust="center" hoffset="0.0" voffset="0.0" visibilityqueryexpname="Ground Device" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" defaultsymlibname="Quick Start - Drafting" defaultsymlibsetname="Default Library Set" isplacedusingorigin="false" isplacedusingdatum="false">
+        <colordata default="true"/>
+      </symboldecoration>
+      <textdecoration id="_206" name="Name" baseid="_206" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="bottom" isvisible="true" isvisibilityoverridable="true" originhjust="middle" originvjust="top" hoffset="0.0" voffset="0.02" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_49" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_207" name="_StackedPinDecorationStyleUPGD_2011_1PRE_1_Default_1_2_2" modified="2262" baseid="_207" type="stackedpin"/>
+    <decorationstyle id="_208" name="UPGD_2013_1PRE_0_Default_BlockDeviceDecorationStyle_1_2" modified="1729" baseid="_208" type="blockdevice">
+      <textdecoration id="_209" name="Name" baseid="_209" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="center" isvisible="true" isvisibilityoverridable="true" originhjust="middle" originvjust="center" hoffset="0.0" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_6" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+      <textdecoration id="_210" name="Associated Design Name" baseid="_210" type="attribute" decorativename="AssociatedDesignName" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="top" isvisible="true" isvisibilityoverridable="false" nominaloriginuid="_209" originhjust="middle" originvjust="bottom" hoffset="0.0" voffset="-0.2" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_14" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_211" name="UIDf4a436-1488f140b79-bca6c92f74070836cb1c6256cb1a48f1_Default_BlockDevicePinDecorationStyle_1_2" modified="1701" baseid="_211" type="blockdevicepin">
+      <textdecoration id="_212" name="Name" baseid="_212" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="right" vjust="center" isvisible="true" isvisibilityoverridable="true" originhjust="middle" originvjust="center" hoffset="-0.025" voffset="0.025" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_21" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_213" name="8a46021a-7314-42bd-9896-7607c7e7ab8e_Splice_DecorationStyle_2_2_2" modified="2284" baseid="_213" type="splice">
+      <textdecoration id="_214" name="Name" baseid="_214" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="center" isvisible="false" isvisibilityoverridable="true" originhjust="middle" originvjust="center" hoffset="0.35" voffset="0.2" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_17" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_215" name="UIDb6cd19-115b19ca203-69e09d9a9a5b2afbe167959e473fb311__SymbolSplice_DecorationStyle_2_2_2" modified="2270" baseid="_215" type="splice"/>
+    <decorationstyle id="_216" name="1e7457bc-9f18-4ee1-85f5-6c55fe9d4e0a_WireConductor_DecorationStyle_Vertical_2_2_2" modified="2284" baseid="_216" type="verticalsegment">
+      <textdecoration id="_217" name="WIRE TYPE" baseid="_217" type="property" decorativename="WIRE TYPE" orientation="90" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="center" isvisible="true" isvisibilityoverridable="false" originhjust="middle" originvjust="center" hoffset="0.0" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_5" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+      <textdecoration id="_218" name="Wire Length" baseid="_218" type="attribute" decorativename="WireLength" orientation="90" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="right" vjust="center" isvisible="true" isvisibilityoverridable="false" nominaloriginuid="_217" originhjust="middle" originvjust="center" hoffset="0.0" voffset="0.25" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_50" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+      <crossreferencedecoration id="_219" name="Cross Reference Text" baseid="_219" type="crossreference" decorativename="cross-reference" orientation="270" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="left" vjust="center" isvisible="true" isvisibilityoverridable="false" originhjust="right" originvjust="top" hoffset="0.0" voffset="0.2" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" fontstyleref="_40" template="{diagram.name}:{zone.column}/{zone.row}" linesperblock="0" referencesperline="1" delimiter="" sortindex="0"/>
+    </decorationstyle>
+    <decorationstyle id="_220" name="af9bd611-f7fb-40bb-90ad-cd925a47b781_NetConductor_DecorationStyle_Vertical_2_2_2" modified="2284" baseid="_220" type="verticalsegment">
+      <crossreferencedecoration id="_221" name="Cross Reference" baseid="_221" type="crossreference" decorativename="cross-reference" orientation="270" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="left" vjust="center" isvisible="true" isvisibilityoverridable="false" originhjust="right" originvjust="top" hoffset="0.0" voffset="0.1" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" fontstyleref="_4" template="{diagram.name}:{zone.column}/{zone.row}" linesperblock="0" referencesperline="0" delimiter="" sortindex="0"/>
+      <textdecoration id="_222" name="Name" baseid="_222" type="attribute" decorativename="Name" orientation="270" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="center" isvisible="true" isvisibilityoverridable="true" originhjust="middle" originvjust="center" hoffset="-0.025" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_42" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_223" name="59c5fb40-3645-48eb-bf16-af641aed5023_highway_DecorationStyle_Vertical_1_2_2" modified="2262" baseid="_223" type="verticalsegment">
+      <textdecoration id="_224" name="Name" baseid="_224" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="center" isvisible="true" isvisibilityoverridable="true" originhjust="middle" originvjust="center" hoffset="0.0" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_10" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_225" name="2867704b-0129-449e-b2b3-2bcd916435d1_ShieldConductor_DecorationStyle_Vertical_2_2_2" modified="2284" baseid="_225" type="verticalsegment">
+      <textdecoration id="_226" name="Name" baseid="_226" type="attribute" decorativename="Name" orientation="270" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="top" isvisible="true" isvisibilityoverridable="true" originhjust="middle" originvjust="center" hoffset="-0.025" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_33" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_227" name="c9997ce4-de93-4928-b7d1-46f2b8977a4a_InterconnectConductor_DecorationStyle_Vertical_2_2_2" modified="2284" baseid="_227" type="verticalsegment">
+      <textdecoration id="_228" name="Harness" baseid="_228" type="attribute" decorativename="Harness" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="center" isvisible="true" isvisibilityoverridable="true" originhjust="middle" originvjust="center" hoffset="-0.025" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_39" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_229" name="576fcd23-42da-4b4e-9915-5591fa818d8f_TwistZMultiCoreIndicator_DecorationStyle_2_2_2" modified="2284" baseid="_229" type="multicore"/>
+    <decorationstyle id="_230" name="be0b891b-9a11-43b6-afe1-eadb43afdca2_OvalMultiCoreIndicator_DecorationStyle_2_2_2" modified="2284" baseid="_230" type="multicore"/>
+    <decorationstyle id="_231" name="UID67aed7-115d08ecf4c-69e09d9a9a5b2afbe167959e473fb311__CustomMultiCoreIndicator_DecorationStyle_2_2_2" modified="2271" baseid="_231" type="multicore"/>
+    <decorationstyle id="_232" name="f7e04fb4-5a99-4efe-9a13-80c7d3d06de4_TwistCommercialMultiCoreIndicator_DecorationStyle_2_2_2" modified="2284" baseid="_232" type="multicore"/>
+    <decorationstyle id="_233" name="574b18b9-02e2-44b8-92b7-417bc6f6259f_DashedOvalMultiCoreIndicator_DecorationStyle_2_2_2" modified="2284" baseid="_233" type="multicore"/>
+    <decorationstyle id="_234" name="9c0cc8f3-1204-4aca-8ef0-09b2011055e7_TwistMilitaryMultiCoreIndicator_DecorationStyle_2_2_2" modified="2284" baseid="_234" type="multicore"/>
+    <decorationstyle id="_235" name="c223bf11-2a5a-493b-aa08-6721415c4f43_CoaxMultiCoreIndicator_DecorationStyle_2_2_2" modified="2284" baseid="_235" type="multicore"/>
+    <decorationstyle id="_236" name="59c5fb40-3645-48eb-bf16-af641aed5023_highway_DecorationStyle_Horizontal_1_2_2" modified="2262" baseid="_236" type="horizontalsegment">
+      <textdecoration id="_237" name="Name" baseid="_237" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="center" isvisible="true" isvisibilityoverridable="true" originhjust="middle" originvjust="center" hoffset="0.0" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_23" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_238" name="1e7457bc-9f18-4ee1-85f5-6c55fe9d4e0a_WireConductor_DecorationStyle_Horizontal_2_2_2" modified="2284" baseid="_238" type="horizontalsegment">
+      <textdecoration id="_239" name="WIRE TYPE" baseid="_239" type="property" decorativename="WIRE TYPE" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="center" isvisible="false" isvisibilityoverridable="false" originhjust="middle" originvjust="center" hoffset="0.0" voffset="0.025" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_51" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+      <crossreferencedecoration id="_240" name="Cross Reference Text" baseid="_240" type="crossreference" decorativename="cross-reference" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="left" vjust="center" isvisible="true" isvisibilityoverridable="false" originhjust="left" originvjust="bottom" hoffset="0.1" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" fontstyleref="_11" template="{diagram.name}:{zone.column}/{zone.row}" linesperblock="0" referencesperline="1" delimiter="" sortindex="0"/>
+      <textdecoration id="_241" name="Name" baseid="_241" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="center" isvisible="true" isvisibilityoverridable="true" originhjust="middle" originvjust="center" hoffset="0.0" voffset="0.025" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_31" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+      <compositetextdecoration id="_242" name="&quot;(SC: &quot; + Separation Code + &quot;)&quot;" baseid="_242" type="compositetext" decorativename="&quot;(SC: &quot; + Separation Code + &quot;)&quot;" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="right" vjust="center" isvisible="false" isvisibilityoverridable="false" nominaloriginuid="_241" originhjust="left" originvjust="center" hoffset="-0.07" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_38" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0">
+        <decorationpropertycomp>
+          <nametextcompentry value="(SC: "/>
+          <namepropertycompentry value="Separation Code"/>
+          <nametextcompentry value=")"/>
+        </decorationpropertycomp>
+      </compositetextdecoration>
+      <textdecoration id="_243" name="Wire Length" baseid="_243" type="attribute" decorativename="WireLength" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="left" vjust="center" isvisible="true" isvisibilityoverridable="false" nominaloriginuid="_241" originhjust="right" originvjust="center" hoffset="0.09" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_30" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+      <textdecoration id="_244" name="EQUIPOT" baseid="_244" type="property" decorativename="EQUIPOT" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="left" vjust="center" isvisible="false" isvisibilityoverridable="false" nominaloriginuid="_243" originhjust="right" originvjust="center" hoffset="0.025" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_44" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_245" name="2867704b-0129-449e-b2b3-2bcd916435d1_ShieldConductor_DecorationStyle_Horizontal_2_2_2" modified="2284" baseid="_245" type="horizontalsegment">
+      <textdecoration id="_246" name="Name" baseid="_246" type="attribute" decorativename="Name" orientation="90" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="center" isvisible="false" isvisibilityoverridable="true" originhjust="middle" originvjust="center" hoffset="0.0" voffset="-0.6" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_36" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_247" name="c9997ce4-de93-4928-b7d1-46f2b8977a4a_InterconnectConductor_DecorationStyle_Horizontal_2_2_2" modified="2284" baseid="_247" type="horizontalsegment">
+      <textdecoration id="_248" name="Harness" baseid="_248" type="attribute" decorativename="Harness" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="center" isvisible="true" isvisibilityoverridable="true" originhjust="middle" originvjust="center" hoffset="0.0" voffset="0.025" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_27" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_249" name="af9bd611-f7fb-40bb-90ad-cd925a47b781_NetConductor_DecorationStyle_Horizontal_2_2_2" modified="2284" baseid="_249" type="horizontalsegment">
+      <crossreferencedecoration id="_250" name="Cross Reference" baseid="_250" type="crossreference" decorativename="cross-reference" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="left" vjust="center" isvisible="true" isvisibilityoverridable="false" originhjust="left" originvjust="bottom" hoffset="0.1" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" fontstyleref="_20" template="{diagram.name}:{zone.column}/{zone.row}" linesperblock="0" referencesperline="1" delimiter="" sortindex="0"/>
+      <textdecoration id="_251" name="Name" baseid="_251" type="attribute" decorativename="Name" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="center" isvisible="true" isvisibilityoverridable="true" originhjust="middle" originvjust="center" hoffset="0.0" voffset="0.025" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" roundingtype="None" decimalplaces="Inherit" decimaldelimiter="Inherit" fontstyleref="_37" editabletext="false" excludepositionfromapplystyle="false" boundswidth="0.0" boundsheight="0.0"/>
+    </decorationstyle>
+    <decorationstyle id="_252" name="8278fb7e-c5de-465b-96c5-4576cf61141e_logicDesign_DecorationStyle_1_3_2" modified="2267" baseid="_252" type="logicaldesign" packingsymbols="false">
+      <symboldecoration id="_253" name="Border" baseid="_253" type="border" decorativename="" orientation="0" orientationtype="relativetoowner" autoflip="true" boxing="OVERFLOW" wrap="NO_WRAP" recenter="false" hjust="middle" vjust="center" isvisible="true" isvisibilityoverridable="true" originhjust="middle" originvjust="center" hoffset="0.0" voffset="0.0" ispositionlocked="false" usenominalsymbolorigin="false" excludefromapplystyle="false" defaultsymlibname="" isplacedusingorigin="false" isplacedusingdatum="false">
+        <colordata default="true"/>
+      </symboldecoration>
+    </decorationstyle>
+    <segmentdecorationstyle id="_254" name="1e7457bc-9f18-4ee1-85f5-6c55fe9d4e0a_WireConductor_DecorationStyle_2_2_2" modified="2284" baseid="_254">
+      <refsegmentdecorationstyle originsegment="longest" horizontalstyleref="_238" verticalstyleref="_216"/>
+    </segmentdecorationstyle>
+    <segmentdecorationstyle id="_255" name="af9bd611-f7fb-40bb-90ad-cd925a47b781_NetConductor_DecorationStyle_2_2_2" modified="2284" baseid="_255">
+      <refsegmentdecorationstyle originsegment="longest" horizontalstyleref="_249" verticalstyleref="_220"/>
+    </segmentdecorationstyle>
+    <segmentdecorationstyle id="_256" name="59c5fb40-3645-48eb-bf16-af641aed5023_highway_DecorationStyle_1_2_2" modified="2262" baseid="_256">
+      <refsegmentdecorationstyle originsegment="longest" horizontalstyleref="_236" verticalstyleref="_223"/>
+    </segmentdecorationstyle>
+    <segmentdecorationstyle id="_257" name="2867704b-0129-449e-b2b3-2bcd916435d1_ShieldConductor_DecorationStyle_2_2_2" modified="2284" baseid="_257">
+      <refsegmentdecorationstyle originsegment="longest" horizontalstyleref="_245" verticalstyleref="_225"/>
+    </segmentdecorationstyle>
+    <segmentdecorationstyle id="_258" name="c9997ce4-de93-4928-b7d1-46f2b8977a4a_InterconnectConductor_DecorationStyle_2_2_2" modified="2284" baseid="_258">
+      <refsegmentdecorationstyle originsegment="mainsegment" horizontalstyleref="_247" verticalstyleref="_227"/>
+    </segmentdecorationstyle>
+  </stylemgr>
+  <entityconfigurationmgr id="_259" modified="1" baseid="_259">
+    <entityconfiguration id="_260" name="UIDf4a436-1488f140b79-bca6c92f74070836cb1c6256cb1a48f1_Default_BlockDevicePinEntityConfig_1_2" baseid="_260" type="blockdevicepin" decorationstyleref="_211" graphicsstyleref="_58" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="85"/>
+    <entityconfiguration id="_261" name="UPGD_2011_1PRE_1_Default_StackedPinEntityConfig_1_2_2" baseid="_261" type="stackedpin" decorationstyleref="_207" graphicsstyleref="_73" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="79"/>
+    <entityconfiguration id="_262" name="UPGD_2013_1PRE_0_Default_BlockDeviceEntityConfig_1_2" baseid="_262" type="blockdevice" decorationstyleref="_208" graphicsstyleref="_88" conditionalshapestyleref="_128" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="84"/>
+    <entityconfiguration id="_263" name="59c5fb40-3645-48eb-bf16-af641aed5023_highway_1_2_2" baseid="_263" type="highway" decorationstyleref="_256" graphicsstyleref="_60" conditionalshapestyleref="_145" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="61"/>
+    <entityconfiguration id="_264" name="1e7457bc-9f18-4ee1-85f5-6c55fe9d4e0a_WireConductor_2_2_2" baseid="_264" type="conductor" decorationstyleref="_254" graphicsstyleref="_79" conditionalshapestyleref="_136" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="23"/>
+    <entityconfiguration id="_265" name="af9bd611-f7fb-40bb-90ad-cd925a47b781_NetConductor_2_2_2" baseid="_265" type="conductor" decorationstyleref="_255" graphicsstyleref="_86" conditionalshapestyleref="_132" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="21"/>
+    <entityconfiguration id="_266" name="2867704b-0129-449e-b2b3-2bcd916435d1_ShieldConductor_2_2_2" baseid="_266" type="conductor" decorationstyleref="_257" graphicsstyleref="_69" conditionalshapestyleref="_144" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="22"/>
+    <entityconfiguration id="_267" name="c9997ce4-de93-4928-b7d1-46f2b8977a4a_InterconnectConductor_2_2_2" baseid="_267" type="conductor" decorationstyleref="_258" graphicsstyleref="_97" conditionalshapestyleref="_127" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="34"/>
+    <entityconfiguration id="_268" name="8278fb7e-c5de-465b-96c5-4576cf61141e_logicDesign_1_3_2" baseid="_268" type="logicaldesign" decorationstyleref="_252" conditionalshapestyleref="_147" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="59"/>
+    <entityconfiguration id="_269" name="64f56e9a-a5df-4661-9afc-79272a3d6537_Device_2_2_2" baseid="_269" type="device" decorationstyleref="_202" graphicsstyleref="_76" conditionalshapestyleref="_148" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="0"/>
+    <entityconfiguration id="_270" name="f9501ba4-5d31-4c6f-9f9b-c528ef58115c_InterconnectDevice_2_2_2" baseid="_270" type="device" decorationstyleref="_186" graphicsstyleref="_91" conditionalshapestyleref="_142" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="32"/>
+    <entityconfiguration id="_271" name="ff33c577-ff8c-47c4-b406-7f070d5adeca_SymbolDevice_2_2_2" baseid="_271" type="device" decorationstyleref="_192" graphicsstyleref="_75" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="4"/>
+    <entityconfiguration id="_272" name="def8ec9d-ce9d-4ff2-8edc-8d3922459cc8_SymbolGroundDevice_2_2_2" baseid="_272" type="device" decorationstyleref="_179" graphicsstyleref="_100" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="2"/>
+    <entityconfiguration id="_273" name="be0b891b-9a11-43b6-afe1-eadb43afdca2_OvalMultiCoreIndicator_2_2_2" baseid="_273" type="multicore" decorationstyleref="_230" graphicsstyleref="_87" conditionalshapestyleref="_140" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="55" subtype="oval"/>
+    <entityconfiguration id="_274" name="576fcd23-42da-4b4e-9915-5591fa818d8f_TwistZMultiCoreIndicator_2_2_2" baseid="_274" type="multicore" decorationstyleref="_229" graphicsstyleref="_83" conditionalshapestyleref="_126" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="55" subtype="twist-z"/>
+    <entityconfiguration id="_275" name="574b18b9-02e2-44b8-92b7-417bc6f6259f_DashedOvalMultiCoreIndicator_2_2_2" baseid="_275" type="multicore" decorationstyleref="_233" graphicsstyleref="_82" conditionalshapestyleref="_125" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="55" subtype="dashed-oval"/>
+    <entityconfiguration id="_276" name="9c0cc8f3-1204-4aca-8ef0-09b2011055e7_TwistMilitaryMultiCoreIndicator_2_2_2" baseid="_276" type="multicore" decorationstyleref="_234" graphicsstyleref="_66" conditionalshapestyleref="_131" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="55" subtype="twist-military"/>
+    <entityconfiguration id="_277" name="c223bf11-2a5a-493b-aa08-6721415c4f43_CoaxMultiCoreIndicator_2_2_2" baseid="_277" type="multicore" decorationstyleref="_235" graphicsstyleref="_90" conditionalshapestyleref="_135" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="55" subtype="coax"/>
+    <entityconfiguration id="_278" name="f7e04fb4-5a99-4efe-9a13-80c7d3d06de4_TwistCommercialMultiCoreIndicator_2_2_2" baseid="_278" type="multicore" decorationstyleref="_232" graphicsstyleref="_62" conditionalshapestyleref="_130" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="55" subtype="twist-commercial"/>
+    <entityconfiguration id="_279" name="UID67aed7-115d08ecf4c-69e09d9a9a5b2afbe167959e473fb311__CustomMultiCoreIndicator_2_2_2" baseid="_279" type="multicore" decorationstyleref="_231" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="55" subtype=""/>
+    <entityconfiguration id="_280" name="b95ae3ad-eec0-47d8-984e-d0faa809a3a1_PlugConnectorPin_2_2_2" baseid="_280" type="pin" decorationstyleref="_163" graphicsstyleref="_56" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="17"/>
+    <entityconfiguration id="_281" name="41f23642-743e-4538-9a51-df2fdf62956a_JackConnectorBackShellPin_2_2_2" baseid="_281" type="pin" decorationstyleref="_152" graphicsstyleref="_99" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="15"/>
+    <entityconfiguration id="_282" name="4b1cefe1-5722-4d5d-a20f-ee2e238d81d4_SymbolGroundDevicePin_2_2_2" baseid="_282" type="pin" decorationstyleref="_176" graphicsstyleref="_81" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="3"/>
+    <entityconfiguration id="_283" name="b9fe9581-7769-4f86-b331-a93e27710951_InlinePlugConnectorPin_2_2_2" baseid="_283" type="pin" decorationstyleref="_167" graphicsstyleref="_68" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="11"/>
+    <entityconfiguration id="_284" name="cb445c56-e5a3-4b26-8ad6-fc19d9713fd0_DevicePin_2_2_2" baseid="_284" type="pin" decorationstyleref="_173" graphicsstyleref="_98" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="1"/>
+    <entityconfiguration id="_285" name="421b917d-22d7-44e7-85c0-aeac2c90fa1f_InlineJackConnectorPin_2_2_2" baseid="_285" type="pin" decorationstyleref="_161" graphicsstyleref="_92" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="8"/>
+    <entityconfiguration id="_286" name="f63c83c2-f708-4e4e-8b48-5aa9fb74e8b6_SymbolDevicePin_2_2_2" baseid="_286" type="pin" decorationstyleref="_171" graphicsstyleref="_64" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="false" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="5"/>
+    <entityconfiguration id="_287" name="7fba9aa3-5961-4af8-a33f-80e985266bd6_InlinePlugConnectorBackShellPin_2_2_2" baseid="_287" type="pin" decorationstyleref="_149" graphicsstyleref="_94" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="12"/>
+    <entityconfiguration id="_288" name="13f6c584-ce48-4c8a-b5b2-0a01d1637dd3_InlineJackConnectorBackShellPin_2_2_2" baseid="_288" type="pin" decorationstyleref="_157" graphicsstyleref="_84" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="9"/>
+    <entityconfiguration id="_289" name="UIDb6cd19-115b19ca203-69e09d9a9a5b2afbe167959e473fb311__SymbolSplicePin_2_2_2" baseid="_289" type="pin" decorationstyleref="_175" graphicsstyleref="_65" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="57"/>
+    <entityconfiguration id="_290" name="1bb5e5ee-821c-4b63-9433-8183d1c85e50_InlineInterconnectJackConnectorPin_2_2_2" baseid="_290" type="pin" decorationstyleref="_166" graphicsstyleref="_85" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="45"/>
+    <entityconfiguration id="_291" name="3f95b898-09bc-4de1-bb64-b4a4dd59defa_JackConnectorPin_2_2_2" baseid="_291" type="pin" decorationstyleref="_154" graphicsstyleref="_77" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="14"/>
+    <entityconfiguration id="_292" name="c52357a6-2131-46c8-84a7-cef9ef6e900e_SplicePin_2_2_2" baseid="_292" type="pin" decorationstyleref="_156" graphicsstyleref="_71" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="20"/>
+    <entityconfiguration id="_293" name="0c8f6010-2c01-4973-8602-3da213b51208_InterconnectDevicePin_2_2_2" baseid="_293" type="pin" decorationstyleref="_159" graphicsstyleref="_72" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="53"/>
+    <entityconfiguration id="_294" name="932d0351-7b6d-4b8f-b17c-8a127c4c433f_InterconnectConnectorPin_2_2_2" baseid="_294" type="pin" decorationstyleref="_177" graphicsstyleref="_93" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="54"/>
+    <entityconfiguration id="_295" name="81034a1a-ad82-47fd-ac06-d4a85c72960d_PlugConnectorBackShellPin_2_2_2" baseid="_295" type="pin" decorationstyleref="_169" graphicsstyleref="_61" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="18"/>
+    <entityconfiguration id="_296" name="9dfcfa3c-0126-4ccb-8028-059f5c90a7f4_InlineInterconnectPlugConnectorPin_2_2_2" baseid="_296" type="pin" decorationstyleref="_151" graphicsstyleref="_96" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="47"/>
+    <entityconfiguration id="_297" name="UPGD_1_108_0_Default_AssemblyEntityConfiguration_2_2_2" baseid="_297" type="assembly" graphicsstyleref="_70" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="78"/>
+    <entityconfiguration id="_298" name="UIDb6cd19-115b19ca203-69e09d9a9a5b2afbe167959e473fb311__SymbolSplice_2_2_2" baseid="_298" type="splice" decorationstyleref="_215" graphicsstyleref="_74" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="56"/>
+    <entityconfiguration id="_299" name="8a46021a-7314-42bd-9896-7607c7e7ab8e_Splice_2_2_2" baseid="_299" type="splice" decorationstyleref="_213" graphicsstyleref="_78" conditionalshapestyleref="_143" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="19"/>
+    <entityconfiguration id="_300" name="70c8d9d1-c847-4829-8126-08093d124c04_JackConnector_2_2_2" baseid="_300" type="connector" decorationstyleref="_198" graphicsstyleref="_63" conditionalshapestyleref="_133" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="13"/>
+    <entityconfiguration id="_301" name="8e6ed6b7-99d5-45e3-8b11-850d40451ecc_DeviceSideJackConnector_2_2_2" baseid="_301" type="connector" decorationstyleref="_190" graphicsstyleref="_95" conditionalshapestyleref="_137" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="6"/>
+    <entityconfiguration id="_302" name="687072c0-b35e-4dae-a2c6-f3c4051bf0ca_InlineJackConnector_2_2_2" baseid="_302" type="connector" decorationstyleref="_196" graphicsstyleref="_57" conditionalshapestyleref="_134" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="7"/>
+    <entityconfiguration id="_303" name="8e2aeef1-42f9-4bc5-a248-23d8cf9c4dc0_PlugConnector_2_2_2" baseid="_303" type="connector" decorationstyleref="_181" graphicsstyleref="_59" conditionalshapestyleref="_138" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="16"/>
+    <entityconfiguration id="_304" name="be616131-4648-4161-8c76-9ce58a8556a7_InlineInterconnectPlugConnector_2_2_2" baseid="_304" type="connector" decorationstyleref="_200" graphicsstyleref="_67" conditionalshapestyleref="_141" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="46"/>
+    <entityconfiguration id="_305" name="e0836288-6a01-4fc2-b753-180b42906988_InlinePlugConnector_2_2_2" baseid="_305" type="connector" decorationstyleref="_188" graphicsstyleref="_89" conditionalshapestyleref="_139" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="10"/>
+    <entityconfiguration id="_306" name="675574a8-b0bc-4ff1-83c5-5372d8d2cd39_InterconnectConnector_2_2_2" baseid="_306" type="connector" decorationstyleref="_194" graphicsstyleref="_55" conditionalshapestyleref="_129" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="33"/>
+    <entityconfiguration id="_307" name="1c53665d-701f-45f0-8cb3-f59d16f9b7f8_InlineInterconnectJackConnector_2_2_2" baseid="_307" type="connector" decorationstyleref="_184" graphicsstyleref="_80" conditionalshapestyleref="_146" isshapevisible="true" isshapevisibilityoverridable="true" isdecorationvisible="true" isdecorationvisibilityoverridable ="true" entitycfgtypevalue="44"/>
+  </entityconfigurationmgr>
+  <preferencesetmgr id="_308" modified="1" baseid="_308">
+    <preferenceset id="_309" name="CnS_SS" modified="2284" baseid="_309" type="logic" unit="inch">
+      <refentityconfiguration entityconfigurationref="_287" entityconfigurationtype="12"/>
+      <refentityconfiguration entityconfigurationref="_299" entityconfigurationtype="19"/>
+      <refentityconfiguration entityconfigurationref="_297" entityconfigurationtype="78"/>
+      <refentityconfiguration entityconfigurationref="_296" entityconfigurationtype="47"/>
+      <refentityconfiguration entityconfigurationref="_279" entityconfigurationtype="55"/>
+      <refentityconfiguration entityconfigurationref="_275" entityconfigurationtype="55"/>
+      <refentityconfiguration entityconfigurationref="_276" entityconfigurationtype="55"/>
+      <refentityconfiguration entityconfigurationref="_274" entityconfigurationtype="55"/>
+      <refentityconfiguration entityconfigurationref="_278" entityconfigurationtype="55"/>
+      <refentityconfiguration entityconfigurationref="_273" entityconfigurationtype="55"/>
+      <refentityconfiguration entityconfigurationref="_277" entityconfigurationtype="55"/>
+      <refentityconfiguration entityconfigurationref="_262" entityconfigurationtype="84"/>
+      <refentityconfiguration entityconfigurationref="_303" entityconfigurationtype="16"/>
+      <refentityconfiguration entityconfigurationref="_261" entityconfigurationtype="79"/>
+      <refentityconfiguration entityconfigurationref="_267" entityconfigurationtype="34"/>
+      <refentityconfiguration entityconfigurationref="_281" entityconfigurationtype="15"/>
+      <refentityconfiguration entityconfigurationref="_291" entityconfigurationtype="14"/>
+      <refentityconfiguration entityconfigurationref="_298" entityconfigurationtype="56"/>
+      <refentityconfiguration entityconfigurationref="_263" entityconfigurationtype="61"/>
+      <refentityconfiguration entityconfigurationref="_289" entityconfigurationtype="57"/>
+      <refentityconfiguration entityconfigurationref="_295" entityconfigurationtype="18"/>
+      <refentityconfiguration entityconfigurationref="_307" entityconfigurationtype="44"/>
+      <refentityconfiguration entityconfigurationref="_266" entityconfigurationtype="22"/>
+      <refentityconfiguration entityconfigurationref="_265" entityconfigurationtype="21"/>
+      <refentityconfiguration entityconfigurationref="_283" entityconfigurationtype="11"/>
+      <refentityconfiguration entityconfigurationref="_306" entityconfigurationtype="33"/>
+      <refentityconfiguration entityconfigurationref="_302" entityconfigurationtype="7"/>
+      <refentityconfiguration entityconfigurationref="_300" entityconfigurationtype="13"/>
+      <refentityconfiguration entityconfigurationref="_269" entityconfigurationtype="0"/>
+      <refentityconfiguration entityconfigurationref="_264" entityconfigurationtype="23"/>
+      <refentityconfiguration entityconfigurationref="_288" entityconfigurationtype="9"/>
+      <refentityconfiguration entityconfigurationref="_292" entityconfigurationtype="20"/>
+      <refentityconfiguration entityconfigurationref="_290" entityconfigurationtype="45"/>
+      <refentityconfiguration entityconfigurationref="_280" entityconfigurationtype="17"/>
+      <refentityconfiguration entityconfigurationref="_260" entityconfigurationtype="85"/>
+      <refentityconfiguration entityconfigurationref="_282" entityconfigurationtype="3"/>
+      <refentityconfiguration entityconfigurationref="_284" entityconfigurationtype="1"/>
+      <refentityconfiguration entityconfigurationref="_272" entityconfigurationtype="2"/>
+      <refentityconfiguration entityconfigurationref="_305" entityconfigurationtype="10"/>
+      <refentityconfiguration entityconfigurationref="_271" entityconfigurationtype="4"/>
+      <refentityconfiguration entityconfigurationref="_293" entityconfigurationtype="53"/>
+      <refentityconfiguration entityconfigurationref="_285" entityconfigurationtype="8"/>
+      <refentityconfiguration entityconfigurationref="_286" entityconfigurationtype="5"/>
+      <refentityconfiguration entityconfigurationref="_304" entityconfigurationtype="46"/>
+      <refentityconfiguration entityconfigurationref="_301" entityconfigurationtype="6"/>
+      <refentityconfiguration entityconfigurationref="_270" entityconfigurationtype="32"/>
+      <refentityconfiguration entityconfigurationref="_294" entityconfigurationtype="54"/>
+      <refentityconfiguration entityconfigurationref="_268" entityconfigurationtype="59"/>
+      <overridesymbolstyling value="false" overrideonlystyleddecorations="false"/>
+      <defaultfontstyle/>
+    </preferenceset>
+  </preferencesetmgr>
+</systemstylingdata>

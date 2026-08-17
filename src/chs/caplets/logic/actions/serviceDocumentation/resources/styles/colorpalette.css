@@ -1,0 +1,64 @@
+.cp-grid-container {
+    background-color: white;
+    height: auto;
+}
+
+.cp-grid {
+    height: auto;
+    margin: 4px auto;
+    width: 256px;
+}
+
+.cp-grid-row {
+    width: auto;
+    height: auto;
+    margin: -2px auto;
+}
+
+.cp-grid-row:first-child {
+    margin: 5px auto;
+}
+
+.cp-grid-column {
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.cp-color-item-container {
+    border-width: 1px;
+    border-style: double;
+    border-color: #cccccc;
+    height: auto;
+    width: auto;
+}
+
+.cp-color-item {
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+}
+
+.cp-current-item-container {
+    border-color: orangered !important;
+    content: "\u2713";
+}
+
+.palette-panel .listItem .cp-color-item-container {
+    display: inline-block;
+    margin: 5px 3px 0 16px;
+}
+
+.palette-panel .listItem .mainText {
+    /* display: inline-block;
+    width: auto !important; */
+    vertical-align: text-top;
+}
+
+.history-panel .titlebar, .palette-panel .titlebar,
+.history-panel .headerText, .palette-panel .headerText {
+    cursor: default;
+}
+
+.palette-panel .listItem {
+    display: block !important;
+}

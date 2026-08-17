@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2013, v.4002-->
+<!DOCTYPE dmodule [
+<!ENTITY ICN-PC24-A-E28-20-0009-S-S4080-00002-A-001-1 SYSTEM "ICN-PC24-A-E28-20-0009-S-S4080-00002-A-001-1.cgm" NDATA cgm>
+]>
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://www.purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_4-1/xml_schema_flat/wrngdata.xsd">
+    <identAndStatusSection>
+        <?Pub Dtl?>
+        <dmAddress>
+            <dmIdent>
+                <dmCode assyCode="TO-BE-SUPPLIED" disassyCode="TO-BE-SUPPLIED" disassyCodeVariant="TO-BE-SUPPLIED" infoCode="TO-BE-SUPPLIED" infoCodeVariant="TO-BE-SUPPLIED" itemLocationCode="TO-BE-SUPPLIED" modelIdentCode="TO-BE-SUPPLIED" subSubSystemCode="TO-BE-SUPPLIED" subSystemCode="TO-BE-SUPPLIED" systemCode="TO-BE-SUPPLIED" systemDiffCode="TO-BE-SUPPLIED"/>
+                <language countryIsoCode="US" languageIsoCode="en"/>
+                <issueInfo inWork="TO-BE-SUPPLIED" issueNumber="TO-BE-SUPPLIED"/>
+            </dmIdent>
+            <dmAddressItems>
+                <issueDate day="31" month="12" year="2012"/>
+                <dmTitle>
+                    <techName>TO-BE-SUPPLIED</techName>
+                    <infoName>TO-BE-SUPPLIED</infoName>
+                </dmTitle>
+            </dmAddressItems>
+        </dmAddress>
+        <dmStatus issueType="new">
+            <security securityClassification="01"/>
+            <responsiblePartnerCompany enterpriseCode="S4080">
+                <enterpriseName>Anonymous Aircraft Ltd</enterpriseName>
+            </responsiblePartnerCompany>
+            <originator enterpriseCode="S4080">
+                <enterpriseName>Anonymous Aircraft Ltd</enterpriseName>
+            </originator>
+            <applicCrossRefTableRef>
+                <dmRef>
+                    <dmRefIdent>
+                        <dmCode assyCode="TO-BE-SUPPLIED" disassyCode="TO-BE-SUPPLIED" disassyCodeVariant="TO-BE-SUPPLIED" infoCode="TO-BE-SUPPLIED" infoCodeVariant="TO-BE-SUPPLIED" itemLocationCode="TO-BE-SUPPLIED" modelIdentCode="TO-BE-SUPPLIED" subSubSystemCode="TO-BE-SUPPLIED" subSystemCode="TO-BE-SUPPLIED" systemCode="TO-BE-SUPPLIED" systemDiffCode="TO-BE-SUPPLIED"/>
+                    </dmRefIdent>
+                </dmRef>
+            </applicCrossRefTableRef>
+            <applic>
+                <displayText>
+                    <simplePara>Applicable to all PC-24 aircraft</simplePara>
+                </displayText>
+                <evaluate andOr="and">
+                    <assert applicPropertyIdent="type" applicPropertyType="prodattr" applicPropertyValues="PC24"></assert>
+                    <evaluate andOr="or">
+                        <evaluate andOr="and">
+                            <assert applicPropertyIdent="model" applicPropertyType="prodattr" applicPropertyValues="A"></assert>
+                            <assert applicPropertyIdent="serialNumber" applicPropertyType="prodattr" applicPropertyValues="0000~9999"> 							</assert>
+                        </evaluate>
+                        <evaluate andOr="and">
+                            <assert applicPropertyIdent="model" applicPropertyType="prodattr" applicPropertyValues="B"></assert>
+                            <assert applicPropertyIdent="serialNumber" applicPropertyType="prodattr" applicPropertyValues="0000~9999"> 							</assert>
+                        </evaluate>
+                    </evaluate>
+                </evaluate>
+            </applic>
+            <brexDmRef>
+                <dmRef>
+                    <dmRefIdent>
+                        <dmCode assyCode="TO-BE-SUPPLIED" disassyCode="TO-BE-SUPPLIED" disassyCodeVariant="TO-BE-SUPPLIED" infoCode="TO-BE-SUPPLIED" infoCodeVariant="TO-BE-SUPPLIED" itemLocationCode="TO-BE-SUPPLIED" modelIdentCode="TO-BE-SUPPLIED" subSubSystemCode="TO-BE-SUPPLIED" subSystemCode="TO-BE-SUPPLIED" systemCode="TO-BE-SUPPLIED" systemDiffCode="TO-BE-SUPPLIED"/>
+                    </dmRefIdent>
+                </dmRef>
+            </brexDmRef>
+            <qualityAssurance>
+            </qualityAssurance>
+        </dmStatus>
+    </identAndStatusSection>
+</dmodule>

@@ -1,0 +1,360 @@
+/**
+ *
+ * Some common styles.
+ *
+ */
+.styled {
+    font-family: 'Helvetica', Verdana, Tahoma, sans-serif;
+    background-color: white;
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+}
+
+img.ApplicationLogo {
+    width: 32px;
+    height: 32px;
+    /* margin: 6px 3px 4px 10px; */
+    object-fit: contain;
+    float: left;
+    vertical-align: middle;
+    padding: 0px 5px 5px 15px;
+}
+
+.ApplicationName {
+    width: 248px;
+    height: 20px;
+    /* margin: 0px 8px 0px 8px; */
+    font-family: Segoe UI, "Open sans", Verdana, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: white;
+    float: left;
+    vertical-align: middle;
+    padding: 0px 5px 5px 5px;
+}
+
+.ApplicationNameInHeader {
+    /*width: 176px;*/
+    font-family: Segoe UI, "Open sans", Verdana, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    margin: 0px 0px 0px 8px;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: white;
+    float: left;
+    height: 100%;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    min-width: 0%;
+    max-width: 75%;
+    line-height: 38px;
+    height: 100%;
+}
+
+img.ApplicationLogoInHeader {
+    width: 26px;
+    height: 26px;
+    margin: 6px 0px 4px 4px;
+    object-fit: contain;
+    float: left;
+    vertical-align: middle;
+}
+
+img.SiemensWhiteLogo {
+    width: 100.7px;
+    height: 100%;
+    margin: 0px 8px;
+    object-fit: contain;
+    float: right;
+    display: block;
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.component-button {
+    float: left;
+    cursor: pointer;
+    border-radius: 3px;
+    height: 17px;
+    padding: 2px 0px;
+    margin: 5px;
+    margin-top: 8px;
+    border-width: 1px;
+    padding-top: 3px;
+    text-overflow: ellipsis;
+    width: 72px;
+    white-space: nowrap;
+}
+
+.error-page-button {
+    border-radius: 2px;
+    border: solid 1px #843f0c;
+    background-color: #dc6914;
+    color: white;
+    height: auto;
+    padding: 5px 10px;
+    left: 48%;
+    position: relative;
+    margin-top: 15px;
+    font-size: 16px;
+    width: auto;
+}
+
+/* This is applied for toolbar buttons on mouse hover */
+.component-button:hover {
+    cursor: pointer;
+}
+
+.component-label {
+    z-index: 100;
+    min-height: 16px;
+    text-align: center;
+    width: auto;
+    text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    line-height: 38px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+.background {
+    background-image: -ms-radial-gradient(75% top, ellipse farthest-side, #55A0B9 -100%, #0077A1 40%, #006B91 75%, #006487 calc(100% - 68px));
+    background-image: -moz-radial-gradient(75% top, ellipse farthest-side, #55A0B9 -100%, #0077A1 40%, #006B91 75%, #006487 calc(100% - 68px));
+    background-image: -o-radial-gradient(75% top, ellipse farthest-side, #55A0B9 -100%, #0077A1 40%, #006B91 75%, #006487 calc(100% - 68px));
+    background-image: -webkit-gradient(radial, 75% top, 0, center top, 258, color-stop(-100, #55A0B9), color-stop(40, #0077A1), color-stop(75, #006B91), color-stop(100, #006487));
+    background-image: -webkit-radial-gradient(75% top, ellipse farthest-side, #55A0B9 -100%, #0077A1 40%, #006B91 75%, #006487 calc(100% - 68px));
+    background-image: radial-gradient(ellipse farthest-side at 75% top, #55A0B9 -100%, #0077A1 40%, #006B91 75%, #006487 calc(100% - 68px));
+}
+
+.small-button {
+    max-width: 32px !important;
+    min-width: 24px !important;
+    height: 16px !important;
+    background-size: auto !important;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-right: 0px;
+    margin-left: 0px;
+
+}
+
+/*
+The following styles are for tooltips
+*/
+.tooltip {
+    position: absolute;
+    max-width: 50%;
+    word-wrap: break-word;
+    z-index: 9999;
+    color: black;
+    display: none;
+    background-color: lightYellow;
+    padding: 3px 3px 3px 3px;
+    border: 1px solid #999;
+    text-shadow: none;
+    float: left;
+    text-align: left;
+}
+
+.tooltipValue {
+
+}
+
+.tooltipName {
+    font-weight: bold;
+}
+
+.border {
+
+}
+
+#navigation {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 21%;
+}
+
+.unselectable {
+    cursor: default;
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    user-select: none;
+}
+
+/*
+The below classes are for EULA table
+*/
+#eula {
+    height: 80%;
+}
+
+.eulaHeading1 {
+    font-size: 200%;
+    text-align: center;
+    font-weight: bold;
+    height: 35px;
+}
+
+.eulaHeading2 {
+    font-size: 150%;
+    text-align: center;
+    height: 30px;
+}
+
+.eula_caution {
+    font-size: 120%;
+    height: auto;
+    width: 98%;
+    max-width: 980px;
+    margin-top: 20px;
+}
+
+.div_border {
+    border: 2px solid black;
+}
+
+.div_center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.para_heading {
+    font-size: 120%;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 20px;
+    height: auto;
+}
+
+.para_content {
+    font-size: 115%;
+    margin-left: 20px;
+    margin-top: 5px;
+    width: auto;
+}
+
+.para {
+    height: auto;
+}
+
+.eula {
+    width: 80%;
+    margin-bottom: auto;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80%;
+    background-color: #FAF8F8;
+}
+
+.hyperlink:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.stop_default_touch_behaviour {
+    overflow: hidden;
+    /*-ms-touch-action :pan-x pan-y;*/
+}
+
+.screen {
+    display: block;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+}
+
+.click-target {
+    cursor: pointer;
+}
+.collapse-nav-panel {
+    background-image: url("../images/collapse.png");
+}
+
+.expand-nav-panel {
+    background-image: url("../images/collapse.png");
+}
+
+.related-grid-btn {
+	background-image: url("../images/related_grid.png");
+}
+
+.navigation_btn {
+    width: 24px;
+    height: 20px;
+    font-size: 20px;
+    margin: 0;
+    display: none;
+}
+
+#back_button {
+
+}
+
+#forward_button {
+
+}
+
+.eulaAccept {
+    text-align: center;
+    width: 100%;
+    color: white;
+    height: 4%;
+    font-size: 140%;
+    border-radius: 2px;
+    border: solid 1px #843f0c;
+    background-color: #dc6914;
+    float: left;
+    cursor: pointer;
+    border-radius: 3px;
+    line-height: 100%;
+    box-shadow: 1px 2px 4px 0 rgb(0 0 0 / 30%);
+}
+
+
+.display-none {
+    display: none;
+}
+
+.pointer-events-none {
+    pointer-events: none;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.margin-bottom-ten {
+    margin-bottom: 10px;
+}
+
+.display-block {
+    display: block;
+}

@@ -1,0 +1,13 @@
+<Popup>
+    <Device title="[Step]">
+        <Links/>
+        <CustomData title="Links to Diagrams"/>
+        <CustomData title="Links to Videos"/>
+        <CustomData title="Links to Documents"/>
+        <CustomData title="Links to Websites"/>
+    </Device>
+    <Net>
+        <Links/>
+        <CustomData/>
+    </Net>
+</Popup>

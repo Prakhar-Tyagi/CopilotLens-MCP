@@ -1,0 +1,86 @@
+<!--
+  ~ This material contains trade secrets or otherwise confidential information owned by
+  ~ Siemens Industry Software Inc. or its affiliates (collectively, "SISW"), or its licensors.
+  ~ Access to and use of this information is strictly limited as set forth in the Customer's
+  ~ applicable agreements with SISW.
+  ~
+  ~ Copyright 2022 Siemens
+  -->
+
+<NavigationPanel>
+    <introduction-page/>
+    <system>
+        <attribute name="Name"
+                   display="Name"/>
+        <attribute name="ShortDescription"
+                   display="Description"/>
+        <property name="ApplicableOptions"
+                  display="Options"/>
+        <attribute name="FolderPath"
+                   display="Folder"/>
+    </system>
+
+    <harnesslayout>
+        <attribute name="Name" display="Name"/>
+        <attribute name="PartNumber" display="Part Number"/>
+        <attribute name="ShortDescription" display="Description"/>
+        <attribute name="Revision" display="Revision"/>
+    </harnesslayout>
+    <commonFaultCodes/>
+    <LocationViews/>
+    <faultcode/>
+    <diagnostics/>
+    <wires type="IXWire">
+        <attribute name="Name" display="Name"/>
+        <property name="signaltype" display="Signal"/>
+        <attribute name="ColorDescription" display="Color"/>
+        <attribute name="MaterialDescription" display="Material"/>
+    </wires>
+    <nets type="IXNet">
+        <attribute name="Name" display="Name"/>
+        <property name="signaltype" display="Signal"/>
+        <attribute name="ColorDescription" display="Color"/>
+        <attribute name="MaterialDescription" display="Material"/>
+    </nets>
+    <connectors type="IXConnector">
+        <property name="serviceName" display="Name"/>
+        <attribute name="PartNumber" display="Part Number"/>
+        <attribute name="Harness" display="Harness"/>
+        <attribute name="PartDescription" display="Description"/>
+    </connectors>
+    <inlines type="IXConnector">
+        <property name="serviceName" display="Name"/>
+        <attribute name="PartNumber" display="Part Number"/>
+        <attribute name="Harness" display="Harness"/>
+        <attribute name="PartDescription" display="Description"/>
+    </inlines>
+    <devices type="IXDevice">
+        <property name="serviceName" display="Name"/>
+        <attribute name="PartNumber" display="Part Number"/>
+        <attribute name="PartDescription" display="Description"/>
+        <attribute name="OptionExpression" display="Options"/>
+    </devices>
+    <grounds type="IXGround">
+        <property name="serviceName" display="Name"/>
+        <attribute name="PartNumber" display="Part Number"/>
+        <attribute name="PartDescription" display="Description"/>
+        <attribute name="OptionExpression" display="Options"/>
+    </grounds>
+    <splices type="IXSplice">
+        <property name="serviceName" display="Name"/>
+        <attribute name="PartNumber" display="Part Number"/>
+        <attribute name="Harness" display="Harness"/>
+        <attribute name="PartDescription" display="Description"/>
+    </splices>
+    <multicores type="IXMulticore">
+        <property name="serviceName" display="Name"/>
+        <attribute name="PartNumber" display="Part Number"/>
+        <attribute name="PartDescription" display="Description"/>
+        <attribute name="OptionExpression" display="Options"/>
+    </multicores>
+    <report/>
+    <harness/>
+    <globalreports/>
+</NavigationPanel>
+
+

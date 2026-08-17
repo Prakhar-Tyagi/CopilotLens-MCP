@@ -1,0 +1,3 @@
+node_modules/*
+/ra_app/solo/
+/ra_app/uniview/spec/capital_ipc.js

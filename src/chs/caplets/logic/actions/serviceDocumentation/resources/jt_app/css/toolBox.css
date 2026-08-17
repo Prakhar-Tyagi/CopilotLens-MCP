@@ -1,0 +1,87 @@
+/*  2016 SIEMENS PRODUCT LIFECYCLE MANAGEMENT SOFTWARE INC */
+
+.toolBox {
+	background: rgb(240,240,240);
+	z-index: 100;
+	width: 25%;
+}
+
+.toolBoxTitle {
+	background: rgb(220,220,220);
+    height: 25px;
+	background: rgb(85,160,185);
+    font-size: 12px;
+	color: white;
+	padding-left: 10px;
+	padding-top: 5px;
+}
+
+.toolBoxScrollContent {
+	padding: 10px;
+	overflow-y: auto;
+	height: 100%;
+	background: rgb(255,255,255);
+}
+
+.toolBoxHeading {
+	font-weight: bold;
+	padding: 10px;
+}
+
+.toolBoxButton {
+	border: none;
+	background: rgb(220,220,220);
+	height: 100%;
+	padding: 10px;
+	width: 100%;
+	font-size: 18px;
+}
+
+
+.drawerPull {
+	background: rgb(255,255,255);
+	height: 48px;
+    width: 30px;
+}
+
+#productName {
+    font-size: 12px;
+}
+
+#toolbar_tab2 {
+	display: none !important;
+}
+
+#toolbar_console {
+	display: none !important;
+}
+
+label {
+	font-size: 12px !important;
+}
+
+#toolbar{
+	background-color: hsl(214,39%,30%) !important;
+}
+
+.toolBoxTitle{
+	background-color: hsl(214,39%,30%) !important;
+}
+
+#toolbar_service {
+	display: none !important;
+}
+
+#toolbar_open {
+    display: none !important;
+}
+
+.toolbarButton img{
+	width: 26px !important;
+	height: 26px !important;
+}
+
+#toolbar_markup {
+    padding-top: 0px !important;
+	padding-right: 12px !important;
+}

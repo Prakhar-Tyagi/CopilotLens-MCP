@@ -1,0 +1,93 @@
+<report name="Insulations" summary-included="true">
+    <tables name="Insulation Runs"
+            apply-to="insulation-run"
+            types="modified added removed"
+            sorted-by="{Name}">
+        <!--
+            Allowed column types - attribute, property, computed
+
+            Accepted 'computed' types - DerivativesAndModules, Start, End, InsulationLayers, Bundles
+        -->
+        <column type="attribute" key="Name" name="{Name}"/>
+        <column type="computed" key="Start" name="{Start}"/>
+        <column type="computed" key="End" name="{End}"/>
+        <column type="attribute" key="InsulationCodeName" name="{Insulation Code Name}"/>
+        <column type="computed" key="InsulationLayers" name="{Insulation Layers}"/>
+        <column type="computed" key="Bundles" name="{Bundles}"/>
+        <column type="computed" key="AnchorNodeOffset" name="{Anchor node offset}"/>
+        <column type="computed" key="AnchorNode" name="{Anchor Node}"/>
+    </tables>
+    <tables name="Insulations"
+            apply-to="insulation"
+            types="modified added removed"
+            sorted-by="{Name}">
+        <!--
+            Allowed column types - attribute, property, computed
+
+            Accepted 'computed' types - DerivativesAndModules
+        -->
+        <column type="attribute" key="Name" name="{Name}"/>
+        <column type="attribute" key="InsulationType" name="{Insulation Type}"/>
+        <column type="attribute" key="PartNumber" name="{Part Number}"/>
+        <column type="attribute" key="TypeCode" name="{Type Code}"/>
+        <column type="attribute" key="ColorCode" name="{Color Code}"/>
+        <column type="attribute" key="MaterialCode" name="{Material Code}"/>
+        <column type="attribute" key="InsulatedLength" name="{Insulated Length}" numerical-precision="0.01"/>
+        <column type="attribute" key="UnmodifiedLength" name="{Unmodified Length}" numerical-precision="0.01"/>
+        <column type="attribute" key="Weight" name="{Weight}" numerical-precision="0.01"/>
+        <column type="attribute" key="Width" name="{Width}" numerical-precision="0.01"/>
+        <column type="attribute" key="Layer" name="{Layer}"/>
+        <column type="attribute" key="Assembly" name="{Assembly}"/>
+        <column type="computed" key="Bundle" name="{Bundle}"/>
+        <column type="computed" key="AnchorNodeOffset" name="{Anchor node offset}"/>
+        <column type="computed" key="AnchorNode" name="{Anchor Node}"/>
+    </tables>
+    <tables name="Spot Tapes"
+            apply-to="spot-tape"
+            types="modified added removed"
+            sorted-by="{Name}">
+        <!--
+            Allowed column types - attribute, property, computed
+
+            Accepted 'computed' types - DerivativesAndModules
+        -->
+        <column type="attribute" key="Name" name="{Name}"/>
+        <column type="attribute" key="PartNumber" name="{Part Number}"/>
+        <column type="attribute" key="TypeCode" name="{Type Code}"/>
+        <column type="attribute" key="ColorCode" name="{Color Code}"/>
+        <column type="attribute" key="MaterialCode" name="{Material Code}"/>
+        <column type="attribute" key="NumberOfOverlaps" name="{Number of Turns}"/>
+        <column type="attribute" key="UnmodifiedLength" name="{Unmodified Length}" numerical-precision="0.01"/>
+        <column type="attribute" key="Weight" name="{Weight}" numerical-precision="0.01"/>
+        <column type="attribute" key="Width" name="{Width}" numerical-precision="0.01"/>
+        <column type="attribute" key="Layer" name="{Layer}"/>
+        <column type="attribute" key="Assembly" name="{Assembly}"/>
+        <column type="computed" key="Bundle" name="{Bundle}"/>
+        <column type="computed" key="AnchorNodeOffset" name="{Anchor node offset}"/>
+        <column type="computed" key="AnchorNode" name="{Anchor Node}"/>
+    </tables>
+    <tables name="Breakout Tapes"
+            apply-to="breakout-tape"
+            types="modified added removed"
+            sorted-by="{Name}">
+        <!--
+            Allowed column types - attribute, property, computed
+
+            Accepted 'computed' types - DerivativesAndModules
+        -->
+        <column type="attribute" key="Name" name="{Name}"/>
+        <column type="attribute" key="PartNumber" name="{Part Number}"/>
+        <column type="attribute" key="TypeCode" name="{Type Code}"/>
+        <column type="attribute" key="ColorCode" name="{Color Code}"/>
+        <column type="attribute" key="MaterialCode" name="{Material Code}"/>
+        <column type="attribute" key="TurnsAtBreakout" name="{Turns At Breakout}"/>
+        <column type="attribute" key="TurnsOnBranch" name="{Turns On Branch}"/>
+        <column type="attribute" key="UnmodifiedLength" name="{Unmodified Length}" numerical-precision="0.01"/>
+        <column type="attribute" key="Weight" name="{Weight}" numerical-precision="0.01"/>
+        <column type="attribute" key="Width" name="{Width}" numerical-precision="0.01"/>
+        <column type="attribute" key="Layer" name="{Layer}"/>
+        <column type="attribute" key="Assembly" name="{Assembly}"/>
+        <column type="computed" key="Bundle" name="{Bundle}"/>
+        <column type="computed" key="AnchorNode" name="{Anchor Node}"/>
+    </tables>
+</report>

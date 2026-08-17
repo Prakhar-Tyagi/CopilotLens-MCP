@@ -1,0 +1,15 @@
+<% if(items.length){ %>
+<div class="listPanel xrefs">
+	<div class="titlebar">
+		<span class="headingCount" style="display: block; ">
+			<span class="headingCountNumber"><%=items.length%></span></span>
+		<span class="headerText"><%=title%></span></div>
+	<% _.each(items, function(item) {%>
+	<div class="listItem"  data-id="<%=item.id%>" style="display: none;">
+		<span class="mainText"><%=item.get("mainText")%></span><span class="popUp"></span>
+		<br>
+		<span class="subText"><%=item.get("subText")%></span>
+	</div>
+	<% });%>
+</div>
+<% } %>

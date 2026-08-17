@@ -1,0 +1,103 @@
+<project name="run_javascript_unittests">
+    <!--Javascript unit tests directory -->
+    <property name="publisher.javascript.unittests"
+              value="${chs.projecthome}/clogic_src/src/capitallogic/src/chs/caplets/logic/actions/serviceDocumentation/resources"/>
+
+    <property name="publisher.javascript.unittest.coverage"
+              value="${chshome}/bld/js_uts"/>
+
+    <target name="stop_server_and_phantomJS" description="stop both JSTDServer and phantom headless browser..">
+        <if>
+            <or>
+                <equals arg1="${build_vco}" arg2="ixn"/>
+                <equals arg1="${build_vco}" arg2="ixw"/>
+            </or>
+            <then>
+                <exec executable="sh" dir="${publisher.javascript.unittests}" failonerror="false" timeout="150000">
+                    <arg value="stop.sh"/>
+                    <arg value="${publisher.javascript.unittest.coverage}"/>
+                </exec>
+            </then>
+            <else>
+            </else>
+        </if>
+    </target>
+
+
+    <target name="run_JS_tests" description="run capital publisher unit tests">
+        <if>
+            <or>
+                <equals arg1="${build_vco}" arg2="ixn"/>
+                <equals arg1="${build_vco}" arg2="ixw"/>
+            </or>
+            <then>
+                <exec executable="sh" dir="${publisher.javascript.unittests}" failonerror="false" timeout="150000000"
+                      output="${publisher.javascript.unittest.coverage}/log.txt"
+                      error="${publisher.javascript.unittest.coverage}/error.txt"
+                      logError="${publisher.javascript.unittest.coverage}/log.txt">
+                    <arg value="runjavascriptunittests.sh"/>
+                    <arg value="${publisher.javascript.unittests}"/>
+                    <arg value="${chs.projecthome}/infrastructure_src/src/third_party/jstestdriver/"/>
+                    <arg value="${chs.projecthome}/infrastructure_src/src/third_party/jgenhtml/"/>
+                    <arg value="${chs.projecthome}/infrastructure_src/src/third_party/phantomjs/"/>
+                    <arg value="${publisher.javascript.unittest.coverage}"/>
+                    <arg value="9876"/>
+                </exec>
+                <for param="line" list="${chshome}/bld/javascripttestsreport/result.txt" delimiter="">
+                    <sequential>
+                        <echo>@{line}</echo>
+                    </sequential>
+                </for>
+            </then>
+            <else>
+            </else>
+        </if>
+    </target>
+
+    <target name="runsingletestwithhighmemory" depends="initJaCoCoExecFilePerTest, extendedtestsinit">
+
+        <property environment="env"/>
+        <junit fork="${junit.fork}" maxmemory="${memory}" haltonfailure="${junit.haltonfailure}"
+               printsummary="${junit.printsummary}" timeout="${junit.timeout.ms}" showoutput="${junit.showoutput}">
+            <syspropertyset refid="test.sysproperties"/>
+            <sysproperty key="net.sourceforge.cobertura.datafile" file="${cobertura.serfile}"/>
+            <jvmarg value="-ea"/>
+            <jvmarg value="-javaagent:${chshome}/bld/lib/jmockit.jar"/>
+            <formatter type="${junit.format}"/>
+            <classpath>
+                <fileset dir="${cb-instrumented.dir}" includes="**/*.jar"/>
+                <path refid="classpath.runtests"/>
+                <path refid="cobertura.classpath"/>
+                <path refid="jacoco.agent.path"/>
+                <path refid="junit.path"/>
+            </classpath>
+            <jvmarg value="-ea"/>
+            <jvmarg value="-Dvalidation.extended=${validation.extended}"/>
+            <jvmarg line="-Dvalidation.extended=${validation.extended}
+            -Dvalidation.intermediateXML=${validation.intermediateXML}
+            -ea
+            -Xmx${memory}
+            ${chsbuild.bigstack}
+            -XX:+HeapDumpOnOutOfMemoryError
+            -XX:HeapDumpPath=${chs.build.heapdumpdir}
+            ${test.jvm.args.linux}
+          "/>
+            <batchtest todir="${test.results.dir}">
+                <fileset dir="${chs.extendedtests.dir}" includes="${testlist}">
+                    <include name="**/${test}.${class.suffix}"/>
+                </fileset>
+            </batchtest>
+        </junit>
+    </target>
+
+    <target name="run_javascript_unittests" description="run capital publisher unit tests">
+        <trycatch>
+            <try>
+                <ant target="run_JS_tests"/>
+            </try>
+            <finally>
+                <ant target="stop_server_and_phantomJS"/>
+            </finally>
+        </trycatch>
+    </target>
+</project>

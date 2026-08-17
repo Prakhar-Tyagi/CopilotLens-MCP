@@ -1,0 +1,52 @@
+<% if(isEffectivityPacket) {%>
+<% if(configLicence) { %>
+<div id="vinSearchToolbar" class="effectVinSearchToolBar toolbar1 auto-filter-bar">
+			<span class="Effectivity-Range auto-effectivity-label">
+                  Effectivity Range : <%= range %>
+            </span>
+	<div id="resetBox" style="width: 89% ">
+		<div id="vinTextHolder" class="effectVinTextHolder" style="width: 80%; " title="">
+			<input
+					value="<%= mentor.publisher.languageTranslator.localize('SelectConfigText')%>"
+					id="vinFilterText"
+					readonly
+					disabled
+					name="search"
+					type="text"
+					class="search placeHolderText auto-vin-filter-field" style="width: 100%; ">
+		</div>
+		<div id="resetVin" class="clear clearImage auto-filter-reset-button"></div>
+	</div>
+	<div id="configButton" class="component-button small-button auto-filter-button"
+		 data-name="Configuration Filter">&nbsp;
+	</div>
+</div>
+<% } else { %>
+<div id="vinSearchToolbar" class="effectVinSearchToolBarWithoutConfig toolbar1 auto-filter-bar">
+			<span class="Effectivity-Range auto-effectivity-label">
+                  Effectivity Range : <%= range %>
+            </span>
+</div>
+<% } %>
+<% } else { %>
+<div id="vinSearchToolbar" class="nonEffectivityVinSearchToolBar toolbar1 auto-filter-bar">
+	<% if(vinLicence || configLicence){ %>
+	<div id="resetBox" style="width: 89% ">
+		<div id="vinTextHolder" class="vinTextHolder" style="width: 80%; " title="">
+			<input
+					value="<%= mentor.publisher.languageTranslator.localize('EnterVintext')%>" id="vinFilterText"
+					name="search"
+					type="text"
+					autocomplete="off"
+					class="search placeHolderText auto-vin-filter-field" style="width: 100%; ">
+		</div>
+			<div id="resetVin" class="clear clearImage auto-filter-reset-button"></div>
+		</div>
+		<%}%>
+		<% if(configLicence){ %>
+		<div id="configButton" class="component-button small-button auto-filter-button"
+			 data-name="Configuration Filter">&nbsp;
+		</div>
+		<%}%>
+	</div>
+	<% } %>

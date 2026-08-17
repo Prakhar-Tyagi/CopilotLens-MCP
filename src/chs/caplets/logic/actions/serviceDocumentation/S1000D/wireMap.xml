@@ -1,0 +1,694 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+
+
+<!--
+
+**WARNING **  **WARNING **   **WARNING **
+Please do not directly use S1000D configuration files located in Capital Home/Publisher etc .  
+Files in these locations should be treated as samples. You must make a copy of these 
+configuration files and use them from an outside directory.
+
+Files located in capital home may be upgraded (and hence overwritten) during 
+future Capital release cycles.
+
+
+ * Copyright 2015 Mentor Graphics Corporation. All Rights Reserved.
+ * <p>
+ * Recipients who obtain this code directly from Mentor Graphics use it solely
+ * for internal purposes to serve as example Java web services.
+ * This code may not be used in a commercial distribution. Recipients may
+ * duplicate the code provided that all notices are fully reproduced with
+ * and remain in the code. No part of this code may be modified, reproduced,
+ * translated, used, distributed, disclosed or provided to third parties
+ * without the prior written consent of Mentor Graphics, except as expressly
+ * authorized above.
+ * <p>
+ * THE CODE IS MADE AVAILABLE "AS IS" WITHOUT WARRANTY OR SUPPORT OF ANY KIND.
+ * MENTOR GRAPHICS OFFERS NO EXPRESS OR IMPLIED WARRANTIES AND SPECIFICALLY
+ * DISCLAIMS ANY WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
+ * OR WARRANTY OF NON-INFRINGEMENT. IN NO EVENT SHALL MENTOR GRAPHICS OR ITS
+ * LICENSORS BE LIABLE FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING LOST PROFITS OR SAVINGS) WHETHER BASED ON CONTRACT, TORT
+ * OR ANY OTHER LEGAL THEORY, EVEN IF MENTOR GRAPHICS OR ITS LICENSORS HAVE BEEN
+ * ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+ * <p>
+-->
+
+
+
+
+<!--
+This file is an executable description of how to make the S1000D data for <content>/<wiringData>/<wireGroup><wire> etc from a 
+simple generic representation of data on a Mentor IXLogicDiagram.
+The header area is populated by another map see ('wireHeaderMap.xml')
+For this map we create the target completely – we don't merge. 
+
+Use <isCleaningFiles val='n'/> to see the source data files for the map. The source 
+of the data will be visible and will be like DiagramLogicDatax.xml
+The correct technique for modifying this map is to make small incremental alterations and to rerun Publisher. 
+This map will be picked up and rerun without any need to start Publisher again. 
+
+-->
+<maps>
+    <!-- for  each 'XLogicDesign' in the source make a  content/wiringData-->
+    <map independent='true'>
+        <target>
+            <path val= 'content'/>
+            <path val= 'wiringData'/>
+        </target>
+        <source>
+            <path val='XLogicDiagram'/>
+        </source>
+        <call target='figure' source ='$self'/>
+        <call target='wireGroup' source ='$self'/>
+        <call target='electricalEquipGroup' source ='$self'/>
+    </map>
+    <!-- for  the single 'XLogicDesign' in the source make a  wireGroup   -->
+    <map target  = 'wireGroup' source  = 'XLogicDesign'>
+        <call target='wireGroup' source ='XLogicDiagram'/>
+    </map>
+    <!-- for  each 'XLogicDiagram' in the populate the wireGroup - using 'merge' means it does not create a node, 
+	which is not exactly how merge was expected to work, but 'fixing' merge now, given that merge is used in the header map
+	would be unwise.  If merge was a true merge one could write this map in one stage-->
+    <map target  = 'wireGroup' source  = 'XLogicDiagram' mode='merge'>
+        <call target='wireGroup' source ='XLogicDiagramConductor'/>
+    </map>
+    <!-- for  each 'XLogicDiagramPinList' in the source make a  wire  record-->
+    <map target  = 'wireGroup' source  = 'XLogicDiagramConductor' mode='merge'>
+        <varif op='set' name='isDupW' source ='@dupX'/>
+        <varif op='NOT_EQUAL' name='isDupW' constant='y'>
+            <call target='wire' source ='$self'/>
+        </varif>
+    </map>
+    <!-- create the single electricalEquipGroup from single XLogicDesign  -->
+    <map target  = 'electricalEquipGroup' source  = 'XLogicDesign'>
+        <call target='electricalEquipGroup' source ='XLogicDiagram'/>
+    </map>
+    <!-- for  each 'XLogicDiagram' populate the  electricalEquipGroup  -->
+    <map target  = 'electricalEquipGroup' source  = 'XLogicDiagram' mode='merge'>
+        <call target='electricalEquip' source ='XLogicDiagramPinList'/>
+    </map>
+    <!-- for  each 'XLogicDiagramPinList' in the source make a  electricalEquip  record-->
+    <map target  = 'electricalEquipGroup' source  = 'XLogicDiagramPinList' mode='merge'>
+        <varif op='set' name='isDup' source ='@dupX'/>
+        <varif op='NOT_EQUAL' name='isDup' constant='y'>
+            <call target='electricalEquip' source ='$self'/>
+        </varif>
+    </map>
+    <map target='electricalEquip' source  = 'XLogicDiagramPinList'>
+        <copy source= '@name'>
+            <target>
+                <path val= 'functionalItemRef'/>
+                <path val= '@functionalItemNumber'/>
+            </target>
+        </copy>
+        <copy target="partNumber" skipblank='Y'>
+            <source>
+                <path val= 'Attrs'/>
+                <!--As in Select attr.value where name ='PartNumber'-->
+                <path val= 'getAttr' param='PartNumber'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+        <!-- only add some alt if there is some to add - first we set -->
+        <!-- a local var 'hasSomeAlternativeId' to the value of the id-->
+        <varif op='set' name='hasSomeAlternativeId'>
+            <source>
+                <path val= 'Attrs'/>
+                <path val= 'getAttr' param='SupplierPartNumber'/>
+                <path val= '@val'/>
+            </source>
+        </varif>
+        <!-- now execute it only if 'hasSomeAlternativeId' is not equal <> to blank-->
+        <varif op='NOT_EQUAL' name='hasSomeAlternativeId' constant=''>
+            <call target ='altIdentGroup' source ='$self'/>
+        </varif>
+        <!-- only set connectionListClass if there a value for it. First we set -->
+        <!-- a local var 'hasconnectionListClass' then test it and run code conditional on that test-->
+        <varif op='set' name='hasConnectionListClass'>
+            <source>
+                <path val= 'Props'/>
+                <path val= 'getProp' param='S1000D.CLC'/>
+                <path val= '@val'/>
+            </source>
+        </varif>
+        <varif op='NOT_EQUAL' name='hasConnectionListClass' constant=''>
+            <copy target="connectionListClass">
+                <source>
+                    <path val= 'Props'/>
+                    <path val= 'getProp' param='S1000D.CLC'/>
+                    <path val= '@val'/>
+                </source>
+            </copy>
+        </varif>
+        <call target='responsiblePartnerCompany' source ='$self'/>
+        <!--above equipName 22.08.2014-->
+        <copy target="equipName">
+            <source>
+                <path val= 'Attrs'/>
+                <!--As in Select attr.value where name ='PartNumber'-->
+                <path val= 'getAttr' param='Name'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+        <call target='reqQuantity' source ='$self'/>
+        <call target='installationInfo' source ='mate'>
+		    <relationship val='Mates'/>
+            <relationship val='mate'/>
+		</call>
+    </map>
+	
+    <map target='installationInfo' source  = 'mate'>
+        <copy target='installationLocation' skipblank='Y'> 
+            <source>
+                <path val= 'getParentMates'/>
+                <path val= 'getParentXLogicDiagramPinList'/>
+                <path val= 'Props'/>
+                <path val= 'getProp' param='ZONE'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+        <copy source= '@val'>
+            <target>
+                <path val= 'siblingPlugIdent'/>
+                <path val= 'functionalItemRef'/>
+                <path val= '@functionalItemNumber'/>
+            </target>
+        </copy>
+    </map>
+    <map target='reqQuantity' source  = 'XLogicDiagramPinList'>
+        <copy target= "@unitOfMeasure" constant ="EA"/>
+        <copy target= "$Content" constant ="1"/>
+    </map>
+    <map target  = 'altIdentGroup' source  = 'XLogicDiagramPinList'>
+        <call target= 'altIdent' source ='$self'/>
+    </map>
+    <map target  = 'altIdent' source  = 'XLogicDiagramPinList'>
+        <copy target="partNumber">
+            <source>
+                <path val= 'Attrs'/>
+                <path val= 'getAttr' param='SupplierPartNumber'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+        <copy target="manufacturerCode">
+            <source>
+                <path val= 'Props'/>
+                <path val= 'getProp' param='S1000D.NCAGE'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+    </map>
+    <!-- for  each 'XLogicDiagramPinList' in the source make a  responsiblePartnerCompany  record-->
+    <map target  = 'responsiblePartnerCompany' source  = 'XLogicDiagramPinList'>
+        <copy target= '@enterpriseCode'>
+            <source>
+                <function name='getValueFromConfigHdr'>
+                    <param constant="WIRE"/>
+                    <param constant="*.dmStatus.responsiblePartnerCompany.@enterpriseCode"/>
+                </function>
+            </source>
+        </copy>
+        <!-- The first param 'WIRE' simply fetches date arelated to wiring back -->
+        <copy target="enterpriseName">
+            <source>
+                <function name='getValueFromConfigHdr'>
+                    <param constant="WIRE"/>
+                    <param constant="*.dmStatus.responsiblePartnerCompany.enterpriseName"/>
+                </function>
+            </source>
+        </copy>
+    </map>
+    <!-- for  each 'XLogicDiagram' in the source make a single figure-->
+    <map target  = 'figure' source  = 'XLogicDesign'>
+        <copy target ='@xmlns' constant = 'http://www.customer.com/XSD/customerApplication'/>
+    <!--    <copy target ='title' source = "@description" skipblank='N'/>  --> 
+        <copy target ='title' source = "@description" skipblank='N'/>   
+        <!-- Was 'description' -->
+        <!--copy target ='title' constant = 'Title'/-->
+        <!--   <call target='graphic' source ='$self'/>  -->
+        <call target='graphic' source ='XLogicDiagram'/>
+        <!--Altered this to take it from diagram-->
+    </map>
+    <map target  = 'figure' source  = 'XLogicDiagram'>
+        <copy target ='@xmlns' constant = 'http://www.customer.com/XSD/customerApplication'/>
+        <copy target ='title' source = "@description" skipblank='N'/>
+        <call target='graphic' source ='$self'/>
+    </map>
+    <!-- create the figure/title/graphic thing and then under it create a 'hotspot' for each wire 'XLogicDiagramConductor' 
+    <map target ='graphic' source  = 'XLogicDiagram'>
+        <copy target ='@infoEntityIdent'>
+            <source>
+                <function name='getURNBody'>
+                    <param>
+                        <source val  ="XLogicDiagramConductor"/>
+                        <source val  ="@URN"/>
+                    </param>
+                    <param constant="ICN"/>
+                </function>
+            </source>
+        </copy>
+        <call target='hotspot' source ='XLogicDiagramConductor'/>
+    </map>
+	-->
+    <map target ='graphic' source  = 'XLogicDiagram'>
+        <copy target ='@infoEntityIdent' source ="@icnRef"/>
+        <copy target ='@reproductionHeight' constant ="130mm"/>
+        <copy target ='@reproductionScale' constant ="1"/>
+        <call target='hotspot' source ='XLogicDiagramConductor'/>
+		<!--Added ACE 2014.09.16 call to also add pinlists-->
+		 <call target='hotspot' source ='XLogicDiagramPinList'/>
+    </map>
+    <!--Added ACE 2014.09.16- new map for Pin list-->
+    <map target  = 'hotspot' source  = 'XLogicDiagramPinList'>
+        <copy target ='@applicationStructureIdent' source = "@name"/>
+        <copy target ='@applicationStructureName' source = "@name"/>
+        <!-- OK-->
+        <copy target ='@hotspotTitle'>
+            <source>
+                <function name='concat'>
+                    <param source="@name"/>
+                    <param constant=" Device"/>
+                </function>
+            </source>
+        </copy>
+        <copy target ='@hotspotType' constant='callout'/>
+    </map>
+	
+    <map target  = 'hotspot' source  = 'XLogicDiagramConductor' mode='nocreate'>
+	     <varif op='set' name='HotSpotIdent' source ="@HotSpot"/>		    
+		 <!-- note that some conductors may be invisible in which case 
+	     they will have no hotspot attribute and we don't create the object. 
+		 We do this by not calling the map for an object with no @HotSpot-->
+		 <!-- don't execute any more map statements in this map -->
+         <varif op='NOT_EQUAL' name='HotSpotIdent' constant=''>        
+             <setmode mode = 'create'/>       	 
+            <!--<return/> -->
+         </varif>
+	<!-- <setmode mode = 'create'/>  alter the mode of this map--> 		
+        <copy target ='@applicationStructureIdent' source = "@HotSpot"/>
+        <copy target ='@applicationStructureName' source = "@name"/>
+        <!-- OK-->
+        <copy target ='@hotspotTitle'>
+            <source>
+                <function name='concat'>
+                    <param source="@name"/>
+                    <param constant=" Wire Conductor"/>
+                </function>
+            </source>
+        </copy>
+        <copy target ='@hotspotType' constant='callout'/>
+    </map>
+    <!-- for each   'XLogicDiagramConductor' make a 'wire' and attach it to the target-->
+    <map>
+        <target path = 'wire'/>
+        <source path ='XLogicDiagramConductor'/>
+        <copy target ='@wireState' constant = 'active'/>
+        <!-- set the  applicRefId from calling function  getValueFromConfigHdr('WIRE','*.referencedApplicGroup.applic.id') 
+	 Gebhard Maurer 27.06.2014 - this value is not required
+        <copy>
+            <target path= '@applicRefId'/>
+            <source>
+                <function name='getValueFromConfigHdr'>
+                    <param constant="WIRE"/>
+                    <param constant="*.referencedApplicGroup.applic.id"/>
+                </function>
+            </source>
+        </copy>
+		-->
+        <call target='wireIdent' source ='$self'/>
+        <call target='wireConnection' source ='$self'/>
+        <call target='wireInfo' source ='$self'/>
+    </map>
+    <!-- populate the wireIdent tag's wireNumber element-->
+    <map>
+        <target path = 'wireIdent'/>
+        <source path='XLogicDiagramConductor'/>
+        <copy>
+            <target>
+                <path val= 'wireNumber'/>
+                <path val= '$Content'/>
+            </target>
+            <source>
+                <path val = '@name'/>
+            </source>
+        </copy>
+    </map>
+    <!-- populate the wireConnection  This guy contains zero to two children-->
+    <map>
+        <target path = 'wireConnection'/>
+        <source path='XLogicDiagramConductor'/>
+        <call name='Eq' target='fromEquip' source ='XLogicDiagramPin' offset='0'/>
+        <call name='Eq' target='toEquip' source ='XLogicDiagramPin' offset='1'/>
+    </map>
+    <!--With  'getRelatedPinList' in the following map we use a more generalised concept of a 'relationship' to make life easy.  
+	 A relationship allows one to set off anywhere in the xml and find (or make) the related nodes.  Then we can continue  the  mapping from the related notes.  
+     We  have informally been using the concept of a relationship before this point. The default relationship is the set of child nodes is in that relationship with its parent. -->
+    <!-- populate the fromEquip or toEquip dynamically so no actual target is specified here, we call this map by name-->
+    <map name='Eq' source= 'XLogicDiagramPin'>
+        <copy>
+            <target>
+                <path val= 'functionalItemRef'/>
+                <path val= '@functionalItemNumber'/>
+            </target>
+            <source>
+                <path val='getRelatedPinList'/>
+                <path val='@name'/>
+            </source>
+        </copy>
+        <call target='contactInfo' source ='$self'/>
+    </map>
+    <map target = 'contactInfo' source= 'XLogicDiagramPin'>
+        <call target='contact' source ='$self'/>
+    </map>
+    <map target = 'contact' source= 'XLogicDiagramPin'>
+        <copy target = '@contactIdent' source = '@name'/>
+        <copy target = '@contactPartNumber'>
+            <source>
+                <path val='getRelatedPinList'/>
+                <path val= 'Attrs'/>
+                <path val= 'getAttr' param='PartNumber'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+    </map>
+    <!--
+	This example is what we are trying to make - insofar as we have information to make it
+	 <wireInfo>
+                       
+                        <harnessIdent>Lamp1</harnessIdent>
+                        <wireSeqNumber>1</wireSeqNumber>
+                        <circuitIdent>234</circuitIdent>
+                        <sectionIdent>567</sectionIdent>
+                        <twistGroup>
+                            <twist twistingType="1">Lamp1</twist>
+                        </twistGroup>
+                        <length>1000</length>
+                        <wireColor>red</wireColor>
+                        <responsiblePartnerCompany enterpriseCode="U8025">
+                            <enterpriseName>UK MoD</enterpriseName>
+                        </responsiblePartnerCompany>
+                        <routing>
+                            <feedThru holeIdent="1">
+                                <referenceDesignator>FT3</referenceDesignator>
+                            </feedThru>
+                        </routing>
+                    </wireInfo>
+	-->
+    <map target = 'wireGauge' source ='XLogicDiagramConductor'>
+        <copy target = '$Content'>
+            <source>
+                <path val= 'Attrs'/>
+                <!--As in Select attr.value where name ='WireCSA'-->
+                <path val= 'getAttr' param='WireCSA'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+        <copy>
+            <target>
+                <path val= '@wireGaugeType'/>
+            </target>
+            <source constant='proj'/>
+        </copy>
+    </map>
+    <map target = 'wireInfo' source ='XLogicDiagramConductor'>
+        <call target='wireCode' source ='$self'/>
+        <copy target="partNumber" skipblank='Y'>
+            <source>
+                <path val= 'Attrs'/>
+                <path val= 'getAttr' param='PartNumber'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+        <copy target ='harnessIdent' skipblank='Y'>
+            <source>
+                <path val= 'Attrs'/>
+                <!--As in Select attr.value where name ='Harness'-->
+                <path val= 'getAttr' param='Harness'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+        <copy target ='wireColor' skipblank='Y'>
+            <source>
+                <path val= 'Attrs'/>
+                <path val= 'getAttr' param='WireColor'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+        <!-- now we might want make an 'illustrationRef/refs' - of the raw data has an XREF then this is required -->
+        <call target='refs' source ='XREF'/>
+        <!--  <call target='dmRef' source ='$self'/> -->
+    </map>
+    <map source ='XREF'>
+        <target>
+            <path val= 'illustrationRef'/>
+            <path val= 'refs'/>
+        </target>
+        <call target='dmCode' source ='E'/>
+    </map>
+    <map source ='E'>
+        <target>
+            <path val= 'dmRef'/>
+            <path val= 'dmRefIdent'/>
+            <path val= 'dmCode'/>
+        </target>
+        <copy target='@assyCode' source = "assyCode"/>
+        <!--* *-->
+        <copy target='@disassyCode' source = "DC"/>
+        <copy target='@disassyCodeVariant' source = "DCV"/>
+        <copy target='@infoCode' source = "IC"/>
+        <copy target='@infoCodeVariant' source = "ICV"/>
+        <copy target='@itemLocationCode' source = "LC"/>
+        <copy target='@modelIdentCode' source = "MI"/>
+        <copy target='@subSubSystemCode' source = "subSubSystemCode"/>
+        <!--* *-->
+        <copy target='@subSystemCode' source = "subSystemCode"/>
+        <!--* *-->
+        <copy target='@systemCode' source = "systemCode"/>
+        <!--* *-->
+        <copy target='@systemDiffCode' source = "SDC"/>
+    </map>
+    <!--
+	 <illustrationRef>
+        // For references to other wiring data modules of an wire the element <illustrationRef> has to be used.
+        // For each reference a element <demRef> has to be used inside of the element <refs>.
+        <refs>
+            <dmRef>
+                <dmRefIdent>
+                   <dmCode assyCode="0009" disassyCode="00" disassyCodeVariant="A" infoCode="056" infoCodeVariant="A" itemLocationCode="A" modelIdentCode="PC24" subSubSystemCode="0" subSystemCode="2" systemCode="E28" systemDiffCode="A"/>
+                </dmRefIdent>
+            </dmRef>
+			// more here 
+        </refs>
+        </illustrationRef>
+	
+	-->
+    <map target = 'wireCode' source ='XLogicDiagramConductor'>
+        <copy target ='wireType'>
+            <source>
+                <path val= 'Attrs'/>
+                <path val= 'getAttr' param='WireSpec'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+        <call target='wireGauge' source ='$self'/>
+    </map>
+    <!-- make xlink:type="simple" xlink:href="URN:S1000D:ICN-S1000DBIKE-AAA-D000000-0-U8025-00536-A-04-1" xlink:title="Complete bicycle" infoEntityIdent="ICN-S1000DBIKE-AAA-D000000-0-U8025-00536-A-04-1">  -->
+    <!-- //////////////////// -->
+    <map source ='XLogicDiagramConductor'>
+        <target>
+            <path val= 'illustrationRef'/>
+            <path val= 'refs'/>
+            <path val= 'dmRef'/>
+        </target>
+        <copy target ='@xlink:type' constant= 'simple'/>
+        <copy target ='@xlink:href'>
+            <source>
+                <function name='concat'>
+                    <param constant= 'URN:S1000D:'/>
+                    <param>
+                        <function name='getURNBody'>
+                            <param source="@URN"/>
+                            <param constant="ICN"/>
+                        </function>
+                    </param>
+                </function>
+            </source>
+        </copy>
+        <copy target ='@xlink:title' source="@name"/>
+        <copy target ='@infoEntityIdent'>
+            <source>
+                <function name='concat'>
+                    <param constant= 'URN:S1000D:'/>
+                    <param>
+                        <function name='getURNBody'>
+                            <param source="@URN"/>
+                            <param constant="ICN"/>
+                        </function>
+                    </param>
+                </function>
+            </source>
+        </copy>
+        <call target='OLD_hotspot' source ='$self'/>
+    </map>
+    <!-- //////////////////////-->
+    <!-- make     <hotspot id="fig-0001-gra-0001-hot-0000" applicationStructureIdent="hot000" applicationStructureName="0" hotspotType="CALLOUT" hotspotTitle="BICYCLE" objectDescr="BICYCLE"/> -->
+    <map target = 'OLD_hotspot' source ='XLogicDiagramConductor'>
+        <copy target ='@id' source ='@HotSpot'/>
+        <copy target ='@applicationStructureIdent' source ='@HotSpot'/>
+        <copy target ='@applicationStructureName' constant= '0'/>
+        <copy target ='@hotspotType' constant= 'CALLOUT'/>
+        <copy target ='@hotspotTitle' source ='@name'/>
+    </map>
+    <!-- //////////////////////-->
+    <!-- These are a relationships which are navigated on the source-->
+    <!-- //////////////////////-->
+    <relationship name="getRelatedPinList" side ="source">
+        <origin val= 'XLogicDiagramPin'/>
+        <destination val= 'XLogicDiagramPinList'/>
+        <valueRule op='EQUAL'>
+            <origin path='@id'/>
+            <destination>
+                <path val='XLogicDiagramPin'/>
+                <path val='@id'/>
+            </destination>
+        </valueRule>
+        <elementPathRule/>
+    </relationship>
+	<!--/////////////////////////////////////////////-->	
+	<relationship name="getParentMates" side ="source">
+        <origin val= 'mate'/>
+        <destination val= 'Mates'/>
+        <positionRule val = 'parent' offset='0'/>  
+    </relationship>
+	
+	<relationship name="getParentXLogicDiagramPinList" side ="source">
+        <origin val= 'Mates'/>
+        <destination val= 'XLogicDiagramPinList'/>
+        <positionRule val = 'parent' offset='0'/>  
+    </relationship>
+	
+	
+	
+	
+	
+    <!-- /////////////////////
+This is a parameterised relationship – it takes an origin parameter and compares that value with the destination path. 
+Currently relationships will only interpret one parameter
+    //////////////////////-->
+    <relationship name="getAttr" side ="source">
+        <origin val= 'Attrs'/>
+        <destination val= 'A'/>
+        <valueRule op='EQUAL'>
+            <origin>
+                <path param ='true'/>
+            </origin>
+            <destination path="@name"/>
+        </valueRule>
+        <positionRule val = 'child' offset='0'/>
+        <elementPathRule/>
+    </relationship>
+    <!-- ///////////same type of relationship – this one gets a named property by parameter///////////-->
+    <relationship name="getProp" side ="source">
+        <origin val= 'Props'/>
+        <destination val= 'P'/>
+        <valueRule op='EQUAL'>
+            <origin>
+                <path param ='true'/>
+            </origin>
+            <destination path="@name"/>
+        </valueRule>
+        <positionRule val = 'child' offset='0'/>
+        <elementPathRule/>
+    </relationship>
+    <!-- //////////////////////-->
+    <!-- ////This one - (not used) shows how one can define a relationp with a constant condition//////////////////-->
+    <relationship name="getPartNumber" side ="source">
+        <origin val= 'Attrs'/>
+        <destination val= 'A'/>
+        <valueRule op='EQUAL'>
+            <origin constant='PartNumber'/>
+            <destination path="@name"/>
+        </valueRule>
+        <positionRule val = 'child' offset='0'/>
+        <elementPathRule/>
+    </relationship>
+    <!-- //////////////////////-->
+    <!-- General  Notes
+
+The two essential concepts are
+    a map which is a description of how you find/create something in one element from another element
+and 
+    a relationship which tells you how you navigate on one side or the other of the system 
+
+A map usually has a source and target defined - if it doesn't then the source and target are taken from where it called.
+A map may have a name.  If it has a name it can be called by name.
+A map has a mode.  By default the mode is 'create'.   The modes defined are:
+
+'create' - create (unconditional) the entire target of the map
+'find'. - Find  or create - create the final target if it does not exist. Otherwise do not create but use the existing.  Identification attributes may be set. (not yet implemented)
+'optional'.  - don't create the target of the map - you have to conditionally hit the keyword 'setmode' to set the mode to something else. 
+'nocreate' - don't create the target of this map unless we run a create statement (we normally put the create statement in a variable )
+'extant' - the target of this map already exists, just set attributes and values on it
+'merge' - merge this based on identification (not yet implemented)
+
+The target can be a path in which case it this will find or create all the elements of that path.
+The mapping statements are either:
+     1) 'copy' - which tells it to copy something to the target -
+      2) 'call' - which tells it to call another map from the point given in the call statement.
+      3) id - a set of statements identifying the final target element. 
+
+The statement in a map run in the order they are declared.
+
+All elements that declare a 'val' may be abbreviated ( provided we only want to declare one object with a 'val') 
+
+Thus 
+
+ <source>
+      <path val='XLogicDesign'/>
+</source>
+
+could have been written 
+
+ <source path ='XLogicDesign'/>
+
+There is no difference in execution.
+In the same way source and target statements may be abbrieviated 
+
+Special attributes. 
+
+$Content is a special attribute standing for the node content				
+All attributes are  prefixed with @name.
+The final target of a copy can be an element - in which case we assume the value is to be set into $Content
+The source attribute $Tree makes a copy of the entire source tree below that point. 
+
+A copy statement may take the property 'replace'   this tells it to replace the old value of an attribute or $Content with value assigned by the map. 
+If no value previously existed then the new value is set in any case. 
+
+Where a copy statment has a true path target it will make a new path for all elements to that point. 
+This means that the technique is not appropriate for creating a number of attributes, single target path.  The solution to this problem is to use a call to an independent map and let that ake a single target with
+potentially many properites set.
+
+The call statement may have  up to 5 parameters
+	 			
+    1) name = the optional name of the transform we will call.
+    2) target = the name of the item is going to be created in the transform that we call.  
+          If the transform doesn't defy a target name then this will be the name of the object we create.
+    3) source - the name of the source of the transform. 
+    4) relationship -  the name of the relationship used to get from the current source to the source 
+	      we will plug into the transform we call.  If not present it 
+		  simply means we're going to use the inbuilt child relationship to that name. 	
+     5) offset - the offset into the relationship navigation. If we ask from an offset which 
+	     is bigger than the number of items then the transform will not be called.  If we don't
+	     specify an offset at all it means it will be called for all child items.
+	
+For VarIf the following ops are defined:
+     "SET"   - which instructs the system to set the value to named var
+	 "EQUAL" , 	"NOT_EQUAL", "BIGGER",  "SMALLER", "BIGGER_OR_EQUAL","SMALLER_OR_EQUAL"
+	  Thsee all instructs a system to use the value in a named varif and execute the code contained in the VarIf conditionally
+
+
+Note that this document  uses pure XML attribute style.  We don't allow mixed up content nodes in this XML.
+
+              -->
+</maps>

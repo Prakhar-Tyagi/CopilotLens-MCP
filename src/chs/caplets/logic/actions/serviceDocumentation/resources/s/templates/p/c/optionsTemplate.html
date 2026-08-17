@@ -1,0 +1,34 @@
+<% if(items.length){ %>
+	<% if(showTitle){ %>
+	<div class="titlebar auto-list-header">
+		<span class="headingCount">
+			<span class="headingCountNumber auto-item-count-label"><%=items.length%></span>
+		</span>
+		<span class="headerText auto-title-label"><%=title%></span>
+	</div>
+	<% } %>
+	<% if (expand) { %>
+		<% _.each(items, function(item) {%>
+		<div class="listItem colorBlack auto-item <%if(item.get('disabled')){%> disabled<%}%>" data-id="<%=item.id%>" data-type="<%=item.get('type')%>"
+			 data-name="<%=item.get('name')%>" data-value="<%=item.get('value')%>"
+			 data-isvariant="<%=item.get('isVariant')%>"
+			 data-exclusiveoptions="<%=item.get('exclusiveOptions')%>"
+			 data-inclusiveoptions="<%=item.get('inclusiveOptions')%>"
+			 data-diagramflag="<%=item.get('diagramFlag')%>">
+			<span class="mainText auto-title-label" data-type="<%=item.get('type')%>" style="width: 86%;float: left;"
+				  data-name="<%=item.get('name')%>" data-value="<%=item.get('value')%>"
+				  data-isvariant="<%=item.get('isVariant')%>"
+				  data-exclusiveoptions="<%=item.get('exclusiveOptions')%>"
+				  data-inclusiveoptions="<%=item.get('inclusiveOptions')%>"
+                  data-diagramflag="<%=item.get('diagramFlag')%>"><%=_.escape(item.get("name"))%></span>
+			<input type="checkbox" class="configPanelCheckBox auto-checkbox" style="float: left;" data-type="<%=item.get('type')%>"
+				   data-name="<%=item.get('name')%>" data-value="<%=item.get('value')%>"
+				   data-isvariant="<%=item.get('isVariant')%>"
+				   data-exclusiveoptions="<%=item.get('exclusiveOptions')%>"
+				   data-inclusiveoptions="<%=item.get('inclusiveOptions')%>"
+				   data-diagramflag="<%=item.get('diagramFlag')%>" <%if(item.get('disabled')){%> disabled<%}%>
+					<%if(item.get('checked')){%> checked<%}%> >
+		</div>
+		<% });%>
+	<% } %>
+<% } %>

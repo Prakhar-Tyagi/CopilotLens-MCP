@@ -1,0 +1,36 @@
+
+<div id="detailPopup" class="iesdPopup auto-popover"
+	 style="visibility:hidden;display: block;height: <%=height%>px; left: <%=x%>px; top: <%=y%>px;">
+	<div id="popupheader" class="toolbar1 auto-popover-header">
+		<% if(showRenderConnectivityBtn) { %>
+		<div class="component-button trace-signal renderConnectivityBtn auto-render-connectivity-button"
+			 style="float: left;" title="<%=renderConnectivityBtnToolTip %>"><%=
+			mentor.publisher.languageTranslator.localize('Build') %>
+		</div>
+		<% } %>
+		<div class="popOverClearBtn clear closeBtn auto-close-button"></div>
+		<div class="component-label auto-title-label" title="">
+			<%=decodeURIComponent(encodeURIComponent(title).replace(/%5Cn/g, ' '))%>
+		</div>
+	</div>
+	<div id="popover-grouped-list" class="border auto-popover-content">
+	</div>
+	<div id="popupfooter" class="toolbar1 background auto-popover-footer">
+		<% if(showFilter && showXrefBuilderButton){ %>
+		<div id="relateddata_filter" style="display: block; width: 88%;">
+			<input type="text"
+				   placeholder="<%= mentor.publisher.languageTranslator.localize('FilterPlaceholderText') %>"
+				   class="navigationSearchFilter auto-search-field">
+		</div>
+		<div id="buildConfigurationButton" class="component-button auto-config-filter-button"
+			 data-name="Configuration Filter"
+			 style="display: block;">
+			&nbsp;
+		</div>
+		<% }else if(showFilter) {%>
+		<div id="relateddata_filter" style="display: block; width: 100%;">
+			<input type="text" placeholder="<%= mentor.publisher.languageTranslator.localize('FilterPlaceholderText') %>" class="navigationSearchFilter auto-search-field">
+		</div>
+		<% }%>
+	</div>
+</div>

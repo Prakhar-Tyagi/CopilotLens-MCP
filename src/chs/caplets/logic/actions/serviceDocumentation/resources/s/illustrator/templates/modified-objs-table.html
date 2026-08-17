@@ -1,0 +1,63 @@
+<tbody>
+<%
+_.range(visibleData.getRangeStart(), visibleData.getRangeEnd()).forEach(function(index) {
+var visibleIndex = visibleData.indices[index]
+var item = data.items[visibleIndex];
+%>
+<tr>
+    <% _.each(data.cols, function(col) {%>
+    <%if(item[col].value && item[col].value.data){%>
+    <td class="mergedCellTop inner-parent">
+        <%= templateFn({ data: item[col].value.data, templateFn: templateFn }) %>
+    </td>
+    <%}else{%>
+    <td class="mergedCellTop <%if(item[col].highlighted){%>modified<%}%>"
+        <% if (item[col].layoutId) { %> data-layoutId="<%=item[col].layoutId%>" <% } %>
+        data-objectId="<%=item[col].uid%>">
+    <%if(item[col].filtered){%>
+        <span class="filtered">
+    <%}%>
+            <%=Utils.translate(item[col].value)%>
+    <%if(item[col].filtered){%>
+        </span>
+    <%}%>
+    </td>
+    <%}%>
+    <%});%>
+</tr>
+<tr>
+    <% _.each(data.cols, function(col) {%>
+    <%if(item['old-'+col].value && item['old-'+col]['value'].data){%>
+    <td class="mergedCellBottom inner-parent">
+        <%= templateFn({ data: item['old-'+col]['value'].data, templateFn: templateFn }) %>
+    </td>
+    <%}else{%>
+    <td class="mergedCellBottom <%if(item['old-'+col]['highlighted']){%>modified<%}%>"
+        <% if (item[col].layoutId) { %> data-layoutId="<%=item[col].layoutId%>" <% } %>
+        data-objectId="<%=item['old-'+col].uid%>">
+        <%if(item['old-'+col].filtered){%>
+        <span class="filtered">
+    <%}%>
+        <%=Utils.translate(item['old-'+col]['value'])%>
+    <%if(item['old-'+col].filtered){%>
+        </span>
+        <%}%>
+    </td>
+    <%}%>
+    <%});%>
+</tr>
+<%});%>
+<% if (visibleData.pageCount > 1) { %>
+<tr>
+    <th colspan="<%= data.cols.length %>">
+        <button class="prev-page" style="display: inline-block; margin: 0 5px;" <% if (visibleData.currentPage === 1) { %> disabled <% } %>>
+            <%= mentor.publisher.languageTranslator.localize('Prev') %>
+        </button>
+        <span style="display: inline-block; margin: 0 5px;">Page <%= visibleData.currentPage %> of <%= visibleData.pageCount %></span>
+        <button class="next-page" style="display: inline-block; margin: 0 5px;" <% if (visibleData.currentPage === visibleData.pageCount) { %> disabled <% } %>>
+            <%= mentor.publisher.languageTranslator.localize('Next') %>
+        </button>
+    </th>
+</tr>
+<% } %>
+</tbody>

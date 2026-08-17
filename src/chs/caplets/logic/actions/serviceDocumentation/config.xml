@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <!--
+    ## Application specific configuration
+    -->
+    <!--<application-platform>linux</application-platform>-->
+    <showSystemsAsTree value="false"/>
+    <showHarnessAsTree value="false"/>
+    <showDiagnosticsAsTree value="false"/>
+    <include-package-manager>false</include-package-manager>
+
+    <diagnostic-hierarchy-level-delimiter value="\"/>
+
+    <!--
+    ## Diagnostic troubleshoot configuration
+    !-->
+
+    <!--
+    ## Data specific configuration
+    -->
+
+    <!--
+    The property name to consider for reading fault codes on an object.
+    -->
+    <fault-code-property value="Fault Codes"/>
+    <!--
+     Fault Data Generator Configuration to enable or disable the generator in publisher
+     -->
+    <enableFaultCodeDataGenerator value="false"/>
+
+    <duplicate_uses_new_folder>true</duplicate_uses_new_folder>
+    <create_user_specific_folder>true</create_user_specific_folder>
+
+    <!--
+        Supported values of print-method: pdf, html
+        Choose 'pdf' for pdf based printing.
+        Choose 'html' for html based printing.
+    -->
+    <print-method>html</print-method>
+    <!-- JT 3D Mapping keys -->
+    <threeD_jt_config>
+        <capital_property value="JT_MAPPING"/>
+        <jt_property value="Name"/>
+    </threeD_jt_config>
+
+    <!-- RapidAuthor Mapping keys -->
+    <!-- The threeD_ra_ipc_config element is used to specify the mapping keys between a Rapid Author 3D Interactive
+         IPC model and elements in Capital diagrams.
+         The value of the capital_property element (RA_MAPPING by default) should be specified on Capital diagrams.
+         The value of the ra_property (ComponentID by default) specifies the element attribute name that will be mapped
+         from the Rapid Author 3D model to corresponding values in capital diagrams
+    -->
+    <threeD_ra_ipc_config>
+        <capital_property value="RA_MAPPING"/>
+        <ra_property value="ComponentID"/>
+    </threeD_ra_ipc_config>
+
+    <!-- These flags affect the generation of SVG or CGM from Capital diagrams included in the output.
+        By default items are created in colour.
+        Note that the Capital Service Explorer package creates SVG diagrams
+        The value 'true' (case insensitive) is required for greyscale
+        -->
+    <createSVG-in-greyscale value='false'/>
+    <createCGM-in-greyscale value='false'/>
+    <createS1000-in-greyscale value='false'/>
+    <!--
+        Three log levels are possible, Information, Warning and Error.
+        Specify any one of them. if Warning is specified then all the message with level as Warning and Error will be reported.
+    -->
+    <log-level>Warning</log-level>
+    <collapseAllPanelsInObjectPopover>false</collapseAllPanelsInObjectPopover>
+    <highlight-onclick-color>red</highlight-onclick-color>
+    <highlight-onhover-color>orange</highlight-onhover-color>
+    <highlight-stroke-width>2</highlight-stroke-width>
+    <splitPanelView>
+        <delimiter value="/"/>
+        <windowTitleAttributes>
+            <attributeName value="name"/>
+            <attributeName value="part Number"/>
+            <attributeName value="Color description"/>
+            <attributeName value="Option Expression"/>
+        </windowTitleAttributes>
+        <autoFitSVGOnWindowResize value="true"/>
+        <showPathForFaceViews value="true"/>
+        <showPathFor2dViews value="true"/>
+    </splitPanelView>
+    <use-pdfjs>true</use-pdfjs>
+    <hide-navigation-panel>false</hide-navigation-panel>
+
+    <whats-in-common-table>
+        <!-- Column 1 is the Type column -->
+        <column2 key="Name"
+                 type="attribute"/>
+        <column3 key="ShortDescription"
+                 type="attribute"/>
+        <!-- Column 4 is the applicable fault codes column -->
+    </whats-in-common-table>
+
+    <!--
+    Following two flags are used in Capital Change Explorer package to improve SVG rendering in browsers.
+    The flags control display of symbols and tables on Harness SVG diagrams.
+
+    Setting the values to true will hide tables and symbols on diagrams.
+    And if user wants to see the table/symbol associated with an object, he can click the object on SVG/report.
+    Then, the object's symbol/table will be poppulated dynamically on the diagram
+
+    To populate design level symbols/tables, User needs to click the border graphics.
+    Design level symbols/tables might be heavy and can degrade the performance of SVG in browser.
+    User can hide the design level symbols/tables by clicking empty area on SVG diagram
+    -->
+    <only-show-tables-on-click>false</only-show-tables-on-click>
+    <only-show-symbols-on-click>false</only-show-symbols-on-click>
+
+    <!-- <svg-background-color>lightgray</svg-background-color> -->
+    <full-document-search>true</full-document-search>
+    <!--
+        If below flag is set to true, connector view symbol is read from corresponding symbol library
+    -->
+    <!--
+        <show-multiple-connector-views>true</show-multiple-connector-views>
+        <connector-views separator="-">
+            <symbol-library view="{Front}">Name of symbol Library1</symbol-library>
+            <symbol-library view="{Side}">Name of symbol Library2</symbol-library>
+            <symbol-library view="{Plan}">Name of symbol Library3</symbol-library>
+        </connector-views>
+    -->
+    <!-- Disabling this flag will disable the authentication popup. -->
+    <VIN-server-login-required>false</VIN-server-login-required>
+    <open-external-documents-in-tab>false</open-external-documents-in-tab>
+    <splitpane-height-ratio>1:1</splitpane-height-ratio>
+    <zip-packets value="true"/>
+
+    <generate-package-locally-and-move>false</generate-package-locally-and-move>
+    <!--
+    Following flag controls the type of validation executed on the scope for signal trace.
+        * 'legacy' will stop validation as soon as problem object(s) is/are identified and provides minimum feedback.
+        * 'complete' will generate the complete list of problem objects.
+    Missing tag or an invalid value will result in 'legacy' validation.
+    -->
+    <signal-trace-validation>legacy</signal-trace-validation>
+
+</config>
+

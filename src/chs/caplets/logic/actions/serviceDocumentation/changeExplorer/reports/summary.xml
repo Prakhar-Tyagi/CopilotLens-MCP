@@ -1,0 +1,10 @@
+<report name="Summary" summary-included="true">
+    <tables name="Objects"
+            apply-to="additional-component backshell bundle connector device ring-terminal splice wire net multicore overbraid insulation insulation-run spot-tape breakout-tape clip grommet other-component multi-location-component"
+            types="removed added modified unmodified"
+            sorted-by="{Name}">
+        <column type="attribute" key="Name" name="{Name}"/>
+        <column type="attribute" key="PartNumber" name="{Part Number}"/>
+        <column type="attribute" key="TypeCode" name="{Type Code}"/>
+    </tables>
+</report>

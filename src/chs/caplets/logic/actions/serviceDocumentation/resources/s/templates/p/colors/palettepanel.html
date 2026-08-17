@@ -1,0 +1,24 @@
+<div class="listPanel palette-panel auto-list">
+    <div class="titlebar auto-list-header">
+        <span class="headerText auto-title-label"><%= mentor.publisher.languageTranslator.localize(resourceKeys.title) %></span>
+    </div>
+    <div class='cp-grid-container auto-list'>
+        <div class='cp-grid'>
+            <% gridColors.forEach(function (rowColors) { %>
+            <div class='cp-grid-row'>
+                <% rowColors.forEach(function (color) { %>
+                <div class='cp-grid-column cp-color-item-container'>
+                    <div class="cp-color-item auto-item" style='background-color: <%= color %>'></div>
+                </div>
+                <% }) %>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+    <div class="listItem cp-default-item auto-item">
+        <div class="cp-color-item-container">
+            <div class="cp-color-item" style="background-color: <%= defaultColor %>"></div>
+        </div>
+        <span class="mainText auto-title-label"><%= mentor.publisher.languageTranslator.localize(resourceKeys.defaultColorTitle) %></span>
+    </div>
+</div>

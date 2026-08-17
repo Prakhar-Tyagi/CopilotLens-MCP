@@ -1,0 +1,19 @@
+<% if(items.length){ %>
+<div class="listPanel <%=className%> auto-list">
+	<div class="titlebar auto-list-header">
+		<span class="headingCount">
+			<span class="headingCountNumber auto-item-count-label"><%=items.length%></span>
+		</span>
+		<span class="headerText auto-title-label"><%=title%></span>
+	</div>
+	<% _.each(items, function(item) {%>
+	<div class="listItem auto-item" data-id="<%=item.id%>" <% if(!expand){ %> style="display: none;" <%}%>>
+		<span class="mainText auto-title-label"><%=item.get("mainText")%></span>
+        <span class="popUp auto-pop-out-button"></span>
+		<% if(item.get("thumbNailPath")){ %>
+		<img class="auto-thumbnail" src='<%=item.get("thumbNailPath")%>'>
+		<% } %>
+	</div>
+	<% });%>
+</div>
+<% } %>

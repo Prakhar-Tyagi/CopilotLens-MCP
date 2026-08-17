@@ -1,0 +1,429 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+
+<!--
+
+**WARNING **  **WARNING **   **WARNING **
+Please do not directly use S1000D configuration files located in Capital Home/Publisher etc .  
+Files in these locations should be treated as samples. You must make a copy of these 
+configuration files and use them from an outside directory.
+
+Files located in capital home may be upgraded (and hence overwritten) during 
+future Capital release cycles.
+
+
+ * Copyright 2015 Mentor Graphics Corporation. All Rights Reserved.
+ * <p>
+ * Recipients who obtain this code directly from Mentor Graphics use it solely
+ * for internal purposes to serve as example Java web services.
+ * This code may not be used in a commercial distribution. Recipients may
+ * duplicate the code provided that all notices are fully reproduced with
+ * and remain in the code. No part of this code may be modified, reproduced,
+ * translated, used, distributed, disclosed or provided to third parties
+ * without the prior written consent of Mentor Graphics, except as expressly
+ * authorized above.
+ * <p>
+ * THE CODE IS MADE AVAILABLE "AS IS" WITHOUT WARRANTY OR SUPPORT OF ANY KIND.
+ * MENTOR GRAPHICS OFFERS NO EXPRESS OR IMPLIED WARRANTIES AND SPECIFICALLY
+ * DISCLAIMS ANY WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
+ * OR WARRANTY OF NON-INFRINGEMENT. IN NO EVENT SHALL MENTOR GRAPHICS OR ITS
+ * LICENSORS BE LIABLE FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING LOST PROFITS OR SAVINGS) WHETHER BASED ON CONTRACT, TORT
+ * OR ANY OTHER LEGAL THEORY, EVEN IF MENTOR GRAPHICS OR ITS LICENSORS HAVE BEEN
+ * ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+ * <p>
+-->
+
+
+
+
+
+<!-- This XML contains instructions as how to populate  the header area via mapping.  
+This map  we expect  a pre-populated target that we can merge into.  That target is defined  in 'wiringDataHdr.xml' 
+Use <isCleaningFiles val='n'/> to see the source data files for the map. The source 
+of the data will be visible and will be like DiagramLogicDataxx.yyHeaderFieldData.xml 
+
+The correct technique for modifying this map is to make small incremental alterations and to rerun Publisher. 
+This map will be picked up and rerun without any need to start Publisher again. 
+
+-->
+<maps>
+    <!-- This is the entry point (independent).  Merge into  'dmodule' node and then 
+	start cascading down to rdf:Description and identAndStatusSection-->
+    <map target = 'dmodule' source ='root' mode='merge' independent='true'>
+        <!-- Some  companies don't need the RDF bit so we don't call the map -->
+        <!--  <call target='rdf:Description' source ='$self'/>-->
+        <call target='identAndStatusSection' source ='$self'/>
+    </map>
+    <!--set URN.@val and date in the rdf:Description.
+	'getFormttedDate' is a built in function - It takes two parameters:
+    	1) '$now$ whihc means the time at npw or a standard xml schema time.
+	    2) A String according to the syntax of java.text.SimpleDateFormat
+	
+	-->
+    <map target = 'rdf:Description' source ='root' mode='extant'>
+        <copy target='dc:identifier' mode='extant'>
+            <source>
+                <path val = 'URN'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+        <copy target='dc:date' mode='extant'>
+            <source>
+                <function name='getFormttedDate'>
+                    <param constant="$now$"/>
+                    <param constant="yyyy-MM-dd"/>
+                </function>
+            </source>
+        </copy>
+    </map>
+    <!--start cascading down the extant heirarchy. The varif:set operation is put 
+	here as example.  It sets a variable called 'someVar' to the value 'fred' 
+    and buries it in the stack.  Any map below this stack point can retrieve and 
+	conditionally operate.	-->
+    <map target = 'identAndStatusSection' source ='root' mode='extant'>
+        <varif op='set' name='someVar' constant = 'fred'/>
+        <call target='dmAddress' source ='$self'/>
+        <call target='dmStatus' source ='$self'/>
+    </map>
+    <map target = 'dmAddress' source ='root' mode='extant'>
+        <call target='dmIdent' source ='$self'/>
+        <call target='dmAddressItems' source ='$self'/>
+    </map>
+    <map target = 'dmIdent' source ='root' mode='extant'>
+        <call target='dmCode' source ='$self'/>
+		<call target='language' source ='$self'/>
+        <call target='issueInfo' source ='$self'/>
+    </map>
+    <!--set the various attributes of dmCode .  If the S1000D tag names 
+	change then we would need to change them here also. 
+	This called twice - once to create the path applicCrossRefTableRef.dmRef.dmRefIdent.dmCode
+	                  - once to create the path brexDmRef.dmRef.dmRefIdent.dmCode
+	Only one value changes - infocode - whihc is mapped from S1000D.IC property in applicCrossRefTableRef
+	and from S1000D.BREX_IC in the brexDmRef.  
+	So in the caller via BREX we set a VarIf and operate conditionally on it here.
+	
+	//-->
+    <map target = 'dmCode' source ='root' mode='extant'>
+        <!--copy target='@assyCode'>
+            <source>
+                <path val= 'getDataValue' param='S1000D.assyCode'/--> <!-- this was 'ORG' which was wrong as its OriginatorCodeNCAGE-->
+                <!--path val= '@val'/>
+            </source>
+        </copy-->
+        <copy target='@disassyCode'>
+            <source>
+                <path val= 'getDataValue' param='S1000D.DC'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+		
+        <copy target='@disassyCodeVariant'>
+            <source>
+                <path val= 'getDataValue' param='S1000D.DCV'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+		<!-- as explained above - two different  sources as CHS props for infocode--> 
+       
+		<!-- DM Section -->
+		<varif op='EQUAL' name='DMSection' constant = 'BREX'>
+            <copy target='@infoCode'>
+                <source>
+                    <path val= 'getDataValue' param='S1000D.BREXIC'/>
+                    <path val= '@val'/>
+                </source>
+            </copy> 
+			
+			<copy target='@subSystemCode'>
+                <source>
+                    <path val= 'getDataValue' param='S1000D.BREXsubSystemCode'/>
+                    <path val= '@val'/>
+                </source>
+            </copy>
+			<copy target='@assyCode'>
+            <source>
+                <path val= 'getDataValue' param='S1000D.BREXassyCode'/> 
+                <path val= '@val'/>
+            </source>
+        </copy>
+        </varif>
+        <varif op='EQUAL' name='DMSection' constant = 'ACT'>
+            <copy target='@infoCode'>
+                <source>
+                    <path val= 'getDataValue' param='S1000D.ACTIC'/>
+                    <path val= '@val'/>
+                </source>
+            </copy>  
+        </varif>
+        <varif op='NOT_EQUAL' name='DMSection' constant = 'BREX'>
+            <varif op='NOT_EQUAL' name='DMSection' constant = 'ACT'>                
+				 <copy target='@infoCode'>
+                <source>
+                    <path val= 'getDataValue' param='S1000D.IC'/>
+                    <path val= '@val'/>
+                </source>
+            </copy>	
+			<copy target='@subSystemCode'>
+                <source>
+                    <path val= 'getDataValue' param='S1000D.subSystemCode'/>
+                    <path val= '@val'/>
+                </source>
+            </copy>
+			<copy target='@assyCode'>
+            <source>
+                <path val= 'getDataValue' param='S1000D.assyCode'/> <!-- this was 'ORG' which i guess was wrong as its OriginatorCodeNCAGE-->
+                <path val= '@val'/>
+            </source>
+			</copy>
+			</varif>
+		</varif>    
+
+		<!-- DM Section end -->
+
+	   
+		
+        
+		
+        <!-- ACT -->
+		
+        	
+        
+		<!-- ACT end -->
+		
+        <copy target='@infoCodeVariant'>
+            <source>
+                <path val= 'getDataValue' param='S1000D.ICV'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+        <copy target='@itemLocationCode'>
+            <source>
+                <path val= 'getDataValue' param='S1000D.LC'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+        <copy target='@modelIdentCode'>
+            <source>
+                <path val= 'getDataValue' param='S1000D.MI'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+        <copy target='@subSubSystemCode'>
+            <source>
+                <path val= 'getDataValue' param='S1000D.subSubSystemCode'/> 
+                <path val= '@val'/>
+            </source>
+        </copy>
+        <!--copy target='@subSystemCode'>
+            <source>
+                <path val= 'getDataValue' param='S1000D.subSystemCode'/--> 
+                <!--path val= '@val'/>
+            </source>
+        </copy-->
+        <copy target='@systemCode'>
+            <source>
+                <path val= 'getDataValue' param='S1000D.systemCode'/>  
+                <path val= '@val'/>
+            </source>
+        </copy>
+        <copy target='@systemDiffCode'>
+            <source>
+                <path val= 'getDataValue' param='S1000D.SDC'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+    </map>
+	<map target = 'language' source ='root' mode='extant'>
+        <copy target='@countryIsoCode' mode='extant'>
+            <source>
+                <path val= 'getDataValue' param='S1000D.countryIsoCode'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+		<copy target='@languageIsoCode' mode='extant'>
+            <source>
+                <path val= 'getDataValue' param='S1000D.languageIsoCode'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+	</map>
+    <!--issueInfo is not always present so we mark it optional - if we were to 
+	mark it extant then the map execution would throw an exception when it 
+	could not find the target node -->
+    <map target = 'issueInfo' source ='root' mode='optional'>
+        <copy target='@inWork'>
+            <source>
+                <path val= 'getDataValue' param='S1000D.inWork'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+        <copy target='@issueNumber'>
+            <source>
+                <path val= 'getDataValue' param='S1000D.ISSNUM'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+    </map>
+    <map target = 'dmAddressItems' source ='root' mode='extant'>
+        <call target='issueDate' source ='$self'/>
+        <call target='dmTitle' source ='$self'/>
+    </map>
+	
+	
+    <map target = 'dmTitle' source ='root' mode='extant'>
+        <copy target='techName' mode='extant'>
+            <source>
+                <path val= 'getDataValue' param='S1000D.techName'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+        <copy target='infoName' mode='extant'>
+            <source>
+                <path val= 'getDataValue' param='S1000D.infoName'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+    </map>
+    <map target = 'issueDate' source ='root' mode='extant'>
+        <copy target='@day' mode='extant'>
+            <source>
+                <function name='getFormttedDate'>
+                    <param constant="$now$"/>
+                    <param constant="dd"/>
+                </function>
+            </source>
+        </copy>
+        <copy target='@month' mode='extant'>
+            <source>
+                <function name='getFormttedDate'>
+                    <param constant="$now$"/>
+                    <param constant="MM"/>
+                </function>
+            </source>
+        </copy>
+        <copy target='@year' mode='extant'>
+            <source>
+                <function name='getFormttedDate'>
+                    <param constant="$now$"/>
+                    <param constant="yyyy"/>
+                </function>
+            </source>
+        </copy>
+    </map>
+    <map target = 'dmStatus' source ='root' mode='extant'>
+              <varif op='set' name='DMSection' constant = 'ACT'/>
+              <call target='applicCrossRefTableRef' source ='$self'/>       
+              
+              <varif op='set' name='DMSection' constant = ''/> <!--not sure about wether this is necessary--> 
+              <call target='applic' source ='$self'/>
+        
+              <varif op='set' name='DMSection' constant = 'BREX'/>
+              <call target='brexDmRef' source ='$self'/>
+              
+        <call target='dataRestrictions' source ='$self'/>
+        <call name ='cd' target='responsiblePartnerCompany' source ='$self'/>
+        <call name ='cd' target='originator' source ='$self'/>
+    </map>    
+
+	 <map target = 'applic' source ='root' mode='extant'>
+	     <call target='displayText' source ='$self'/>
+	 </map>	 
+	  <map target = 'displayText' source ='root' mode='extant'>
+	     <call target='simplePara' source ='$self'/>
+	 </map>	 
+	 <map target = 'simplePara' source ='root' mode='extant'>	    
+		  <copy target='$Content'>
+            <source>
+                <path val= 'getDataValue' param='S1000D.PMODEL'/>
+                <path val= '@val'/>
+            </source>
+        </copy>
+	 </map>
+
+	
+	
+    <!-- Its maybe not obvious but extant target paths always choose the first child element of a given name.
+Here we show how to choose the second extant copyrightPara.
+We also show how to use a 'varif' as a test. The contained 	statements are only run it evaluates as TRUE
+	-->
+    <map target ='dataRestrictions' mode='optional' source ='root'>
+        <copy mode='extant'>
+            <target>
+                <path val= 'restrictionInfo'/>
+                <path val= 'copyright'/>
+                <path val= 'copyrightPara'/>
+                <path val= 'emphasis'/>
+            </target>
+            <source>
+                <function name='concat'>
+                    <param constant= 'Copyright (C)'/>
+                    <param>
+                        <function name='getFormttedDate'>
+                            <param constant="$now$"/>
+                            <param constant="yyyy"/>
+                        </function>
+                    </param>
+                </function>
+            </source>
+        </copy>
+        <varif op= 'EQUAL' name='someVar' constant = 'fred'>
+            <copy mode='extant' constant='Altered to Some Other Value as a Mapping Test'>
+                <target>
+                    <path val= 'restrictionInfo'/>
+                    <path val= 'copyright'/>
+                    <path val= 'copyrightPara' offset='1'/>
+                    <path val= 'emphasis'/>
+                </target>
+            </copy>
+        </varif>
+    </map>
+    <map name = 'cd' mode='extant' source ='root'>
+        <copy target= '@enterpriseCode' constant= 'S4080' mode='extant'/>
+        <copy target= 'enterpriseName' constant= 'Anonymous Aircraft Ltd' mode='extant'/>
+    </map>
+    <map target = 'applicCrossRefTableRef' source ='root' mode='extant'>
+        <call target='dmRef' source ='$self'/>
+    </map>
+    <map target = 'brexDmRef' source ='root' mode='extant'>
+        <call target='dmRef' source ='$self'/>
+    </map>
+    <map target = 'dmRef' source ='root' mode='extant'>
+        <!--
+        <copy target='@xlink:href' mode='extant'>
+            <source>
+                <function name='concat'>
+                    <param constant= 'URN:S1000D:'/>
+                    <param>
+                        <source>
+                            <path val="ICN"/>
+                            <path val="@val"/>
+                        </source>
+                    </param>
+                </function>
+            </source>
+        </copy>
+	-->
+        <call target='dmRefIdent' source ='$self'/>
+    </map>
+    <map target = 'dmRefIdent' source ='root' mode='extant'>
+        <call target='dmCode' source ='$self'/>
+        <call target='issueInfo' source ='$self'/>
+    </map>
+    <!--
+This is a parameterised relationship  it takes an origin parameter and compares that value with the destination path
+(Currently relationships  only interpret one parameter)
+-->
+    <relationship name="getDataValue" side ="source">
+        <origin val= 'root'/>
+        <destination val= 'data'/>
+        <valueRule op='EQUAL'>
+            <origin>
+                <path param ='true'/>
+            </origin>
+            <destination path="@name"/>
+        </valueRule>
+        <positionRule val = 'child' offset='0'/>
+        <elementPathRule/>
+    </relationship>
+</maps>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packageSettings>
+<same_package_instruction>duplicate</same_package_instruction>
+<duplicate_uses_new_folder>true</duplicate_uses_new_folder>
+<project>Automotive Generative</project>
+<packager>Capital Service Explorer package</packager>
+<package_name>pack1</package_name>
+<export_to path="C:\work\packets\html\fem-test2"/>
+<resources path="H:\chs_home\data\xml\Publisher\auto resources"/>
+<package_description/>
+<style_set/>
+<includes>
+<generator>Attributes and Properties</generator>
+<generator>Cross references</generator>
+<generator>SVG Diagrams</generator>
+</includes>
+<scope>
+<design name="1-Power_Wiring" revision="A" shortDescription="{PD}" type="Logical"/>
+</scope>
+</packageSettings>

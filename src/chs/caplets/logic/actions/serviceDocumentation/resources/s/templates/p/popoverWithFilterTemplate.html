@@ -1,0 +1,19 @@
+<% if(show){ %>
+<div id="detailPopup" class="iesdPopup auto-popover" style="display: block;height: 230px; left: <%=x%>px; top: <%=y%>px;">
+	<div id="popupheader" class="toolbar1 auto-popover-header">
+		<div class="clear closeBtn auto-close-button"></div>
+		<div class="component-label auto-title-label" title=""><%=title%></div>
+	</div>
+	<div id="popover-grouped-list" class="border auto-popover-content">
+	</div>
+	<div id="popupfooter" class="toolbar1 background auto-popover-footer">
+		<% if(showFilter){ %>
+		<div id="relateddata_filter" style="display: block; width: 100%;">
+			<input type="text"
+				   placeholder="<%= mentor.publisher.languageTranslator.localize('FilterPlaceholderText') %>"
+				   class="navigationSearchFilter auto-search-field">
+		</div>
+		<% } %>
+	</div>
+</div>
+<% } %>

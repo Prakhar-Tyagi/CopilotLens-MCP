@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="icon" class="applicationIcon" type="image/png" sizes="32x32" href="#APP_LOGO#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <META http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+    <title>#APP_TITLE#</title>
+
+    <!-- PANEL FILES -->
+
+    <link rel="stylesheet" type="text/css" href="styles/grid-ui.css">
+    <link href="styles/faults.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="styles/print.css" media="print">
+    <link rel="stylesheet" type="text/css" href="styles/faultCode.css">
+    <link rel="stylesheet" type="text/css" href="styles/diagnostic.css">
+    <link rel="stylesheet" type="text/css" href="styles/report.css">
+    <script type="text/javascript" src="s/libs/jquery.js"></script>
+    <script type="text/javascript" src="s/print.js"></script>
+    <script type="text/javascript">
+        function printProcess() {
+            // Here you can inject javascript if you like
+            document.title = window.opener.mentor.publisher.getLocalizedApplicationTitle();
+            window.opener.mentor.publisher.printer.print();
+            window.onafterprint = function () {
+                setTimeout(function(){
+                    window.close();
+                }, 4000);
+
+            }
+
+		}
+		function printAndClose() {
+		
+			setTimeout(function() {
+				window.focus();
+				window.print();
+				if(isChrome()) {
+				    //sometime chrome crashed after print. alert prevents it from crashing
+					alert(mentor.publisher.languageTranslator.localize("AlertClosingPrintWin"));
+				}
+				window.afterPrinting();
+			}, 100);
+		}
+		function afterPrinting() {
+			window.close();
+		}
+		function appendContent(content, callback) {
+			var printDetailContainer = $('body');
+			if (navigator.userAgent.toLowerCase().indexOf('msie') > -1 || navigator.userAgent.match(/Edge/i)) {
+				printDetailContainer.append(content[0].innerHTML);
+			} else {
+                setTimeout(() => {
+                    var objectXPath = "//div[@id='systemSVGLoadArea']//object";
+                    var svgObjectElement = document.evaluate(objectXPath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+                    const style = '<style><![CDATA[ text{ stroke-opacity:0.0 !important; } ]]></style>';
+                    const svgObjectElementStyle = svgObjectElement?.contentDocument?.getElementsByTagName("style");
+                    if (svgObjectElementStyle.length && svgObjectElementStyle[0]) {
+                        svgObjectElementStyle[0].insertAdjacentHTML('afterend', style);
+                    }
+                }, 100);
+				printDetailContainer.append(content);
+			}
+			if (callback) {
+				setTimeout(callback, 100);
+			}
+		}		
+	</script>
+
+</head>
+<!-- changed width from 100% to auto in order fix DOCS-12446 issue-->
+<body onload="printProcess();" style="height: 100%;width: auto;overflow: auto;">
+</body>
+</html>

@@ -1,0 +1,20 @@
+<% if(show){ %>
+<div class="diagramControl toolbar background splitPanel_bottomToolBar_mouseEnter auto-zoom-bar"
+     style="display: none;<% if(!showFixZoomButton){%>width:316px<%}%>">
+    <div class="zoomout-button component-button auto-zoom-out-button"></div>
+    <div class="zoomin-button component-button auto-zoom-in-button"></div>
+    <div class="slider">
+        <div class="sliderNotch auto-slider-notch" style="left: 10px;"></div>
+		<% if(showFixZoomButton){%>
+			<div class="zoomDefinitionNotch" style="left: 10px;"></div>
+		<% } %>
+    </div>
+    <div class="component-label zoom-percentage auto-zoom-percentage-label" style="">100%</div>
+    <div class="zoomall-button component-button auto-zoom-all-button" customtooltip-0="ZoomToFit"></div>
+    <div class="zoom-selected-button component-button auto-zoom-selected-button" customtooltip-0="ZoomSelected"></div>
+    <% if(showFixZoomButton){%>
+    <div class="fix-view-button component-button auto-define-zoom-button"
+         customtooltip-0="SetDefaultZoomPercentage"></div>
+    <% } %>
+</div>
+<% } %>

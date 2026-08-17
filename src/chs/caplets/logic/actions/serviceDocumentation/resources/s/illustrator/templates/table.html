@@ -1,0 +1,42 @@
+<tbody>
+<%
+_.range(visibleData.getRangeStart(), visibleData.getRangeEnd()).forEach(function(index) {
+var visibleIndex = visibleData.indices[index];
+var item = data.items[visibleIndex];
+%>
+<tr>
+    <% _.each(data.cols, function(col) {%>
+    <%if(item[col].value && item[col].value.data){%>
+    <td class="inner-parent">
+        <%= templateFn({ data: item[col].value.data, templateFn: templateFn }) %>
+    </td>
+    <%}else{%>
+    <td data-objectId="<%=item[col].uid%>"
+    <% if (item[col].layoutId) { %> data-layoutId="<%=item[col].layoutId%>" <% } %>
+    <%if(item[col].highlighted){%> class="modified" <%}%>>
+    <%if(item[col].filtered){%>
+    <span class="filtered">
+    <%}%>
+    <%=Utils.translate(item[col].value)%>
+    <%if(item[col].filtered){%>
+         </span>
+    <%}%>
+    </td>
+    <%}%>
+    <%});%>
+</tr>
+<%});%>
+<% if (visibleData.pageCount > 1) { %>
+<tr>
+    <th colspan="<%= data.cols.length %>">
+        <button class="prev-page" style="display: inline-block; margin: 0 5px;" <% if (visibleData.currentPage === 1) { %> disabled <% } %>>
+            <%= mentor.publisher.languageTranslator.localize('Prev') %>
+        </button>
+        <span style="display: inline-block; margin: 0 5px;">Page <%= visibleData.currentPage %> of <%= visibleData.pageCount %></span>
+        <button class="next-page" style="display: inline-block; margin: 0 5px;" <% if (visibleData.currentPage === visibleData.pageCount) { %> disabled <% } %>>
+            <%= mentor.publisher.languageTranslator.localize('Next') %>
+        </button>
+    </th>
+</tr>
+<% } %>
+</tbody>

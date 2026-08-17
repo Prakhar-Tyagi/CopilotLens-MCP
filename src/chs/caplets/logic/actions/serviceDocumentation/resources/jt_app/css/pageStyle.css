@@ -1,0 +1,570 @@
+/* © 2016 SIEMENS PRODUCT LIFECYCLE MANAGEMENT SOFTWARE INC */
+
+#SiemensLogo {
+	position: relative;
+	float: right;
+    padding: 0px;
+    width: 83px !important;
+    height: 25px !important;
+}
+
+#productName {
+	float: left;
+	text-align: center;
+}
+
+#toolbar {
+    background: rgb(240, 240, 240);
+	padding-left: 5px;
+	position: relative;
+	top: 0;
+	left: 0;
+    /*------------------------------------- change height --------------------------------------- */
+    height: 29px;
+	cursor: default;
+	overflow: hidden;
+}
+
+#toolbar .toolbarButton {
+	height: 24px;
+	width: 24px;
+}
+#toolbar .toolbarButton, #toolbar .toolbarMenuButton {
+    display: inline-block;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    position: relative;
+    top: 0;
+    left: 0;
+    float: left;
+}
+
+#toolbar input[type="radio"] {
+	display: none;
+}
+
+#toolbar .tabRadio:checked + .toolbarButton {
+	background: rgb(140,195,210);
+}
+#toolbar #toolbar_home{
+	float: right;
+}
+#toolbar .toolbarButton, #toolbar .toolbarMenuButton,  #toolbar .toolbarSlider {
+	display: inline-block;
+	#padding: 12px;
+	position: relative;
+	top: 0;
+	left: 0;
+	float: left;
+}
+
+#toolbar .toolbarSlider {
+	height: 24px;
+	width: 96px;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+	display: none;
+}
+
+#toolbar .toolbarSlider:hover {
+	opacity: 1;
+}
+
+#toolbar .toolbarButton:hover,
+#toolbar .toolbarMenuButton:hover,
+#toolbar .toolbarMenu li:hover {
+	background: rgb(175,215,225);
+}
+
+#toolbar .toolbarButton_inactive:hover {
+	background: rgb(220,220,220);
+}
+
+#toolbar .toolbarMenu {
+	position: absolute;
+	top: 42px;
+	left: 0;
+	z-index: 1;
+	background: rgb(240,240,240);
+	display: none;
+}
+
+#toolbar .toolbarMenuButton:hover > .toolbarMenu:not([disabled]) {
+	display: inline-block;
+	z-index: 101;
+}
+
+#toolbar .toolbarMenuButton:hover > .toolbarMenu:disabled {
+	display: none;
+}
+
+#toolbar .toolbarMenu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	cursor: default;
+}
+
+#toolbar .toolbarMenu li {
+	white-space: nowrap;
+	padding: 5px;
+	padding-right: 10px;
+}
+
+#toolbar .toolbarMenu li img {
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+#toolbar .slider {
+	-webkit-appearance: none;
+	display: inline-block;
+	position: relative;
+	width: 96px;
+	border-radius: 10px;
+	background: transparent;
+	outline: none;
+}
+
+#toolbar .slider::-webkit-slider-runnable-track {
+	height: 8px;
+	background: #ddd;
+	border-radius: 10px;
+}
+
+#toolbar .slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	margin-top: -8px;
+	width: 24px; 
+	height: 24px; 
+	background: rgb(140,195,210); 
+	border-radius: 50%; 
+	cursor: pointer;
+}
+
+#toolbar .slider::-moz-range-track {
+	height: 8px;
+	background: #ddd;
+	border: none;
+	border-radius: 10px;
+}
+
+#toolbar .slider::-moz-range-thumb {
+	-webkit-appearance: none;
+	width: 24px; 
+	height: 24px; 
+	background: rgb(140,195,210);
+	border-radius: 50%; 
+	border: none;
+	cursor: pointer; 
+}
+
+#toolbar .slider::-ms-tooltip {
+	display: none;
+}
+
+#toolbar .slider::-ms-track {
+	background: transparent;
+	border-color: transparent;
+	height: 8px;
+	border-width: 8px 0;
+	color: transparent;
+}
+
+#toolbar .slider::-ms-fill-lower {
+	background: #ddd;
+	border-radius: 10px;
+}
+
+#toolbar .slider::-ms-fill-upper {
+	background: #ddd;
+	border-radius: 10px;
+}
+
+#toolbar .slider::-ms-thumb {
+	-webkit-appearance: none;
+	width: 24px; 
+	height: 24px; 
+	background: rgb(140,195,210);
+	border-radius: 50%; 
+	border: none;
+	cursor: pointer; 
+}
+
+#toolbar .verticalSeparator {
+	padding: 5px;
+	position: relative;
+	height: 32px;
+	width: 11px;
+	float: left;
+}
+
+#content {
+	background: rgb(180,182,184); /* Old browsers */
+	background: linear-gradient(to bottom, rgb(180,182,184) 0%, rgb(230,232,234) 100%); /* W3C */ /* Need to put this first so html2canvas will ignore it. */
+	background: -moz-linear-gradient(top, rgb(180,182,184) 0%, rgb(230,232,234) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(180,182,184)), color-stop(100%,rgb(230,232,234))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgb(180,182,184) 0%,rgb(230,232,234) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgb(180,182,184) 0%,rgb(230,232,234) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgb(180,182,184) 0%,rgb(230,232,234) 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgb(180,182,184) ', endColorstr='rgb(230,232,234)',GradientType=0 ); /* IE6-9 */
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+#footer {
+	background: rgb(255,255,255);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 42px;
+	width: 100%;
+}
+
+#leftToolbox {
+	position: absolute;
+    top: 5px;
+	left: 0;
+}
+
+#rightToolbox {
+	position: absolute;
+    top: 5px;
+	right: 0;
+}
+
+
+#toolbar_sessionUsers input[type=button] {
+	background: rgb(220,220,220);
+	border: 2px rgb(220,220,220) solid;
+	width: 100%;
+	padding: 5px;
+}
+
+#loginForm table {
+	padding: 5px;
+}
+
+	#loginForm table tr td:first-child {
+		width: 100px;
+	}
+
+#sessionUsersList {
+}
+
+#globalProgressBox {
+	background: rgb(173,190,203);
+	margin: auto auto;
+	width: 50%;
+	height: 50%;
+	position: relative;
+	top: 25%;
+}
+
+#globalProgressBar {
+	background: rgb(60,175,130);
+}
+
+#globalProgressText {
+	font-size: 0.8em;
+}
+
+#leftToolbox .drawerPull {
+	position: absolute;
+	background-repeat: no-repeat;
+	background-position: center;
+	top: 0;
+    right: -30px;
+}
+
+	#leftToolbox .drawerPull .span {
+		display: none;
+	}
+
+#rightToolbox .drawerPull .span {
+	display: none;
+}
+
+#rightToolbox .drawerPull {
+	position: absolute;
+	background-repeat: no-repeat;
+	background-position: center;
+	top: 0;
+    left: -30px;
+}
+
+#plmviswebHost, #plmviswebHost2 {
+	height: 100%;
+}
+
+#toolboxToolbox {
+	display: none;
+}
+
+#fileToolbox {
+}
+
+	#fileToolbox ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		cursor: default;
+	}
+
+	#fileToolbox li {
+		white-space: nowrap;
+		padding: 10px;
+		padding-right: 10px;
+	}
+
+		#fileToolbox li:hover {
+			background: rgb(175,215,225);
+		}
+
+#console input[type=button] {
+	width: 100%;
+	padding: 10px;
+}
+
+#productStructure > .toolBoxScrollContent > .toolBoxContent,
+#console > .toolBoxScrollContent > .toolBoxContent,
+#cameraToolbox > .toolBoxScrollContent > .toolBoxContent,
+#selectionToolbox > .toolBoxScrollContent > .toolBoxContent,
+#markupToolbox > .toolBoxScrollContent > .toolBoxContent,
+#sectionToolbox > .toolBoxScrollContent > .toolBoxContent,
+#measurementToolbox > .toolBoxScrollContent > .toolBoxContent {
+	padding: 10px;
+}
+
+	#cameraToolbox > .toolBoxScrollContent > .toolBoxContent img,
+	#selectionToolbox > .toolBoxScrollContent > .toolBoxContent img {
+		vertical-align: middle;
+		margin-right: 5px;
+	}
+
+	#sectionToolbox > .toolBoxScrollContent > .toolBoxContent img {
+		background-color: rgb(220,220,220);
+		padding: 8px 8px;
+	}
+
+	#markupToolbox > .toolBoxScrollContent > .toolBoxContent ul,
+	#sectionToolbox > .toolBoxScrollContent > .toolBoxContent ul,
+	#serviceToolBox > .toolBoxScrollContent > .toolBoxContent #converterForm ul {
+		list-style-type: none;
+	}
+
+	#markupToolbox > .toolBoxScrollContent > .toolBoxContent li,
+	#sectionToolbox > .toolBoxScrollContent > .toolBoxContent li,
+	#serviceToolBox > .toolBoxScrollContent > .toolBoxContent #converterForm li {
+		padding: 5px;
+	}
+
+#serviceToolBox > .toolBoxScrollContent > .toolBoxContent #converterForm li {
+	padding-bottom: 5px;
+}
+
+#serviceToolBox > .toolBoxScrollContent > .toolBoxContent #converterForm input[type="text"] {
+	width: 16px;
+	margin-right: 5px;
+}
+
+#sectionToolbox > .toolBoxScrollContent > .toolBoxContent fieldset,
+#measurementToolbox > .toolBoxScrollContent > .toolBoxContent fieldset, #serviceToolBox > .toolBoxScrollContent > .toolBoxContent #converterForm fieldset {
+	padding: 5px;
+}
+
+#sectionToolbox > .toolBoxScrollContent > .toolBoxContent input[type=radio] {
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+#sectionToolbox > .toolBoxScrollContent > .toolBoxContent input[type=button] {
+	width: 25px;
+}
+
+/* Style to disable the div for the filter pick checkbox and label.  
+   This is part of the fix for D-42106*/
+.disableLabel {
+	padding: 5px;
+	pointer-events: none;
+	opacity: 0.4;
+}
+
+input[type="checkbox"] {
+	display: none;
+}
+
+label {
+	cursor: pointer;
+}
+
+input[type="checkbox"] + label:before {
+	border: 1px solid #7f83a2;
+	content: "\00a0";
+	display: inline-block;
+	font: 18px/1em sans-serif;
+	height: 18px;
+	margin: 0 .25em 0 0;
+	padding: 0;
+	vertical-align: top;
+	width: 18px;
+}
+
+input[type="checkbox"]:checked + label:before {
+	color: #666;
+	content: "\2713";
+	text-align: center;
+}
+
+input[type='radio'] {
+	-webkit-appearance: none;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #7f83a2;
+	border-radius: 50%;
+	outline: none;
+}
+
+	input[type='radio']:hover {
+		box-shadow: 0 0 5px 0px orange inset;
+	}
+
+	input[type='radio']:before {
+		content: '';
+		display: block;
+		width: 60%;
+		height: 60%;
+		margin: 20% auto;
+		border-radius: 50%;
+	}
+
+	input[type='radio']:checked:before {
+		background: rgb(180,182,184);
+	}
+
+#converterForm {
+	padding: 10px;
+}
+
+#ticket {
+	width: 50%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+#fileNames {
+	display: none;
+}
+
+#fileSelector {
+	display: none;
+}
+
+#submitConvert, #exportConvert, #exportConvertCGM {
+	padding: 5px;
+	background: rgb(220,220,220);
+	border: 1px rgb(150,150,150) solid;
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#statusRow {
+	padding: 10px;
+}
+
+#statusText {
+	text-decoration: none;
+}
+
+.displayNone {
+	display: none;
+}
+
+.updatePadding {
+	padding: 5px;
+}
+
+.updateFloat {
+	float: left;
+	padding-right: 20px;
+}
+
+#fileToolbox > .toolBoxScrollContent > .toolBoxContent {
+	border: none;
+	padding: 10px;
+	width: 80%;
+}
+
+	#fileToolbox > .toolBoxScrollContent > .toolBoxContent :hover {
+		color: rgb(0,100,135);
+	}
+
+#legalLink {
+	position: absolute;
+	right: 0;
+	width: 200px;
+	height: 100%;
+	vertical-align: middle;
+	text-align: right;
+	padding: 10px;
+	display:none;
+}
+
+	#legalLink a, #legalLink a:link, #legalLink a:hover, #legalLink a:visited {
+		color: #006487;
+		text-decoration: none;
+	}
+
+.tab {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: rgb(241,241,241);
+}
+
+ul.tab li {
+	float: left;
+}
+
+	ul.tab li a {
+		color: black;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		transition: 0.3s;
+		font-size: 17px;
+	}
+
+.tabContent {
+	display: none;
+}
+
+ul.tab li a:focus, .active {
+	background-color: rgb(175,215,225);
+}
+
+.measurementListItem:hover {
+	cursor: pointer;
+	background: rgb(175,215,225);
+}
+
+.markupListItem:hover {
+	cursor: pointer;
+	background: rgb(175,215,225);
+}
+
+.markupListItemBlock {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	border: 1px solid rgb(0,0,0);
+}

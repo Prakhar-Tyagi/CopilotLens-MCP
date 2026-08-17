@@ -1,0 +1,22 @@
+<table class="grid-ui">
+    <thead>
+    <tr>
+        <% _.each(data.cols, function(col) {%>
+        <th data-col="<%=col%>">
+            <span><%=Utils.translate(col)%></span>
+        </th>
+        <%});%>
+    </tr>
+    </thead>
+    <tbody>
+    <% _.each(data.items, function(item) {%>
+    <tr>
+        <% _.each(data.cols, function(col) {%>
+        <td data-objectId="<%=item[col].uid%>"
+        <% if (item[col].layoutId) { %> data-layoutId="<%=item[col].layoutId%>" <% } %>
+        <%if(item[col].highlighted){%> class="modified" <%}%> ><%=Utils.translate(item[col].value)%></td>
+        <%});%>
+    </tr>
+    <%});%>
+    </tbody>
+</table>

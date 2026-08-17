@@ -1,0 +1,37 @@
+<% if(show){ %>
+<div class="iesdPopup auto-login-popover" id="loginPopover"
+	 style="display: none; left: 320px; top: 40px; height: 175px;z-index: 150">
+	<div class="iesdPopupHeader auto-login-popover-header" title="">
+		<%=mentor.publisher.languageTranslator.localize("Login")%>
+	</div>
+	<div class="iesdLoginPopupContent auto-login-popover-content">
+		<div style="height: auto;" class="default_mouse_pointer">
+			<div class="titlebar default_mouse_pointer">
+				<span class="headerText default_mouse_pointer auto-username-label vinHeaderText"><%=mentor.publisher.languageTranslator.localize("Username")%></span>
+			</div>
+			<div class="iesd-editable-panel default_mouse_pointer">
+				<input type="text" value="" size="25" id="username" class="iesd-editable-text auto-username-field">
+			</div>
+		</div>
+		<div style="height: auto;" class="default_mouse_pointer">
+			<div class="titlebar default_mouse_pointer">
+				<span class="headerText default_mouse_pointer auto-password-label vinHeaderText"><%=mentor.publisher.languageTranslator.localize("Password")%></span>
+			</div>
+			<div class="iesd-editable-panel default_mouse_pointer">
+				<input type="password" value="" size="25" id="password" class="iesd-editable-text auto-password-field"></div>
+		</div>
+		<div id="login_statusMsg" class="titlebar login_statusmsg default_mouse_pointer auto-status-label"
+			 style="height: 20px;"></div>
+	</div>
+	<div class="iesdLoginPopupFooter auto-login-popover-footer">
+		<div id="login_error_message" class="default_mouse_pointer">
+			<div class="standard_button_left default_mouse_pointer">
+				<input type="button" value="<%=mentor.publisher.languageTranslator.localize('Login')%>"
+					   id="login_submit" class="auto-submit-button"></div>
+			<div class="standard_button_right default_mouse_pointer">
+				<input type="button" value="<%=mentor.publisher.languageTranslator.localize('Cancel')%>"
+					   id="login_cancel" class="auto-cancel-button"></div>
+		</div>
+	</div>
+</div>
+<% } %>

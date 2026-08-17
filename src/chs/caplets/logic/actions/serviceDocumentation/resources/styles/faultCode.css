@@ -1,0 +1,90 @@
+faultTableStyle/* These are the classes and id's appled for the Fault code Table */
+
+/* This class applied for falu code columns  */
+.faultTableStyle td {
+  /*font-family: Courier, monospace;*/
+  text-align: left;
+  border-bottom: 1px solid #000000;
+  border-right: 1px solid #000000;
+  padding: 2px !important;
+}
+
+/* This is used for fault code table out side css */
+.faultTableStyle {
+  width: 98%;
+  margin: 5px;
+  border-left: 1px solid #000000;
+  /*-ms-touch-action:pan-x pan-y;*/
+}
+
+/* This is applied for fault code table header columns*/
+.faultTableStyle tr.header td {
+  background-color: white;
+  font-size: 14px;
+  padding: 4px !important;
+}
+.faultTableStyle td td {
+  border: 0 solid white;
+}
+
+/* This is used for fault code table */
+table.faultTableStyle {
+  margin: 20px;
+  border-collapse: collapse;
+  width: 95%;
+}
+
+table.faultTableStyle tr td.header_font {
+  display: none;
+}
+/* THis is applied for fault code table columns */
+table.faultTableStyle td {
+  text-align: left;
+  vertical-align: top;
+  /*font-family: Courier, monospace, sans-serif;*/
+  border-collapse: collapse;
+  border: 1px solid black;
+  padding: 3px;
+}
+
+/* For highlighting the fault codes*/
+table.faultTableStyle td.highlight, span.highlight  {
+  background: -moz-linear-gradient(top, #eeee99 0%, #dddd99 100%) !important;
+  /* firefox */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeee99), color-stop(100%, #dddd99)) !important;
+  background-color: #ee9 !important;
+  /* 	background-color: purple !important; */
+
+}
+table.faultTableStyle td.selected, span.selected  {
+    background: -moz-linear-gradient(top, #eeee99 0%, #dddd99 100%) !important;
+    /* firefox */
+
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeee99), color-stop(100%, #dddd99)) !important;
+    background-color: #ee9 !important;
+    /* 	background-color: purple !important; */
+
+}
+table.faultTableStyle td table td {
+  border: 0 solid black;
+  background-color: transparent !important;
+}
+table.faultTableStyle tr:nth-child(odd) td {
+  background-color: rgba(230, 230, 240, 0.5);
+}
+table.faultTableStyle tr:nth-child(even) td {
+  background-color: #fff;
+}
+
+/* This is applied for fault codes table headded columns */
+table.faultTableStyle tr.header td {
+  font-weight: bold;
+  text-wrap: none;
+  background: #eee;
+  vertical-align: middle;
+  border-bottom: 2px solid black;
+  background-color: hsl(214,39%,35%);
+  color: white;
+  text-shadow: 1px 1px black;
+}

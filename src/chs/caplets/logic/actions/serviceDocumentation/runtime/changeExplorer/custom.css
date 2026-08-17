@@ -1,0 +1,19 @@
+#platform-grouped-list {
+    margin-top: 38px;
+}
+
+.system-scope-panel {
+    display: none;
+}
+
+.save-button {
+    display: block !important;
+    float: right;
+    cursor: pointer;
+    width: 19px;
+    height: 19px;
+    margin-right: 10px;
+    object-fit: contain;
+    margin-top: 10px;
+    float: right;
+}

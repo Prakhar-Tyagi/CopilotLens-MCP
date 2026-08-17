@@ -1,0 +1,2198 @@
+{
+  "status": "ready",
+  "repo_path": "C:\\CoPilotLens\\src",
+  "health": {
+    "avg_score": 74,
+    "grade": "B",
+    "total_files": 200,
+    "distribution": {
+      "critical": 1,
+      "poor": 16,
+      "fair": 33,
+      "good": 51,
+      "excellent": 99
+    },
+    "worst_files": [
+      {
+        "score": 25,
+        "grade": "F",
+        "lines": 3250,
+        "code_lines": 2689,
+        "comment_lines": 257,
+        "todo_count": 9,
+        "markers": [
+          {
+            "id": "file_too_large",
+            "impact": -20,
+            "desc": "File exceeds 500 lines",
+            "detail": "3250 lines"
+          },
+          {
+            "id": "too_many_todos",
+            "impact": -10,
+            "desc": "More than 5 TODO/FIXME/HACK comments",
+            "detail": "9 found"
+          },
+          {
+            "id": "long_functions",
+            "impact": -15,
+            "desc": "Functions/methods > 50 lines",
+            "detail": "15 long function(s)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "chs/caplets/logic/BrowserClient.java"
+      },
+      {
+        "score": 30,
+        "grade": "F",
+        "lines": 3659,
+        "code_lines": 2972,
+        "comment_lines": 342,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "file_too_large",
+            "impact": -20,
+            "desc": "File exceeds 500 lines",
+            "detail": "3659 lines"
+          },
+          {
+            "id": "long_functions",
+            "impact": -15,
+            "desc": "Functions/methods > 50 lines",
+            "detail": "11 long function(s)"
+          },
+          {
+            "id": "magic_numbers",
+            "impact": -5,
+            "desc": "Magic numbers (hardcoded literals)",
+            "detail": "15 magic numbers"
+          }
+        ],
+        "is_test_file": false,
+        "path": "chs/caplets/logic/LogicDataTransfer.java"
+      },
+      {
+        "score": 35,
+        "grade": "F",
+        "lines": 743,
+        "code_lines": 694,
+        "comment_lines": 12,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "file_too_large",
+            "impact": -20,
+            "desc": "File exceeds 500 lines",
+            "detail": "743 lines"
+          },
+          {
+            "id": "long_functions",
+            "impact": -15,
+            "desc": "Functions/methods > 50 lines",
+            "detail": "2 long function(s)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "chs/caf/caplet/helpers/snapping/SnapThroughConnectorHelper.java"
+      },
+      {
+        "score": 35,
+        "grade": "F",
+        "lines": 780,
+        "code_lines": 668,
+        "comment_lines": 20,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "file_too_large",
+            "impact": -20,
+            "desc": "File exceeds 500 lines",
+            "detail": "780 lines"
+          },
+          {
+            "id": "long_functions",
+            "impact": -15,
+            "desc": "Functions/methods > 50 lines",
+            "detail": "2 long function(s)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "chs/caplets/border/actions/EditUserDefinedZonesAction.java"
+      },
+      {
+        "score": 35,
+        "grade": "F",
+        "lines": 1067,
+        "code_lines": 886,
+        "comment_lines": 60,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "file_too_large",
+            "impact": -20,
+            "desc": "File exceeds 500 lines",
+            "detail": "1067 lines"
+          },
+          {
+            "id": "long_functions",
+            "impact": -15,
+            "desc": "Functions/methods > 50 lines",
+            "detail": "4 long function(s)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "chs/caplets/logic/ConnectivityBrowserClient.java"
+      },
+      {
+        "score": 35,
+        "grade": "F",
+        "lines": 1368,
+        "code_lines": 1171,
+        "comment_lines": 24,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "file_too_large",
+            "impact": -20,
+            "desc": "File exceeds 500 lines",
+            "detail": "1368 lines"
+          },
+          {
+            "id": "long_functions",
+            "impact": -15,
+            "desc": "Functions/methods > 50 lines",
+            "detail": "5 long function(s)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "chs/caplets/logic/actions/AbstractCreateOtherComponentAction.java"
+      },
+      {
+        "score": 35,
+        "grade": "F",
+        "lines": 523,
+        "code_lines": 400,
+        "comment_lines": 14,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "file_too_large",
+            "impact": -20,
+            "desc": "File exceeds 500 lines",
+            "detail": "523 lines"
+          },
+          {
+            "id": "long_functions",
+            "impact": -15,
+            "desc": "Functions/methods > 50 lines",
+            "detail": "3 long function(s)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "chs/caplets/logic/actions/AbstractDnDHelper.java"
+      },
+      {
+        "score": 35,
+        "grade": "F",
+        "lines": 2319,
+        "code_lines": 1929,
+        "comment_lines": 132,
+        "todo_count": 1,
+        "markers": [
+          {
+            "id": "file_too_large",
+            "impact": -20,
+            "desc": "File exceeds 500 lines",
+            "detail": "2319 lines"
+          },
+          {
+            "id": "long_functions",
+            "impact": -15,
+            "desc": "Functions/methods > 50 lines",
+            "detail": "7 long function(s)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "chs/caplets/logic/actions/AbstractPinActionHelper.java"
+      },
+      {
+        "score": 35,
+        "grade": "F",
+        "lines": 567,
+        "code_lines": 443,
+        "comment_lines": 32,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "file_too_large",
+            "impact": -20,
+            "desc": "File exceeds 500 lines",
+            "detail": "567 lines"
+          },
+          {
+            "id": "long_functions",
+            "impact": -15,
+            "desc": "Functions/methods > 50 lines",
+            "detail": "2 long function(s)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "chs/caplets/logic/actions/AddBackshellDialog.java"
+      },
+      {
+        "score": 45,
+        "grade": "D",
+        "lines": 405,
+        "code_lines": 327,
+        "comment_lines": 40,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "very_large_file",
+            "impact": -10,
+            "desc": "File exceeds 300 lines",
+            "detail": "405 lines"
+          },
+          {
+            "id": "long_functions",
+            "impact": -15,
+            "desc": "Functions/methods > 50 lines",
+            "detail": "1 long function(s)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "chs/caplets/logic/IndicatorRefresher.java"
+      }
+    ],
+    "best_files": [
+      {
+        "score": 85,
+        "grade": "A",
+        "lines": 55,
+        "code_lines": 38,
+        "comment_lines": 12,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "good_comment_ratio",
+            "impact": 10,
+            "desc": "Good documentation ratio (>10%)",
+            "detail": "22% comments"
+          },
+          {
+            "id": "short_file",
+            "impact": 5,
+            "desc": "File is concise (<100 lines)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "chs/caplets/logic/actions/AddIndicatorsActionUI.java"
+      },
+      {
+        "score": 85,
+        "grade": "A",
+        "lines": 85,
+        "code_lines": 66,
+        "comment_lines": 9,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "good_comment_ratio",
+            "impact": 10,
+            "desc": "Good documentation ratio (>10%)",
+            "detail": "11% comments"
+          },
+          {
+            "id": "short_file",
+            "impact": 5,
+            "desc": "File is concise (<100 lines)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "chs/caplets/logic/actions/AddICDWithSymbolAction.java"
+      },
+      {
+        "score": 85,
+        "grade": "A",
+        "lines": 66,
+        "code_lines": 39,
+        "comment_lines": 21,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "good_comment_ratio",
+            "impact": 10,
+            "desc": "Good documentation ratio (>10%)",
+            "detail": "32% comments"
+          },
+          {
+            "id": "short_file",
+            "impact": 5,
+            "desc": "File is concise (<100 lines)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "chs/caplets/logic/actions/AddDiagramListTableActionUI.java"
+      },
+      {
+        "score": 85,
+        "grade": "A",
+        "lines": 83,
+        "code_lines": 57,
+        "comment_lines": 12,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "good_comment_ratio",
+            "impact": 10,
+            "desc": "Good documentation ratio (>10%)",
+            "detail": "14% comments"
+          },
+          {
+            "id": "short_file",
+            "impact": 5,
+            "desc": "File is concise (<100 lines)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "chs/caplets/logic/actions/AddDiagramListTableAction.java"
+      },
+      {
+        "score": 85,
+        "grade": "A",
+        "lines": 66,
+        "code_lines": 39,
+        "comment_lines": 21,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "good_comment_ratio",
+            "impact": 10,
+            "desc": "Good documentation ratio (>10%)",
+            "detail": "32% comments"
+          },
+          {
+            "id": "short_file",
+            "impact": 5,
+            "desc": "File is concise (<100 lines)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "chs/caplets/logic/actions/AddDeviceListTableActionUI.java"
+      },
+      {
+        "score": 85,
+        "grade": "A",
+        "lines": 83,
+        "code_lines": 57,
+        "comment_lines": 12,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "good_comment_ratio",
+            "impact": 10,
+            "desc": "Good documentation ratio (>10%)",
+            "detail": "14% comments"
+          },
+          {
+            "id": "short_file",
+            "impact": 5,
+            "desc": "File is concise (<100 lines)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "chs/caplets/logic/actions/AddDeviceListTableAction.java"
+      },
+      {
+        "score": 85,
+        "grade": "A",
+        "lines": 56,
+        "code_lines": 42,
+        "comment_lines": 8,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "good_comment_ratio",
+            "impact": 10,
+            "desc": "Good documentation ratio (>10%)",
+            "detail": "14% comments"
+          },
+          {
+            "id": "short_file",
+            "impact": 5,
+            "desc": "File is concise (<100 lines)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "chs/caplets/logic/actions/AddDeviceFromLibraryPartActionUI.java"
+      },
+      {
+        "score": 85,
+        "grade": "A",
+        "lines": 40,
+        "code_lines": 19,
+        "comment_lines": 15,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "good_comment_ratio",
+            "impact": 10,
+            "desc": "Good documentation ratio (>10%)",
+            "detail": "38% comments"
+          },
+          {
+            "id": "short_file",
+            "impact": 5,
+            "desc": "File is concise (<100 lines)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "chs/caplets/logic/actions/AddDeviceFromLibraryPartAction.java"
+      },
+      {
+        "score": 85,
+        "grade": "A",
+        "lines": 78,
+        "code_lines": 46,
+        "comment_lines": 25,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "good_comment_ratio",
+            "impact": 10,
+            "desc": "Good documentation ratio (>10%)",
+            "detail": "32% comments"
+          },
+          {
+            "id": "short_file",
+            "impact": 5,
+            "desc": "File is concise (<100 lines)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "chs/caplets/logic/actions/AddCommentSymbolToMCActionUI.java"
+      },
+      {
+        "score": 85,
+        "grade": "A",
+        "lines": 76,
+        "code_lines": 51,
+        "comment_lines": 16,
+        "todo_count": 1,
+        "markers": [
+          {
+            "id": "good_comment_ratio",
+            "impact": 10,
+            "desc": "Good documentation ratio (>10%)",
+            "detail": "21% comments"
+          },
+          {
+            "id": "short_file",
+            "impact": 5,
+            "desc": "File is concise (<100 lines)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "chs/caplets/logic/actions/AddCommentSymbolToMCAction.java"
+      }
+    ]
+  },
+  "hotspots": [
+    {
+      "path": "dashboard/style.css",
+      "commit_count": 1,
+      "churn": 997,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "mcp_server/server.py",
+      "commit_count": 1,
+      "churn": 638,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "dashboard/app.js",
+      "commit_count": 1,
+      "churn": 506,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "mcp_server/analyzers/dependency.py",
+      "commit_count": 1,
+      "churn": 294,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "mcp_server/analyzers/git_analyzer.py",
+      "commit_count": 1,
+      "churn": 263,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "mcp_server/analyzers/code_health.py",
+      "commit_count": 1,
+      "churn": 255,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "dashboard/index.html",
+      "commit_count": 1,
+      "churn": 214,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "README.md",
+      "commit_count": 1,
+      "churn": 208,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "mcp_server/analyzers/why_analyzer.py",
+      "commit_count": 1,
+      "churn": 201,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "mcp_server/analyzers/search_analyzer.py",
+      "commit_count": 1,
+      "churn": 187,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "hack.md",
+      "commit_count": 1,
+      "churn": 184,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "run_dashboard.py",
+      "commit_count": 1,
+      "churn": 173,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "setup.md",
+      "commit_count": 1,
+      "churn": 146,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "mcp_server/analyzers/dead_code.py",
+      "commit_count": 1,
+      "churn": 138,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "breakdown.md",
+      "commit_count": 1,
+      "churn": 128,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    }
+  ],
+  "dead_code": [
+    {
+      "symbol": "ABS",
+      "defined_in": "chs/caplets/logic/actions/serviceDocumentation/resources/jt_app/js/plmvisweb/plmvisweb.min.js",
+      "type": "function",
+      "line": 12732,
+      "reference_count": 0,
+      "confidence": "HIGH"
+    },
+    {
+      "symbol": "ADD",
+      "defined_in": "chs/caplets/logic/actions/serviceDocumentation/resources/jt_app/js/plmvisweb/plmvisweb.min.js",
+      "type": "function",
+      "line": 12720,
+      "reference_count": 0,
+      "confidence": "HIGH"
+    },
+    {
+      "symbol": "ALIGNRP",
+      "defined_in": "chs/caplets/logic/actions/serviceDocumentation/resources/jt_app/js/plmvisweb/plmvisweb.min.js",
+      "type": "function",
+      "line": 12636,
+      "reference_count": 0,
+      "confidence": "HIGH"
+    },
+    {
+      "symbol": "AbstractAddDatumAction",
+      "defined_in": "chs/caplets/symbol/actions/AbstractAddDatumAction.java",
+      "type": "class",
+      "line": 80,
+      "reference_count": 0,
+      "confidence": "HIGH"
+    },
+    {
+      "symbol": "AbstractAutoShareExecutor",
+      "defined_in": "chs/caplets/logic/actions/shared/autoshare/AbstractAutoShareExecutor.java",
+      "type": "class",
+      "line": 45,
+      "reference_count": 0,
+      "confidence": "HIGH"
+    },
+    {
+      "symbol": "AbstractAxisDimensionAction",
+      "defined_in": "chs/caplets/logic/actions/layout/AbstractAxisDimensionAction.java",
+      "type": "class",
+      "line": 100,
+      "reference_count": 0,
+      "confidence": "HIGH"
+    },
+    {
+      "symbol": "AbstractBaseShareConductorActionHelper",
+      "defined_in": "chs/caplets/logic/actions/shared/AbstractBaseShareConductorActionHelper.java",
+      "type": "class",
+      "line": 79,
+      "reference_count": 0,
+      "confidence": "HIGH"
+    },
+    {
+      "symbol": "AbstractBaseShareSingleLineActionHelper",
+      "defined_in": "chs/caplets/logic/actions/shared/AbstractBaseShareSingleLineActionHelper.java",
+      "type": "class",
+      "line": 35,
+      "reference_count": 0,
+      "confidence": "HIGH"
+    },
+    {
+      "symbol": "AbstractBatchShareActionExecutor",
+      "defined_in": "chs/caplets/logic/actions/shared/batchshare/AbstractBatchShareActionExecutor.java",
+      "type": "class",
+      "line": 47,
+      "reference_count": 0,
+      "confidence": "HIGH"
+    },
+    {
+      "symbol": "AbstractBatchShareDialog",
+      "defined_in": "chs/caplets/logic/actions/shared/batchshare/ui/AbstractBatchShareDialog.java",
+      "type": "class",
+      "line": 42,
+      "reference_count": 0,
+      "confidence": "HIGH"
+    },
+    {
+      "symbol": "AbstractBatchUpdateICDCmd",
+      "defined_in": "chs/caplets/logic/commands/AbstractBatchUpdateICDCmd.java",
+      "type": "class",
+      "line": 73,
+      "reference_count": 0,
+      "confidence": "HIGH"
+    },
+    {
+      "symbol": "AbstractConflictInfoKey",
+      "defined_in": "chs/caplets/logic/actions/ui/FacetConflictNode.java",
+      "type": "class",
+      "line": 308,
+      "reference_count": 0,
+      "confidence": "HIGH"
+    },
+    {
+      "symbol": "AbstractCreateDeviceFromPartBrowserAction",
+      "defined_in": "chs/caplets/logic/actions/partbrowser/AbstractCreateDeviceFromPartBrowserAction.java",
+      "type": "class",
+      "line": 18,
+      "reference_count": 0,
+      "confidence": "HIGH"
+    },
+    {
+      "symbol": "AbstractDeleteDiagramsDelegate",
+      "defined_in": "chs/caplets/shared/AbstractDeleteDiagramsDelegate.java",
+      "type": "class",
+      "line": 38,
+      "reference_count": 0,
+      "confidence": "HIGH"
+    },
+    {
+      "symbol": "AbstractDeltaShareCmd",
+      "defined_in": "chs/caplets/logic/actions/shared/batchshare/AbstractDeltaShareCmd.java",
+      "type": "class",
+      "line": 37,
+      "reference_count": 0,
+      "confidence": "HIGH"
+    },
+    {
+      "symbol": "AbstractDevicePlacementController",
+      "defined_in": "chs/caplets/logic/actions/layout/AbstractDevicePlacementController.java",
+      "type": "class",
+      "line": 66,
+      "reference_count": 0,
+      "confidence": "HIGH"
+    },
+    {
+      "symbol": "AbstractDumpICDAction",
+      "defined_in": "chs/caplets/logic/actions/debug/AbstractDumpICDAction.java",
+      "type": "class",
+      "line": 23,
+      "reference_count": 0,
+      "confidence": "HIGH"
+    },
+    {
+      "symbol": "AbstractFindAndShareCmd",
+      "defined_in": "chs/caplets/logic/actions/shared/batchshare/AbstractFindAndShareCmd.java",
+      "type": "class",
+      "line": 115,
+      "reference_count": 0,
+      "confidence": "HIGH"
+    },
+    {
+      "symbol": "AbstractInstanceDetailPane",
+      "defined_in": "chs/caplets/logic/actions/shared/batchshare/ui/detailsPane/AbstractInstanceDetailPane.java",
+      "type": "class",
+      "line": 35,
+      "reference_count": 0,
+      "confidence": "HIGH"
+    },
+    {
+      "symbol": "AbstractLayoutDesignSync",
+      "defined_in": "chs/caplets/logic/actions/layout/sync/AbstractLayoutDesignSync.java",
+      "type": "class",
+      "line": 79,
+      "reference_count": 0,
+      "confidence": "HIGH"
+    }
+  ],
+  "dependency_graph": {
+    "nodes": [
+      {
+        "id": "chs/caplets/logic/Model.java",
+        "label": "Model.java",
+        "imports_count": 1,
+        "imported_by_count": 21,
+        "centrality": 0.143,
+        "is_hub": true,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/BasicAddPinListDialog.java",
+        "label": "BasicAddPinListDialog.java",
+        "imports_count": 0,
+        "imported_by_count": 4,
+        "centrality": 0.027,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/AutoRouteActionUI.java",
+        "label": "AutoRouteActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 3,
+        "centrality": 0.02,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/AddConductorNameActionUI.java",
+        "label": "AddConductorNameActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 3,
+        "centrality": 0.02,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/capture/actions/ddt/transmodel/DDTTypeTransient.java",
+        "label": "DDTTypeTransient.java",
+        "imports_count": 0,
+        "imported_by_count": 3,
+        "centrality": 0.02,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/LogicDataTransfer.java",
+        "label": "LogicDataTransfer.java",
+        "imports_count": 2,
+        "imported_by_count": 2,
+        "centrality": 0.02,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/AddPinListAction.java",
+        "label": "AddPinListAction.java",
+        "imports_count": 1,
+        "imported_by_count": 2,
+        "centrality": 0.017,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/BatchDevicePlacementAction.java",
+        "label": "BatchDevicePlacementAction.java",
+        "imports_count": 1,
+        "imported_by_count": 2,
+        "centrality": 0.017,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/DaisyChainCreationHelper.java",
+        "label": "DaisyChainCreationHelper.java",
+        "imports_count": 1,
+        "imported_by_count": 2,
+        "centrality": 0.017,
+        "is_hub": false,
+        "is_circular": true,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/capture/actions/ddt/AssignDDTTypesActionUI.java",
+        "label": "AssignDDTTypesActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 2,
+        "centrality": 0.013,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/AddInterconnectShieldActionUI.java",
+        "label": "AddInterconnectShieldActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 2,
+        "centrality": 0.013,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/CompareDiagramsAction.java",
+        "label": "CompareDiagramsAction.java",
+        "imports_count": 0,
+        "imported_by_count": 2,
+        "centrality": 0.013,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/AddInterconnectWireActionUI.java",
+        "label": "AddInterconnectWireActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 2,
+        "centrality": 0.013,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/capture/actions/ddt/transmodel/DeviceFieldModel.java",
+        "label": "DeviceFieldModel.java",
+        "imports_count": 0,
+        "imported_by_count": 2,
+        "centrality": 0.013,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/CheckSchematicConductorConnection.java",
+        "label": "CheckSchematicConductorConnection.java",
+        "imports_count": 0,
+        "imported_by_count": 2,
+        "centrality": 0.013,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/AddCommentSymbolToMCActionUI.java",
+        "label": "AddCommentSymbolToMCActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 2,
+        "centrality": 0.013,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/AddInterconnectOverbraidActionUI.java",
+        "label": "AddInterconnectOverbraidActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 2,
+        "centrality": 0.013,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/AddIndicatorsActionUI.java",
+        "label": "AddIndicatorsActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 2,
+        "centrality": 0.013,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/capture/actions/ddt/EditDDTTypesActionUI.java",
+        "label": "EditDDTTypesActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 2,
+        "centrality": 0.013,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/capture/actions/ddt/transmodel/PinFieldModel.java",
+        "label": "PinFieldModel.java",
+        "imports_count": 0,
+        "imported_by_count": 2,
+        "centrality": 0.013,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/UndoDisableForSharedObjectSave.java",
+        "label": "UndoDisableForSharedObjectSave.java",
+        "imports_count": 0,
+        "imported_by_count": 2,
+        "centrality": 0.013,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/AddChainActionUI.java",
+        "label": "AddChainActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 2,
+        "centrality": 0.013,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/LogicResource.java",
+        "label": "LogicResource.java",
+        "imports_count": 21,
+        "imported_by_count": 1,
+        "centrality": 0.077,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/capture/actions/ddt/AssignDDTTypesAction.java",
+        "label": "AssignDDTTypesAction.java",
+        "imports_count": 3,
+        "imported_by_count": 1,
+        "centrality": 0.017,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/layout/LayoutDataTransfer.java",
+        "label": "LayoutDataTransfer.java",
+        "imports_count": 2,
+        "imported_by_count": 1,
+        "centrality": 0.013,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/border/actions/UserZonePropertiesAction.java",
+        "label": "UserZonePropertiesAction.java",
+        "imports_count": 2,
+        "imported_by_count": 1,
+        "centrality": 0.013,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caf/cafmain/actions/capture/sysml/graph/UsedProjectGraphBuilder.java",
+        "label": "UsedProjectGraphBuilder.java",
+        "imports_count": 1,
+        "imported_by_count": 1,
+        "centrality": 0.01,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/AddChainAction.java",
+        "label": "AddChainAction.java",
+        "imports_count": 1,
+        "imported_by_count": 1,
+        "centrality": 0.01,
+        "is_hub": false,
+        "is_circular": true,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/layout/properties/QAPLayoutPropertiesClient.java",
+        "label": "QAPLayoutPropertiesClient.java",
+        "imports_count": 1,
+        "imported_by_count": 1,
+        "centrality": 0.01,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/AddConductorNameAction.java",
+        "label": "AddConductorNameAction.java",
+        "imports_count": 1,
+        "imported_by_count": 1,
+        "centrality": 0.01,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/border/properties/UserZonePropertiesClient.java",
+        "label": "UserZonePropertiesClient.java",
+        "imports_count": 1,
+        "imported_by_count": 1,
+        "centrality": 0.01,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/border/properties/BorderPropertiesClient.java",
+        "label": "BorderPropertiesClient.java",
+        "imports_count": 1,
+        "imported_by_count": 1,
+        "centrality": 0.01,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/layout/properties/LayoutPropertiesClient.java",
+        "label": "LayoutPropertiesClient.java",
+        "imports_count": 1,
+        "imported_by_count": 1,
+        "centrality": 0.01,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/AddInstanceAction.java",
+        "label": "AddInstanceAction.java",
+        "imports_count": 1,
+        "imported_by_count": 1,
+        "centrality": 0.01,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/AutoRouteSettingsAction.java",
+        "label": "AutoRouteSettingsAction.java",
+        "imports_count": 1,
+        "imported_by_count": 1,
+        "centrality": 0.01,
+        "is_hub": false,
+        "is_circular": true,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/AutoRouteSettingsActionUI.java",
+        "label": "AutoRouteSettingsActionUI.java",
+        "imports_count": 1,
+        "imported_by_count": 1,
+        "centrality": 0.01,
+        "is_hub": false,
+        "is_circular": true,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/AddLibraryInnercoreNetAction.java",
+        "label": "AddLibraryInnercoreNetAction.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/View.java",
+        "label": "View.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/AlignAction.java",
+        "label": "AlignAction.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/ConnectByNetActionUI.java",
+        "label": "ConnectByNetActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/IndicatorRefresher.java",
+        "label": "IndicatorRefresher.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/capture/actions/ddt/transmodel/PinTableRow.java",
+        "label": "PinTableRow.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/SchemObjectHandler.java",
+        "label": "SchemObjectHandler.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/AddShieldConductorAction.java",
+        "label": "AddShieldConductorAction.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/BaseSystemLogicLifecycle.java",
+        "label": "BaseSystemLogicLifecycle.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/AddPinListActionUI.java",
+        "label": "AddPinListActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/AddLibraryInnercoreWireActionUI.java",
+        "label": "AddLibraryInnercoreWireActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/AutoGenerateConnectorSupport.java",
+        "label": "AutoGenerateConnectorSupport.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/AddInterconnectWireAction.java",
+        "label": "AddInterconnectWireAction.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/border/Caplet.java",
+        "label": "Caplet.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/AddLibraryInnercoreShieldActionUI.java",
+        "label": "AddLibraryInnercoreShieldActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/capture/actions/ddt/EditDDTTypesAction.java",
+        "label": "EditDDTTypesAction.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/AddLibraryInnercoreNetActionUI.java",
+        "label": "AddLibraryInnercoreNetActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caf/cafmain/actions/capture/sysml/SysMLProjectNode.java",
+        "label": "SysMLProjectNode.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/AddInstanceActionUI.java",
+        "label": "AddInstanceActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/border/actions/UserZonePropertiesActionUI.java",
+        "label": "UserZonePropertiesActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/border/actions/CreateFormboardRegionDatumActionUI.java",
+        "label": "CreateFormboardRegionDatumActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/ConnectActionUI.java",
+        "label": "ConnectActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caf/cafmain/actions/capture/sysml/graph/SysMLGraphUtils.java",
+        "label": "SysMLGraphUtils.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/border/actions/CreateFormboardRegionDatumAction.java",
+        "label": "CreateFormboardRegionDatumAction.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/ConnectIndicatorsActionUI.java",
+        "label": "ConnectIndicatorsActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/ConnectByWireActionUI.java",
+        "label": "ConnectByWireActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caf/cafmain/actions/capture/sysml/graph/IUsedProjectGraphBuilder.java",
+        "label": "IUsedProjectGraphBuilder.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/border/actions/EditUserDefinedZonesActionUI.java",
+        "label": "EditUserDefinedZonesActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/ConnectByInterconnectActionUI.java",
+        "label": "ConnectByInterconnectActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caf/caplet/logic/HWMNameSpaceIndexSynchronizer.java",
+        "label": "HWMNameSpaceIndexSynchronizer.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/BatchDevicePlacementActionUI.java",
+        "label": "BatchDevicePlacementActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/ConnectByPinActionUI.java",
+        "label": "ConnectByPinActionUI.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/AddLibraryInnercoreWireAction.java",
+        "label": "AddLibraryInnercoreWireAction.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caf/cafmain/actions/capture/sysml/SysMLSoaModelImporter.java",
+        "label": "SysMLSoaModelImporter.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/actions/Add3dDeviceAction.java",
+        "label": "Add3dDeviceAction.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/border/actions/EditUserDefinedZonesAction.java",
+        "label": "EditUserDefinedZonesAction.java",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/LayoutResource.java",
+        "label": "LayoutResource.java",
+        "imports_count": 16,
+        "imported_by_count": 0,
+        "centrality": 0.053,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/LayoutController.java",
+        "label": "LayoutController.java",
+        "imports_count": 5,
+        "imported_by_count": 0,
+        "centrality": 0.017,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/BrowserClient.java",
+        "label": "BrowserClient.java",
+        "imports_count": 5,
+        "imported_by_count": 0,
+        "centrality": 0.017,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/border/Controller.java",
+        "label": "Controller.java",
+        "imports_count": 5,
+        "imported_by_count": 0,
+        "centrality": 0.017,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/border/Resource.java",
+        "label": "Resource.java",
+        "imports_count": 4,
+        "imported_by_count": 0,
+        "centrality": 0.013,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caf/cafmain/actions/capture/sysml/SysMLSoaModelImportService.java",
+        "label": "SysMLSoaModelImportService.java",
+        "imports_count": 3,
+        "imported_by_count": 0,
+        "centrality": 0.01,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caplets/logic/SvcDocResource.java",
+        "label": "SvcDocResource.java",
+        "imports_count": 2,
+        "imported_by_count": 0,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "chs/caf/caplet/helpers/snapping/SnapThroughConnectorHelper.java",
+        "label": "SnapThroughConnectorHelper.java",
+        "imports_count": 2,
+        "imported_by_count": 0,
+        "centrality": 0.007,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      }
+    ],
+    "edges": [
+      {
+        "source": "chs/caf/cafmain/actions/capture/sysml/SysMLSoaModelImportService.java",
+        "target": "chs/caf/cafmain/actions/capture/sysml/graph/SysMLGraphUtils.java"
+      },
+      {
+        "source": "chs/caf/cafmain/actions/capture/sysml/SysMLSoaModelImportService.java",
+        "target": "chs/caf/cafmain/actions/capture/sysml/graph/UsedProjectGraphBuilder.java"
+      },
+      {
+        "source": "chs/caf/cafmain/actions/capture/sysml/SysMLSoaModelImportService.java",
+        "target": "chs/caf/cafmain/actions/capture/sysml/graph/IUsedProjectGraphBuilder.java"
+      },
+      {
+        "source": "chs/caf/cafmain/actions/capture/sysml/graph/UsedProjectGraphBuilder.java",
+        "target": "chs/caf/cafmain/actions/capture/sysml/SysMLProjectNode.java"
+      },
+      {
+        "source": "chs/caf/caplet/helpers/snapping/SnapThroughConnectorHelper.java",
+        "target": "chs/caplets/logic/AutoGenerateConnectorSupport.java"
+      },
+      {
+        "source": "chs/caf/caplet/helpers/snapping/SnapThroughConnectorHelper.java",
+        "target": "chs/caplets/logic/Model.java"
+      },
+      {
+        "source": "chs/caplets/border/Controller.java",
+        "target": "chs/caplets/border/actions/EditUserDefinedZonesAction.java"
+      },
+      {
+        "source": "chs/caplets/border/Controller.java",
+        "target": "chs/caplets/border/properties/BorderPropertiesClient.java"
+      },
+      {
+        "source": "chs/caplets/border/Controller.java",
+        "target": "chs/caplets/logic/actions/AlignAction.java"
+      },
+      {
+        "source": "chs/caplets/border/Controller.java",
+        "target": "chs/caplets/border/actions/UserZonePropertiesAction.java"
+      },
+      {
+        "source": "chs/caplets/border/Controller.java",
+        "target": "chs/caplets/border/actions/CreateFormboardRegionDatumAction.java"
+      },
+      {
+        "source": "chs/caplets/border/Lifecycle.java",
+        "target": "chs/caplets/border/Caplet.java"
+      },
+      {
+        "source": "chs/caplets/border/Resource.java",
+        "target": "chs/caplets/border/actions/CreateFormboardRegionDatumActionUI.java"
+      },
+      {
+        "source": "chs/caplets/border/Resource.java",
+        "target": "chs/caplets/logic/Model.java"
+      },
+      {
+        "source": "chs/caplets/border/Resource.java",
+        "target": "chs/caplets/border/actions/UserZonePropertiesActionUI.java"
+      },
+      {
+        "source": "chs/caplets/border/Resource.java",
+        "target": "chs/caplets/border/actions/EditUserDefinedZonesActionUI.java"
+      },
+      {
+        "source": "chs/caplets/border/actions/UserZonePropertiesAction.java",
+        "target": "chs/caplets/logic/Model.java"
+      },
+      {
+        "source": "chs/caplets/border/actions/UserZonePropertiesAction.java",
+        "target": "chs/caplets/border/properties/UserZonePropertiesClient.java"
+      },
+      {
+        "source": "chs/caplets/border/properties/BorderPropertiesClient.java",
+        "target": "chs/caplets/logic/Model.java"
+      },
+      {
+        "source": "chs/caplets/border/properties/UserZonePropertiesClient.java",
+        "target": "chs/caplets/logic/Model.java"
+      },
+      {
+        "source": "chs/caplets/capture/CaptureCaplet.java",
+        "target": "chs/caplets/logic/LogicDataTransfer.java"
+      },
+      {
+        "source": "chs/caplets/capture/CaptureCaplet.java",
+        "target": "chs/caplets/logic/LogicResource.java"
+      },
+      {
+        "source": "chs/caplets/capture/CaptureController.java",
+        "target": "chs/caplets/capture/actions/ddt/AssignDDTTypesAction.java"
+      },
+      {
+        "source": "chs/caplets/capture/CaptureController.java",
+        "target": "chs/caplets/capture/actions/ddt/EditDDTTypesAction.java"
+      },
+      {
+        "source": "chs/caplets/capture/CaptureLifecycle.java",
+        "target": "chs/caplets/logic/BaseSystemLogicLifecycle.java"
+      },
+      {
+        "source": "chs/caplets/capture/CapturePropertiesClient.java",
+        "target": "chs/caplets/logic/Model.java"
+      },
+      {
+        "source": "chs/caplets/capture/ICaptureLifecycle.java",
+        "target": "chs/caplets/logic/Model.java"
+      },
+      {
+        "source": "chs/caplets/capture/QAPCapturePropertiesClient.java",
+        "target": "chs/caplets/logic/Model.java"
+      },
+      {
+        "source": "chs/caplets/capture/SysMLImportFactory.java",
+        "target": "chs/caf/cafmain/actions/capture/sysml/SysMLSoaModelImporter.java"
+      },
+      {
+        "source": "chs/caplets/capture/actions/ddt/AssignDDTDialog.java",
+        "target": "chs/caplets/capture/actions/ddt/transmodel/DeviceFieldModel.java"
+      },
+      {
+        "source": "chs/caplets/capture/actions/ddt/AssignDDTDialog.java",
+        "target": "chs/caplets/capture/actions/ddt/transmodel/PinFieldModel.java"
+      },
+      {
+        "source": "chs/caplets/capture/actions/ddt/AssignDDTTypesAction.java",
+        "target": "chs/caplets/capture/actions/ddt/transmodel/DeviceFieldModel.java"
+      },
+      {
+        "source": "chs/caplets/capture/actions/ddt/AssignDDTTypesAction.java",
+        "target": "chs/caplets/capture/actions/ddt/transmodel/PinTableRow.java"
+      },
+      {
+        "source": "chs/caplets/capture/actions/ddt/AssignDDTTypesAction.java",
+        "target": "chs/caplets/capture/actions/ddt/transmodel/PinFieldModel.java"
+      },
+      {
+        "source": "chs/caplets/capture/actions/ddt/EditDDTTypeMgrDialog.java",
+        "target": "chs/caplets/capture/actions/ddt/transmodel/DDTTypeTransient.java"
+      },
+      {
+        "source": "chs/caplets/capture/actions/ddt/EditDDTTypesDialog.java",
+        "target": "chs/caplets/capture/actions/ddt/transmodel/DDTTypeTransient.java"
+      },
+      {
+        "source": "chs/caplets/capture/actions/ddt/EditDDTTypesDialogModel.java",
+        "target": "chs/caplets/capture/actions/ddt/transmodel/DDTTypeTransient.java"
+      },
+      {
+        "source": "chs/caplets/layout/LayoutDataTransfer.java",
+        "target": "chs/caplets/logic/View.java"
+      },
+      {
+        "source": "chs/caplets/layout/LayoutDataTransfer.java",
+        "target": "chs/caplets/logic/LogicDataTransfer.java"
+      },
+      {
+        "source": "chs/caplets/layout/properties/LayoutPropertiesClient.java",
+        "target": "chs/caplets/logic/Model.java"
+      },
+      {
+        "source": "chs/caplets/layout/properties/QAPLayoutPropertiesClient.java",
+        "target": "chs/caplets/logic/Model.java"
+      },
+      {
+        "source": "chs/caplets/logic/AutoRouteSettingsAction.java",
+        "target": "chs/caplets/logic/actions/AutoRouteSettingsActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/BrowserClient.java",
+        "target": "chs/caplets/logic/actions/BatchDevicePlacementAction.java"
+      },
+      {
+        "source": "chs/caplets/logic/BrowserClient.java",
+        "target": "chs/caplets/logic/actions/AddLibraryInnercoreNetAction.java"
+      },
+      {
+        "source": "chs/caplets/logic/BrowserClient.java",
+        "target": "chs/caplets/logic/actions/AddLibraryInnercoreWireAction.java"
+      },
+      {
+        "source": "chs/caplets/logic/BrowserClient.java",
+        "target": "chs/caplets/logic/actions/AddShieldConductorAction.java"
+      },
+      {
+        "source": "chs/caplets/logic/BrowserClient.java",
+        "target": "chs/caplets/logic/actions/AddPinListAction.java"
+      },
+      {
+        "source": "chs/caplets/logic/DaisyChainCreationHelper.java",
+        "target": "chs/caplets/logic/actions/AddChainAction.java"
+      },
+      {
+        "source": "chs/caplets/logic/InterconnectSourceBrowserClient.java",
+        "target": "chs/caplets/logic/actions/AddInterconnectWireAction.java"
+      },
+      {
+        "source": "chs/caplets/logic/LayoutCaplet.java",
+        "target": "chs/caplets/layout/LayoutDataTransfer.java"
+      },
+      {
+        "source": "chs/caplets/logic/LayoutController.java",
+        "target": "chs/caplets/logic/actions/BatchDevicePlacementAction.java"
+      },
+      {
+        "source": "chs/caplets/logic/LayoutController.java",
+        "target": "chs/caplets/logic/actions/AddConductorNameAction.java"
+      },
+      {
+        "source": "chs/caplets/logic/LayoutController.java",
+        "target": "chs/caplets/layout/properties/QAPLayoutPropertiesClient.java"
+      },
+      {
+        "source": "chs/caplets/logic/LayoutController.java",
+        "target": "chs/caplets/layout/properties/LayoutPropertiesClient.java"
+      },
+      {
+        "source": "chs/caplets/logic/LayoutController.java",
+        "target": "chs/caplets/logic/actions/AddPinListAction.java"
+      },
+      {
+        "source": "chs/caplets/logic/LayoutResource.java",
+        "target": "chs/caplets/logic/actions/CompareDiagramsAction.java"
+      },
+      {
+        "source": "chs/caplets/logic/LayoutResource.java",
+        "target": "chs/caplets/logic/actions/CheckSchematicConductorConnection.java"
+      },
+      {
+        "source": "chs/caplets/logic/LayoutResource.java",
+        "target": "chs/caplets/capture/actions/ddt/AssignDDTTypesActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LayoutResource.java",
+        "target": "chs/caplets/logic/actions/AddInstanceActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LayoutResource.java",
+        "target": "chs/caplets/logic/actions/AddInterconnectShieldActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LayoutResource.java",
+        "target": "chs/caplets/capture/actions/ddt/EditDDTTypesActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LayoutResource.java",
+        "target": "chs/caplets/logic/actions/AutoRouteActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LayoutResource.java",
+        "target": "chs/caplets/logic/actions/ConnectIndicatorsActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LayoutResource.java",
+        "target": "chs/caplets/logic/actions/AddInterconnectOverbraidActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LayoutResource.java",
+        "target": "chs/caplets/logic/actions/AddConductorNameActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LayoutResource.java",
+        "target": "chs/caplets/logic/actions/BatchDevicePlacementActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LayoutResource.java",
+        "target": "chs/caplets/logic/actions/AddInterconnectWireActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LayoutResource.java",
+        "target": "chs/caplets/logic/actions/AddCommentSymbolToMCActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LayoutResource.java",
+        "target": "chs/caplets/logic/actions/AddIndicatorsActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LayoutResource.java",
+        "target": "chs/caplets/logic/actions/AddChainActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LayoutResource.java",
+        "target": "chs/caplets/logic/actions/AddPinListActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LogicDataTransfer.java",
+        "target": "chs/caplets/UndoDisableForSharedObjectSave.java"
+      },
+      {
+        "source": "chs/caplets/logic/LogicDataTransfer.java",
+        "target": "chs/caplets/logic/DaisyChainCreationHelper.java"
+      },
+      {
+        "source": "chs/caplets/logic/LogicResource.java",
+        "target": "chs/caplets/logic/actions/CompareDiagramsAction.java"
+      },
+      {
+        "source": "chs/caplets/logic/LogicResource.java",
+        "target": "chs/caplets/logic/actions/CheckSchematicConductorConnection.java"
+      },
+      {
+        "source": "chs/caplets/logic/LogicResource.java",
+        "target": "chs/caplets/capture/actions/ddt/AssignDDTTypesActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LogicResource.java",
+        "target": "chs/caplets/logic/actions/AddInterconnectShieldActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LogicResource.java",
+        "target": "chs/caplets/capture/actions/ddt/EditDDTTypesActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LogicResource.java",
+        "target": "chs/caplets/logic/actions/ConnectByNetActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LogicResource.java",
+        "target": "chs/caplets/logic/actions/AutoRouteActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LogicResource.java",
+        "target": "chs/caplets/logic/actions/ConnectByInterconnectActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LogicResource.java",
+        "target": "chs/caplets/logic/actions/AddInterconnectOverbraidActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LogicResource.java",
+        "target": "chs/caplets/logic/actions/AddConductorNameActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LogicResource.java",
+        "target": "chs/caplets/logic/actions/AddLibraryInnercoreNetActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LogicResource.java",
+        "target": "chs/caplets/logic/actions/AddInterconnectWireActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LogicResource.java",
+        "target": "chs/caplets/logic/actions/ConnectByPinActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LogicResource.java",
+        "target": "chs/caplets/logic/actions/ConnectActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LogicResource.java",
+        "target": "chs/caplets/logic/actions/AddLibraryInnercoreWireActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LogicResource.java",
+        "target": "chs/caplets/logic/actions/AddCommentSymbolToMCActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LogicResource.java",
+        "target": "chs/caplets/logic/actions/AddIndicatorsActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LogicResource.java",
+        "target": "chs/caplets/logic/actions/Add3dDeviceAction.java"
+      },
+      {
+        "source": "chs/caplets/logic/LogicResource.java",
+        "target": "chs/caplets/logic/actions/ConnectByWireActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LogicResource.java",
+        "target": "chs/caplets/logic/actions/AddChainActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LogicResource.java",
+        "target": "chs/caplets/logic/actions/AddLibraryInnercoreShieldActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/LogicSelectHelper.java",
+        "target": "chs/caplets/UndoDisableForSharedObjectSave.java"
+      },
+      {
+        "source": "chs/caplets/logic/Model.java",
+        "target": "chs/caf/caplet/logic/HWMNameSpaceIndexSynchronizer.java"
+      },
+      {
+        "source": "chs/caplets/logic/SvcDocController.java",
+        "target": "chs/caplets/logic/actions/AddInstanceAction.java"
+      },
+      {
+        "source": "chs/caplets/logic/SvcDocResource.java",
+        "target": "chs/caplets/logic/actions/AutoRouteActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/SvcDocResource.java",
+        "target": "chs/caplets/logic/actions/AddConductorNameActionUI.java"
+      },
+      {
+        "source": "chs/caplets/logic/actions/AbstractCreateOtherComponentAction.java",
+        "target": "chs/caplets/logic/Model.java"
+      },
+      {
+        "source": "chs/caplets/logic/actions/AbstractPinActionHelper.java",
+        "target": "chs/caplets/logic/Model.java"
+      },
+      {
+        "source": "chs/caplets/logic/actions/AddChainAction.java",
+        "target": "chs/caplets/logic/DaisyChainCreationHelper.java"
+      },
+      {
+        "source": "chs/caplets/logic/actions/AddConductorNameAction.java",
+        "target": "chs/caplets/logic/Model.java"
+      },
+      {
+        "source": "chs/caplets/logic/actions/AddDeviceWithPinsFromLibrary.java",
+        "target": "chs/caplets/logic/BasicAddPinListDialog.java"
+      },
+      {
+        "source": "chs/caplets/logic/actions/AddIndicatorsAction.java",
+        "target": "chs/caplets/logic/Model.java"
+      },
+      {
+        "source": "chs/caplets/logic/actions/AddInstanceAction.java",
+        "target": "chs/caplets/logic/Model.java"
+      },
+      {
+        "source": "chs/caplets/logic/actions/AddInterconnectOverbraidAction.java",
+        "target": "chs/caplets/logic/Model.java"
+      },
+      {
+        "source": "chs/caplets/logic/actions/AddLibraryInnercoreShieldAction.java",
+        "target": "chs/caplets/logic/Model.java"
+      },
+      {
+        "source": "chs/caplets/logic/actions/AddMultiSymbolledPinListDialog.java",
+        "target": "chs/caplets/logic/BasicAddPinListDialog.java"
+      },
+      {
+        "source": "chs/caplets/logic/actions/AddPinListAction.java",
+        "target": "chs/caplets/logic/BasicAddPinListDialog.java"
+      },
+      {
+        "source": "chs/caplets/logic/actions/AddPinListDialog.java",
+        "target": "chs/caplets/logic/BasicAddPinListDialog.java"
+      },
+      {
+        "source": "chs/caplets/logic/actions/AssociateSymbolAction.java",
+        "target": "chs/caplets/logic/Model.java"
+      },
+      {
+        "source": "chs/caplets/logic/actions/AutoRouteAction.java",
+        "target": "chs/caplets/logic/Model.java"
+      },
+      {
+        "source": "chs/caplets/logic/actions/AutoRouteSettingsActionUI.java",
+        "target": "chs/caplets/logic/AutoRouteSettingsAction.java"
+      },
+      {
+        "source": "chs/caplets/logic/actions/BatchDevicePlacementAction.java",
+        "target": "chs/caplets/logic/Model.java"
+      },
+      {
+        "source": "chs/caplets/logic/actions/ConductorRouteActionImpl.java",
+        "target": "chs/caplets/logic/SchemObjectHandler.java"
+      },
+      {
+        "source": "chs/caplets/logic/actions/ConductorRouteActionImpl.java",
+        "target": "chs/caplets/logic/IndicatorRefresher.java"
+      },
+      {
+        "source": "chs/caplets/logic/actions/ConnectIndicatorsAction.java",
+        "target": "chs/caplets/logic/Model.java"
+      }
+    ],
+    "circular": [
+      [
+        "chs/caplets/logic/DaisyChainCreationHelper.java",
+        "chs/caplets/logic/actions/AddChainAction.java",
+        "chs/caplets/logic/DaisyChainCreationHelper.java"
+      ],
+      [
+        "chs/caplets/logic/AutoRouteSettingsAction.java",
+        "chs/caplets/logic/actions/AutoRouteSettingsActionUI.java",
+        "chs/caplets/logic/AutoRouteSettingsAction.java"
+      ]
+    ],
+    "orphans": [
+      "chs/caplets/logic/LogicLibrariedObjectUpdater.java",
+      "chs/caplets/logic/actions/ConnectAction.java",
+      "chs/caplets/logic/LogicObjectGraphBrowser.java",
+      "chs/caplets/logic/actions/AddBSTerminationActionHelper.java",
+      "chs/caplets/logic/AbstractLogicDerivativeController.java",
+      "chs/caplets/logic/Caplet.java",
+      "chs/caplets/logic/actions/AbstractDisconnectAction.java",
+      "chs/caplets/logic/VeSysDesignPropertiesClient.java",
+      "chs/caplets/logic/actions/AddPinWNAccelAction.java",
+      "chs/caf/cafmain/actions/capture/sysml/XMLConfigSchemaValidator.java",
+      "chs/caplets/logic/ILogicCaplet.java",
+      "chs/caplets/logic/SegmentCrossingControlModelChangeListener.java",
+      "chs/caplets/border/actions/MarkDrawableAction.java",
+      "chs/caplets/logic/actions/AddLibraryPartWithSymbolAction.java",
+      "chs/caplets/logic/actions/BlockPinSelectionPanel.java"
+    ]
+  },
+  "co_change_pairs": [],
+  "blast_radius": [
+    {
+      "targets": [
+        "dashboard/style.css"
+      ],
+      "blast_radius_breakdown": {
+        "direct_dependents": [],
+        "co_change_partners": [],
+        "associated_tests": []
+      },
+      "minimal_review_set": [
+        "dashboard/style.css"
+      ],
+      "total_files_in_review_set": 1,
+      "total_repo_files": 200,
+      "token_savings": {
+        "reduction_percentage": "99.5%",
+        "token_reduction_multiplier": "200.0x fewer tokens",
+        "summary": "Context reduced from 200 repository files down to 1 precise files (99.5% token reduction / 200.0x savings)."
+      }
+    },
+    {
+      "targets": [
+        "mcp_server/server.py"
+      ],
+      "blast_radius_breakdown": {
+        "direct_dependents": [],
+        "co_change_partners": [],
+        "associated_tests": []
+      },
+      "minimal_review_set": [
+        "mcp_server/server.py"
+      ],
+      "total_files_in_review_set": 1,
+      "total_repo_files": 200,
+      "token_savings": {
+        "reduction_percentage": "99.5%",
+        "token_reduction_multiplier": "200.0x fewer tokens",
+        "summary": "Context reduced from 200 repository files down to 1 precise files (99.5% token reduction / 200.0x savings)."
+      }
+    },
+    {
+      "targets": [
+        "dashboard/app.js"
+      ],
+      "blast_radius_breakdown": {
+        "direct_dependents": [],
+        "co_change_partners": [],
+        "associated_tests": []
+      },
+      "minimal_review_set": [
+        "dashboard/app.js"
+      ],
+      "total_files_in_review_set": 1,
+      "total_repo_files": 200,
+      "token_savings": {
+        "reduction_percentage": "99.5%",
+        "token_reduction_multiplier": "200.0x fewer tokens",
+        "summary": "Context reduced from 200 repository files down to 1 precise files (99.5% token reduction / 200.0x savings)."
+      }
+    }
+  ],
+  "repo_summary": {
+    "total_commits": 1,
+    "total_files_changed": 23,
+    "remote_branches": 2,
+    "active_contributors_90d": [
+      {
+        "name": "Aryan Chakravarty",
+        "commits": 1
+      }
+    ],
+    "analysis_window_days": 90
+  }
+}

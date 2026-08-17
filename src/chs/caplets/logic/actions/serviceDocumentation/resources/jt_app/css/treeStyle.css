@@ -1,0 +1,54 @@
+/* © 2019 SIEMENS PRODUCT LIFECYCLE MANAGEMENT SOFTWARE INC */
+
+.treeEntryStyle {
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.displayNone {
+	display: none;
+}
+
+.treeButtonStyle {
+	vertical-align: top;
+	height: 24px;
+	width: 24px;
+}
+
+.treeButtonHidden {
+	padding-right: 24PX;
+	visibility: hidden;
+}
+
+.hideChildren {
+	display: none !important;
+	visibility: hidden;
+}
+
+.treeImgStyle {
+	vertical-align: middle;
+	height: 24px;
+	width: 24px;
+}
+
+
+.treeLabelSelected {
+	background-color: rgb(175,215,225);
+}
+
+.treeListStyle {
+	list-style-type: none;
+	-webkit-padding-start: 10px;
+	padding-left: 10px;
+}
+
+.treeLineEntry {
+	margin-top: 10px;
+	white-space: nowrap;
+}
+
+.treeNodeStyle {
+	-webkit-padding-start: 0px;
+	padding: 0px;
+	width: 100%;
+}

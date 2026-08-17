@@ -1,0 +1,90 @@
+<div id="fault-table-header-container">
+    <div class="header">
+        <div class="orient-outer auto-FTOrient-outer"
+             title="<%= localize('TroubleshootingPanel.FaultsTable.ExpandCollapse') %>">
+            <%if(isSectionCollapsed) {%> <span class="orient-inner collapsed"> </span><%}else{%>
+            <span class="orient-inner expanded"></span><%}%>
+        </div>
+        <div class="title" id="faults-table-title"><span class="troubleshoot-section-index">2.&nbsp;</span> <%=
+            localize('TroubleshootingPanel.FaultsTable.Title') %>
+        </div>
+    </div>
+</div>
+<%if(isSectionCollapsed) {%>
+<div class="controls" style="display: none"><%}else{%>
+    <div class="controls"><%}%>
+        <button class="aw-button aw-button-base clear-button auto-clear-button" customtooltiparraylength="1"
+                id="clear-codes-button"
+                title="<%= localize('TroubleshootingPanel.FaultsTable.ClearButton.ToolTip') %>">
+            <%= localize('TroubleshootingPanel.FaultsTable.ClearButton.Title') %>
+        </button>
+        <button class="auto-whats-in-common aw-button-contrast aw-button" customtooltiparraylength="1" disabled
+                id="whats-in-common"
+                title="<%= localize('TroubleshootingPanel.FaultsTable.commonFaultCodeButton.ToolTip') %>">
+            <%= localize('TroubleshootingPanel.FaultsTable.commonFaultCodeButton.Title') %>
+        </button>
+        <button class="auto-troubleshoot-button aw-button-contrast aw-button" customtooltiparraylength="1" disabled
+                id="troubleshoot"
+                title="<%= localize('TroubleshootingPanel.FaultsTable.DiagnosticsButton.ToolTip') %>">
+            <%= localize('TroubleshootingPanel.FaultsTable.DiagnosticsButton.Title') %>
+        </button>
+    </div>
+    <div class="scrollableFaultCodeTable">
+        <%if(isSectionCollapsed) {%>
+        <table class="fullFaultCodeTable commonFaultTableStyle auto-fault-table" style="display: none"><%}else{%>
+            <table class="fullFaultCodeTable commonFaultTableStyle auto-fault-table"><%}%>
+                <thead>
+                <tr class="commonFaultHeader auto-fault-table-header">
+                    <th id="fault-table-header-checkbox"><input id="all-fault-codes" type="checkbox"
+                                                                value="all-fault-codes">
+                        <label class="checker" for="all-fault-codes"></label></th>
+                    <th class="sortable-column" data-column-index="1" id="faults-checkbox-title">
+                        <%=localize('TroubleshootingPanel.FaultsTable.FaultsCheckBoxColumn.Title')%> <span
+                            class="sort-indicator"><%=getSortIndicator(1)%></span>
+                    </th>
+
+                    <th class="sortable-column" data-column-index="2" id="faults-column-title"><%=
+                        localize('TroubleshootingPanel.FaultsTable.FaultsColumn.Title')%> <span class="sort-indicator"><%=getSortIndicator(2)%></span>
+                    </th>
+                    <th class="sortable-column" data-column-index="3" id="faults-description-column-title"><%=
+                        localize('TroubleshootingPanel.FaultsTable.FaultsDescriptionColumn.Title')%> <span
+                                class="sort-indicator"><%=getSortIndicator(3)%></span>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <% if (faults.length === 0) { %>
+                <tr class="pointer-events-none empty-fault-row auto-empty-fault-row">
+                    <td colspan="4">
+                        <p class="fault-table-content-info" id="emptyFaultCodeArea"><%=
+                            localize('TroubleshootingPanel.FaultsTable.SearchAndAdd') %></p>
+                    </td>
+                </tr>
+                <% } %>
+                <% _.each(faults, function (fault) { %>
+                <tr class="faults-table-row auto-fault-table-row">
+                    <td class="fault-checkbox-table-data" colspan="2"><input id="fault-code-<%= fault.index %>"
+                                                                             type="checkbox"
+                                                                             value="<%= fault.index %>"><label
+                            class="checker auto-fault-code-<%= fault.index %>"
+                            for="fault-code-<%= fault.index %>"></label></td>
+                    <td><%= fault.code %></td>
+                    <td class="faults-table-description">
+                        <div class="faults-table-description-cell">
+                            <span class="faults-table-description-cell-text"><%= translatePlainText(fault.description) %></span>
+                            <span class="faults-table-row-delete"
+                                  title="<%= localize('TroubleshootingPanel.FaultsTable.DeleteRowButton.ToolTip') %>"></span>
+                        </div>
+                    </td>
+                </tr>
+                <% }) %>
+                </tbody>
+                <%if(isSectionCollapsed) {%>
+            </table>
+            <%}else{%>
+        </table>
+        <%}%>
+        <%if(isSectionCollapsed) {%>
+    </div>
+    <%}else{%>
+</div><%}%>

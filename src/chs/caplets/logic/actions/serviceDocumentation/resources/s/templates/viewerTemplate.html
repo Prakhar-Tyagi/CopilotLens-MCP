@@ -1,0 +1,28 @@
+<div id="navigation" class="styled auto-navigation-panel">
+	<% if(isEffectivityPacket) {%>
+	<% if(configLicence) { %>
+	<div id="platform-grouped-list" class="effectPlatform-grouped-list border auto-lists">
+		<% } else { %>
+		<div id="platform-grouped-list" class="effectPlatform-grouped-listWithoutConfig border auto-lists">
+			<% } %>
+			<% } else { %>
+			<div id="platform-grouped-list" class="nonEffectPlatform-grouped-list border auto-lists">
+				<% } %>
+				<div></div>
+			</div>
+
+			<div id="navigationBottomToolbar" class="toolbar background">
+			</div>
+			<div class="toolbar background" id="platformToolbar">
+			</div>
+
+		</div>
+		<div id="detail" class="styled auto-detail-area">
+
+		</div>
+
+		<div id="detailNavigationResizeBar" class="iesdResizeBar auto-resize-bar">
+			<div class="resize-icon"> </div>
+		</div>
+	</div>
+</div>

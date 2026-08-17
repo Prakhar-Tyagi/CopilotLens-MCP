@@ -1,0 +1,8 @@
+// ********************** DON'T MODIFY THIS FILE **********************
+//
+// Initial Gradle build file wrapper for the ant build.xml in this directory.
+// The file is here for now to allow transition of build scripts to Gradle
+// and to allow engineers to experiement with the Gradle command line if they wish.
+//
+// Please wait for announcement before modifying anything related to the Gradle build.
+ant.importBuild 'build.xml'

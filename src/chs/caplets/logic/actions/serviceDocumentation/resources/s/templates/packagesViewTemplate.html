@@ -1,0 +1,37 @@
+<div id="packages-grid-container" class="auto-packages-container">
+    <div id="packages-grid" class="auto-list">
+        <% if (packages) { %>
+        <% _.each(packages, function (package) { %>
+        <div class='package-cell click-target auto-item'
+             data-id="<%= package.get('id') %>"
+             data-name="<%= package.get('name') %>"
+             data-projectid="<%= package.get('projectId') %>"
+             data-range="<%= package.get('effectivityRange') %>"
+             data-prefix="<%= package.get('prefix') %>"
+             data-start="<%= package.get('start') %>"
+             data-end="<%= package.get('end') %>"
+             title="<%= Utils.translate(package.get('name')) %>">
+            <div class="thumbnail auto-thumbnail">
+                <object data="<%= package.getThumbnailPath() %>" style="width:100%; height:100%;">
+                    <img src="images/fallback.png" style="width:100%; height:100%;">
+                </object>
+            </div>
+            <div class="package-name auto-title-label"><%= Utils.translate(package.get('name')) %></div>
+            <% if (isEffectivityPackage) { %>
+                <% if(package.get('start') == package.get('end')){ %>
+                    <div class="effectivity-range auto-title-label"
+                         title="<%= package.get('prefix') + package.get('start') %>">
+                        (<%= package.get('prefix') + package.get('start') %>)
+                    </div>
+                <% } else {%>
+                    <div class="effectivity-range auto-title-label"
+                         title="<%= package.get('effectivityRange')%>">
+                        (<%= package.get('effectivityRange') %>)
+                    </div>
+                <% } %>
+            <% } %>
+        </div>
+        <% }); %>
+        <% } %>
+    </div>
+</div>

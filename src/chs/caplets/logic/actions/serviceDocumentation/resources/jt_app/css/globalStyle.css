@@ -1,0 +1,11 @@
+/* © 2016 SIEMENS PRODUCT LIFECYCLE MANAGEMENT SOFTWARE INC */
+
+html {
+	font-family: 'Segoe UI', 'Helvetica', 'Open Sans';
+	overflow: hidden;
+}
+
+html * {
+	margin: 0;
+	padding: 0;
+}

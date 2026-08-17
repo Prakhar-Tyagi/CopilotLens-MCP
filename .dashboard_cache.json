@@ -1,0 +1,1089 @@
+{
+  "status": "ready",
+  "repo_path": "C:\\CoPilotLens\\",
+  "health": {
+    "avg_score": 51,
+    "grade": "D",
+    "total_files": 16,
+    "distribution": {
+      "critical": 2,
+      "poor": 7,
+      "fair": 2,
+      "good": 3,
+      "excellent": 2
+    },
+    "worst_files": [
+      {
+        "score": 15,
+        "grade": "F",
+        "lines": 676,
+        "code_lines": 532,
+        "comment_lines": 22,
+        "todo_count": 5,
+        "markers": [
+          {
+            "id": "file_too_large",
+            "impact": -20,
+            "desc": "File exceeds 500 lines",
+            "detail": "676 lines"
+          },
+          {
+            "id": "deeply_nested",
+            "impact": -15,
+            "desc": "Deep nesting (4+ levels)",
+            "detail": "28 deeply nested lines"
+          },
+          {
+            "id": "long_functions",
+            "impact": -15,
+            "desc": "Functions/methods > 50 lines",
+            "detail": "1 long function(s)"
+          },
+          {
+            "id": "magic_numbers",
+            "impact": -5,
+            "desc": "Magic numbers (hardcoded literals)",
+            "detail": "35 magic numbers"
+          }
+        ],
+        "is_test_file": false,
+        "path": "mcp_server/server.py"
+      },
+      {
+        "score": 25,
+        "grade": "F",
+        "lines": 256,
+        "code_lines": 211,
+        "comment_lines": 8,
+        "todo_count": 8,
+        "markers": [
+          {
+            "id": "too_many_todos",
+            "impact": -10,
+            "desc": "More than 5 TODO/FIXME/HACK comments",
+            "detail": "8 found"
+          },
+          {
+            "id": "deeply_nested",
+            "impact": -15,
+            "desc": "Deep nesting (4+ levels)",
+            "detail": "37 deeply nested lines"
+          },
+          {
+            "id": "long_functions",
+            "impact": -15,
+            "desc": "Functions/methods > 50 lines",
+            "detail": "1 long function(s)"
+          },
+          {
+            "id": "magic_numbers",
+            "impact": -5,
+            "desc": "Magic numbers (hardcoded literals)",
+            "detail": "40 magic numbers"
+          }
+        ],
+        "is_test_file": false,
+        "path": "mcp_server/analyzers/code_health.py"
+      },
+      {
+        "score": 30,
+        "grade": "F",
+        "lines": 765,
+        "code_lines": 647,
+        "comment_lines": 21,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "file_too_large",
+            "impact": -20,
+            "desc": "File exceeds 500 lines",
+            "detail": "765 lines"
+          },
+          {
+            "id": "long_functions",
+            "impact": -15,
+            "desc": "Functions/methods > 50 lines",
+            "detail": "4 long function(s)"
+          },
+          {
+            "id": "magic_numbers",
+            "impact": -5,
+            "desc": "Magic numbers (hardcoded literals)",
+            "detail": "62 magic numbers"
+          }
+        ],
+        "is_test_file": false,
+        "path": "dashboard/app.js"
+      },
+      {
+        "score": 30,
+        "grade": "F",
+        "lines": 311,
+        "code_lines": 256,
+        "comment_lines": 16,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "very_large_file",
+            "impact": -10,
+            "desc": "File exceeds 300 lines",
+            "detail": "311 lines"
+          },
+          {
+            "id": "deeply_nested",
+            "impact": -15,
+            "desc": "Deep nesting (4+ levels)",
+            "detail": "57 deeply nested lines"
+          },
+          {
+            "id": "long_functions",
+            "impact": -15,
+            "desc": "Functions/methods > 50 lines",
+            "detail": "1 long function(s)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "mcp_server/analyzers/dependency.py"
+      },
+      {
+        "score": 35,
+        "grade": "F",
+        "lines": 208,
+        "code_lines": 168,
+        "comment_lines": 7,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "deeply_nested",
+            "impact": -15,
+            "desc": "Deep nesting (4+ levels)",
+            "detail": "13 deeply nested lines"
+          },
+          {
+            "id": "long_functions",
+            "impact": -15,
+            "desc": "Functions/methods > 50 lines",
+            "detail": "1 long function(s)"
+          },
+          {
+            "id": "magic_numbers",
+            "impact": -5,
+            "desc": "Magic numbers (hardcoded literals)",
+            "detail": "17 magic numbers"
+          }
+        ],
+        "is_test_file": false,
+        "path": "run_dashboard.py"
+      },
+      {
+        "score": 35,
+        "grade": "F",
+        "lines": 263,
+        "code_lines": 222,
+        "comment_lines": 10,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "deeply_nested",
+            "impact": -15,
+            "desc": "Deep nesting (4+ levels)",
+            "detail": "55 deeply nested lines"
+          },
+          {
+            "id": "long_functions",
+            "impact": -15,
+            "desc": "Functions/methods > 50 lines",
+            "detail": "2 long function(s)"
+          },
+          {
+            "id": "magic_numbers",
+            "impact": -5,
+            "desc": "Magic numbers (hardcoded literals)",
+            "detail": "14 magic numbers"
+          }
+        ],
+        "is_test_file": false,
+        "path": "mcp_server/analyzers/git_analyzer.py"
+      },
+      {
+        "score": 40,
+        "grade": "D",
+        "lines": 138,
+        "code_lines": 110,
+        "comment_lines": 10,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "deeply_nested",
+            "impact": -15,
+            "desc": "Deep nesting (4+ levels)",
+            "detail": "39 deeply nested lines"
+          },
+          {
+            "id": "long_functions",
+            "impact": -15,
+            "desc": "Functions/methods > 50 lines",
+            "detail": "1 long function(s)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "mcp_server/analyzers/dead_code.py"
+      },
+      {
+        "score": 40,
+        "grade": "D",
+        "lines": 187,
+        "code_lines": 153,
+        "comment_lines": 6,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "deeply_nested",
+            "impact": -15,
+            "desc": "Deep nesting (4+ levels)",
+            "detail": "62 deeply nested lines"
+          },
+          {
+            "id": "long_functions",
+            "impact": -15,
+            "desc": "Functions/methods > 50 lines",
+            "detail": "1 long function(s)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "mcp_server/analyzers/search_analyzer.py"
+      },
+      {
+        "score": 45,
+        "grade": "D",
+        "lines": 201,
+        "code_lines": 160,
+        "comment_lines": 8,
+        "todo_count": 13,
+        "markers": [
+          {
+            "id": "too_many_todos",
+            "impact": -10,
+            "desc": "More than 5 TODO/FIXME/HACK comments",
+            "detail": "13 found"
+          },
+          {
+            "id": "deeply_nested",
+            "impact": -15,
+            "desc": "Deep nesting (4+ levels)",
+            "detail": "41 deeply nested lines"
+          }
+        ],
+        "is_test_file": false,
+        "path": "mcp_server/analyzers/why_analyzer.py"
+      },
+      {
+        "score": 55,
+        "grade": "C",
+        "lines": 122,
+        "code_lines": 98,
+        "comment_lines": 6,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "deeply_nested",
+            "impact": -15,
+            "desc": "Deep nesting (4+ levels)",
+            "detail": "29 deeply nested lines"
+          }
+        ],
+        "is_test_file": false,
+        "path": "mcp_server/analyzers/blast_radius.py"
+      }
+    ],
+    "best_files": [
+      {
+        "score": 85,
+        "grade": "A",
+        "lines": 1,
+        "code_lines": 0,
+        "comment_lines": 1,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "good_comment_ratio",
+            "impact": 10,
+            "desc": "Good documentation ratio (>10%)",
+            "detail": "100% comments"
+          },
+          {
+            "id": "short_file",
+            "impact": 5,
+            "desc": "File is concise (<100 lines)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "mcp_server/analyzers/__init__.py"
+      },
+      {
+        "score": 85,
+        "grade": "A",
+        "lines": 48,
+        "code_lines": 41,
+        "comment_lines": 2,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "short_file",
+            "impact": 5,
+            "desc": "File is concise (<100 lines)"
+          },
+          {
+            "id": "has_tests",
+            "impact": 10,
+            "desc": "File appears to be test/spec file"
+          }
+        ],
+        "is_test_file": true,
+        "path": "test_analyzers.py"
+      },
+      {
+        "score": 75,
+        "grade": "B",
+        "lines": 45,
+        "code_lines": 39,
+        "comment_lines": 0,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "no_comments",
+            "impact": -10,
+            "desc": "Zero comment lines (undocumented)"
+          },
+          {
+            "id": "short_file",
+            "impact": 5,
+            "desc": "File is concise (<100 lines)"
+          },
+          {
+            "id": "has_tests",
+            "impact": 10,
+            "desc": "File appears to be test/spec file"
+          }
+        ],
+        "is_test_file": true,
+        "path": "test_new_features.py"
+      },
+      {
+        "score": 75,
+        "grade": "B",
+        "lines": 0,
+        "code_lines": 0,
+        "comment_lines": 0,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "short_file",
+            "impact": 5,
+            "desc": "File is concise (<100 lines)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "full_analysis.py"
+      },
+      {
+        "score": 75,
+        "grade": "B",
+        "lines": 0,
+        "code_lines": 0,
+        "comment_lines": 0,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "short_file",
+            "impact": 5,
+            "desc": "File is concise (<100 lines)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "calculate_blast_radius.py"
+      },
+      {
+        "score": 65,
+        "grade": "C",
+        "lines": 55,
+        "code_lines": 45,
+        "comment_lines": 0,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "no_comments",
+            "impact": -10,
+            "desc": "Zero comment lines (undocumented)"
+          },
+          {
+            "id": "short_file",
+            "impact": 5,
+            "desc": "File is concise (<100 lines)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "mcp_server/analyzers/cache.py"
+      },
+      {
+        "score": 55,
+        "grade": "C",
+        "lines": 122,
+        "code_lines": 98,
+        "comment_lines": 6,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "deeply_nested",
+            "impact": -15,
+            "desc": "Deep nesting (4+ levels)",
+            "detail": "29 deeply nested lines"
+          }
+        ],
+        "is_test_file": false,
+        "path": "mcp_server/analyzers/blast_radius.py"
+      },
+      {
+        "score": 45,
+        "grade": "D",
+        "lines": 201,
+        "code_lines": 160,
+        "comment_lines": 8,
+        "todo_count": 13,
+        "markers": [
+          {
+            "id": "too_many_todos",
+            "impact": -10,
+            "desc": "More than 5 TODO/FIXME/HACK comments",
+            "detail": "13 found"
+          },
+          {
+            "id": "deeply_nested",
+            "impact": -15,
+            "desc": "Deep nesting (4+ levels)",
+            "detail": "41 deeply nested lines"
+          }
+        ],
+        "is_test_file": false,
+        "path": "mcp_server/analyzers/why_analyzer.py"
+      },
+      {
+        "score": 40,
+        "grade": "D",
+        "lines": 187,
+        "code_lines": 153,
+        "comment_lines": 6,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "deeply_nested",
+            "impact": -15,
+            "desc": "Deep nesting (4+ levels)",
+            "detail": "62 deeply nested lines"
+          },
+          {
+            "id": "long_functions",
+            "impact": -15,
+            "desc": "Functions/methods > 50 lines",
+            "detail": "1 long function(s)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "mcp_server/analyzers/search_analyzer.py"
+      },
+      {
+        "score": 40,
+        "grade": "D",
+        "lines": 138,
+        "code_lines": 110,
+        "comment_lines": 10,
+        "todo_count": 0,
+        "markers": [
+          {
+            "id": "deeply_nested",
+            "impact": -15,
+            "desc": "Deep nesting (4+ levels)",
+            "detail": "39 deeply nested lines"
+          },
+          {
+            "id": "long_functions",
+            "impact": -15,
+            "desc": "Functions/methods > 50 lines",
+            "detail": "1 long function(s)"
+          }
+        ],
+        "is_test_file": false,
+        "path": "mcp_server/analyzers/dead_code.py"
+      }
+    ]
+  },
+  "hotspots": [
+    {
+      "path": "dashboard/style.css",
+      "commit_count": 1,
+      "churn": 997,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "mcp_server/server.py",
+      "commit_count": 1,
+      "churn": 638,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "dashboard/app.js",
+      "commit_count": 1,
+      "churn": 506,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "mcp_server/analyzers/dependency.py",
+      "commit_count": 1,
+      "churn": 294,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "mcp_server/analyzers/git_analyzer.py",
+      "commit_count": 1,
+      "churn": 263,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "mcp_server/analyzers/code_health.py",
+      "commit_count": 1,
+      "churn": 255,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "dashboard/index.html",
+      "commit_count": 1,
+      "churn": 214,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "README.md",
+      "commit_count": 1,
+      "churn": 208,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "mcp_server/analyzers/why_analyzer.py",
+      "commit_count": 1,
+      "churn": 201,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "mcp_server/analyzers/search_analyzer.py",
+      "commit_count": 1,
+      "churn": 187,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "hack.md",
+      "commit_count": 1,
+      "churn": 184,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "run_dashboard.py",
+      "commit_count": 1,
+      "churn": 173,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "setup.md",
+      "commit_count": 1,
+      "churn": 146,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "mcp_server/analyzers/dead_code.py",
+      "commit_count": 1,
+      "churn": 138,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    },
+    {
+      "path": "breakdown.md",
+      "commit_count": 1,
+      "churn": 128,
+      "authors": [
+        "aryanchakravarty04@gmail.com"
+      ],
+      "last_changed": "2026-07-20",
+      "risk_level": "LOW"
+    }
+  ],
+  "dead_code": [
+    {
+      "symbol": "DashboardPage",
+      "defined_in": "dashboard-next/src/app/page.tsx",
+      "type": "function",
+      "line": 96,
+      "reference_count": 1,
+      "confidence": "MEDIUM"
+    },
+    {
+      "symbol": "Layout",
+      "defined_in": "dashboard-next/.next/types/routes.d.ts",
+      "type": "function",
+      "line": 46,
+      "reference_count": 1,
+      "confidence": "MEDIUM"
+    },
+    {
+      "symbol": "RootLayout",
+      "defined_in": "dashboard-next/src/app/layout.tsx",
+      "type": "function",
+      "line": 22,
+      "reference_count": 1,
+      "confidence": "MEDIUM"
+    },
+    {
+      "symbol": "changeGraphLayout",
+      "defined_in": "dashboard/app.js",
+      "type": "function",
+      "line": 720,
+      "reference_count": 1,
+      "confidence": "MEDIUM"
+    },
+    {
+      "symbol": "copyPrompt",
+      "defined_in": "dashboard/app.js",
+      "type": "function",
+      "line": 407,
+      "reference_count": 1,
+      "confidence": "MEDIUM"
+    },
+    {
+      "symbol": "get_blast_radius",
+      "defined_in": "mcp_server/server.py",
+      "type": "function",
+      "line": 412,
+      "reference_count": 1,
+      "confidence": "MEDIUM"
+    },
+    {
+      "symbol": "resetGraphView",
+      "defined_in": "dashboard/app.js",
+      "type": "function",
+      "line": 725,
+      "reference_count": 1,
+      "confidence": "MEDIUM"
+    },
+    {
+      "symbol": "searchGraphNode",
+      "defined_in": "dashboard/app.js",
+      "type": "function",
+      "line": 709,
+      "reference_count": 1,
+      "confidence": "MEDIUM"
+    },
+    {
+      "symbol": "switchTab",
+      "defined_in": "dashboard/app.js",
+      "type": "function",
+      "line": 59,
+      "reference_count": 1,
+      "confidence": "MEDIUM"
+    },
+    {
+      "symbol": "syncCopilotInstructions",
+      "defined_in": "dashboard/app.js",
+      "type": "function",
+      "line": 739,
+      "reference_count": 1,
+      "confidence": "MEDIUM"
+    },
+    {
+      "symbol": "toggleHubsOnly",
+      "defined_in": "dashboard/app.js",
+      "type": "function",
+      "line": 731,
+      "reference_count": 1,
+      "confidence": "MEDIUM"
+    }
+  ],
+  "dependency_graph": {
+    "nodes": [
+      {
+        "id": "mcp_server/analyzers/git_analyzer.py",
+        "label": "git_analyzer.py",
+        "imports_count": 0,
+        "imported_by_count": 4,
+        "centrality": 0.5,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "mcp_server/analyzers/code_health.py",
+        "label": "code_health.py",
+        "imports_count": 0,
+        "imported_by_count": 3,
+        "centrality": 0.375,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "mcp_server/analyzers/dependency.py",
+        "label": "dependency.py",
+        "imports_count": 0,
+        "imported_by_count": 3,
+        "centrality": 0.375,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "mcp_server/analyzers/why_analyzer.py",
+        "label": "why_analyzer.py",
+        "imports_count": 0,
+        "imported_by_count": 2,
+        "centrality": 0.25,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "mcp_server/analyzers/search_analyzer.py",
+        "label": "search_analyzer.py",
+        "imports_count": 0,
+        "imported_by_count": 2,
+        "centrality": 0.25,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "mcp_server/analyzers/dead_code.py",
+        "label": "dead_code.py",
+        "imports_count": 0,
+        "imported_by_count": 2,
+        "centrality": 0.25,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "mcp_server/server.py",
+        "label": "server.py",
+        "imports_count": 8,
+        "imported_by_count": 1,
+        "centrality": 0.625,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "mcp_server/analyzers/cache.py",
+        "label": "cache.py",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.125,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "mcp_server/analyzers/blast_radius.py",
+        "label": "blast_radius.py",
+        "imports_count": 0,
+        "imported_by_count": 1,
+        "centrality": 0.125,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "run_dashboard.py",
+        "label": "run_dashboard.py",
+        "imports_count": 5,
+        "imported_by_count": 0,
+        "centrality": 0.312,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "test_new_features.py",
+        "label": "test_new_features.py",
+        "imports_count": 4,
+        "imported_by_count": 0,
+        "centrality": 0.25,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "test_analyzers.py",
+        "label": "test_analyzers.py",
+        "imports_count": 2,
+        "imported_by_count": 0,
+        "centrality": 0.125,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": false
+      },
+      {
+        "id": "mcp_server/analyzers/__init__.py",
+        "label": "__init__.py",
+        "imports_count": 0,
+        "imported_by_count": 0,
+        "centrality": 0.0,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": true
+      },
+      {
+        "id": "calculate_blast_radius.py",
+        "label": "calculate_blast_radius.py",
+        "imports_count": 0,
+        "imported_by_count": 0,
+        "centrality": 0.0,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": true
+      },
+      {
+        "id": "dashboard/app.js",
+        "label": "app.js",
+        "imports_count": 0,
+        "imported_by_count": 0,
+        "centrality": 0.0,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": true
+      },
+      {
+        "id": "full_analysis.py",
+        "label": "full_analysis.py",
+        "imports_count": 0,
+        "imported_by_count": 0,
+        "centrality": 0.0,
+        "is_hub": false,
+        "is_circular": false,
+        "is_orphan": true
+      }
+    ],
+    "edges": [
+      {
+        "source": "run_dashboard.py",
+        "target": "mcp_server/server.py"
+      },
+      {
+        "source": "run_dashboard.py",
+        "target": "mcp_server/analyzers/dependency.py"
+      },
+      {
+        "source": "run_dashboard.py",
+        "target": "mcp_server/analyzers/git_analyzer.py"
+      },
+      {
+        "source": "run_dashboard.py",
+        "target": "mcp_server/analyzers/code_health.py"
+      },
+      {
+        "source": "run_dashboard.py",
+        "target": "mcp_server/analyzers/dead_code.py"
+      },
+      {
+        "source": "test_analyzers.py",
+        "target": "mcp_server/analyzers/git_analyzer.py"
+      },
+      {
+        "source": "test_analyzers.py",
+        "target": "mcp_server/analyzers/code_health.py"
+      },
+      {
+        "source": "test_new_features.py",
+        "target": "mcp_server/analyzers/search_analyzer.py"
+      },
+      {
+        "source": "test_new_features.py",
+        "target": "mcp_server/analyzers/dependency.py"
+      },
+      {
+        "source": "test_new_features.py",
+        "target": "mcp_server/analyzers/why_analyzer.py"
+      },
+      {
+        "source": "test_new_features.py",
+        "target": "mcp_server/analyzers/git_analyzer.py"
+      },
+      {
+        "source": "mcp_server/server.py",
+        "target": "mcp_server/analyzers/dead_code.py"
+      },
+      {
+        "source": "mcp_server/server.py",
+        "target": "mcp_server/analyzers/blast_radius.py"
+      },
+      {
+        "source": "mcp_server/server.py",
+        "target": "mcp_server/analyzers/search_analyzer.py"
+      },
+      {
+        "source": "mcp_server/server.py",
+        "target": "mcp_server/analyzers/dependency.py"
+      },
+      {
+        "source": "mcp_server/server.py",
+        "target": "mcp_server/analyzers/git_analyzer.py"
+      },
+      {
+        "source": "mcp_server/server.py",
+        "target": "mcp_server/analyzers/code_health.py"
+      },
+      {
+        "source": "mcp_server/server.py",
+        "target": "mcp_server/analyzers/why_analyzer.py"
+      },
+      {
+        "source": "mcp_server/server.py",
+        "target": "mcp_server/analyzers/cache.py"
+      }
+    ],
+    "circular": [],
+    "orphans": [
+      "mcp_server/analyzers/__init__.py",
+      "calculate_blast_radius.py",
+      "dashboard/app.js",
+      "full_analysis.py"
+    ]
+  },
+  "co_change_pairs": [],
+  "blast_radius": [
+    {
+      "targets": [
+        "dashboard/style.css"
+      ],
+      "blast_radius_breakdown": {
+        "direct_dependents": [],
+        "co_change_partners": [],
+        "associated_tests": []
+      },
+      "minimal_review_set": [
+        "dashboard/style.css"
+      ],
+      "total_files_in_review_set": 1,
+      "total_repo_files": 16,
+      "token_savings": {
+        "reduction_percentage": "93.8%",
+        "token_reduction_multiplier": "16.0x fewer tokens",
+        "summary": "Context reduced from 16 repository files down to 1 precise files (93.8% token reduction / 16.0x savings)."
+      }
+    },
+    {
+      "targets": [
+        "mcp_server/server.py"
+      ],
+      "blast_radius_breakdown": {
+        "direct_dependents": [
+          "run_dashboard.py"
+        ],
+        "co_change_partners": [],
+        "associated_tests": []
+      },
+      "minimal_review_set": [
+        "run_dashboard.py",
+        "mcp_server/server.py"
+      ],
+      "total_files_in_review_set": 2,
+      "total_repo_files": 16,
+      "token_savings": {
+        "reduction_percentage": "87.5%",
+        "token_reduction_multiplier": "8.0x fewer tokens",
+        "summary": "Context reduced from 16 repository files down to 2 precise files (87.5% token reduction / 8.0x savings)."
+      }
+    },
+    {
+      "targets": [
+        "dashboard/app.js"
+      ],
+      "blast_radius_breakdown": {
+        "direct_dependents": [],
+        "co_change_partners": [],
+        "associated_tests": []
+      },
+      "minimal_review_set": [
+        "dashboard/app.js"
+      ],
+      "total_files_in_review_set": 1,
+      "total_repo_files": 16,
+      "token_savings": {
+        "reduction_percentage": "93.8%",
+        "token_reduction_multiplier": "16.0x fewer tokens",
+        "summary": "Context reduced from 16 repository files down to 1 precise files (93.8% token reduction / 16.0x savings)."
+      }
+    }
+  ],
+  "repo_summary": {
+    "total_commits": 1,
+    "total_files_changed": 23,
+    "remote_branches": 2,
+    "active_contributors_90d": [
+      {
+        "name": "Aryan Chakravarty",
+        "commits": 1
+      }
+    ],
+    "analysis_window_days": 90
+  }
+}

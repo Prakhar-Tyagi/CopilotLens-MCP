@@ -1,0 +1,35 @@
+<div class="change-reports">
+    <%if (hasItems){%>
+    <table class="grid-ui">
+
+        <thead>
+        <tr>
+            <% _.each(cols, function(col) {%>
+            <th data-col="<%=col%>">
+                <span><%=Utils.translate(col)%></span>
+
+                <span class="sort-order"><%if(sorting.col === col){ %>
+                    <%=sorting.order%>
+                    <%}%></span>
+
+            </th>
+            <%});%>
+        </tr>
+        <%if(searchable){ %>
+        <tr>
+            <% _.each(cols, function(col) {%>
+            <td>
+                <input class="placeHolderText" data-col="<%=col%>" type="text"
+                       alt="<%=mentor.publisher.languageTranslator.localize('Search')%>"
+                       value="<%=(filtering[col] || mentor.publisher.languageTranslator.localize('Search'))%>">
+            </td>
+            <%});%>
+        </tr>
+        <%}%>
+        </thead>
+        <tbody>
+        </tbody>
+
+    </table>
+    <%}%>
+</div>

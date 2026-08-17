@@ -1,0 +1,24 @@
+<pdf>
+    <global>
+        <translatePlugins value="true"/>
+        <color value="true"/>
+        <pagenumbertemplate text="Page #PageNo of #TotalPages" beginAt="Information"/>
+    </global>
+    <Item name="TOC" landscapeLayout="a4LandscapeTemplate.xsl" header="TABLE OF CONTENTS"/>
+    <Item name="Information" landscapeLayout="a4LandscapeTemplate.xsl" scaleToFit="true"/>
+    <!-- Use groupingKey to group the designs
+    groupingKey can be defined in the following way to group designs with same property value
+    <Item name="Systems" landscapeLayout="a4LandscapeTemplate.xsl" portraitLayout="a4portraitTemplate.xsl" header="{attribute:name}"
+             scaleToFit="true" groupingKey="{property:SERVICE_DESCRIPTION}">
+	-->
+    <Item name="Systems" landscapeLayout="a4LandscapeTemplate.xsl" portraitLayout="a4PortraitTemplate.xsl" header="{attribute:name}"
+             scaleToFit="true" fitToBorder="false">
+        <Item name="WireList" landscapeLayout="a4LandscapeTemplate.xsl" header="{attribute:name}"/>
+        <Item name="ComponentBOM" landscapeLayout="a4LandscapeTemplate.xsl" header="{attribute:name}"/>
+        <Item name="AssemblyBOM" landscapeLayout="a4LandscapeTemplate.xsl" header="{attribute:name}"/>
+        <Item name="MulticoreList" landscapeLayout="a4LandscapeTemplate.xsl" header="{attribute:name}"/>
+    </Item>
+    <Item name="Faceviews" landscapeLayout="a4LandscapeTemplate.xsl"/>
+    <Item name="_2DViews" landscapeLayout="a4LandscapeTemplate.xsl" scaleToFit="true" header="{name}"/>
+    <Item name="Index" landscapeLayout="a4LandscapeTemplate.xsl" header="INDEX"/>
+</pdf>

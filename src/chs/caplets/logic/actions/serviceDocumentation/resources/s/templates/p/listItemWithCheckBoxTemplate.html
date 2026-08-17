@@ -1,0 +1,18 @@
+<% if(items.length){ %>
+<div class="listPanel <%=className%> auto-list">
+	<% if(showTitle){ %>
+	<div class="titlebar auto-list-header">
+		<span class="headingCount">
+			<span class="headingCountNumber auto-item-count-label"><%=items.length%></span>
+		</span>
+		<span class="headerText auto-title-label"><%=title%></span>
+	</div>
+	<% } %>
+	<% _.each(items, function(item) {%>
+	<div class="listItem auto-item" data-id="<%=item.id%>" >
+		<input type="checkbox" class="configPanelCheckBox auto-checkbox" style="float: left;">
+		<span class="mainText auto-title-label" style="text-overflow: ellipsis;width: 85%;float: left;margin-top: 3px;"><%=Utils.translate(item.get("mainText"))%></span>
+	</div>
+	<% });%>
+</div>
+<% } %>

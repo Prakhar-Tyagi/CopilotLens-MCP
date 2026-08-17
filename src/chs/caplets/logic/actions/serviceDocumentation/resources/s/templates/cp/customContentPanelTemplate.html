@@ -1,0 +1,26 @@
+<div class="detailContent" style="height: 88.3076923076923%;">
+    <div id="locationViewSVGLoadArea" class="panel_content zoomable-content-area">
+        <%if(path.indexOf(".mp4") > 0 || path.indexOf(".avi") > 0 || path.indexOf(".mov") > 0 || path.indexOf(".m4v") >
+        0){%>
+        <video width="99%" height="99%" controls autoplay>
+            <source src="<%=path%>" type="video/mp4">
+        </video>
+        <%} else if(contentType === 'application/pdf'){%>
+
+        <%      if (opensPDFExternally) { %>
+        <div style="margin-top: 20px; font-size: 1.4em; line-height: 1.6m;">
+            <%= mentor.publisher.languageTranslator.localize('PDFCantBeOpenedInternally') %><br>
+            <div id="open-pdf-button" class="component-button" style="width:150px; margin:15px auto; color: white; float: none;">
+                <%= mentor.publisher.languageTranslator.localize('PDFOpenExternally') %>
+            </div>
+        </div>
+        <%      } else { %>
+        <object class="auto-custom-content" data="<%=path%>" type="<%=contentType%>" width="99%" height="99%">
+            <param name="src" value="<%=path%>"/>
+        </object>
+        <%      } %>
+        <%} else if(contentType !== 'application/pdf') { %>
+        <object class="auto-custom-content" data="<%=path%>" type="<%=contentType%>" width="99%" height="99%"></object>
+        <%}%>
+    </div>
+</div>

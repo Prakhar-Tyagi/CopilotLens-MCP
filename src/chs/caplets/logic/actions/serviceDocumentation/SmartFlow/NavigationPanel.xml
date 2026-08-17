@@ -1,0 +1,27 @@
+<NavigationPanel>
+    <introduction-page/>
+    <system>
+        <attribute name="Name"
+                   display="Name"/>
+        <attribute name="ShortDescription"
+                   display="Description"/>
+        <property name="ApplicableOptions"
+                  display="Options"/>
+        <attribute name="FolderPath"
+                   display="Folder"/>
+    </system>
+    <devices type="IXDevice">
+        <attribute name="Name"
+                   display="Name"/>
+        <property name="Description"
+                  display="Description"/>
+        <attribute name="OptionExpression"
+                   display="Applicability"/>
+        <property name="FlowType"
+                  display="Domain"/>
+    </devices>
+    <report/>
+    <globalreports/>
+</NavigationPanel>
+
+

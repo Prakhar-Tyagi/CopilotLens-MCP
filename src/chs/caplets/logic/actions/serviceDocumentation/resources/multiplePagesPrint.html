@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="icon" class="applicationIcon" type="image/png" sizes="32x32" href="#APP_LOGO#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>#APP_TITLE#</title>
+    <style type="text/css" media="print,screen">
+        @page {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        .diagramControl {
+            display: none !important;
+        }
+
+        * {
+            border: 0;
+
+        }
+
+        #table1 > object {
+            width: 188% !important;
+            height: 188% !important;
+        }
+
+        #table2 > object {
+            width: 188% !important;
+            height: 188% !important;
+        }
+
+        #table1 {
+            transform: translate(-0%, 3%) !important;
+            -ms-transform: translate(-0%, 3%) !important;
+            -webkit-transform: translate(-0%, 3%) !important;
+            width: 90% !important;
+            height: 90% !important;
+
+        }
+
+        #table2 {
+            transform: translate(-100%, 3%) !important;
+            -ms-transform: translate(-100%, 3%) !important;
+            -webkit-transform: translate(-100%, 3%) !important;
+            width: 90% !important;
+            height: 90% !important;
+
+        }
+
+        #table00 {
+            position: absolute;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        #table01 {
+            position: absolute;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            left: -100%;
+            top: 100%;
+        }
+
+        #iTable10 {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 200%;
+        }
+
+        #table10 {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: -100%;
+        }
+
+        #iTable11 {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+
+            left: 0;
+            top: 300%;
+        }
+
+        #table11 {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            left: -100%;
+            top: -100%;
+        }
+
+        body {
+            padding: 0;
+            border: 0;
+            margin: 0;
+            overflow: auto;
+
+        }
+    </style>
+
+    <!-- PANEL FILES -->
+
+    <link rel="stylesheet" type="text/css" href="styles/print.css" media="print">
+    <link rel="stylesheet" type="text/css" href="styles/faultCode.css">
+    <link rel="stylesheet" type="text/css" href="styles/diagnostic.css">
+    <link rel="stylesheet" type="text/css" href="styles/report.css">
+    <script type="text/javascript" src="s/libs/jquery.js"></script>
+    <script type="text/javascript" src="s/print.js"></script>
+    <script type="text/javascript">
+        //setTimeout(printProcess, .1);
+        function printProcess()
+        {
+            document.title = window.opener.mentor.publisher.getLocalizedApplicationTitle();
+            window.opener.mentor.publisher.printer.print();
+        }
+        function afterPrinting()
+        {
+            setTimeout(function ()
+            {
+                window.close();
+            }, 4000);
+
+        }
+        function printAndClose()
+        {
+
+            setTimeout(function ()
+            {
+                window.focus();
+                window.print();
+                window.afterPrinting();
+            }, 100);
+        }
+        function appendContent(content, callback, id)
+        {
+            var printDetailContainer = $('body');
+
+            try {
+                printDetailContainer.append(content);
+            }
+            catch (e) {
+                //for IE
+                if (id) {
+                    printDetailContainer.append($(content[0].innerHTML).attr("id", id));
+                }
+                else {
+                    printDetailContainer.append($(content[0].innerHTML));
+                }
+            }
+
+            if (callback) {
+                setTimeout(function ()
+                {
+                    window.opener.mentor.publisher.printer.filterSVGAndFirePrint();
+                }, 1000);
+            }
+        }
+    </script>
+
+</head>
+<body onload="printProcess();" style="height: 100%;width: 100%;overflow: auto;">
+</body>
+</html>

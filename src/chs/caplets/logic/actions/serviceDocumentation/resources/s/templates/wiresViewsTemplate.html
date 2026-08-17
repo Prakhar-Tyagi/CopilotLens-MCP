@@ -1,0 +1,29 @@
+<%if(items.length){ %>
+
+<div class="titlebar auto-list-header">
+		<span class="headingCount">
+			<span class="headingCountNumber auto-item-count-label"><%=items.length%>/<%=totalItems%></span></span>
+    <span class="headerText auto-title-label"><%=title%></span></div>
+<% if(page > 1){ %>
+<div class="listItem next_prevous_btn previous auto-previous-button" <% if(!expand){ %>style="display: none;"<%}%>>
+<span class="mainText auto-title-label"><%=mentor.publisher.languageTranslator.localize('previousItems')%></span>
+</div>
+<%}%>
+<% _.each(items, function(item) {%>
+<div class="listItem <%=item.isActive || item.attributes && item.attributes.isActive%> auto-item"
+	 data-id="<%=item.id%>" <% if(!expand){ %> style="display: none;" <%}%>>
+<span class="mainText auto-title-label"><%=Utils.translate(item.get("mainText"))%></span>
+<span class="collapseAll auto-collapse-list-button"
+	  title="<%=mentor.publisher.languageTranslator.localize('clicktocollapse')%>">[-]</span>
+<br>
+<span class="subText auto-subtitle-label"><%=Utils.translate(item.get("subText"))%></span>
+
+</div>
+<% });%>
+<% if( totalPages > page){ %>
+<div class="listItem next_prevous_btn next auto-next-button" <% if(!expand){ %> style="display: none;"<%}%>>
+<span class="mainText auto-title-label"><%=mentor.publisher.languageTranslator.localize('nextItems')%></span>
+</div>
+<%}%>
+
+<%}%>

@@ -1,0 +1,10 @@
+<% if(items.length){ %>
+
+<div class="titlebar">
+	<span class="headingCount" style="display: block; ">
+		<span class="headingCountNumber"><%=items.length%></span>
+	</span>
+	<span class="headerText"><%=Utils.translate(title)%></span>
+</div>
+<%=systemAsTreeHTML %>
+<% } %>

@@ -1,0 +1,11 @@
+<NavigationPanel>
+    <harnesslayout>
+        <attribute name="Name" display="Name"/>
+        <attribute name="PartNumber" display="Part Number"/>
+        <attribute name="ShortDescription" display="Description"/>
+        <attribute name="Revision" display="Revision"/>
+    </harnesslayout>
+    <custompanel type="Reports"/>
+</NavigationPanel>
+
+

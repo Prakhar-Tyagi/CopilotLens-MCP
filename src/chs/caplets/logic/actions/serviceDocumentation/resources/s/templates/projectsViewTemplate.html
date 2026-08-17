@@ -1,0 +1,23 @@
+<% if (previousTitle != null) { %>
+<div id="previous-project-btn" class='project-navigation-button click-target auto-previous-button'>
+    <img class="arrow" src="images/gray_left.png" title="<%= previousTitle %>">
+</div>
+<% } %>
+<div class="project-detail-container">
+    <div id="project-thumbnail" class="auto-project-thumbnail">
+        <object data="<%= project.getThumbnailPath() %>" style="width:100%; height:100%;">
+            <img src="images/fallback.png" style="width:100%; height:100%;">
+        </object>
+    </div>
+    <div id="project-detail" class="auto-project-view">
+        <div id="project-name" class="auto-title-label" title="<%= projectTitle %>"><%= projectTitle %></div>
+        <div id="project-description" class="auto-description-label" title="<%= projectDescription %>"><%=
+            projectDescription %>
+        </div>
+    </div>
+</div>
+<% if (nextTitle != null) { %>
+<div id="next-project-btn" class='project-navigation-button click-target auto-next-button'>
+    <img class="arrow" src="images/gray_right.png" title="<%= nextTitle %>">
+</div>
+<% } %>

@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<components>
+
+    <component name="viewer"
+               view="views/viewer"
+               template="templates/viewerTemplate.html"
+               container="#applicationArea"/>
+    <component name="navigationPanel"
+               view="views/navigationPanelView"
+               template=""
+               container="#navigation"/>
+    <component name="system"
+               view="views/systems"
+               template="templates/flatListTemplate.html"
+               container="#platform-grouped-list>div>.system"/>
+
+
+    <component name="introduction-page"
+               view="views/informations"
+               template="templates/informationTemplate.html"
+               container="#platform-grouped-list>div>.introduction-page"/>
+
+    <component name="harness-layouts"
+               view="views/harnessLayoutsView"
+               template="templates/paginatedListGroup.html"
+               container="#platform-grouped-list>div>.harness-layouts"/>
+
+    <component name="harness"
+               view="views/harness"
+               template="templates/flatListTemplate.html"
+               container="#platform-grouped-list>div>.harness"/>
+
+    <component name="faultCode"
+               view="views/faultCode"
+               template="templates/faultCodeTemplate.html"
+               container="#platform-grouped-list>div>.faultcode"/>
+
+    <component name="commonFaultCodes"
+               view="views/commonFaultCode"
+               template="templates/commonFaultCodeTemplate.html"
+               container="#platform-grouped-list>div>.commonFaultCodes"/>
+
+    <component name="diagnostics"
+               view="views/diagnosticsView"
+               template="templates/flatListTemplate.html"
+               container="#platform-grouped-list>div>.diagnostics"/>
+
+    <component name="locationViews"
+               view="views/paginatedListview"
+               template="templates/paginatedListGroup.html"
+               container="#platform-grouped-list>div>.locationViews"/>
+
+    <component name="wires"
+               view="views/designobjects/designObjectsSection"
+               template="templates/wiresViewsTemplate.html"
+               container="#platform-grouped-list>div>.WiresTitle"/>
+
+    <component name="nets"
+               view="views/designobjects/designObjectsSection"
+               template="templates/wiresViewsTemplate.html"
+               container="#platform-grouped-list>div>.NetsTitle"/>
+
+    <component name="inlines"
+               view="views/designobjects/designObjectsSection"
+               template="templates/wiresViewsTemplate.html"
+               container="#platform-grouped-list>div>.InlinesTitle"/>
+
+    <component name="grounds"
+               view="views/designobjects/designObjectsSection"
+               template="templates/wiresViewsTemplate.html"
+               container="#platform-grouped-list>div>.GroundsTitle"/>
+
+    <component name="devices"
+               view="views/designobjects/designObjectsSection"
+               template="templates/wiresViewsTemplate.html"
+               container="#platform-grouped-list>div>.DevicesTitle"/>
+
+    <component name="globalreports"
+               view="views/globalReports"
+               template="templates/flatListTemplate.html"
+               container="#platform-grouped-list>div>.globalreports"/>
+
+
+    <component name="connectors"
+               view="views/designobjects/designObjectsSection"
+               template="templates/wiresViewsTemplate.html"
+               container="#platform-grouped-list>div>.ConnectorTitle"/>
+
+    <component name="multicores"
+               view="views/designobjects/designObjectsSection"
+               template="templates/wiresViewsTemplate.html"
+               container="#platform-grouped-list>div>.MulticoresTitle"/>
+
+    <component name="splices"
+               view="views/designobjects/designObjectsSection"
+               template="templates/wiresViewsTemplate.html"
+               container="#platform-grouped-list>div>.SplicesTitle"/>
+
+    <component name="contentPanel"
+               view="views/contentpanel/contentPanel"
+               template="templates/cp/contentPanelTemplate.html"
+               container="#detail"/>
+
+    <component name="systemButtons"
+               view="views/contentpanel/toolbar/systemToolBar"
+               template="templates/cp/toolbar/systemToolBar.html"
+               container=""/>
+
+    <component name="LayoutButtons"
+               view="views/contentpanel/toolbar/LayoutButtons"
+               template="templates/cp/toolbar/systemToolBar.html"
+               container=""/>
+
+    <component name="generalButtons"
+               view="views/contentpanel/toolbar/generalButtons"
+               template="templates/cp/toolbar/generalButtons.html"
+               container=""/>
+
+    <component name="contentToolBar"
+               view="views/contentpanel/toolbar/contentToolBar"
+               template=""
+               container=""/>
+
+    <component name="zoomToolBar"
+               view="views/zoomToolBarView"
+               template="templates/zoomToolBarTemplate.html"
+               container=""/>
+
+    <component name="systemDiagramPanel"
+               view="views/contentpanel/systemDiagramPanel"
+               template="templates/cp/systemDiagramTemplate.html"
+               container="#splitter1"/>
+
+    <component name="systemReportPanel"
+               view="views/contentpanel/systemReportPanel"
+               template="templates/cp/systemReportTemplate.html"
+               container="#splitter3"/>
+
+    <component name="reportView"
+               view="views/contentpanel/reportView"
+               template="templates/cp/capitalReportTemplate.html"
+               container="#splitter2"/>
+
+    <component name="locationView"
+               view="views/contentpanel/locationViewPanel"
+               template="templates/cp/locationViewTemplate.html"
+               container="#splitter2"/>
+
+    <component name="harnessDiagramPanel"
+               view="views/contentpanel/harnessDiagramPanel"
+               template="templates/cp/harnessDiagramPanel.html"
+               container="#splitter2"/>
+
+    <component name="harnessReportPanel"
+               view="views/contentpanel/harnessReportPanel"
+               template="templates/cp/capitalReportTemplate.html"
+               container="#splitter3"/>
+
+    <component name="renderedSVG"
+               view="views/contentpanel/renderedSVGPanel"
+               template="templates/cp/locationViewTemplate.html"
+               container="#splitter2"/>
+
+
+    <component name="faultCodePanel"
+               view="views/contentpanel/faultCodePanel"
+               template="templates/cp/faultCodePanelTemplate.html"
+               container="#splitter3"/>
+    <component name="diagnosticPanel"
+               view="views/contentpanel/diagnosticPanel"
+               template="templates/cp/diagnosticPanelTemplate.html"
+               container="#splitter3"/>
+    <component name="customContentPanel"
+               view="views/contentpanel/customContentPanel"
+               template="templates/cp/customContentPanelTemplate.html"
+               container="#splitter2"/>
+    <component name="faceViewPanel"
+               view="views/contentpanel/faceViewPanel"
+               template="templates/cp/faceViewPanelTemplate.html"
+               container="#splitter3"/>
+    <component name="threeDXMLPanel"
+               view="views/contentpanel/threeDXMLPanel"
+               template="templates/cp/ThreeDXMLTemplate.html"
+               container="#splitter2"/>
+    <component name="jt3DPanel"
+               view="views/contentpanel/threeDXMLPanel"
+               template="templates/cp/JT3DTemplate.html"
+               container="#splitter2"/>
+    <component name="ra3DPanel"
+               view="views/contentpanel/rapidAuthorCatalogPanel"
+               template="templates/cp/RA3DTemplate.html"
+               container="#splitter2"/>
+
+    <component name="packages"
+               view="views/packageView"
+               template="templates/packagesTemplate.html"
+               container="#platformToolbar"/>
+    <component name="textSearch"
+               view="views/filters/textSearchView"
+               template="templates/filters/textSearchTemplate.html"
+               container="#navigationBottomToolbar"/>
+
+    <component name="designObjectPopover"
+               view="views/p/designObjectPopoverView"
+               template="templates/p/popoverTemplate.html"
+               container="body"/>
+
+    <component name="locationViewPopover"
+               view="views/p/locationViewPopoverView"
+               template="templates/p/popoverTemplate.html"
+               container="body"/>
+
+    <component name="xrefs"
+               view="views/p/xrefsView"
+               template="templates/p/basicListItemTemplate.html"
+               container="#popover-grouped-list"/>
+
+
+    <component name="harnessesPopoverItemView"
+               view="views/p/harnessPopoverView"
+               template="templates/p/basicListItemTemplate.html"
+               container="#popover-grouped-list"/>
+
+
+    <component name="attributes"
+               view="views/p/attributesView"
+               template="templates/p/attributesTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="groundSignal"
+               view="views/p/groundSignalPopoverItem"
+               template="templates/p/basicListItemTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="faceviews"
+               view="views/p/connectorFaceviewView"
+               template="templates/p/basicListItemTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="threeDViews"
+               view="views/p/threeDviewView"
+               template="templates/p/basicListItemTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="customDataViews"
+               view="views/p/customDataView"
+               template="templates/p/multipleListItemsTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="twoDLocationViews"
+               view="views/p/twoDLocationView"
+               template="templates/p/twoDLocationsTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="printOptionsPopover"
+               view="views/p/print/printOptionsPopoverView"
+               template="templates/p/popoverTemplate.html"
+               container="body"/>
+
+    <component name="printOptionsItem"
+               view="views/p/print/printOptionsPopoverItemView"
+               template="templates/p/printTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="printContentPopover"
+               view="views/p/print/printContentPopoverView"
+               template="templates/p/printPopoverTemplate.html"
+               container="body"/>
+
+    <component name="printContentItem"
+               view="views/p/print/printContentPopoverItemView"
+               template="templates/p/listItemWithCheckBoxTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="diagramsPopover"
+               view="views/p/diagrams/diagramsPopoverView"
+               template="templates/p/popoverTemplate.html"
+               container="body"/>
+
+    <component name="diagramItem"
+               view="views/p/diagrams/diagramPopoverItemView"
+               template="templates/p/translatableListItemTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="languagesPopover"
+               view="views/p/languages/languagesPopoverView"
+               template="templates/p/popoverTemplate.html"
+               container="body"/>
+
+    <component name="languageItem"
+               view="views/p/languages/languagesPopoverItemView"
+               template="templates/p/basicListItemTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="reportsPopover"
+               view="views/p/reports/reportsPopoverView"
+               template="templates/p/popoverTemplate.html"
+               container="body"/>
+
+    <component name="reportItem"
+               view="views/p/reports/reportsPopoverItemView"
+               template="templates/p/translatableListItemTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="relatedDataPopover"
+               view="views/p/relatedData/relatedDataPopoverView"
+               template="templates/p/popoverWithFilterTemplate.html"
+               container="body"/>
+
+    <component name="connectorsItem"
+               view="views/p/relatedData/objSecView"
+               template="templates/wiresViewsTemplate.html"
+               container="#popover-grouped-list .ConnectorTitle"/>
+
+    <component name="devicesItem"
+               view="views/p/relatedData/objSecView"
+               template="templates/wiresViewsTemplate.html"
+               container="#popover-grouped-list .DeviceTitle"/>
+
+    <component name="signalsItem"
+               view="views/p/relatedData/objSecView"
+               template="templates/wiresViewsTemplate.html"
+               container="#popover-grouped-list .SignalTitle"/>
+
+    <component name="vinFilter"
+               view="views/filters/vin/vinFilterView"
+               template="templates/filters/vin/vinFilterTemplate.html"
+               container="#navigation"/>
+
+    <component name="vinLoginPopover"
+               view="views/filters/vin/vinLoginPopoverView"
+               template="templates/filters/vin/vinLoginPOTemplate.html"
+               container="#applicationArea"/>
+    <component name="configurationsPopover"
+               view="views/p/c/configurationsView"
+               template="templates/p/c/configurationsTemplate.html"
+               container="#applicationArea"/>
+
+    <component name="xRefBuilderPopover"
+               view="views/p/c/xRefsBuilderView"
+               template="templates/p/c/configurationsTemplate.html"
+               container="#applicationArea"/>
+
+    <component name="configurationPanel"
+               view="views/p/c/configurationsPanelView"
+               template="templates/p/c/configurationsPanelTemplate.html"
+               container="#config-popover-groupedlist .configurations"/>
+
+    <component name="optionsPanel"
+               view="views/p/c/optionsPanelView"
+               template="templates/p/c/optionsTemplate.html"
+               container="#config-popover-groupedlist .options"/>
+
+    <component name="A project level generator"
+               view="views/customProjectDataListView"
+               template="templates/flatListTemplate.html"
+               container="#platform-grouped-list>div"/>
+
+
+    <component name="designLevelCustomData"
+               view="views/p/relatedData/customDataView"
+               template="templates/p/translatableListItemTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="HarnessLayoutDiagramsPopover"
+               view="views/p/hld/HarnessLayoutDiagramsPopover"
+               template="templates/p/popoverTemplate.html"
+               container="body"/>
+
+    <component name="HarnessLayoutDiagramsPanel"
+               view="views/p/hld/HarnessLayoutDiagramsPanel"
+               template="templates/p/translatableListItemTemplate.html"
+               container=""/>
+
+    <component name="ColorsPopover"
+               view="views/p/colors/colorspopover"
+               template="templates/p/popoverTemplate.html"
+               container="body"/>
+
+    <component name="PalettePanel"
+               view="views/p/colors/palettepanel"
+               template="templates/p/colors/palettepanel.html"
+               container="#popover-grouped-list"/>
+
+    <component name="HistoryPanel"
+               view="views/p/colors/historypanel"
+               template="templates/p/colors/historypanel.html"
+               container="#popover-grouped-list"/>
+
+</components>

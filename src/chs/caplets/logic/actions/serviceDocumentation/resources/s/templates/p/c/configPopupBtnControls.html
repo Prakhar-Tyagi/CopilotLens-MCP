@@ -1,0 +1,27 @@
+<div id="configSave">
+    <label for="config-filter-name"><%=mentor.publisher.languageTranslator.localize("Name") %>:</label>
+    <input id="config-filter-name"
+           type="text"
+           class="configTextBox"
+           value="<%=_.escape(configFilterName)%>"
+           maxlength="255"
+           autocomplete="off"
+    />
+    <p>
+        <input class="save-config"
+               type="button"
+               value="<%=mentor.publisher.languageTranslator.localize('save')%>"
+               title="<%=mentor.publisher.languageTranslator.localize('tooltip.configuration.save')%>"
+        />
+        <input class="filter-config"
+               type="button"
+               value="<%=mentor.publisher.languageTranslator.localize('filter.label')%>"
+               title="<%=mentor.publisher.languageTranslator.localize('tooltip.configuration.filter')%>"
+        />
+        <input class="close-config"
+               type="button"
+               value="<%=mentor.publisher.languageTranslator.localize('Cancel')%>"
+               title="<%=mentor.publisher.languageTranslator.localize('tooltip.configuration.Cancel')%>"
+        />
+    </p>
+</div>

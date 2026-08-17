@@ -1,0 +1,42 @@
+{
+  "name": "smartclient",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build.app.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "karma": "^6.3.4",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage": "^2.0.3",
+    "karma-firefox-launcher": "^2.1.1",
+    "karma-htmlfile-reporter": "^0.3.8",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-jasmine": "^0.1.6",
+    "karma-junit-reporter": "^2.0.1",
+    "karma-ng-html2js-preprocessor": "^1.0.0",
+    "karma-opera-launcher": "^1.0.0",
+    "karma-requirejs": "^1.1.0",
+    "karma-safari-launcher": "^1.0.0",
+    "karma-script-launcher": "^1.0.0",
+    "requirejs": "^2.3.7",
+    "requirejs-text": "^2.0.16",
+    "uglify-js": "^2.8.29"
+  },
+  "dependencies": {
+    "underscore":"1.13.8",
+    "requirejs": "2.3.7",
+    "pdfmake": "0.3.9",
+    "backbone": "1.0.0",
+    "select2": "4.0.13",
+    "pdfjs-dist": "3.11.174",
+    "jquery": "3.5.1",
+    "requirejs-text": "2.0.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

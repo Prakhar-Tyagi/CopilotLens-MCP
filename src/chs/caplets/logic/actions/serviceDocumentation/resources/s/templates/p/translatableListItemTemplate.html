@@ -1,0 +1,21 @@
+<% if(items.length){ %>
+<div class="listPanel <%=className%> auto-list">
+    <% if(showTitle){ %>
+    <div class="titlebar auto-list-header">
+		<span class="headingCount">
+			<span class="headingCountNumber auto-item-count-label"><%=items.length%></span>
+		</span>
+        <span class="headerText auto-title-label"><%=title%></span>
+    </div>
+    <% } %>
+    <% _.each(items, function(item) {%>
+    <div class="listItem <%=item.isActive%> auto-item" data-id="<%=item.id || item.cid%>" <% if(!expand){ %> style="display: none;" <%}%>>
+    <span class="mainText auto-title-label"><%=Utils.handleTranslation(item.get("mainText"))%></span>
+    <% if(showPopup){ %>
+    <span class="popUp auto-pop-out-button"></span>
+    <% } %>
+    <span class="subText auto-subtitle-label"><%=Utils.handleTranslation(item.get("subText"))%></span>
+</div>
+<% });%>
+</div>
+<% } %>

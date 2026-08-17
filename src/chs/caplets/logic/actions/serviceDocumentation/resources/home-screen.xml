@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<components>
+    <component name="homeView"
+               view="views/homeView"
+               template="templates/homeViewTemplate.html"
+               container="#home-screen"/>
+    <component name="projectsView"
+               view="views/projectsView"
+               template="templates/projectsViewTemplate.html"
+               container="#projects-view"/>
+    <component name="packagesView"
+               view="views/packagesView"
+               template="templates/packagesViewTemplate.html"
+               container="#packages-view"/>
+    <component name="packageInfoView"
+               view="views/packageInfoView"
+               template="templates/packageInfoViewTemplate.html"
+               container="#info-view"/>
+
+    <component name="homeMenu"
+               view="views/homeMenu"
+               template="templates/homeMenuTemplate.html"
+               container=".home-menu"/>
+
+    <component name="SettingsPopoverView"
+               view="views/p/settings/SettingsPopoverView"
+               template="templates/p/popoverTemplate.html"
+               container="body"/>
+
+    <component name="SystemScopePanel"
+               view="SystemScopePanel"
+               template="templates/p/SystemScopePanelTemplate.html"
+               container=""/>
+
+    <component name="LanguagesPanel"
+               view="LanguagesPanel"
+               template="templates/p/basicListItemTemplate.html"
+               container=""/>
+
+    <component name="ProjectsPopoverView"
+               view="views/p/projects/ProjectsPopoverView"
+               template="templates/p/popoverTemplate.html"
+               container="body"/>
+
+    <component name="ProjectsPanel"
+               view="ProjectsPanel"
+               template="templates/p/translatableListItemTemplate.html"
+               container=""/>
+
+</components>

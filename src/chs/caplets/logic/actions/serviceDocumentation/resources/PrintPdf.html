@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="icon" class="applicationIcon" type="image/png" sizes="32x32" href="#APP_LOGO#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+    <title>#APP_TITLE#</title>
+    <script type="text/javascript" src="s/libs/jquery.js"></script>
+    <script type="text/javascript" src="s/print.js"></script>
+    <script>
+        function setTitleAndStartPrinting()
+        {
+            document.title = window.opener.mentor.publisher.getLocalizedApplicationTitle();
+            startPrinting('pdfDoc');
+        }
+
+        function startPrinting(documentId)
+        {
+            if (typeof Utils == 'undefined') {
+                setTimeout(function()
+                {
+                    startPrinting(documentId);
+                }, 50);
+            }
+            else {
+                var pdfDoc = $('<embed type="application/pdf" width="100%" height="100%" id="'+documentId+'"></embed>');
+                pdfDoc.attr('src', "print/FINAL" + Utils.getUrlParameter('appendage') + ".pdf");
+                $('#printContainer').append(pdfDoc);
+            }
+            window.onunload = function()
+            {
+                destroyPrintApplet(Utils.getUrlParameter('appendage'));
+            };
+			setTimeout(function()
+            {
+                printDocument(documentId);
+            }, 2000);
+        }
+        function printDocument(documentId)
+        {
+            //Wait until PDF is ready to print
+            if (typeof document.getElementById(documentId).print == 'undefined') {
+                setTimeout(function()
+                {
+                    printDocument(documentId);
+                    //window.print();
+                }, 500);
+
+            }
+            else {
+                var pdfDoc = document.getElementById(documentId);
+                pdfDoc.print();
+            }
+        }
+        function destroyPrintApplet(appendage)
+        {
+            window.opener.destroyPrintApplet(appendage);
+        }
+    </script>
+</head>
+<body style="height: 100%;width: 100%; overflow: auto;" onload="setTitleAndStartPrinting();">
+<div style="height: 600px;" id="printContainer">
+</div>
+</body>
+</html>

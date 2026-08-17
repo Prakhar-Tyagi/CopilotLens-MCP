@@ -1,0 +1,35 @@
+<% if(showPrivacyBtn){ %>
+<div class="component-button small-button privacyPolicyBtn auto-privacy-button"
+     customtooltiparraylength="1" customtooltip-0="privacyPolicy" style="float: right;">
+</div>
+<% } %>
+<div class="component-button small-button restoreBtn auto-restore-button" customtooltiparraylength="1"
+     customtooltip-0="Restore"
+     style="display: none; float: right; ">&nbsp;</div>
+<div class="component-button small-button maximizeBtn auto-maximize-button" customtooltiparraylength="1"
+     customtooltip-0="Maximize"
+     style="float: right;  display: none;">&nbsp;</div>
+
+<div class="component-button small-button closeBtn auto-close-button" customtooltiparraylength="1" customtooltip-0="Close"
+     style="float: right; display: none;">&nbsp;</div>
+
+<div class="component-button small-button popOutBtn auto-pop-out-button" customtooltiparraylength="1"
+     customtooltip-0="Popout"
+     style="float: right; ">&nbsp;</div>
+<div class="component-button small-button regenerateBtn auto-regenerate-button" customtooltiparraylength="1"
+     customtooltip-0="Redraw"
+     style="float: right; display: none; ">&nbsp;</div>
+<% if (allowsPrinting) { %>
+<div class="component-button small-button printBtn auto-print-button" customtooltiparraylength="1" customtooltip-0="Print"
+     style="float: right;">&nbsp;</div>
+<% } %>
+<div class="component-button languageBtn auto-language-button"
+     style="display: none; float: right; "
+     customtooltiparraylength="1"
+     customtooltip-0="<%=mentor.publisher.languageTranslator.localize('Language')%> <%=language||EN%>"><%=language%>
+</div>
+<div class="component-button small-button backgroundColorBtn auto-background-color-button"
+     style="float: right; "
+     customtooltiparraylength="1" customtooltip-0="BackgroundColorButtonTitle">
+</div>
+<div class="component-label auto-title-label" title=""><%=Utils.translate(title)%></div>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<components>
+
+    <component name="viewer" view="views/viewer" template="templates/popupTemplate.html" container="body"/>
+    <component name="contentPanel" view="illustrator/views/contentPanel"
+               template="templates/popup/contentPanelTemplate.html"
+               container="#detail"/>
+
+    <component name="systemButtons" view="views/contentpanel/toolbar/systemToolBar"
+               template="templates/popup/systemToolBar.html"
+               container=""/>
+
+    <component name="LayoutButtons" view="views/contentpanel/toolbar/LayoutButtons"
+               template="templates/popup/systemToolBar.html"
+               container=""/>
+
+    <component name="generalButtons" view="views/contentpanel/toolbar/generalButtons"
+               template="templates/popup/generalButtons.html"
+               container=""/>
+
+    <component name="contentToolBar" view="views/contentpanel/toolbar/contentToolBar" template=""
+               container=""/>
+
+    <component name="zoomToolBar" view="views/zoomToolBarView" template="templates/zoomToolBarTemplate.html"
+               container=""/>
+    <component name="oldDesignRevision"
+               view="illustrator/views/oldDesignView"
+               template="templates/cp/harnessDiagramPanel.html"
+               container="#splitter1"/>
+
+    <component name="newDesignRevision"
+               view="illustrator/views/newDesignView"
+               template="templates/cp/harnessDiagramPanel.html"
+               container="#splitter2"/>
+
+    <component name="reportView" view="views/contentpanel/reportView"
+               template="templates/cp/systemReportTemplate.html"
+               container="#splitter2"/>
+
+
+    <component name="customContentPanel" view="views/contentpanel/customContentPanel"
+               template="templates/cp/customContentPanelTemplate.html"
+               container="#splitter3"/>
+
+    <component name="faceViewPanel" view="views/contentpanel/faceViewPanel"
+               template="templates/cp/faceViewPanelTemplate.html"
+               container="#splitter3"/>
+
+    <component name="renderedSVG" view="views/contentpanel/renderedSVGPanel"
+               template="templates/cp/locationViewTemplate.html"
+               container="#splitter2"/>
+
+
+    <component name="designObjectPopover" view="views/p/designObjectPopoverView"
+               template="templates/p/popoverTemplate.html"
+               container="body"/>
+
+    <component name="locationViewPopover" view="views/p/locationViewPopoverView"
+               template="templates/p/popoverTemplate.html"
+               container="body"/>
+
+    <component name="xrefs" view="views/illustrator/xrefsView"
+               template="templates/p/basicListItemTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="harnessesPopoverItemView" view="views/p/harnessPopoverView"
+               template="templates/p/basicListItemTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="attributes" view="views/p/attributesView"
+               template="templates/p/attributesTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="faceviews" view="views/p/connectorFaceviewView"
+               template="templates/p/basicListItemTemplate.html"
+               container="#popover-grouped-list"/>
+    <component name="groundSignal" view="views/p/groundSignalPopoverItem"
+               template="templates/p/basicListItemTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="threeDViews" view="views/p/threeDviewView"
+               template="templates/p/basicListItemTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="customDataViews" view="views/p/customDataView"
+               template="templates/p/multipleListItemsTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="twoDLocationViews" view="views/p/twoDLocationView"
+               template="templates/p/twoDLocationsTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="xRefBuilderPopover" view="views/p/c/xRefsBuilderView"
+               template="templates/p/c/configurationsTemplate.html"
+               container="#applicationArea"/>
+
+    <component name="configurationPanel" view="views/p/c/configurationsPanelView"
+               template="templates/p/c/configurationsPanelTemplate.html"
+               container="#config-popover-groupedlist"/>
+
+    <component name="packages" view="views/packagesView"
+               template="templates/popup/packagesTemplate.html"
+               container="#platformToolbar"/>
+
+    <component name="optionsPanel" view="views/p/c/optionsPanelView"
+               template="templates/p/c/optionsTemplate.html"
+               container="#config-popover-groupedlist"/>
+    <component name="Reports"
+               view="illustrator/views/reports/reportsList"
+               template="templates/flatListTemplate.html"
+               container="#platform-grouped-list>div>.Reports"/>
+
+
+</components>

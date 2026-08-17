@@ -1,0 +1,127 @@
+<Popup>
+    <Device>
+        <Links/>
+        <TwodViews/>
+        <LocationView/>
+        <Attributes/>
+        <HarnessLayout/>
+        <CustomData/>
+        <ShowFullInstance/>
+        <ShowGroundAndPowerSignal/>
+    </Device>
+
+    <Ground>
+        <Links/>
+        <TwodViews/>
+        <LocationView/>
+        <Attributes/>
+        <HarnessLayout/>
+        <CustomData/>
+        <ShowFullInstance/>
+        <ShowGroundAndPowerSignal/>
+    </Ground>
+
+    <Connector>
+        <Links/>
+        <TwodViews/>
+        <LocationView/>
+        <CustomData/>
+        <FaceViews/>
+        <Attributes/>
+        <HarnessLayout/>
+        <ShowFullInstance/>
+    </Connector>
+
+    <Cavity>
+        <Links/>
+        <TwodViews/>
+        <LocationView/>
+        <Attributes/>
+        <CustomData/>
+        <ShowFullSignal/>
+    </Cavity>
+
+    <DevicePin>
+        <Links/>
+        <TwodViews/>
+        <LocationView/>
+        <Attributes/>
+        <CustomData/>
+        <ShowFullSignal/>
+    </DevicePin>
+
+    <Splice>
+        <Links/>
+        <HarnessLayout/>
+        <TwodViews/>
+        <LocationView/>
+        <Attributes/>
+        <CustomData/>
+    </Splice>
+
+    <Wire>
+        <Links/>
+        <TwodViews/>
+        <LocationView/>
+        <Attributes/>
+        <CustomData/>
+        <ShowFullSignal/>
+        <HarnessLayout/>
+    </Wire>
+
+    <Shield>
+        <Links/>
+        <TwodViews/>
+        <LocationView/>
+        <Attributes/>
+        <CustomData/>
+        <ShowFullSignal/>
+    </Shield>
+
+    <Net>
+        <Links/>
+        <TwodViews/>
+        <LocationView/>
+        <Attributes/>
+        <CustomData/>
+        <ShowFullSignal/>
+    </Net>
+
+    <Multicore>
+        <Links/>
+        <HarnessLayout/>
+        <TwodViews/>
+        <LocationView/>
+        <Attributes/>
+        <CustomData/>
+    </Multicore>
+
+    <Bundle>
+        <Links/>
+        <Attributes/>
+        <HarnessLayout/>
+        <LocationView/>
+        <CustomData/>
+        <Wires/>
+    </Bundle>
+
+    <Grommet>
+        <Links/>
+        <Attributes/>
+        <HarnessLayout/>
+        <LocationView/>
+        <CustomData/>
+    </Grommet>
+
+    <RingTerminal>
+        <Links/>
+        <TwodViews/>
+        <LocationView/>
+        <FaceViews/>
+        <Attributes/>
+        <HarnessLayout/>
+        <CustomData/>
+        <ShowFullInstance/>
+    </RingTerminal>
+
+</Popup>

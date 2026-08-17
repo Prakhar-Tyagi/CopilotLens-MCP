@@ -1,0 +1,39 @@
+<% if(items.length){ %>
+
+<div class="titlebar auto-list-header">
+		<span class="headingCount">
+			<span class="headingCountNumber auto-item-count-label"><%=items.length%>/<%=totalItems%></span></span>
+    <span class="headerText auto-title-label"><%=Utils.translate(title)%></span></div>
+
+<% if(page > 1){ %>
+<div class="listItem next_prevous_btn previous auto-previous-button" <% if(!expand){ %>style="display: none;"<%}%>>
+<span class="mainText"><%=mentor.publisher.languageTranslator.localize('previousItems')%></span>
+</div>
+<%}%>
+
+<% _.each(items, function(item) {%>
+<div class="listItem auto-item" data-id="<%=item.id%>"
+	 base-id="<%=item.get('systemId')%>" <% if(!expand){ %> style="display: none;" <%}%>>
+<span class="mainText auto-title-label"><%=Utils.translate(item.get("mainText"))%></span><span
+		title="<%=item.get('revision')%>"><%=item.get('revision')%></span>
+<span class="collapseAll auto-collapse-list-button"
+	  title="<%=mentor.publisher.languageTranslator.localize('clicktocollapse')%>">[-]</span><span class="popUp"></span>
+<br>
+<% if(item.get("thumbNailPath")){ %>
+<img class="auto-thumbnail" src='<%=item.get("thumbNailPath")%>'>
+<% } %>
+
+<% if(item.get("subText")){ %>
+<span class="subText auto-subtitle-label"><%=Utils.translate(item.get("subText"))%></span>
+<% } %>
+
+
+</div>
+<% });%>
+<% if( totalPages > page){ %>
+<div class="listItem next_prevous_btn next auto-next-button" <% if(!expand){ %> style="display: none;"<%}%>>
+<span class="mainText"><%=mentor.publisher.languageTranslator.localize('nextItems')%></span>
+</div>
+<%}%>
+
+<% } %>

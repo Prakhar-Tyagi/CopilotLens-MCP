@@ -1,0 +1,20 @@
+<div class="modal-overlay indeterminate-progress-bar-dialog">
+    <div class="modal-popup">
+        <div class="modal-header">
+            <span class="error-icon"></span>
+            <label><%= _.escape(title) %></label>
+            <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="indeterminate-progress-bar">
+                <div class="indeterminate-progress-bar-value"></div>
+            </div>
+            <div class="indeterminate-activity-message"><%= _.escape(message) %></div>
+            <div class="indeterminate-activity-implication display-none"><%= _.escape(implication) %></div>
+            <div class="indeterminate-activity-guidance display-none"><%= _.escape(guidance) %></div>
+        </div>
+        <div class="text-right">
+            <button class="btn cancel"><%= _.escape(cancel) %></button>
+        </div>
+    </div>
+</div>

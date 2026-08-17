@@ -1,0 +1,415 @@
+.level-2 {
+    -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.9);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.9);
+}
+
+#home-logo {
+    max-height: 24px;
+    max-width: 100px;
+    position: relative;
+    z-index: 10;
+    padding: 5px 10px;
+    float: right;
+}
+
+#projects-view {
+    background-image: -ms-radial-gradient(75% top, ellipse farthest-side, #55A0B9 -100%, #0077A1 40%, #006B91 75%, #006487 calc(100% - 68px));
+    background-image: -moz-radial-gradient(75% top, ellipse farthest-side, #55A0B9 -100%, #0077A1 40%, #006B91 75%, #006487 calc(100% - 68px));
+    background-image: -o-radial-gradient(75% top, ellipse farthest-side, #55A0B9 -100%, #0077A1 40%, #006B91 75%, #006487 calc(100% - 68px));
+    background-image: -webkit-gradient(radial, 75% top, 0, center top, 258, color-stop(-100, #55A0B9), color-stop(40, #0077A1), color-stop(75, #006B91), color-stop(100, #006487));
+    background-image: -webkit-radial-gradient(75% top, ellipse farthest-side, #55A0B9 -100%, #0077A1 40%, #006B91 75%, #006487 calc(100% - 68px));
+    background-image: radial-gradient(ellipse farthest-side at 75% top, #55A0B9 -100%, #0077A1 40%, #006B91 75%, #006487 calc(100% - 68px));
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 280px;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.project-detail-container {
+    display: block;
+    height: 240px;
+    margin: 30px auto 10px auto;
+    position: relative;
+    width: 420px;
+}
+
+.project-detail-container > div {
+    display: inline-block;
+    float: none;
+    margin: 10px 0;
+}
+
+#project-thumbnail {
+    margin-right: auto;
+    opacity: 0;
+    margin-left: auto;
+    transition: opacity .4s ease-in-out;
+    -moz-transition: opacity .4s ease-in-out;
+    -webkit-transition: opacity .4s ease-in-out;
+
+    width: 120px;
+    height: 120px;
+    display: block;
+}
+
+#project-detail {
+    width: 100%;
+    position: relative;
+    /* top: 65%; */
+    /* left: 10%; */
+    margin: 0px;
+    text-align: center;
+}
+
+#project-name {
+    color: white;
+    font-size: 20px;
+    height: auto;
+    line-height: 36px;
+    margin-bottom: 5px;
+    white-space: pre-wrap;
+    width: 100%;
+    line-height: 1.3;
+    text-align: center;
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    max-width: 400px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#project-description
+{
+    color: lightgray;
+    font-size: 14px;
+    height: 40px;
+    line-height: 1.4em;
+    white-space: nowrap;
+    width: 100%;
+    display: block;
+    max-width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.project-navigation-button
+{
+    background: white;
+    height: 40px;
+    width: auto;
+    opacity: 0.7;
+    overflow: hidden;
+}
+
+.project-navigation-button .arrow {
+    padding: 8px 5px;
+    width: 24px;
+    height: 24px;
+}
+
+.project-navigation-button:hover
+{
+    opacity: 0.9;
+}
+
+.project-navigation-button > *
+{
+    display: inline-block;
+}
+
+#previous-project-btn
+{
+    left: 0;
+    position: fixed;
+    top: 155px;
+}
+
+#next-project-btn
+{
+    position: fixed;
+    right: 0;
+    top: 155px;
+}
+
+#next-project-btn > *
+{
+    float: right;
+}
+
+#packages-view {
+    background: whitesmoke;
+    bottom: 0;
+    height: auto;
+    left: 0;
+    position: fixed;
+    top: 280px;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+
+#packages-grid-container {
+    overflow-y: auto;
+}
+
+#packages-grid {
+    height: auto;
+    /*margin-right: 350px;*/
+    margin-right: 25%;
+    padding: 10px 0px 10px 10px;
+    width: auto;
+}
+
+#package-detail
+{
+    display: none;
+}
+
+.package-cell {
+    display: inline-block;
+    margin: 10px 0px 10px 0px;
+    padding-top: 10px;
+    vertical-align: top;
+    width: 150px;
+    height: 160px;
+}
+
+.package-cell .thumbnail {
+    display: block;
+    height: 110px;
+    margin: 0 auto;
+    padding: 0;
+    width: 110px;
+}
+
+.package-name, .effectivity-range {
+    height: auto;
+    line-height: 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 15px;
+}
+
+.effectivity-range {
+    font-size: 14px;
+}
+
+.package-name, .effectivity-range {
+    padding-top: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.package-name {
+    font-family: Segoe UI, "Open sans", Verdana, Arial, Helvetica, sans-seri, serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    color: var(--black);
+}
+
+#effectivity-search {
+    width: 15%;
+    height: 24px;
+    border: solid 1px #8c8c8c;
+    background-color: white;
+    position: relative;
+    padding: 1px 10px;
+    float: right;
+}
+
+input#effectivity-search:focus {
+    outline: none;
+}
+
+img.setting-lines {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    /* right: 130px; */
+    position: relative;
+    padding: 5px 10px;
+    float: right;
+}
+
+
+#reset-effectivity-search {
+    position: relative;
+    height: 26px;
+    /* margin-right: 12px; */
+    /* right: 160px; */
+    border: 1px solid #8c8c8c;
+    margin-right: 5px;
+}
+
+#info-view {
+    border-left: 1px dotted #000000;
+    position: fixed;
+    right: 15px;
+    top: 280px;
+    /*width: 320px;*/
+    width: 25%;
+    background-color: white;
+}
+
+#info-view > div {
+    width: 100%;
+    padding-top: 10px;
+}
+
+#package-info-view {
+    height: auto;
+    margin-bottom: 200px;
+    width: 280px;
+}
+
+#package-info-view .name {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+
+#package-info-view .description {
+    color: dimgray;
+    line-height: 1.6em;
+    margin-bottom: 25px;
+    /* text-align: center; */
+    margin-left: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 95%;
+    padding-right: 5px;
+    white-space: pre-wrap;
+}
+
+#package-info-view .open-button {
+    width: 30%;
+    height: 21px;
+    border-radius: 2px;
+    box-shadow: 1px 2px 4px 0 rgb(0 0 0 / 30%);
+    border: solid 1px #003950;
+    background-color: #003950;
+    color: #ffffff;
+    float: none;
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    border-color: hsl(214, 39%, 20%);
+    border: thin solid hsl(214, 39%, 25%);
+    border-top: thin solid hsl(214, 39%, 20%);
+    text-shadow: 1px -1px black;
+    text-overflow: ellipsis;
+}
+
+#legend-view {
+    display: table;
+    width: 99%;
+    height: auto;
+    padding-left: 10px;
+}
+
+#legend-view .entry {
+    line-height: 1.6em;
+    color: dimgray;
+}
+
+#legend-view .entry em {
+    color: #000000;
+}
+
+.home-menu {
+    height: 38px;
+    position: absolute;
+    /* right: 10px; */
+    top: 10px;
+    z-index: 10;
+}
+
+.Open {
+    width: 34px;
+    height: 19px;
+    font-family: SegoeUI, Segoe UI, "Open sans", Verdana, Arial, Helvetica, sans-seri, serif;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--white);
+}
+
+.menu-button {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px !important;
+    max-width: 32px;
+    min-width: 24px;
+    padding: 7px 10px 0px 0px;
+}
+
+.projects-button {
+    background-image: url("../images/project_menu_item.png");
+    position: relative;
+    padding: 5px 5px;
+    height: 16px;
+    width: 16px;
+}
+
+.tick {
+    background-image: url("../images/success.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    float: left;
+    height: 20px;
+    margin: 0 10px 0 5px;
+    visibility: hidden;
+    width: 20px;
+}
+
+.preferred .tick {
+    visibility: visible;
+}
+
+#toast-container {
+    position: fixed;
+    bottom: 50px;
+    left: 5px;
+    width: auto;
+    height: auto;
+  }
+
+  .toast-message {
+    background-color: #3f77b0;
+    color: #f1f1f1;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    max-width: 60vw;
+    width: fit-content;
+  }
+
+  .toast-message.show {
+    opacity: 1;
+    transform: translateX(0);
+  }

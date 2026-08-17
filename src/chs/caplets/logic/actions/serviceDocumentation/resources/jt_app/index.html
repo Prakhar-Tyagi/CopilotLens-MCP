@@ -1,0 +1,603 @@
+﻿<!DOCTYPE html>
+<!-- © 2016 SIEMENS PRODUCT LIFECYCLE MANAGEMENT SOFTWARE INC -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+	<title>PLM Vis JavaScript Toolkit</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="icon" type="image/png" href="favicon.ico" />
+
+	<script src="js/plmvisweb/plmvisweb.min.js"></script>
+
+	<script>
+		var THREE = PLMVisWeb.THREE;
+		var $=window.parent.$;
+	</script>
+
+	<!--== THIS IS ONLY FOR NavCube! ==-->
+	<script src="js/plmvisweb/NavCube.js"></script>
+
+	<!--== THIS IS ONLY FOR SectionHandle! ==-->
+	<script src="js/plmvisweb/ArrowHandle.js"></script>
+	<script src="js/plmvisweb/SectionHandle.js"></script>
+
+	<!--== THIS IS ONLY FOR Dimension SGO! ==-->
+	<script src="js/plmvisweb/DimensionEditHandle.js"></script>
+	<script src="js/plmvisweb/DimensionHoverHandle.js"></script>
+
+</head>
+
+<body>
+	<template id="treeLeaf">
+		<div class="treeEntryStyle">
+			<div id="treeLineEntry" psId="" class="treeLineEntry" style="background-color: 'rgb(255,255,255)'" onmouseout="treeMouseOut(this)" onmouseover="treeMouseOver(this)">
+				<img id="expandCollapse" src='img/expand.svg' class="treeButtonStyle" data-element="expander">
+				<img id="imgSpacer" class="treeButtonHidden">
+				<img id="imgCheckbox" src="img/allChecked.svg" class="treeImgStyle" data-element="checkbox">
+				<label id="name" data-element="selection"></label>
+			</div>
+		</div>
+	</template>
+	<template id="treeNode">
+		<ul id="nodeChildren" class="treeListStyle hideChildren">
+			<li id="treeNode" class="treeNodeStyle">
+			</li>
+		</ul>
+	</template>
+	<div id="toolbar">
+		<!--
+		<img id="SiemensLogo" src="img/SiemensLogo.svg" title="© 2016 SIEMENS PRODUCT LIFECYCLE MANAGEMENT SOFTWARE INC" width="152px" height="24px" />
+		-->
+		<!-- <div id="toolbar_open" class="toolbarButton" onclick="openFileDialogTree();"> -->
+		<!-- <img src="img/open.svg" title="Open File..." /> -->
+		<!-- </div> -->
+		<!-- <div id="toolbar_service" class="toolbarButton" onclick="showConverterService();"> -->
+		<!-- <img src="img/service.svg" title="Open Service Toolbox" /> -->
+		<!-- </div> -->
+		<div id="toolbar_showTree" class="toolbarButton" onclick="showPsTree();">
+			<img src="img/tree_ps.png" title="Product Structure Tree" />
+		</div>
+		<div id="toolbar_showPmiTree" class="toolbarButton toolbarButton_inactive" onclick="showPmiTree();">
+			<img src="img/tree_pmi.png" title="PMI Tree" />
+		</div>
+		<div id="toolbar_fitAll" class="toolbarButton" onclick="fitAll();">
+			<img src="img/fitAll.png" title="Fit All" />
+		</div>
+		<div id="toolbar_camera" class="toolbarButton" onclick="showSettings();">
+			<img src="img/camera_menu.png" title="Open Settings Toolbox" />
+		</div>
+		<div id="toolbar_section" class="toolbarButton" onclick="showSectionToolbox();">
+			<img src="img/section_menu.png" title="Open Sectioning Toolbox" />
+		</div>
+		<div id="toolbar_measurement" class="toolbarButton toolbarButton_inactive" onclick="showMeasurementSettings();">
+			<img src="img/meas_toolbox.png" title="Open Measurement Toolbox" />
+		</div>
+		<div id="toolbar_markup" class="toolbarButton" onclick="showMarkupSettings();">
+			<img src="img/cmdMarkUp24.svg" title="Open Markup Toolbox" />
+		</div>
+		<div id="toolbar_explodeSlider" class="toolbarSlider">
+			<input type="range" min="0" max="1" step="0.01" value="0" class="slider" id="explodeSlider" oninput="explode(parseFloat(document.getElementById('explodeSlider').value))" onchange="explode(document.getElementById('explodeSlider').value)" onmousedown="" onmouseup="rebuild();" title="Explode Slider">
+		</div>
+	</div>
+	<div id="content">
+		<div id="leftToolbox" class="toolBox">
+			<div class="drawerPull" onclick="drawerPull(this);">
+				<span class="span">&lsaquo;</span>
+			</div>
+			<div id="defaultLeftToolbox">
+				<div class="toolBoxTitle">&nbsp;</div>
+				<div class="toolBoxScrollContent">
+					<div class="toolBoxContent"></div>
+				</div>
+			</div>
+		</div>
+		<div id="plmviswebHost" tabindex="0" class="tabContent"></div>
+		<div id="contextMenu">
+			<input id="isOnObject" type="checkbox" />
+			<input id="isOnPmi" type="checkbox" />
+			<div class="emptySpace">
+				<!-- <input type="button" value="X - Axis" onclick="setCameraToStandardView(PLMVisWeb.StandardViewType.X)" /> -->
+				<!-- <input type="button" value="Y - Axis" onclick="setCameraToStandardView(PLMVisWeb.StandardViewType.Y)" /> -->
+				<!-- <input type="button" value="Z - Axis" onclick="setCameraToStandardView(PLMVisWeb.StandardViewType.Z)" /> -->
+				<!-- <input type="button" value="Negative X - Axis" onclick="setCameraToStandardView(PLMVisWeb.StandardViewType.NEGATIVE_X)" /> -->
+				<!-- <input type="button" value="Negative Y - axis" onclick="setCameraToStandardView(PLMVisWeb.StandardViewType.NEGATIVE_Y)" /> -->
+				<!-- <input type="button" value="Negative Z - axis" onclick="setCameraToStandardView(PLMVisWeb.StandardViewType.NEGATIVE_Z)" /> -->
+				<!-- <input type="button" value="Isometric" onclick="setCameraToStandardView(PLMVisWeb.StandardViewType.ISOMETRIC)" /> -->
+				<!-- <input type="button" value="Negative Isometric" onclick="setCameraToStandardView(PLMVisWeb.StandardViewType.NEGATIVE_ISOMETRIC)" /> -->
+				<!-- <input type="button" value="Trimetric" onclick="setCameraToStandardView(PLMVisWeb.StandardViewType.TRIMETRIC)" /> -->
+				<input type="button" value="Transparent" onclick="setCrystal()"/>
+			</div>
+			<div class="onObject">
+				<div class="menuButton">
+					<input type="button" value="Toggle Edges" id="contextToggleEdges" onclick="contextToggleEdges()" />
+					<div class="subMenu">
+						<input type="button" value="Shaded" id="shadedEdges" onclick="contextchangeRenderMode(PLMVisWeb.EdgeType.Shaded)" />
+						<input type="button" value="Outline" id="outlineEdges" onclick="contextchangeRenderMode(PLMVisWeb.EdgeType.Outline)" />
+						<input type="button" value="Visible" id="visibleEdges" onclick="contextchangeRenderMode(PLMVisWeb.EdgeType.Visible)" />
+						<input type="button" value="Hidden" id="hiddenEdges" onclick="contextchangeRenderMode(PLMVisWeb.EdgeType.Hidden)" />
+					</div>
+				</div>
+				<input type="button" value="Toggle Vertices" id="contextToggleVertices" onclick="contextToggleVertices()" />
+			</div>
+			<div class="OnPmi">
+				<input type="button" value="Align to Pmi" onclick="AlignToPmi()" />
+			</div>
+		</div>
+		<div id="rightToolbox" class="toolBox">
+			<div class="drawerPull" onclick="drawerPull(this);">
+				<span class="span">&rsaquo;</span>
+			</div>
+			<div id="defaultRightToolbox">
+				<div class="toolBoxTitle">&nbsp;</div>
+				<div class="toolBoxScrollContent">
+					<div class="toolBoxContent"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div id="globalProgressBox" class="progressBox">
+			<div id="globalProgressBar" class="progressBar"></div>
+			<div id="globalProgressText" class="progressText">Loading...</div>
+		</div>
+		<div id="legalLink">
+			<a href="../../FOSS_Licenses/Siemens%20Third-Party%20Software%20disclosure%20document.html">Open Source Usage</a>
+		</div>
+	</div>
+	<div id="toolboxToolbox">
+		<!-- This invisible constainer holds dialogs for the toolboxes. -->
+		<!-- Toolbox dialogs are swapped aroud with this container at runtime. -->
+		<div id="fileToolbox">
+			<div class="toolBoxTitle">Open File...</div>
+			<div class="toolBoxScrollContent">
+				<div class="toolBoxContent"></div>
+			</div>
+		</div>
+		<div>
+			<div id="productStructure">
+				<div class="toolBoxTitle">Product Structure</div>
+				<div class="background toolBoxScrollContent">
+					<div id="viewer" style="display:block"></div>
+				</div>
+			</div>
+			<div id="pmiStructure">
+				<div class="toolBoxTitle">PMI Structure</div>
+				<div class="background toolBoxScrollContent">
+					<div id="pmi"></div>
+					<div id="mv"></div>
+					<div id="dg"></div>
+				</div>
+			</div>
+		</div>
+		<div id="settingsToolbox">
+			<div class="toolBoxTitle">Settings</div>
+			<div class="toolBoxScrollContent">
+				<div class="toolBoxContent">
+					<div>
+						<div class="toolBoxSubTitle">Camera Type</div>
+						<div onclick="setPerspectiveCamera();">
+							<input type="radio" name="cameraModeRadio" id="cameraModeRadio_perspective" checked />
+							<label for="cameraModeRadio_perspective">
+								<img src="img/camera_perspective.svg" width="20" height="20" />Perspective</label>
+						</div>
+						<div onclick="setOrthographicCamera();">
+							<input type="radio" name="cameraModeRadio" id="cameraModeRadio_orthographic" />
+							<label for="cameraModeRadio_orthographic">
+								<img src="img/camera_orthographic.svg" width="20" height="20" />Orthographic</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="toolBoxFooter"></div>
+		</div>
+
+		<div id="measurementToolbox">
+			<div class="toolBoxTitle">Measurement</div>
+			<div class="toolBoxScrollContent">
+				<div class="toolBoxContent">
+					<div id="measurement_mode">
+						<div class="toolBoxHeading"> Measurement Mode </div>
+						<div class="updatePadding" onclick="setMeasurementMode(PLMVisWeb.MeasurementMode.None, measurementModeRadio_none);">
+							<input type="radio" name="measurementModeRadio" id="measurementModeRadio_none" checked />
+							<label class="updatePadding" for="measurementModeRadio_none">
+								Off</label>
+						</div>
+						<div id="XTmeasurement">
+							<div class="updatePadding" onclick="setMeasurementMode(PLMVisWeb.MeasurementMode.Radius,measurementModeRadio_radius);">
+								<input type="radio" name="measurementModeRadio" id="measurementModeRadio_radius" />
+								<label class="updatePadding" for="measurementModeRadio_radius">
+									Radius</label>
+							</div>
+							<div class="updatePadding" onclick="setMeasurementMode(PLMVisWeb.MeasurementMode.Distance,measurementModeRadio_distance);">
+								<input type="radio" name="measurementModeRadio" id="measurementModeRadio_distance" />
+								<label class="updatePadding" for="measurementModeRadio_distance">
+									Distance</label>
+							</div>
+							<div class="updatePadding" onclick="setMeasurementMode(PLMVisWeb.MeasurementMode.Length,measurementModeRadio_length);">
+								<input type="radio" name="measurementModeRadio" id="measurementModeRadio_length" />
+								<label class="updatePadding" for="measurementModeRadio_length">
+									Length</label>
+							</div>
+							<div class="updatePadding" onclick="setMeasurementMode(PLMVisWeb.MeasurementMode.Angle,measurementModeRadio_angle);">
+								<input type="radio" name="measurementModeRadio" id="measurementModeRadio_angle" />
+								<label class="updatePadding" for="measurementModeRadio_angle">
+									Angle</label>
+							</div>
+							<div class="updatePadding" onclick="setMeasurementMode(PLMVisWeb.MeasurementMode.Area,measurementModeRadio_area);">
+								<input type="radio" name="measurementModeRadio" id="measurementModeRadio_area" />
+								<label class="updatePadding" for="measurementModeRadio_area">
+									Area</label>
+							</div>
+						</div>
+						<div class="updatePadding" onclick="setMeasurementMode(PLMVisWeb.MeasurementMode.Volume,measurementModeRadio_volume);">
+							<input type="radio" name="measurementModeRadio" id="measurementModeRadio_volume" />
+							<label class="updatePadding" for="measurementModeRadio_volume">
+								Volume</label>
+						</div>
+						<div class="updatePadding" onclick="setMeasurementMode(PLMVisWeb.MeasurementMode.BoundingBox,measurementModeRadio_boundingBox);">
+							<input type="radio" name="measurementModeRadio" id="measurementModeRadio_boundingBox" />
+							<label class="updatePadding" for="measurementModeRadio_boundingBox">
+								Bounding Box</label>
+						</div>
+						<div class="updatePadding" onclick="setMeasurementMode(PLMVisWeb.MeasurementMode.PointDistance,measurementModeRadio_point);">
+							<input type="radio" name="measurementModeRadio" id="measurementModeRadio_point" />
+							<label class="updatePadding" for="measurementModeRadio_point">
+								Point Distance</label>
+						</div>
+					</div>
+					<div id="Picking_Modes">
+						<div class="toolBoxHeading"> Picking Modes Available </div>
+						<div class="updatePadding" onclick="setPickingMode(PLMVisWeb.PickingMode.PART);">
+							<input type="checkbox" name="pickingModeRadio" id="pickingModeRadio_part" disabled />
+							<label for="pickingModeRadio_part">
+								Part</label>
+						</div>
+						<div class="updatePadding" onclick="setPickingMode(PLMVisWeb.PickingMode.FACE);">
+							<input type="checkbox" name="pickingModeRadio" id="pickingModeRadio_face" disabled />
+							<label for="pickingModeRadio_face">
+								Face</label>
+						</div>
+						<div class="updatePadding" onclick="setPickingMode(PLMVisWeb.PickingMode.EDGE);">
+							<input type="checkbox" name="pickingModeRadio" id="pickingModeRadio_edge" disabled />
+							<label for="pickingModeRadio_edge">
+								Edge</label>
+						</div>
+						<div class="updatePadding" onclick="setPickingMode(PLMVisWeb.PickingMode.VERTEX);">
+							<input type="checkbox" name="pickingModeRadio" id="pickingModeRadio_vertex" disabled />
+							<label for="pickingModeRadio_vertex">
+								Vertex</label>
+						</div>
+					</div>
+					<div id="Filter_pick">
+						<div class="toolBoxHeading"> Filter Pick</div>
+						<!-- Measurement filters should be disabled if not available... -->
+						<div class="updatePadding" id="PickFaceDiv" onclick="updatePickingMode(this);">
+							<input type="checkbox" id="Pick_face" />
+							<label for="Pick_face">Face</label>
+						</div>
+						<div class="updatePadding" id="PickEdgeDiv" onclick="updatePickingMode(this);">
+							<input type="checkbox" id="Pick_edge" />
+							<label for="Pick_edge">Edge</label>
+						</div>
+						<div class="updatePadding" id="PickVertexDiv" onclick="updatePickingMode(this);">
+							<input type="checkbox" id="Pick_vertex" />
+							<label for="Pick_vertex">Vertex</label>
+						</div>
+					</div>
+					<div id="Measurement_result">
+						<div class="toolBoxHeading"> Measurement Result </div>
+						<div id="annotationMeasurementBox">
+							<div class="toolBoxScrollContent">
+								<div id="measurementList" class="toolBoxContent"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="toolBoxFooter">
+				<button onclick="clearMeasurement();" id="clearmeasurement" class="toolBoxButton">Clear</button>
+			</div>
+		</div>
+		<div id="sectionToolbox">
+			<div class="toolBoxTitle">Sectioning</div>
+			<div class="toolBoxScrollContent">
+				<div class="toolBoxContent">
+					<div id="sectioningTools">
+						<div>
+							<div class="toolBoxHeading">Apply/Reset Direction Axis</div>
+							<ul>
+								<li class="updateFloat">
+									<input type="radio" name="sectionAxisRadio" id="sectionAxisRadio_X" onclick="setSectionDirection('X');" checked />
+									<label class="updatePadding" for="sectionAxisRadio_X">X</label>
+								</li>
+								<li class="updateFloat">
+									<input type="radio" name="sectionAxisRadio" id="sectionAxisRadio_Y" onclick="setSectionDirection('Y');" />
+									<label class="updatePadding" for="sectionAxisRadio_Y">Y</label>
+								</li>
+								<li>
+									<input type="radio" name="sectionAxisRadio" id="sectionAxisRadio_Z" onclick="setSectionDirection('Z');" />
+									<label class="updatePadding" for="sectionAxisRadio_Z">Z</label>
+								</li>
+							</ul>
+						</div>
+						<div>
+							<div class="toolBoxHeading">Visible Side</div>
+							<ul>
+								<li class="updateFloat">
+									<input type="radio" name="sectionSideRadio" id="sectionSideRadio_off" onclick="setSectionSide('*');" />
+									<label class="updatePadding" for="sectionSideRadio_off">Off</label>
+								</li>
+								<li class="updateFloat">
+									<input type="radio" name="sectionSideRadio" id="sectionSideRadio_pos" onclick="setSectionSide('+');" checked />
+									<label class="updatePadding" for="sectionSideRadio_pos">+</label>
+								</li>
+								<li class="updateFloat">
+									<input type="radio" name="sectionSideRadio" id="sectionSideRadio_neg" onclick="setSectionSide('-');" />
+									<label class="updatePadding" for="sectionSideRadio_neg">-</label>
+								</li>
+								<li>
+									<input type="radio" name="sectionSideRadio" id="sectionSideRadio_both" onclick="setSectionSide('~');" />
+									<label class="updatePadding" for="sectionSideRadio_both">BOTH</label>
+								</li>
+							</ul>
+						</div>
+						<div>
+							<div class="toolBoxHeading">Adjust Section Position</div>
+							<ul>
+								<li class="updateFloat">
+									<div id="toolbar_moveSectionNeg" class="toolbarButton toolbarButton_inactive"
+										 onclick="updateSection('-');">
+										<img src="img/section_neg.svg" title="Move Section - Negative" width="32" height="32"/>
+									</div>
+								</li>
+								<li>
+									<div id="toolbar_moveSectionPos" class="toolbarButton toolbarButton_inactive"
+										 onclick="updateSection('+');">
+										<img src="img/section_pos.svg" title="Move Section - Positive" width="32" height="32"/>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div>
+							<div class="toolBoxHeading">Controls</div>
+							<ul>
+								<li>
+									<button onclick="addSectionPlane();" class="toolBoxButton">Add</button>
+								</li>
+								<li>
+									<button onclick="removeSectionPlane();" class="toolBoxButton">Remove</button>
+								</li>
+								<li>
+									<button onclick="clearSectionPlanes();" class="toolBoxButton">Clear</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="toolBoxFooter"></div>
+		</div>
+		<div id="markupToolbox">
+			<div class="toolBoxTitle">Markup</div>
+			<div class="toolBoxScrollContent">
+				<div class="toolBoxContent">
+					<div id="markupEnable">
+						<div>
+							<div class="toolBoxHeading">Enable Markup</div>
+							<div onclick="enableMarkup(true);">
+								<input type="radio" name="markupOnRadio" id="markupOn" style="vertical-align:middle" />
+								<label for="markupOn">On</label>
+							</div>
+							<div onclick="enableMarkup(false);">
+								<input type="radio" name="markupOffRadio" id="markupOff" style="vertical-align:middle" checked />
+								<label for="markupOff">Off</label>
+							</div>
+						</div>
+					</div>
+					<div id="markupMode">
+						<div>
+							<div class="toolBoxHeading">Markup Tools</div>
+							<div onclick="setMarkupMode(PLMVisWeb.MarkupMode.Select);">
+								<input type="radio" id="markupSelect" style="vertical-align:middle" />
+								<label for="markupSelect">Select</label>
+							</div>
+							<div onclick="setMarkupMode(PLMVisWeb.MarkupMode.Line);">
+								<input type="radio" id="markupLine" style="vertical-align:middle" />
+								<label for="markupLine">Line</label>
+							</div>
+							<div onclick="setMarkupMode(PLMVisWeb.MarkupMode.Freehand);">
+								<input type="radio" id="markupFreehand" style="vertical-align:middle" />
+								<label for="markupFreehand">Freehand</label>
+							</div>
+							<div onclick="setMarkupMode(PLMVisWeb.MarkupMode.Ellipse);">
+								<input type="radio" id="markupEllipse" style="vertical-align:middle" />
+								<label for="markupEllipse">Ellipse</label>
+							</div>
+							<div onclick="setMarkupMode(PLMVisWeb.MarkupMode.Rect);">
+								<input type="radio" id="markupRect" style="vertical-align:middle" />
+								<label for="markupRect">Rect</label>
+							</div>
+							<div onclick="setMarkupMode(PLMVisWeb.MarkupMode.Text);">
+								<input type="radio" id="markupText" style="vertical-align:middle" />
+								<label for="markupText">Text</label>
+							</div>
+							<div onclick="setMarkupMode(PLMVisWeb.MarkupMode.AnchoredText);">
+								<input type="radio" id="markupAnchoredText" style="vertical-align:middle" />
+								<label for="markupAnchoredText">Anchored Text</label>
+							</div>
+						</div>
+					</div>
+					<div id="markupProperties">
+						<div>
+							<div class="toolBoxHeading">Markup Properties</div>
+							<div onclick="setMarkupProperties(1);">
+								<input type="radio" id="markupProperty1" style="vertical-align:middle" />
+								<label for="markupProp1">Black</label>
+							</div>
+							<div onclick="setMarkupProperties(2);">
+								<input type="radio" id="markupProperty2" style="vertical-align:middle" />
+								<label for="markupProp2">Red</label>
+							</div>
+							<div onclick="setMarkupProperties(3);">
+								<input type="radio" id="markupProperty3" style="vertical-align:middle" />
+								<label for="markupProp3">Blue & Green</label>
+							</div>
+						</div>
+					</div>
+					<div id="MarkupViews">
+						<div class="toolBoxHeading"> Markup Views </div>
+						<div id="markupViewBox">
+							<div id="markupviewList" class="toolBoxContent"> </div>
+							<div>
+								<ul>
+									<li>
+										<button onclick="getMarkupViewData();" id="getmarkupviewdata" class="toolBoxButton">Save Markup View</button>
+									</li>
+									<li>
+										<button onclick="clearMarkupViews();" id="clearmarkup" class="toolBoxButton">Clear</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="toolBoxFooter"></div>
+		</div>
+		<div id="serviceToolBox">
+			<div class="toolBoxTitle">Converter Service</div>
+			<div class="toolBoxScrollContent">
+				<div class="toolBoxContent">
+					<form id="converterForm" method="post" enctype="multipart/form-data">
+						<input id="fileSelector" type="file" name="file">
+						<div>
+							<div class="toolBoxHeading">Upload/Convert JT</div>
+							<ul>
+								<li id="jt">
+									<input id="fileSelectorOverride" type="button" class="toolBoxButton" value="Upload/Convert" onclick="selectFile();" />
+									<input id="fileNames" disabled />
+								</li>
+							</ul>
+						</div>
+						<div class="toolBoxHeading">Convert Options</div>
+						<ul>
+							<li>
+								<input id="lodLevel" type="text" value="0" size=1 />
+								<label>LOD level</label>
+							</li>
+							<li>
+								<input id="logLevel" type="text" value="1" size=1 />
+								<label>Log level</label>
+							</li>
+							<li>
+								<input id="enableXT" type="checkbox" />
+								<label id="fakeEnableXT" for="enableXT">XT BREP</label>
+							</li>
+							<li>
+								<input id="enablePMI" type="checkbox" checked />
+								<label id="fakeEnablePMI" for="enablePMI"></label>PMI</li>
+							<li>
+								<input id="enablePooling" type="checkbox" checked />
+								<label id="fakeEnablePooling" for="enablePooling"></label>Point Pooling</li>
+							<li>
+								<input id="enableNodeNames" type="checkbox" />
+								<label id="fakeEnableNodeNames" for="enableNodeNames"></label>Use NodeNames</li>
+							<li>
+								<input id="encodeBase64" type="checkbox" />
+								<label id="fakeEncodeBase64" for="encodeBase64"></label>Base64 Encode</li>
+						</ul>
+					</form>
+				</div>
+
+				<div id="statusRow">
+					<div>
+						<img id="spinner" src="img/spinner.gif" style="visibility:hidden">
+					</div>
+					<div id="statusText"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- THIS MUST STAY AT THE BOTTOM -->
+	<script src="js/ui.js"></script>
+	<script src="js/treeImpl.js"></script>
+	<script src="js/dimensionImpl.js"></script>
+	<script src="js/cameraImpl.js"></script>
+	<script src="js/measurementImpl.js"></script>
+	<script src="js/visibilityImpl.js"></script>
+	<script src="js/fileOpenImpl.js"></script>
+	<script src="js/initImpl.js"></script>
+	<script src="js/markupImpl.js"></script>
+	<script src="js/converterServiceImpl.js"></script>
+	<script src="js/sectionImpl.js"></script>
+	<script src="js/exploderImpl.js"></script>
+	<script src="js/impl.js"></script>
+	<script src="js/contextMenu.js"></script>
+	<script src="js/ServiceHelper.js"></script>
+	<script>
+		setTimeout(function(){
+			//changeTab(null, "plmviswebHost1"); // set default to first viewer.
+			$(window.parent.document).find('.panel_content > object').each(function ()
+			{
+				var doc = this.contentDocument;
+				var dataId = "";
+				if (doc == document || $(doc).has(document).length > 0 || $(document).has(doc).length > 0) {
+					modelPath = "./../" + $(this).attr("data-path");
+					viewerManager.setMouseNavigationModeSensitivity(PLMVisWeb.MouseMode.ROTATE,.1);
+					if($(this).attr("data-id")){
+						dataId = $(this).attr("data-id");
+					}
+					jtparentfolder = modelPath + "/../";
+					var psidVSZ = function(psidToVSZ){
+						viewerManager.fitToPsId(psidToVSZ);
+						viewerManager.setSelectionByPsId(psidToVSZ, true, true);
+					}
+					window.parent.document.jtViewerManager = {};
+					window.parent.document.psidVSZ = {};
+					window.parent.document.jtViewerManager = viewerManager;
+					window.parent.document.psidVSZ = psidVSZ;
+					openModel(modelPath, function(success, rootID){
+						if(!success){
+							return;
+						}
+						var psid = "";
+						var firstIndex = rootID.lastIndexOf(":");
+						var instanceId = rootID.substr(0, firstIndex);
+						if(dataId){
+							psid = instanceId + ":" + dataId;
+							psidVSZ(psid);
+						}
+						$("#LoadMask",window.parent.document).hide();
+						//window.parent.LoadMask.removeLoadMask();
+					});
+				}
+			});
+
+			// hide save markup for safari and touch devices
+			var parentWindow = window.parent;
+			var isSafari = parentWindow.Utils.is_safari();
+			var isTouchDevice = parentWindow.is_touch_device();
+			if (isSafari || isTouchDevice) {
+				var eleSaveMarkupPanel = document.getElementById('MarkupViews');
+				eleSaveMarkupPanel.style.display = 'none';
+			}
+
+			// hide point distance feature
+			if (isTouchDevice) {
+				var eleRadioPointDistance = document.getElementById('measurementModeRadio_point');
+				var eleDivPointDistance = eleRadioPointDistance.parentElement;
+				eleDivPointDistance.style.display = 'none';
+			}
+
+			// hide PMI section
+			var eleDivShowPMITree = document.getElementById('toolbar_showPmiTree');
+			eleDivShowPMITree.style.display = 'none';
+		},100);
+	</script>
+</body>
+
+</html>

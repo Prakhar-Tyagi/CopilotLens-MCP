@@ -1,0 +1,8 @@
+<report>
+    <column component="device" displayName="{devicename}" display="true"/>
+    <column component="devicepin" displayName="{devicepinname}" display="true"/>
+    <column component="wire" displayName="{wirename}" display="true"/>
+    <column component="connector" displayName="{connectorname}" display="false"/>
+    <column component="connectorpin" displayName="{pinname}" display="false"/>
+    <column component="custom" type="property" value="servicedescription" displayName="{devicedescription}" display="true"/>
+</report>

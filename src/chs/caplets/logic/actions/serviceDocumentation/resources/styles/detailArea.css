@@ -1,0 +1,67 @@
+#detail {
+    top: 0;
+    left: 21%;
+    width: 79%;
+    overflow: hidden;
+}
+
+.contentArea {
+    float: left;
+    background-color: white;
+}
+
+#splitter1 {
+    display: none;
+    height: 244px;
+    width: 661.4899497487437px;
+
+    overflow: auto;
+}
+
+
+#splitter2 {
+    display: none;
+    height: 244px;
+    width: 661.4899497487437px;
+}
+
+#splitter3 {
+    height: 245px;
+    width: 100%;
+    display: none;
+    background-color: #FFFFFF;
+}
+
+.detailContent {
+}
+
+.panel_content {
+}
+
+.introductionPage {
+    margin-left: 20px;
+    word-wrap: normal;
+    width: 98%;
+    height: 100%;
+    margin-right: 20px;
+}
+
+.verticalResizebar {
+    width: 4px;
+    height: 50%;
+    float: left;
+    cursor: e-resize;
+}
+
+.horizontalResizebar {
+    width: 100%;
+    height: 2px;
+    float: left;
+    cursor: n-resize;
+}
+
+.horizontalResizebar, .verticalResizebar {
+    background-color: #A8A8A8;
+    position: relative;
+    overflow: visible;
+}

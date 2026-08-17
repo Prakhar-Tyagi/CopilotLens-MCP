@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<components>
+
+    <component name="viewer" view="views/viewer" template="templates/popupTemplate.html" container="body"/>
+    <component name="contentPanel" view="views/contentpanel/contentPanel"
+               template="templates/popup/contentPanelTemplate.html"
+               container="#detail"/>
+
+    <component name="systemButtons" view="views/contentpanel/toolbar/systemToolBar"
+               template="templates/popup/systemToolBar.html"
+               container=""/>
+
+    <component name="LayoutButtons" view="views/contentpanel/toolbar/LayoutButtons"
+               template="templates/popup/systemToolBar.html"
+               container=""/>
+
+    <component name="generalButtons" view="views/contentpanel/toolbar/generalButtons"
+               template="templates/popup/generalButtons.html"
+               container=""/>
+
+    <component name="contentToolBar" view="views/contentpanel/toolbar/contentToolBar" template=""
+               container=""/>
+
+    <component name="zoomToolBar" view="views/zoomToolBarView" template="templates/zoomToolBarTemplate.html"
+               container=""/>
+
+    <component name="systemDiagramPanel" view="views/contentpanel/systemDiagramPanel"
+               template="templates/cp/systemDiagramTemplate.html"
+               container="#splitter1"/>
+
+    <component name="systemReportPanel" view="views/contentpanel/systemReportPanel"
+               template="templates/cp/systemReportTemplate.html"
+               container="#splitter3"/>
+
+    <component name="locationView" view="views/contentpanel/locationViewPanel"
+               template="templates/cp/locationViewTemplate.html"
+               container="#splitter2"/>
+
+    <component name="harnessDiagramPanel"
+               view="views/contentpanel/harnessDiagramPanel"
+               template="templates/cp/harnessDiagramPanel.html"
+               container="#splitter2"/>
+
+
+    <component name="harnessReportPanel"
+               view="views/contentpanel/harnessReportPanel"
+               template="templates/cp/capitalReportTemplate.html"
+               container="#splitter3"/>
+    <component name="faultCodePanel" view="views/contentpanel/faultCodePanel"
+               template="templates/cp/faultCodePanelTemplate.html"
+               container="#splitter3"/>
+    <component name="diagnosticPanel" view="views/contentpanel/diagnosticPanel"
+               template="templates/cp/diagnosticPanelTemplate.html"
+               container="#splitter3"/>
+    <component name="reportView" view="views/contentpanel/reportView"
+               template="templates/cp/systemReportTemplate.html"
+               container="#splitter2"/>
+
+
+    <component name="customContentPanel" view="views/contentpanel/customContentPanel"
+               template="templates/cp/customContentPanelTemplate.html"
+               container="#splitter2"/>
+
+    <component name="faceViewPanel" view="views/contentpanel/faceViewPanel"
+               template="templates/cp/faceViewPanelTemplate.html"
+               container="#splitter3"/>
+
+    <component name="renderedSVG" view="views/contentpanel/renderedSVGPanel"
+               template="templates/cp/locationViewTemplate.html"
+               container="#splitter2"/>
+
+    <component name="threeDXMLPanel" view="views/contentpanel/threeDXMLPanel"
+               template="templates/cp/ThreeDXMLTemplate.html"
+               container="#splitter2"/>
+    <component name="jt3DPanel"
+               view="views/contentpanel/threeDXMLPanel"
+               template="templates/cp/JT3DTemplate.html"
+               container="#splitter2"/>
+    <component name="ra3DPanel"
+               view="views/contentpanel/rapidAuthorCatalogPanel"
+               template="templates/cp/RA3DTemplate.html"
+               container="#splitter2"/>
+
+    <component name="designObjectPopover" view="views/p/designObjectPopoverView"
+               template="templates/p/popoverTemplate.html"
+               container="body"/>
+
+    <component name="locationViewPopover" view="views/p/locationViewPopoverView"
+               template="templates/p/popoverTemplate.html"
+               container="body"/>
+
+    <component name="xrefs" view="views/p/xrefsView"
+               template="templates/p/basicListItemTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="harnessesPopoverItemView" view="views/p/harnessPopoverView"
+               template="templates/p/basicListItemTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="attributes" view="views/p/attributesView"
+               template="templates/p/attributesTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="faceviews" view="views/p/connectorFaceviewView"
+               template="templates/p/basicListItemTemplate.html"
+               container="#popover-grouped-list"/>
+    <component name="groundSignal" view="views/p/groundSignalPopoverItem"
+               template="templates/p/basicListItemTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="threeDViews" view="views/p/threeDviewView"
+               template="templates/p/basicListItemTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="customDataViews" view="views/p/customDataView"
+               template="templates/p/multipleListItemsTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="twoDLocationViews" view="views/p/twoDLocationView"
+               template="templates/p/twoDLocationsTemplate.html"
+               container="#popover-grouped-list"/>
+
+    <component name="xRefBuilderPopover" view="views/p/c/xRefsBuilderView"
+               template="templates/p/c/configurationsTemplate.html"
+               container="#applicationArea"/>
+
+    <component name="configurationPanel" view="views/p/c/configurationsPanelView"
+               template="templates/p/c/configurationsPanelTemplate.html"
+               container="#config-popover-groupedlist .configurations"/>
+
+    <component name="packages" view="views/packagesView"
+               template="templates/popup/packagesTemplate.html"
+               container="#platformToolbar"/>
+
+    <component name="optionsPanel" view="views/p/c/optionsPanelView"
+               template="templates/p/c/optionsTemplate.html"
+               container="#config-popover-groupedlist .options"/>
+
+
+    <component name="wires"
+               view="views/designobjects/designObjectsSection"
+               template="templates/wiresViewsTemplate.html"
+               container="#platform-grouped-list>div>.WiresTitle"/>
+
+    <component name="inlines"
+               view="views/designobjects/designObjectsSection"
+               template="templates/wiresViewsTemplate.html"
+               container="#platform-grouped-list>div>.InlinesTitle"/>
+
+    <component name="grounds"
+               view="views/designobjects/designObjectsSection"
+               template="templates/wiresViewsTemplate.html"
+               container="#platform-grouped-list>div>.GroundsTitle"/>
+
+    <component name="devices"
+               view="views/designobjects/designObjectsSection"
+               template="templates/wiresViewsTemplate.html"
+               container="#platform-grouped-list>div>.DevicesTitle"/>
+
+
+    <component name="connectors"
+               view="views/designobjects/designObjectsSection"
+               template="templates/wiresViewsTemplate.html"
+               container="#platform-grouped-list>div>.ConnectorTitle"/>
+
+    <component name="multicores"
+               view="views/designobjects/designObjectsSection"
+               template="templates/wiresViewsTemplate.html"
+               container="#platform-grouped-list>div>.MulticoresTitle"/>
+
+    <component name="splices"
+               view="views/designobjects/designObjectsSection"
+               template="templates/wiresViewsTemplate.html"
+               container="#platform-grouped-list>div>.SplicesTitle"/>
+
+
+</components>

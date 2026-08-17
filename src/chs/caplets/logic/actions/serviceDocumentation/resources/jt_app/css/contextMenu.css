@@ -1,0 +1,79 @@
+/* � 2016 SIEMENS PRODUCT LIFECYCLE MANAGEMENT SOFTWARE INC */
+	#contextMenu {
+		display: none;
+		border: 1px black solid;
+		border-bottom: 1px black solid;
+    background: grey;
+		position: absolute;
+		z-index: 100;
+	}
+
+	#contextMenu input[type=button] {
+		height: 40px;
+		width: 150px;
+    background: none;
+		display: block;
+		vertical-align: middle;
+		text-align: center;
+		padding: 10px;
+		border: 1px black solid;
+	}
+
+	#contextMenu .subMenu {
+		display: none;
+		position: relative;
+		left: 150px;
+		top: -40px;
+		height: 0px;
+	}
+
+	#contextMenu .menuButton:hover .subMenu{
+		display: block;
+	}
+
+	#contextMenu input[type=button]:hover {
+    background: white;
+	}
+
+	#contextMenu .onObject {
+		display: none;
+	}
+
+	#contextMenu #isOnObject {
+		display: none;
+	}
+
+	#contextMenu .OnPmi {
+		display: none;
+	}
+
+	#contextMenu #isOnPmi {
+		display: none;
+	}
+
+	#contextMenu #isOnPmi:checked ~ .emptySpace {
+		display: none;
+	}
+
+	#contextMenu #isOnObject:checked ~ .emptySpace {
+		display: none;
+	}
+
+	#contextMenu #isOnPmi:checked ~ .OnPmi {
+		display: block;
+	}
+
+	#contextMenu #isOnObject:checked ~ .onObject {
+		display: block;
+	}
+
+	#contextMenu .menuItemHidden {
+		display: none !important;
+	}
+
+	#contextMenu input[type="button"]:disabled {
+		font-style: italic;
+		color: white;
+		background: dimGrey;
+	}
+

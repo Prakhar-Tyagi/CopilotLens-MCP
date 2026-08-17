@@ -1,0 +1,77 @@
+<!--
+* This material contains trade secrets or otherwise confidential
+* information owned by Siemens Industry Software Inc. or its
+* affiliates (collectively, “SISW”), or its licensors. Access
+* to and use of this information is strictly limited as set
+* forth in the Customer’s applicable agreements with SISW.  ​
+
+Copyright 2025 Siemens
+-->
+
+<!--  INFO: This file controls the columns of the face view table when a user clicks on a connector within a Capital Explorer application. Please note that the starting point is the cavity selected for the specific connector.
+The following tags can be used to return information within the table. Attributes, properties, and queries are supported. Please note that query expressions and query plugins are also supported.
+
+<attribute name="attributeName" displayName="Name"/>
+<property name="properyName" displayName="Property"/>
+<query name="queryName" displayName="Query Result"/>
+-->
+
+<cavity>
+    <attribute name="Name" displayName="Cavity"/>
+
+    <!-- EXAMPLE: To obtain the terminal part number from the cavity/pin, a query can be used. Please note that to populate this column, the corresponding harness design(s) must be included in the package scope.-->
+    <!-- <query name="GetTerminalPNFromConnectorPin" displayName="Terminal Part Number"/> -->
+
+    <wire>
+
+        <attribute name="Name" displayName="Wire Name"/>
+        <!-- EXAMPLE: To display a Signal property on the wire.-->
+        <!-- <property name="Signal" displayName="Signal" /> -->
+
+        <attribute name="PartNumber" displayName="Wire Part Number"/>
+        <attribute name="WireSpec" displayName="Wire Spec"/>
+        <attribute name="WireColor" displayName="Wire Color Code"/>
+        <attribute name="WireLength" displayName="Wire Length"/>
+
+        <!-- EXAMPLE: The Terminal Part attribute defined within the connections tab of a wire object -->
+        <!-- <attribute name="TerminalPartSpecEnd1" displayName="End1 Terminal Part Spec"/> -->
+        <!-- <attribute name="TerminalPartSpecEnd2" displayName="End2 Terminal Part Spec"/> -->
+
+
+        <!-- EXAMPLE: The related multicore of a wire object -->
+        <!--
+        <multicore>
+            <attribute name="Name" displayName="Multicore"/>
+        </multicore>
+        -->
+
+        <!-- EXAMPLE: The related overbraid of a wire object -->
+        <!--
+        <overbraid>
+            <attribute name="Name" displayName="Overbraid"/>
+            <attribute name="PartNumber" displayName="Overbraid Part Number"/>
+        </overbraid>
+        -->
+
+        <wireendexpression>
+            <!-- INFO: The following <start> section retrieves data from End1 of the wire -->
+            <start>
+                <pin>
+                    <!-- INFO: This section is equivalent to the initial <cavity> tag at the top of this configuration file -->
+                </pin>
+                <connector>
+                </connector>
+            </start>
+
+            <!--  INFO: The following <end> section retrieves data from End2 of the wire -->
+            <end>
+                <pin>
+                    <attribute name="Name" displayName="End2 Cavity"/>
+                </pin>
+                <connector>
+                    <attribute name="Name" displayName="End2 Connector"/>
+                </connector>
+            </end>
+        </wireendexpression>
+    </wire>
+</cavity>

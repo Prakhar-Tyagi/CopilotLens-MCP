@@ -1,0 +1,499 @@
+* {
+    font-family: 'Segoe UI', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Tahoma, sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+html, body, div {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+}
+
+.divForResize {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5000000;
+    opacity: 0.3;
+}
+
+.systemReportPanel div {
+    height: auto;
+    text-align: left;
+    /*-ms-touch-action: pan-x pan-y;*/
+}
+
+div.highlight {
+    background: #bfd7e1;
+}
+
+div.popoutListItemSelected {
+    background: #d9e7ed;
+}
+
+g {
+    cursor: pointer;
+}
+
+/* These are applied for Application area */
+/* -------------------Start ------------------*/
+.iesdApplication {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* ------------------ End -----------------------*/
+
+/* These are applied for Navigation area */
+/* ------------------ Start ---------------------*/
+#navigationArea {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 21%;
+}
+
+/* This can be applied for Navigation area contect and also detail area */
+#detailContent, #navigationContent {
+    background-color: #ffffff;
+    margin-top: 65px;
+    margin-bottom: 33px;
+    overflow: hidden;
+}
+
+/* --------------------- End ---------------------*/
+
+/* These are Properties that can be used commonly */
+/* ---------------- Start ------------------------- */
+/* Panel , Toolbar,resizebar and popup */
+.iesdPanel,
+.iesdToolbar,
+.iesdResizeBar,
+.iesdPopup {
+    background-color: #ffffff;
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.navigation-panel>div {
+    overflow: auto;
+}
+
+/* These are properties applied for all the popout Icon */
+.inlinePopout {
+    background-image: url('../images/inlinePopout.png');
+    background-attachment: center center;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* ------------------- End ---------------------------*/
+
+/* These are applied for detailArea */
+/* --------------------- Start ------------------------*/
+#detailArea {
+    top: 0;
+    left: 21%;
+    width: 79%;
+}
+
+/* ----------------------- End ------------------------ */
+
+/* Following are Properties used for Resizebar */
+/* --------------------- Start --------------------------- */
+
+/* It is used for navigation resize bar */
+#detailNavigationResizeBar {
+    left: 21%;
+    cursor: w-resize;
+    overflow: visible;
+}
+
+#horizontalResizebar > .resize-icon,
+#verticalResizebar > .resize-icon,
+#detailNavigationResizeBar > .resize-icon {
+    position: absolute;
+    border: 1px solid #6e6e6e;
+    border-radius: 5px;
+    background: #dedede;
+    z-index: 999;
+}
+
+#verticalResizebar > .resize-icon,
+#detailNavigationResizeBar > .resize-icon {
+    width: 7px;
+    height: 50px;
+    left: -3px;
+    top: calc(50% - 10px);
+    cursor: col-resize;
+}
+
+#horizontalResizebar > .resize-icon {
+    width: 50px;
+    height: 8px;
+    left: calc(50% - 25px);
+    top: -3px;
+    cursor: row-resize;
+}
+
+#horizontalResizebar > .resize-icon::before,
+#verticalResizebar > .resize-icon::before,
+#detailNavigationResizeBar > .resize-icon::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: 700;
+    color: #6e6e6e;
+    pointer-events: none;
+}
+
+#verticalResizebar > .resize-icon::before,
+#detailNavigationResizeBar > .resize-icon::before {
+    content: '\22EE';
+}
+
+#horizontalResizebar > .resize-icon::before {
+    content: '\2026';
+    top: -12px;
+    left: 0px;
+    position: relative;
+}
+
+#verticalResizebar.horizontalResizebar > .resize-icon {
+    width: 50px;
+    height: 8px;
+    left: calc(50% - 25px);
+    top: -3px;
+    cursor: row-resize;
+}
+
+#verticalResizebar.horizontalResizebar > .resize-icon::before {
+    content: '\2026';
+    top: -12px;
+    left: 0px;
+    position: relative;
+}
+
+/* It is used for changing the Navigation resize bar color and size and height */
+.iesdResizeBar {
+    background-color: rgba(0, 0, 0, 0);
+    width: 2px;
+    border-radius: 2px;
+    background-color: #a8a8a8;;
+    top: 0;
+    bottom: 33px;
+    margin-bottom: 33px;
+    margin-top: 0;
+}
+
+/* This class is used to apply at the time of collapsing the Navigation resize bar */
+.collapse {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background-image: url("../images/sliderNotch.png");
+    background-position: center center;
+    margin-left: -5px;
+    position: fixed;
+    color: transparent;
+}
+
+/* This class is used to apply at the time of expanding the Navigation resize bar */
+.expand {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background-image: url("../images/sliderNotch.png");
+    position: fixed;
+    color: transparent;
+}
+
+.navigation-panel {
+    margin-top: 0;
+    overflow: auto;
+    height: 89%;
+}
+
+ol.iesdIndex>li {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+ol.iesdIndex>li>* {
+    text-transform: none;
+}
+
+.systemReportPanel {
+    overflow: auto;
+    /*-ms-touch-action: pan-x pan-y;*/
+}
+
+.panelBottomToolbar {
+    z-index: 1;
+    position: absolute;
+    width: 300px;
+}
+
+.splitPanel_bottomToolBar_mouseEnter {
+    height: 40px;
+}
+
+.splitPanel_bottomToolBar_mouseLeave {
+    height: 0;
+}
+
+.LoadMask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-image: url('../images/loading.gif');
+    padding: 5px 10px 5px 25px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: wait; /*border: 1px solid #a3bad9;*/
+    /*background-color: #101014;*/
+    color: #222222;
+}
+
+.LoadErrorMask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-image: url('../images/cross.png');
+    padding: 5px 10px 5px 25px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: wait; /*border: 1px solid #a3bad9;*/
+    /*background-color: #101014;*/
+    color: #222222;
+}
+
+.divForResize {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5000000;
+    opacity: 0.3; /*background-color: #101014;*/
+
+}
+
+.iesdLoginPopupContent {
+    position: absolute;
+    top: 24px;
+    height: 130px;
+    width: 100%;
+    background-color: gray;
+    overflow-y: auto;
+}
+
+.iesdLoginPopupFooter {
+    position: absolute;
+    top: 146px;
+    height: 30px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.login_statusmsg {
+    color: red;
+}
+
+#login_statusMsg {
+    color: red;
+    padding-left: 14px;
+}
+
+#applet {
+    width: 0;
+    height: 0;
+}
+
+.display_none {
+    display: none;
+}
+
+.systemFaceView {
+    height: 50%;
+    width: 100%;
+}
+
+.cavityChartTable {
+    height: 50%;
+    width: 100%;
+    overflow: auto;
+    /*-ms-touch-action: pan-x pan-y;*/
+}
+
+.faceViewConnInfo {
+    padding-left: 20px;
+}
+
+#deployJavaPlugin {
+    display: none;
+}
+
+/*CSS for 2022 Siemens Guidelines Standard ScrollBar - Add .standard-scroll-area*/
+
+.standard-scroll-area::-webkit-scrollbar-track {
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+    background: #0000000A 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+}
+
+.standard-scroll-area::-webkit-scrollbar {
+    width: 16px;
+    background: #0000000A 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    padding: 3px;
+}
+
+.standard-scroll-area::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    /*-webkit-box-shadow: inset 0 0 6px #0000004D;*/
+    background: #0000004D 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    border: 3px solid transparent;
+    opacity: 25%;
+}
+
+
+.standard-scroll-area::-webkit-scrollbar-track {
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+    background: #0000000A 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    padding: 3px;
+}
+
+.standard-scroll-area::-webkit-scrollbar-thumb:hover {
+    background: #00000080 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    opacity: 50%;
+}
+
+.standard-scroll-area::-webkit-scrollbar-button {
+    background: #0000000A 0% 0% no-repeat padding-box;
+    background-position: center;
+    height: 16px;
+    width: 16px;
+}
+
+.standard-scroll-area::-webkit-scrollbar-button:hover {
+    background-color: #d2d2d2;
+    border-color: #505050 transparent transparent transparent;
+}
+
+.standard-scroll-area::-webkit-scrollbar-button:active {
+    background-color: #787878;
+}
+
+.standard-scroll-area::-webkit-scrollbar-button:vertical:increment {
+    background-image: url("../images/scrollDown.png");
+    background-size: 8px;
+}
+
+.standard-scroll-area::-webkit-scrollbar-button:vertical:decrement {
+    background-image: url("../images/scrollUp.png");
+    background-size: 8px;
+}
+
+/*CSS for 2022 Siemens Guidelines Button - Add .standard-scroll-area*/
+
+.aw-button {
+    margin: 1px 0px 1px 10px;
+    height: 24px;
+    padding: 2px 10px;
+    border-radius: 2px;
+    width: auto;
+    text-align: center;
+    font: normal normal 600 13px/16px Segoe UI;
+    letter-spacing: 0px;
+    cursor: pointer;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 170px;
+    text-overflow: ellipsis;
+    font-family: 'Segoe UI', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Tahoma, sans-serif;
+}
+
+.aw-button-contrast {
+    background: #005F87 0% 0% no-repeat padding-box;
+    border: 1px solid #003951;
+    box-shadow: 0px 1px 2px #0000004D;
+    color: #ffff;
+}
+
+.aw-button-base {
+    border: 1px solid #005F87;
+    color: #005F87;
+    box-shadow: 0px 1px 2px #0000004D;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+
+.aw-button-base:not(:disabled):hover {
+    background: #D9E7ED 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #0000004D;
+    border-radius: 2px;
+}
+
+.aw-button-base:not(:disabled):active {
+    background: #BFD7E1 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 2px #0000004D;
+    border-radius: 2px;
+    border: 1px solid #003950;
+}
+
+.aw-button[disabled] {
+    color: #00000073;
+    cursor: context-menu;
+    text-align: center;
+    font: normal normal 600 13px/16px Segoe UI;
+    letter-spacing: 0px;
+    background: #00000012 0% 0% no-repeat padding-box;
+    border: 1px solid #00000073;
+    border-radius: 2px;
+    font-weight: normal;
+    font-family: 'Segoe UI', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Tahoma, sans-serif;
+    height: 24px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.aw-button-contrast:not(:disabled):hover {
+    background: #004C6C 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #0000004D;
+    border-radius: 2px;
+    border: 1px solid #003950;
+}
+
+.aw-button-contrast:not(:disabled):active {
+    background: #003950 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 2px #0000004D;
+    border-radius: 2px;
+    border: 1px solid #003950;
+}

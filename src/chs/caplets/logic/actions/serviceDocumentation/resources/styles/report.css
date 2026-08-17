@@ -1,0 +1,246 @@
+/* All these are related to the Reports */
+/* --------------------------- Start -------------------------------*/
+
+.reportTableStyle *, .faultTableStyle * {
+    /*font-family: Consolas, Courier, monospaced;*/
+    font-size: 12px;
+}
+
+.reportTableStyle td, .faultTableStyle td {
+    text-align: left;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    padding: 2px !important;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+}
+
+table.reportTableStyle td, table.faultTableStyle td {
+    text-align: left;
+    vertical-align: top;
+    border-collapse: collapse;
+    border: 1px solid black;
+    padding: 3px;
+}
+
+.cavityChartTable .reportTableStyle thead tr {
+    font-weight: bold;
+    text-wrap: none;
+    background: #eee;
+    vertical-align: middle;
+    border-bottom: 2px solid black;
+    background-color: hsl(214, 39%, 35%);
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.reportTableStyle, .faultTableStyle, .commonFaultTableStyle {
+    width: 98%;
+    margin: 15px;
+    border-collapse: collapse;
+    border-left: 1px solid #000000;
+}
+
+.reportTableStyle tr.header td, .faultTableStyle tr.header td, .commonFaultTableStyle tr.commonFaultheader td {
+    background-color: white;
+    padding: 4px !important;
+}
+
+.reportTableStyle td td {
+    border: 0 solid white;
+}
+
+table.reporterContainer {
+    background-color: #FFFFFF;
+    width: 99%;
+    border-style: solid;
+    border-width: 0;
+}
+
+table.reportTableStyle {
+    margin: 20px;
+    border-collapse: collapse;
+    width: 95%;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.reportTableStyle {
+    width: 98%;
+    margin: 5px;
+    border-left: 1px solid #000000;
+}
+
+table.reporterContainer td {
+    font-weight: bold;
+    align: left;
+}
+
+.reportTableStyle tr:nth-child(odd) {
+    background-color: rgba(230, 230, 240, 1);
+}
+
+.reportTableStyle tr:nth-child(even) {
+    background-color: #fff;
+}
+
+.reportTableStyle th {
+    background-color: hsl(214, 39%, 35%);
+    text-align: center;
+}
+
+.top_row_center {
+    vertical-align: middle;
+    text-align: center;
+    width: 49%;
+}
+
+.top_row_left {
+    vertical-align: middle;
+    text-align: left;
+    width: 30%;
+}
+
+.top_row_right {
+    vertical-align: middle;
+    text-align: left;
+    width: 20%;
+}
+
+table.top_row_center_table {
+    border: 0;
+    width: 100%;
+}
+
+table.top_row_center_table b, p, i {
+    color: green;
+}
+
+table.report_module_table {
+    width: 99%;
+}
+
+.report_module_table_header {
+    background-color: #CCDDFF;
+}
+
+.report_module_table_row_bold {
+    background-color: #E4E4E4;
+}
+
+.report_module_table_row_light {
+
+}
+
+.report_module_table_row_col {
+}
+
+.result_set_header {
+    border-top: black thick solid;
+    background-color: #efefef;
+}
+
+.header_font {
+    font-weight: bold;
+}
+
+.header {
+    background-color: #CCDDFF;
+}
+
+.top_result_header {
+    vertical-align: top;
+    text-align: left;
+    padding: 0;
+    font-weight: bold;
+}
+
+.top_header {
+    border: 0;
+    width: 99%;
+}
+
+table.reportTableStyle td.clickable-multivalued:hover, table.faultTableStyle td.clickable-multivalued:hover {
+    color: red !important;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+table.reportTableStyle span.clickable-span:hover, table.faultTableStyle span.clickable-span:hover {
+    color: red !important;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/*table.reportTableStyle tr:nth-child(odd) td,*/
+
+/*table.reportTableStyle tr:nth-child(even) td,*/
+table.faultTableStyle tr:nth-child(even)
+td {
+    background-color: #fff;
+}
+
+.row0 {
+    background-color: rgba(240, 255, 240, 1);
+}
+
+.row1 {
+    background-color: #fff;
+}
+
+table.reportTableStyle tr td.header_font {
+    display: none;
+}
+
+table.reportTableStyle td.highlighted, span.highlighted {
+    background: -moz-linear-gradient(top, #eeee99 0%, #dddd99 100%) !important; /* firefox */
+
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeee99), color-stop(100%, #dddd99)) !important;
+    background-color: #ee9 !important; /* 	background-color: purple !important; */
+
+}
+
+table.reportTableStyle td.hoverHighlight, span.hoverHighlight {
+    background: -moz-linear-gradient(top, orange 0%, orange 100%) !important; /* firefox */
+
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, orange), color-stop(100%, orange)) !important;
+    background-color: orange !important; /* 	background-color: purple !important; */
+
+}
+
+table.reportTableStyle td.clickable-column:hover, table.faultTableStyle td.clickable-column:hover {
+    color: red !important;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.symbol {
+    -moz-border-radius-bottomleft: 0.5px;
+    -moz-border-radius-bottomright: 0.5px;
+    -moz-border-radius-topleft: 0.5px;
+    -moz-border-radius-topright: 0.5px;
+    border: 1px solid black;
+    height: 49%;
+    margin-bottom: 10px;
+    width: 99%;
+    cursor: text;
+}
+
+#cavityTable {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: scroll;
+}
+
+.nestedTableRow .reportTableStyle {
+    border: 0;
+}
+
+/* ------------------------------------ End ------------------------------------ */

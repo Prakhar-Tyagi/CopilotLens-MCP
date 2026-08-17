@@ -1,0 +1,18 @@
+<% if(items.length){ %>
+<div class="listPanel <%=className%> auto-list">
+	<div class="titlebar auto-list-header">
+		<span class="headingCount">
+			<span class="headingCountNumber auto-item-count-label"><%=items.length%></span>
+		</span>
+		<span class="headerText auto-title-label"><%=title%></span>
+	</div>
+	<% _.each(items, function(item) {%>
+	<div class="listItem auto-item" data-id="<%=item.cid%>" <% if(!expand){ %> style="display: none;" <%}%>>
+		<span class="mainText">
+			<span class="attributeName auto-name-label"><%=item.get("name")%></span>
+			<span class="attributeValue auto-value-label"><%=item.get("value")%></span>
+		</span>
+	</div>
+	<% });%>
+</div>
+<% } %>

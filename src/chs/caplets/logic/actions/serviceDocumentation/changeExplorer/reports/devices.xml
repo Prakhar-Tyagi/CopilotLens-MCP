@@ -1,0 +1,25 @@
+<report name="Devices" summary-included="true">
+    <tables name="Devices"
+            apply-to="device"
+            types="modified added removed unmodified"
+            sorted-by="{Name}">
+        <!--
+            Allowed column types - attribute, property, computed
+
+            Accepted 'computed' types - DerivativesAndModules
+        -->
+        <column type="attribute" key="Name" name="{Name}"/>
+        <column type="attribute" key="TypeCode" name="{Type Code}"/>
+        <column type="attribute" key="PartNumber" name="{Part Number}"/>
+        <column type="attribute" key="ShortDescription" name="{Short Description}"/>
+        <column type="attribute" key="ColorCode" name="{Color Code}"/>
+        <column type="attribute" key="MaterialCode" name="{Material Code}"/>
+        <column type="attribute" key="OptionExpression" name="{Options}"/>
+        <column type="computed" key="DerivativesAndModules" name="{Derivatives / Modules}"/>
+        <column type="attribute" key="Weight" name="{Weight}" numerical-precision="0.01"/>
+        <column type="computed" key="Bundle" name="{Bundle}"/>
+        <column type="computed" key="AnchorNodeOffset" name="{Anchor node offset}"/>
+        <column type="computed" key="AnchorNode" name="{Anchor Node}"/>
+        <column type="computed" key="AssociatedComponents" name="{Associated Components}"/>
+    </tables>
+</report>

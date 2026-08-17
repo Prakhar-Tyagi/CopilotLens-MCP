@@ -1,0 +1,203 @@
+/*
+    Defines default font size for table cells except headers.
+*/
+.grid-ui * {
+    font-size: 12px;
+    box-sizing: content-box;
+}
+
+/*
+    Defines how table expands horizontally when content does not fit into available width.
+    text left aligned by default for table cells (except headers)
+    table background is transparent
+*/
+table.grid-ui {
+    max-width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-collapse: collapse;
+    text-align: left;
+    background: transparent;
+}
+
+/*
+    for seach text box
+*/
+.grid-ui td input {
+    font-size: 14px;
+    display: block;
+    margin: 0 auto;
+    min-width: 60px;
+    max-width: 90%;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid hsl(214, 39%, 30%);
+}
+
+.grid-ui td input:focus {
+    outline: none;
+}
+
+
+/*
+    table headers.
+    text is not wrapped to next line
+*/
+table.grid-ui th {
+    background: whitesmoke;
+    padding: 10px 8px;
+    border: 1px solid hsl(214, 39%, 30%);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/*
+    table header text
+*/
+table.grid-ui th > span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*
+    mouse hover effect for rows
+*/
+table.grid-ui tr:hover td {
+    background: #eed none;
+    color: #000000;
+}
+
+/*
+    table cell specific properties
+    text is not wrapped to next line
+*/
+table.grid-ui td {
+    padding: 9px 8px;
+    background: white;
+    border: 1px solid hsl(214, 39%, 30%);
+    white-space: nowrap;
+}
+
+/*
+    CSS for interactive table cell
+*/
+table.grid-ui td[data-objectId^="UID"]:hover {
+    color: red !important;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/*
+    summary-grid table specific
+*/
+.summary-grid {
+    border: 1px solid hsl(214, 39%, 30%) !important;
+}
+
+.summary-grid td {
+    border-bottom: none !important;
+    border-top: none !important;
+    border-left: 1px solid #2E486A !important;
+    border-right: 1px solid #2E486A !important;
+    border-collapse: collapse !important;
+}
+
+.summary-grid .summary-inner {
+    margin: 0px;
+    width: 100%;
+}
+
+table.grid-ui.summary-inner th {
+    border-top: 1px solid #2E486A !important;
+    border-bottom: 1px solid #2E486A !important;
+}
+
+.grid-ui.summary-grid tr td:nth-child(1) {
+    border: none !important;
+}
+
+.summary-inner th {
+    border: 0px !important;
+}
+
+table.summary-inner th > span {
+    font-size: 12px !important;
+}
+
+.inner-parent {
+    padding: 0px !important;
+    vertical-align: top;
+}
+
+.section-header {
+    text-align: left;
+    max-height: 16px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.section-header span:hover {
+    cursor: pointer;
+}
+
+.change-header {
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.tables {
+    height: auto;
+    width: auto;
+    overflow: auto;
+    margin-top: 48px;
+    max-height: 90%;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section, .change-table, .section-header, .change-reports, .grid-ui {
+    height: auto;
+    width: auto;
+    overflow: visible;
+}
+
+.change-table {
+    margin-left: 10px;
+}
+
+/*
+    modified cell background color
+*/
+.grid-ui td.modified {
+    background-color: orange !important;
+}
+
+.grid-ui span.filtered {
+    background-color: yellow !important;
+}
+
+/*
+    expand and collapse icon images
+*/
+.expanded-section {
+    background-image: url("../images/ico_arrow_down.gif");
+}
+
+.collapsed-section {
+    background-image: url("../images/ico_arrow_right.gif");
+}
+
+/*
+    line decoration for paired cells of modified and unmodified tables
+*/
+table.grid-ui td.mergedCellTop {
+    border-bottom: 1px dashed lightgrey !important;
+}
+
+table.grid-ui td.mergedCellBottom {
+    border-top: 1px dashed lightgrey !important;
+}

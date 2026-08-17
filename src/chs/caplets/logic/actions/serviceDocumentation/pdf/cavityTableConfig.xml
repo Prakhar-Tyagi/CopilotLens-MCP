@@ -1,0 +1,90 @@
+<!--
+* Copyright 2011 Mentor Graphics Corporation
+* All Rights Reserved
+* THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY
+* INFORMATION WHICH IS THE PROPERTY OF MENTOR
+* GRAPHICS CORPORATION OR ITS LICENSORS AND IS
+* SUBJECT TO LICENSE TERMS.
+-->
+<cavity>
+    <!-- An attribute Named "Name" -->
+    <attribute displayName="Name" name="Name"/>    
+    <attribute displayName="Terminal Part Number" name="PartNumber" />
+	<property displayName="V-Min" name="V-Min" />
+
+    <!-- query on connector pin, the query can be defined in system data or as a plugin.
+    name of the query should be provided.
+    -->
+    <!--
+	<query displayName="Column name" name="queryName"/>
+	-->
+	
+	<!-- Attributes/Properties on the pin connected to cavity
+	<attribute displayName="Terminal Part Number" name="PartNumber" connected="true"/>
+	-->
+    <!-- A property Named Signal
+    <property displayName="Signal" name="Signal"/>-->
+
+    <wire> <!-- attributes and properties related to the wire connected to the pin-->
+        <attribute displayName="Name" name="Name"/>
+
+        <!-- A property Named Signal
+        <property displayName="Signal" name="Signal"/>
+        -->
+		<!--Multicore related to the wire
+		<multicore>
+            <attribute displayName="Multicore Name" name="Name"/>
+		</multicore>
+		-->
+		<!--Overbraid related to the wire
+		<overbraid>
+            <attribute displayName="Overbraid Name" name="Name"/>
+			<attribute displayName="Overbraid PartNumber" name="PartNumber"/>
+		</overbraid>
+		-->
+        <attribute displayName="Wire Part Number" name="PartNumber"/>
+        <attribute displayName="Wire CSA " name="WireCSA"/>
+        <attribute displayName="Wire Spec" name="WireSpec"/>
+        <attribute displayName="Wire Material description" name="MaterialDescription"/>
+        <attribute displayName="Wire Color Description" name="ColorDescription"/>
+        <attribute displayName="Wire Length" name="WireLength"/>
+
+        <wireendexpression> <!-- expressions that are applicate to the ends of wires -->
+            <!-- Start of the Wire -->
+            <start>
+				<!-- There is no component on start end of the wire, because it is always a connector 
+				<component>
+                    <property displayName="prop start component" name="prop"/>
+                </component>
+				-->
+				<!-- Plugs, Jacks, inlines at start-->
+                <!--
+                <connector>
+                    <property displayName="Class" name="_Class"/>
+                </connector>
+		-->	
+            </start>
+            <!-- End of the Wire -->
+            <end>
+                <!-- Devices, splices  
+				
+				<component>
+                    <property displayName="prop end component" name="prop"/>
+                </component>
+				-->
+                <pin>
+                    <attribute displayName="End2 Terminal Part Number" name="PartNumber" />
+                    <attribute displayName="End2 Pin Name" name="Name"/>
+					<!-- Attributes/Properties on the pin connected to the end 2 pin
+					<attribute displayName="Terminal Part Number" name="PartNumber" connected="true"/>
+					-->					
+                </pin>
+
+                <!-- Plugs, Jacks, inlines at end-->
+                <connector>
+					<attribute displayName="End2 Connector" name="Name"/>
+                </connector>			
+            </end>
+        </wireendexpression>
+    </wire>
+</cavity>

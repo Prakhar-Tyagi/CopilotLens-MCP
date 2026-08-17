@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <!--
+    ## Application specific configuration
+    -->
+    <auto-zoom-on-click>true</auto-zoom-on-click>
+    <text-delimiter-for-interactivity>:</text-delimiter-for-interactivity>
+    <!-- Uncomment the following line to save Excel in XLSX format. -->
+    <!-- <save-excel-as>xlsx</save-excel-as> -->
+    <rows-per-table-page>100</rows-per-table-page>
+
+
+    <!--
+    ## Data specific configuration
+    -->
+    <addition-color>green</addition-color>
+    <deletion-color>red</deletion-color>
+    <modification-color>orange</modification-color>
+    <highlight-width-factor>1.25</highlight-width-factor>
+
+    <!-- Mark following flag 'false' to not highlight the modified compenents in report section -->
+    <highlight-modified-report-table-cells>true</highlight-modified-report-table-cells>
+
+    <!-- Mark following flag 'false' to not highlight the modified components in tables of SVG Diagrams -->
+    <highlight-modified-diagram-table-cells>true</highlight-modified-diagram-table-cells>
+
+</config>

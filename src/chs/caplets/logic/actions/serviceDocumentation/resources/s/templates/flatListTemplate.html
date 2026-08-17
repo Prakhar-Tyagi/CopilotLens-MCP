@@ -1,0 +1,28 @@
+<% if(items.length){ %>
+
+<div class="titlebar auto-list-header">
+	<span class="headingCount" style="display: block; ">
+		<span class="headingCountNumber auto-item-count-label"><%=items.length%></span>
+	</span>
+	<span class="headerText auto-title-label"><%=Utils.translate(title)%></span>
+</div>
+<div class="list-content" <% if(!expand){ %> style="display: none;" <%}%>>
+<% _.each(items, function(item) {%>
+<div class="listItem auto-item" data-id="<%=item.id%>"
+     base-id="<%=item.get('systemId')%>">
+    <span class="mainText auto-title-label" style="white-space: pre"><%=Utils.translate(item.get("mainText"))%></span>
+    <span class="collapseAll auto-collapse-list-button"
+          title="<%=mentor.publisher.languageTranslator.localize('clicktocollapse')%>">[-]</span><span
+        class="popUp"></span>
+    <br>
+    <% if(item.get("thumbNailPath")){ %>
+    <img class="auto-thumbnail" src='<%=item.get("thumbNailPath")%>'>
+    <% } %>
+
+    <% if(item.get("subText")){ %>
+    <span class="subText auto-subtitle-label"><%=Utils.translate(item.get("subText"))%></span>
+    <% } %>
+</div>
+<% });%>
+</div>
+<% } %>

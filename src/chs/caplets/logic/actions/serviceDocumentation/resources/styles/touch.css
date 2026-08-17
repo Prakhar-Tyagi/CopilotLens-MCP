@@ -1,0 +1,65 @@
+* {
+    -ms-scroll-chaining: none;
+    touch-action: pan-x pan-y;
+    -ms-touch-action: pan-x pan-y;
+    -ms-content-zooming: none;
+}
+
+html, body {
+    overscroll-behavior: none;
+}
+
+.toolbar, .lisPanel {
+    touch-action: pan-y !important;
+    -ms-touch-select: none !important;
+    -ms-touch-action: pan-y !important;
+}
+
+#navigation {
+    touch-action: none !important;
+    -ms-touch-action: none !important;
+}
+
+.zoomable-content-area {
+    overflow: auto !important;
+    touch-action: none !important;
+    overscroll-behavior: none;
+}
+
+.faultTableStyle, .commonFaultTableStyle {
+    touch-action: pan-x pan-y !important;
+    -ms-touch-action: pan-x pan-y !important;
+}
+
+.systemReportPanel div {
+    touch-action: pan-x pan-y !important;
+    -ms-touch-action: pan-x pan-y !important;
+}
+
+.systemReportPanel {
+    touch-action: pan-x pan-y !important;
+    -ms-touch-action: pan-x pan-y !important;
+}
+
+.cavityChartTable {
+    touch-action: pan-x pan-y !important;
+    -ms-touch-action: pan-x pan-y !important;
+}
+
+input {
+    touch-select: grippers;
+    -ms-touch-select: grippers;
+}
+
+@media (hover: none) {
+    /*    .renderConnectivityBtn {
+            display: none;
+        }*/
+    input[type="text"]::-ms-clear {
+        display: none;
+    }
+
+    .LoadMask {
+        touch-action: none !important;
+    }
+}

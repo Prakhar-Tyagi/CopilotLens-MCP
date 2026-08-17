@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" class="applicationIcon" type="image/png" sizes="32x32" href="images/CapitalChangeExplorerIcon.png">
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=UTF-8"></meta>
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=10;IE=IE=9;"></meta>
+    <title>Capital Change Explorer</title>
+    <link rel="stylesheet"
+          type="text/css"
+          href="styles/layout.css"></link>
+</head>
+<body>
+<div style="background-color: hsl(214, 39%, 30%); bottom: 0; color: #eee; left: 0; position: absolute; right: 0; top: 0;">
+    <div style="margin: 25% auto; width: 100%">
+        <div style="font-size: 24px; line-height: 36px; text-align: center;">Unable to open Capital Change Explorer package - No license found.
+            <br>Please make sure you have a valid Capital Change Explorer package license.<br>
+            <input type="button" onclick="referesh()" value="Try Again" width="150px"
+                   style="border-radius: 5px;font-size: 14px;background: #dc6914;color: #eee;margin-top: 15px; padding: 3px 10px 2px 10px;box-shadow: 1px 2px 4px 0 rgb(0 0 0 / 30%);border: solid 1px #843f0c;"/>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    function referesh()
+    {
+        window.location.href = "index.html?rand=" + Math.floor((Math.random() * 1000) + 1);
+    }
+</script>
+</html>

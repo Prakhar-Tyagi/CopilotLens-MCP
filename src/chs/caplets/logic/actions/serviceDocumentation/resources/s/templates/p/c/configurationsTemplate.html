@@ -1,0 +1,21 @@
+<% if(show){ %>
+<div id="configPopup" class="iesdPopup auto-configuration-popover"
+     style="float: left; display: block; height: 405px; width:300px; left: <%=x%>px; top: <%=y%>px;">
+    <div id="popupheader" class="toolbar1 auto-popover-header">
+        <div class="component-label auto-title-label"
+             style="/*width:160px;*/ /*word-wrap: normal;*/ /*float: left;*/ /*margin-left: 92px;*/"><%=title%>
+        </div>
+        <div class="component-button small-button auto-close-button" style="width: 24px;height: 24px;"
+             id="toolbar_closebtn">&nbsp;
+        </div>
+    </div>
+    <div id="config-popover-groupedlist" class="border auto-popover-content" style="height: 375px;">
+        <div class="listPanel configurations auto-list"></div>
+		<div class="listPanel options auto-list"></div>
+
+	</div>
+	<div id="config-btn-controls" class="configPanel"></div>
+	<div id="popupfooter" class="toolbar1 background auto-popover-footer">
+	</div>
+</div>
+<% } %>

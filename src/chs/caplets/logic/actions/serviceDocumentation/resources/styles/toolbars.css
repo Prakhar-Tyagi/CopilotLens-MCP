@@ -1,0 +1,1098 @@
+.toolbar {
+    float: right;
+    height: 38px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    background: rgb(0, 100, 135);
+    background: linear-gradient(90deg, rgba(0, 100, 135, 1) 0%, rgba(85, 160, 185, 1) 100%);
+}
+
+.toolbar1 {
+    float: right;
+    height: 38px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+}
+
+.components {
+    width: auto;
+    margin-left: 2px;
+    margin-right: 2px;
+    float: right;
+    width: 100%;
+}
+
+#platformToolbar {
+    height: 38px;
+    background: rgb(0, 100, 135);
+}
+
+.effectivity-label{
+    float: right;
+    width: 40%;
+    padding-top: 8px;
+    padding-right: 5px;
+    font-size: 14px;
+    text-align: right;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/*
+CSS for VIN search toolbar
+*/
+#vinSearchToolbar {
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+}
+
+.effectVinSearchToolBar {
+    margin-top: 38px;
+    height: 50px;
+}
+
+.effectVinSearchToolBarWithoutConfig {
+    margin-top: 38px;
+    height: 25px;
+}
+
+.nonEffectivityVinSearchToolBar {
+    height: 30px;
+    margin-top: 38px;
+}
+
+
+#navigationBottomToolbar {
+    position: absolute;
+    bottom: 0px;
+}
+
+#vinFilterText {
+    font-size: 14px;
+}
+
+input#vinFilterText:focus, input#filterText:focus {
+    outline: none;
+}
+
+/*
+CSS for zoom tool bar and its buttons
+*/
+
+/* This is applied to slider text*/
+
+/*.splitter_bottomtoolbar .component-label {
+    font-size: 14px;
+    width: 40px;
+    margin-top: 5px;
+    position: relative;
+    padding: 1px;
+}*/
+
+/* This is applied for zoom toolbar buttons */
+.zoomout-button {
+    background-image: url('../images/buttonSmallZoomIn.png');
+}
+
+.zoomin-button {
+    background-image: url("../images/buttonSmallZoomOut.png");
+}
+
+.zoomall-button {
+    background-image: url('../images/buttonSmallZoomFit.png');
+}
+
+.zoom-selected-button {
+    background-image: url('../images/zoom-selected.svg');
+    /* width: 16px; */
+    /* height: 12px; */
+    font-size: 18px;
+}
+
+/*.zoom-selected-button:after {
+    content: "Z";
+    position: relative;
+    top: -6px;
+}*/
+
+.fix-view-button {
+    /*background-image: url('../images/unlock.png');*/
+    background-image: url('../images/lock.png');
+    margin: 8px 5px 5px 5px;
+}
+.locked {
+    background-image: url('../images/lock.png');
+}
+.unlocked {
+    /*background-image: url('../images/unlock.png');*/
+    background-image: url('../images/lock.png');
+}
+.sliderNotch {
+    position: absolute;
+    z-index: 10;
+    width: 16px !important;
+    height: 16px !important;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url('../images/sliderNotch.png');
+    top: 7px;
+    left: 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none;
+}
+
+.sliderNotch:hover, #configButton:hover {
+    box-shadow: none;
+}
+
+.zoomDefinitionNotch {
+    position: absolute;
+    width: 16px !important;
+    height: 16px !important;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url('../images/sliderTrackDefaultZoom.png');
+    top: 7px;
+    left: 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none;
+}
+
+
+.zoomout-button, .zoomin-button, .zoomall-button, .fix-view-button, .zoom-selected-button {
+    width: 24px !important;
+    height: 15px !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position: relative;
+    float: right;
+    border: none;
+}
+
+
+.slider {
+    float: right;
+    width: 116px;
+    background-image: url('../images/sliderTrack.png');
+    background-repeat: repeat-x;
+    background-position: center left;
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    padding: 1px;
+    margin-top: 1px;
+}
+
+.diagramControl .component-label {
+    font-size: 14px;
+    width: 50px;
+    margin-left: 0;
+    position: relative;
+    padding: 1px;
+    float: right;
+}
+
+.diagramControl {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    width: 340px;
+    height: 30px;
+    /*-ms-touch-action: none;*/
+}
+
+/*
+Related to toolbars on popovers
+*/
+.iesdPopup .toolbar1 {
+    height: 30px;
+    background-color: #005f87;
+    background: #005f87;
+}
+
+.iesdPopup .toolbar1 .component-label {
+    top: 0px;
+    line-height: 30px;
+}
+
+/*
+CSS related to the Xref filter panel
+*/
+#buildConfigurationButton {
+    background-image: url('../images/setting-lines.png');
+    float: none;
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    max-width: 36px;
+    height: 100%;
+    /* background-color: #005f87; */
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#configButton {
+    background-image: url('../images/setting-linesblack.png');
+    float: right;
+    margin: 5px 2px 2px 2px;
+}
+
+#filterText {
+    font-size: 14px;
+}
+
+#popupfooter {
+    height: 30px;
+}
+
+/* This applied for Filter Text box */
+.navigationSearchFilter {
+    margin-top: 6px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 0px solid rgba(0, 0, 0, 0);
+    width: 97%;
+    box-sizing: border-box;
+    padding-left: 5px;
+}
+
+input.navigationSearchFilter:focus {
+    outline: none;
+}
+
+/* This applied for Filter Text box */
+.vinNavigationSearchFilter {
+
+    position: absolute;
+    float: left;
+    border: 0px solid transparent;
+    width: 100%;
+}
+
+.navigationSearchGlobalFilter {
+    position: absolute;
+    float: left;
+    border: 0px solid transparent;
+    width: 217px;
+    left: 1px;
+    top: 7px;
+}
+
+.placeHolderText {
+    color: grey;
+    opacity: 1;
+    height: 20px;
+    font-family: Segoe UI, "Open sans", Verdana, Arial, Helvetica, sans-seri, serif;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #959595;
+}
+
+#relateddata_filter {
+    width: 88%;
+    float: left;
+    height: 30px;
+    background-color: #005f87;
+}
+
+#currentProjectLabel {
+    text-align: left;
+    position: relative;
+}
+
+.filterTextHolder {
+    position: absolute;
+    float: left;
+    /*
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px; */
+    border: 0px solid transparent;
+    width: 217px;
+    left: 1px;
+    top: -5px;
+    height: 35px;
+
+}
+
+#filterBox {
+    width: 98%;
+    float: left;
+    height: 25px;
+    background-color: white;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    top: 6px;
+    position: relative;
+    left: 5px;
+}
+
+span.Effectivity-Range {
+    float: left;
+    margin-left: 5px;
+    height: 12px;
+    margin: 4px 5px 4px 5px;
+    font-family: Segoe UI, "Open sans", Verdana, Arial, Helvetica, sans-seri, serif;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #464646;
+}
+
+#resetBox {
+    width: 205px;
+    float: left;
+    height: 25px;
+    background-color: white;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    margin-left: 4px;
+    margin-top: 3px;
+    border: solid 1px black;
+}
+
+.effectVinTextHolder {
+
+    position: absolute;
+    float: left;
+    border: 0px solid transparent;
+    width: 175px;
+    left: 2px;
+    top: 25px;
+    height: 25px;
+}
+
+.collapse-expand-nav-panel {
+    position: absolute;
+    border-radius: 4px;
+    top: 30px;
+    left: 0;
+    display: block !important;
+    border: none;
+    margin-top: 10px;
+    width: 48px !important;
+    height:48px !important;
+}
+
+.expandBtn {
+    background-image: url('../images/expand.png');
+    left: -5px;
+}
+
+.collapseBtn {
+    background-image: url('../images/collapse.png');
+}
+
+.vinTextHolder {
+    position: absolute;
+    float: left;
+    /*
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px; */
+    border: 0px solid transparent;
+    width: 175px;
+    left: 2px;
+    top: 6px
+    /* height: 30px; */
+}
+
+.configPanel {
+    width: 300px;
+    height: 65px;
+    padding: 2px;
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+    background-color: #005f87;
+    color: #fff;
+    border-top: 1px solid #ccc;
+    display: none;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+.configPanel label {
+    float: left;
+    display: inline-block;
+    margin: 5px 0px 5px 15px;
+    font-size: 14px;
+    color: #fff;
+    width: 60px;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+.configTextBox {
+    top: 0px;
+    float: left;
+    width: calc(100% - 125px);
+    display: inline-block;
+    margin: 5px 2px;
+    height: 1.2em;
+    color: #000;
+}
+
+.configPanel input.matched-config {
+    background: #fbf69b;
+}
+
+.configPanel p {
+    margin: 0px;
+    text-align: center;
+    clear: both;
+}
+
+.configPanel input[type='button'] {
+    background-color: rgb(239, 239, 239);
+    background-repeat: no-repeat;
+    background-position: 5px 3px;
+    padding: 3px 5px 3px 25px;
+    margin: 3px 5px;
+    border-radius: 3px;
+    border: 1px solid #111;
+    min-width: 60px;
+    max-width: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.configPanel input[type='button']:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 1px #d6e7f3;
+}
+
+.configPanel input[type='button']:disabled {
+    cursor: default;
+    box-shadow: none;
+}
+
+.configPanel .save-config {
+    background-image: url("../images/config_save.png");
+}
+
+.configPanel .save-config[disabled] {
+    background-image: url("../images/config_save_disabled.png");
+}
+
+.configPanel .filter-config {
+    background-image: url("../images/config_filter.png");
+}
+
+.configPanel .filter-config[disabled] {
+    background-image: url("../images/config_filter_disabled.png");
+}
+
+.configPanel .close-config {
+    background-image: url("../images/config_cancel.png");
+}
+
+.delete-config {
+    background: url("../images/delete.png") 0px 0px no-repeat;
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: 20px;
+    position: relative;
+    top: 2px;
+}
+
+.delete-disabled{
+    filter: grayscale(1);
+    border: none;
+    cursor: not-allowed;
+}
+
+.modal-overlay {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    background: #0000006e 0% 0% no-repeat padding-box;
+}
+
+.hide-button {
+    display: none;
+}
+
+.indeterminate-progress-bar-dialog .modal-popup {
+    width: 30%;
+    height: auto;
+    padding: 0px;
+    left: 0;
+    margin-left: 33.333333%;
+    background: white;
+    position: absolute;
+    top: 35%;
+    box-shadow: 5px 5px 5px #0000004D;
+    z-index: 10001;
+}
+
+.indeterminate-progress-bar-dialog .modal-popup .modal-header {
+    vertical-align: middle;
+    display: inline-flex;
+    background-color: #005f87;
+    color: white;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 2 2;
+}
+
+.modal-popup {
+    width: 30%;
+    height: auto;
+    padding: 0px;
+    left: 0;
+    margin-left: 33.333333%;
+    border: 4px solid #005f87;
+    border-radius: 10px;
+    background: white;
+    position: absolute;
+    top: 15%;
+    box-shadow: 5px 5px 5px #000;
+    z-index: 10001;
+}
+
+.modal-popup .modal-header {
+    font-size: 16px;
+    vertical-align: middle;
+    background-color: #005f87;
+    color: white;
+    height: 2em;
+}
+
+.modal-popup .modal-header > label {
+    font-size: inherit;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.modal-popup .modal-body {
+    height: auto;
+}
+
+.modal-popup .icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 10px;
+}
+
+.modal-popup .icon.warn {
+    background: url("../images/warning-large.png") 1px 1px no-repeat;
+}
+
+.modal-popup .icon.question {
+    background: url("../images/question-large.png") 1px 1px no-repeat;
+}
+
+.modal-popup .icon.error {
+    background: url("../images/error-large.png") 1px 1px no-repeat;
+}
+
+.modal-popup .modal-body .message-body{
+    display: inline-block;
+    float: left;
+    height: auto;
+    margin-right: 10px;
+    width: calc(100% - 90px);
+}
+
+.modal-popup .modal-body .indeterminate-progress-bar {
+    height: 4px;
+    background-color: rgba(5, 114, 206, 0.2);
+    margin: 10px auto 5px auto;
+    overflow: hidden;
+    width: 90%;
+}
+
+.modal-popup .modal-body .indeterminate-activity-message, .modal-popup .modal-body .indeterminate-activity-guidance, .modal-popup .modal-body .indeterminate-activity-implication {
+    margin: 0px;
+    text-align: left;
+    font: normal normal normal 12px/16px Segoe UI;
+    letter-spacing: 0px;
+    font-family: 'Segoe UI', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Tahoma, sans-serif;
+    color: #464646;
+    width: 90%;
+    padding-top: 10px;
+}
+
+.modal-popup .modal-body .indeterminate-activity-guidance {
+    font-style: italic;
+}
+
+.font-weight_bold {
+    font-weight: bold;
+}
+
+
+.modal-popup .modal-body .indeterminate-progress-bar-value {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(5, 114, 206);
+    animation: indeterminateAnimation 1s infinite linear;
+    transform-origin: 0% 50%;
+}
+
+@keyframes indeterminateAnimation {
+    0% {
+        transform:  translateX(0) scaleX(0);
+    }
+    40% {
+        transform:  translateX(0) scaleX(0.4);
+    }
+    100% {
+        transform:  translateX(100%) scaleX(0.5);
+    }
+}
+
+.modal-popup .modal-message {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0px 15px 5px;
+    color: inherit;
+}
+
+.modal-popup .modal-implication {
+    font-size: 14px;
+    margin: 7px 0px 10px 5px;
+    color: inherit;
+}
+
+.modal-popup .modal-guidance {
+    font-size: 14px;
+    font-style: italic;
+    margin: 7px 0px 5px 5px;
+    color: inherit;
+}
+
+.modal-popup i, .modal-popup b {
+    color: inherit;
+}
+
+.modal-overlay .text-right {
+    text-align: right;
+    margin: 10px 0px 0px;
+    height: auto;
+}
+
+.modal-overlay .text-center {
+    text-align: center;
+    margin: 10px 0px 10px;
+    height: auto;
+}
+
+.indeterminate-progress-bar-dialog button {
+    /* padding: 2px 5px; */
+    /* margin: 0px 5px; */
+    font-size: 14px;
+}
+
+.modal-overlay button {
+    /* padding: 2px 5px; */
+    /* margin: 0px 5px; */
+    font-size: 14px;
+}
+
+.clear {
+    float: right;
+    width: 24px;
+    height: 30px;
+    background: none;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 0px solid #666;
+    cursor: pointer;
+    margin-right: 0px;
+}
+
+.clear:hover {
+    cursor: pointer;
+}
+
+.clearImage {
+    background-image: url('../images/vin_cross.png');
+    background-color: white;
+    border-left: 1px solid black;
+    height: 26px;
+}
+
+.search {
+    position: absolute;
+    float: left;
+    border: 0px solid transparent;
+    width: 175px;
+    left: 4px;
+    text-overflow: ellipsis;
+    padding: 1px 2px;
+    vertical-align: middle;
+    margin-left: 2px;
+}
+
+.search[readonly] {
+    background-color: #FFFFFF;
+}
+
+.default_mouse_pointer {
+    cursor: default;
+    border: 0px;
+}
+
+.iesd-editable-panel.default_mouse_pointer {
+    background: #f5f5f5;
+    border: 0px;
+    box-shadow: none;
+}
+
+/*
+CSS from old files
+*/
+/* THis is applied to navagaiion panel project button */
+#project_button {
+    /*   float: right;
+       width: 32px;
+       height: 32px;
+       margin: 5px;
+       background: none;
+       background-color: rgba(0, 0, 0, 0);
+       background-position: center center;
+       background-repeat: no-repeat;
+       border: 0px solid #666;
+       border-radius: 5px;
+       -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+       cursor: pointer;
+       background-image: url('../images/buttonProjects.png');
+       background-size: 100%;*/
+}
+
+/* THis is applied to navagaiion panel project button on mouse hover */
+.project_button:hover {
+    -webkit-box-shadow: 0px 0px 10px #fff;
+    -moz-box-shadow: 0px 0px 10px #fff;
+    box-shadow: 0px 0px 10px #fff;
+    cursor: pointer;
+}
+
+/* Buttons in VIN Login panel */
+.standard_button {
+    float: right;
+    width: 70px;
+    height: 30px;
+    margin: 5px;
+    background: none;
+    background-color: rgba(0, 0, 0, 0);
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 0px solid #666;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    cursor: pointer; /*background-image : url('../images/buttonlogin.png');*/
+}
+
+/* THis is applied to navagaiion panel login button */
+.standard_button_left {
+    float: left;
+    width: 50%;
+    background: none;
+    background-color: rgba(0, 0, 0, 0);
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 0 solid #666;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px; /* cursor: pointer;*/
+    /*background-image : url('../images/buttonlogin.png');*/
+}
+
+.standard_button_right {
+    float: right;
+    width: 50%;
+    background: none;
+    background-color: rgba(0, 0, 0, 0);
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 0 solid #666;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px; /*   cursor: pointer;*/
+    /*background-image : url('../images/buttonlogin.png');*/
+}
+
+.standard_button_left input {
+    width: 50%;
+    height: 22px;
+    text-align: center;
+    margin-right: 2px;
+    margin-top: 2%;
+    color: white;
+    float: right;
+    vertical-align: middle;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 1px 2px 4px 0 rgb(0 0 0 / 30%);
+    border: solid 1px #843f0c;
+    background-color: #dc6914;
+    font-family: Segoe UI, "Open sans", Verdana, Arial, Helvetica, sans-seri, serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.standard_button_right input {
+    width: 50%;
+    height: 22px;
+    border: solid 1px #a8a8a8;
+    background-color: #efefef;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 2%;
+    margin-left: 2px;
+    float: left;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 1px 2px 4px 0 rgb(0 0 0 / 30%);
+    border: solid 1px #a8a8a8;
+    background-color: #efefef;
+    font-family: Segoe UI, "Open sans", Verdana, Arial, Helvetica, sans-seri, serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: black;
+}
+
+/* ------------------------ End -----------------------------------*/
+
+/* These are claases used for loading the images for buttons of the panel */
+/* ---------------------- Start ------------------------------------*/
+#toolbar_closebtn {
+    margin-top: auto;
+    margin-bottom: auto;
+    float: right;
+    padding: 0px;
+    background-image: url(../images/cross.png);
+    height: 100% !important;
+}
+
+#toolbar_printbtn {
+    margin-top: 2px;
+    margin: auto;
+    float: right;
+    margin-top: auto;
+    margin-bottom: auto;
+    float: right;
+    margin-top: 5px;
+    padding: 0px;
+    background-image: url(../images/buttonPrint.png);
+}
+
+#toolbar_closebtn:hover {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.iesdPopup .closeBtn:hover {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.closeBtn {
+    background-image: url('../images/cross.png');
+    border: 0px;
+}
+
+.popOverCloseBtn {
+    margin-top: 3px;
+}
+
+.maximizeBtn {
+    background-image: url('../images/maximise_app.png');
+}
+
+.restoreBtn {
+    background-image: url('../images/restore_app.png');
+}
+
+
+.popOutBtn {
+    background-image: url('../images/inline-poput-black.png');
+    background-size: 13px !important;
+}
+
+.privacyPolicyBtn {
+    background-image: url('../images/privacy-policy.svg');
+    background-size: 13px !important;
+}
+
+.navigation-panel-toggle {
+    background-image: url('../images/hamburger.png');
+    background-size: 20px 20px !important;
+}
+
+.diagrams-button, .reports-button, .related-data-button,.face-view-button {
+    border-radius: 2px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.3);
+    border: solid 1px #843f0c;
+    background-color: #dc6914;
+    font-size: 14px;
+    line-height: 100%;
+    margin-left: 10px;
+    margin-top: 7px;
+}
+
+.related-data-button {
+    width: auto;
+    max-width: 100px;
+    min-width: 72px;
+}
+
+.related-data-button:after {
+    /*content: "Content";*/
+}
+
+.printBtn {
+    background-image: url('../images/buttonPrint.png');
+}
+
+.regenerateBtn {
+    background-image: url('../images/buttonRefresh.png');
+}
+
+.renderConnectivityBtn, #open-pdf-button {
+}
+
+.renderConnectivityBtn.hidden {
+    display: none !important;
+}
+
+.hidden-toolbar-button {
+    display: none !important;
+}
+
+.backgroundColorBtn {
+    background-image: url('../images/svgBackgroundColor.png');
+}
+
+img.home-1 {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    object-fit: contain;
+    margin-top: 10px;
+    float: right;
+    cursor: pointer;
+}
+
+img.trace-signal {
+    width: 18px;
+    height: 100%;
+    margin-left: 5px;
+    object-fit: contain;
+    float: left;
+    cursor: pointer;
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.vinHeaderText {
+    margin-left: 10px;
+}
+
+.languageBtn {
+    height: 38px;
+    line-height: 38px;
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    width: 32px;
+}
+
+.renderConnectivityBtn {
+    border-radius: 2px;
+    box-shadow: 1px 2px 4px 0 rgb(0 0 0 / 30%);
+    border: solid 1px #843f0c;
+    background-color: #dc6914;
+    font-size: 14px;
+    line-height: 100%;
+    margin-left: 2px;
+    margin-top: 3px;
+    width: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 2px;
+}
+
+.zoom-percentage{
+    line-height: 30px;
+    text-align: center;
+}
+
+.flex-parent {
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+
+.flex-child {
+    margin-right: 5px;
+    display: inline-flex;
+}
+
+.flex-growable {
+    flex-grow: 1;
+}
+
+.flex-fixed {
+    width: max-content;
+    flex-shrink: 0;
+}

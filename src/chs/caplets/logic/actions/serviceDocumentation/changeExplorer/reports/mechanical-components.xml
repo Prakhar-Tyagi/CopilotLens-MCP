@@ -1,0 +1,91 @@
+<report name="Mechanical Components" summary-included="true">
+    <tables name="Clips"
+            apply-to="clip"
+            types="modified added removed"
+            sorted-by="{Name}">
+        <!--
+            Allowed column types - attribute, property, computed
+
+            Accepted 'computed' types - DerivativesAndModules
+        -->
+        <column type="attribute" key="Name" name="{Name}"/>
+        <column type="attribute" key="PartNumber" name="{Part Number}"/>
+        <column type="attribute" key="ClipType" name="{Clip Type}"/>
+        <column type="attribute" key="TypeCode" name="{Type Code}"/>
+        <column type="attribute" key="ColorCode" name="{Color Code}"/>
+        <column type="attribute" key="MaterialCode" name="{Material Code}"/>
+        <column type="attribute" key="Orientation" name="{Orientation}"/>
+        <column type="attribute" key="Weight" name="{Weight}" numerical-precision="0.01"/>
+        <column type="attribute" key="Assembly" name="{Assembly}"/>
+        <column type="computed" key="Bundle" name="{Bundle}"/>
+        <column type="computed" key="AnchorNodeOffset" name="{Anchor node offset}"/>
+        <column type="computed" key="AnchorNode" name="{Anchor Node}"/>
+        <column type="computed" key="AssociatedComponents" name="{Associated Components}"/>
+    </tables>
+    <tables name="Grommets"
+            apply-to="grommet"
+            types="modified added removed"
+            sorted-by="{Name}">
+        <!--
+            Allowed column types - attribute, property, computed
+
+            Accepted 'computed' types - DerivativesAndModules
+        -->
+        <column type="attribute" key="Name" name="{Name}"/>
+        <column type="attribute" key="PartNumber" name="{Part Number}"/>
+        <column type="attribute" key="TypeCode" name="{Type Code}"/>
+        <column type="attribute" key="ColorCode" name="{Color Code}"/>
+        <column type="attribute" key="MaterialCode" name="{Material Code}"/>
+        <column type="attribute" key="Orientation" name="{Orientation}"/>
+        <column type="attribute" key="Weight" name="{Weight}" numerical-precision="0.01"/>
+        <column type="attribute" key="Assembly" name="{Assembly}"/>
+        <column type="computed" key="Bundle" name="{Bundle}"/>
+        <column type="computed" key="AnchorNodeOffset" name="{Anchor node offset}"/>
+        <column type="computed" key="AnchorNode" name="{Anchor Node}"/>
+        <column type="computed" key="AssociatedComponents" name="{Associated Components}"/>
+    </tables>
+    <tables name="Other Components"
+            apply-to="other-component"
+            types="modified added removed"
+            sorted-by="{Name}">
+        <!--
+            Allowed column types - attribute, property, computed
+
+            Accepted 'computed' types - DerivativesAndModules
+        -->
+        <column type="attribute" key="Name" name="{Name}"/>
+        <column type="attribute" key="PartNumber" name="{Part Number}"/>
+        <column type="attribute" key="TypeCode" name="{Type Code}"/>
+        <column type="attribute" key="ColorCode" name="{Color Code}"/>
+        <column type="attribute" key="MaterialCode" name="{Material Code}"/>
+        <column type="attribute" key="Weight" name="{Weight}" numerical-precision="0.01"/>
+        <column type="attribute" key="Assembly" name="{Assembly}"/>
+        <column type="computed" key="Bundle" name="{Bundle}"/>
+        <column type="computed" key="AnchorNodeOffset" name="{Anchor node offset}"/>
+        <column type="computed" key="AnchorNode" name="{Anchor Node}"/>
+        <column type="computed" key="AssociatedComponents" name="{Associated Components}"/>
+    </tables>
+    <tables name="Multi Location Components"
+            apply-to="multi-location-component"
+            types="modified added removed"
+            sorted-by="{Name}">
+        <!--
+            Allowed column types - attribute, property, computed
+
+            Accepted 'computed' types - DerivativesAndModules, Locations
+        -->
+        <column type="attribute" key="Name" name="{Name}"/>
+        <column type="computed" key="Locations" name="{Locations}"/>
+        <column type="attribute" key="PartNumber" name="{Part Number}"/>
+        <column type="attribute" key="TypeCode" name="{Type Code}"/>
+        <column type="attribute" key="ColorCode" name="{Color Code}"/>
+        <column type="attribute" key="MaterialCode" name="{Material Code}"/>
+        <column type="attribute" key="Quantity" name="{Quantity}"/>
+        <column type="attribute" key="Weight" name="{Weight}" numerical-precision="0.01"/>
+        <column type="attribute" key="Assembly" name="{Assembly}"/>
+        <column type="computed" key="Bundle" name="{Bundle}"/>
+        <column type="computed" key="AnchorNodeOffset" name="{Anchor node offset}"/>
+        <column type="computed" key="AnchorNode" name="{Anchor Node}"/>
+        <column type="computed" key="AssociatedComponents" name="{Associated Components}"/>
+    </tables>
+</report>

@@ -1,0 +1,114 @@
+<report name="Conductors" summary-included="true">
+    <tables name="Wires"
+            apply-to="wire"
+            types="modified added removed unmodified"
+            sorted-by="{Name}">
+        <!--
+            Allowed column types - attribute, property, computed
+
+            Accepted 'computed' types - DerivativesAndModules, From, To
+        -->
+        <column type="attribute" key="Name" name="{Name}"/>
+        <column type="attribute" key="ShortDescription" name="{Short Description}"/>
+        <column type="attribute" key="WireColor" name="{Color}"/>
+        <column type="attribute" key="WireMaterial" name="{Material}"/>
+        <column type="attribute" key="WireSpec" name="{Spec}"/>
+        <column type="attribute" key="WireCSA" name="{CSA}" numerical-precision="0.01"/>
+        <column type="attribute" key="PartNumber" name="{Part Number}"/>
+        <column type="attribute" key="TypeCode" name="{Type Code}"/>
+        <column type="attribute" key="Multicore" name="{Multicore}"/>
+        <column type="computed" key="From" name="{From}"/>
+        <column type="computed" key="FromTerminal" name="{From Terminal}"/>
+        <!-- <column type="attribute" key="TerminalPartSpecEnd1" name="{From Terminal}"/> -->
+        <column type="computed" key="FromSeal" name="{From Seal}"/>
+        <!-- <column type="attribute" key="SealPartSpecEnd1" name="{From Seal}"/> -->
+        <column type="attribute" key="TerminalMaterialSpecEnd1" name="{From Terminal Material Spec}"/>
+        <column type="computed" key="FromComponents" name="{From Components}"/>
+        <column type="computed" key="To" name="{To}"/>
+        <column type="computed" key="ToTerminal" name="{To Terminal}"/>
+        <!-- <column type="attribute" key="TerminalPartSpecEnd2" name="{To Terminal}"/> -->
+        <column type="computed" key="ToSeal" name="{To Seal}"/>
+        <!-- <column type="attribute" key="SealPartSpecEnd2" name="{To Seal}"/> -->
+        <column type="attribute" key="TerminalMaterialSpecEnd2" name="{To Terminal Material Spec}"/>
+        <column type="computed" key="ToComponents" name="{To Components}"/>
+        <column type="attribute" key="OptionExpression" name="{Options}"/>
+        <column type="computed" key="DerivativesAndModules" name="{Derivatives / Modules}"/>
+        <column type="attribute" key="UnmodifiedLength" name="{Unmodified Length}" numerical-precision="0.01"/>
+        <column type="attribute" key="ModifiedLength" name="{Modified Length}" numerical-precision="0.01"/>
+        <column type="attribute" key="Weight" name="{Weight}" numerical-precision="0.01"/>
+        <column type="attribute" key="WireNote" name="{Note}"/>
+    </tables>
+    <tables name="Nets"
+            apply-to="net"
+            types="modified added removed unmodified"
+            sorted-by="{Name}">
+        <!--
+            Allowed column types - attribute, property, computed
+
+            Accepted 'computed' types - DerivativesAndModules, From, To
+        -->
+        <column type="attribute" key="Name" name="{Name}"/>
+        <column type="attribute" key="ShortDescription" name="{Short Description}"/>
+        <column type="attribute" key="WireColor" name="{Color}"/>
+        <column type="attribute" key="WireMaterial" name="{Material}"/>
+        <column type="attribute" key="WireSpec" name="{Spec}"/>
+        <column type="attribute" key="WireCSA" name="{CSA}" numerical-precision="0.01"/>
+        <column type="attribute" key="PartNumber" name="{Part Number}"/>
+        <column type="attribute" key="TypeCode" name="{Type Code}"/>
+        <column type="attribute" key="Multicore" name="{Multicore}"/>
+        <column type="computed" key="From" name="{From}"/>
+        <column type="computed" key="To" name="{To}"/>
+        <column type="attribute" key="OptionExpression" name="{Options}"/>
+        <column type="computed" key="DerivativesAndModules" name="{Derivatives / Modules}"/>
+        <column type="attribute" key="Weight" name="{Weight}" numerical-precision="0.01"/>
+    </tables>
+    <tables name="Multicores"
+            apply-to="multicore"
+            types="modified added removed unmodified"
+            sorted-by="{Name}">
+        <!--
+            Allowed column types - attribute, property, computed
+
+            Accepted 'computed' types - DerivativesAndModules, Wires
+        -->
+        <column type="attribute" key="Name" name="{Name}"/>
+        <column type="attribute" key="ShortDescription" name="{Short Description}"/>
+        <column type="attribute" key="OSColor" name="{OS Color}"/>
+        <column type="attribute" key="OSMaterial" name="{OS Material}"/>
+        <column type="attribute" key="OSSpec" name="{OS Spec}"/>
+        <column type="attribute" key="PartNumber" name="{Part Number}"/>
+        <column type="attribute" key="TypeCode" name="{Type Code}"/>
+        <column type="attribute" key="OptionExpression" name="{Options}"/>
+        <column type="computed" key="DerivativesAndModules" name="{Derivatives / Modules}"/>
+        <column type="attribute" key="UnmodifiedLength" name="{Unmodified Length}" numerical-precision="0.01"/>
+        <column type="attribute" key="ModifiedLength" name="{Modified Length}" numerical-precision="0.01"/>
+        <column type="attribute" key="OutsideDiameter" name="{Outside Diameter}" numerical-precision="0.01"/>
+        <column type="attribute" key="Weight" name="{Weight}" numerical-precision="0.01"/>
+        <column type="attribute" key="MulticoreNote" name="{Note}"/>
+        <column type="computed" key="Wires" name="{Wires}"/>
+    </tables>
+    <tables name="Overbraids"
+            apply-to="overbraid"
+            types="modified added removed unmodified"
+            sorted-by="{Name}">
+        <!--
+            Allowed column types - attribute, property, computed
+
+            Accepted 'computed' types - DerivativesAndModules, Wires
+        -->
+        <column type="attribute" key="Name" name="{Name}"/>
+        <column type="attribute" key="ShortDescription" name="{Short Description}"/>
+        <column type="attribute" key="OSColor" name="{OS Color}"/>
+        <column type="attribute" key="OSMaterial" name="{OS Material}"/>
+        <column type="attribute" key="OSSpec" name="{OS Spec}"/>
+        <column type="attribute" key="PartNumber" name="{Part Number}"/>
+        <column type="attribute" key="TypeCode" name="{Type Code}"/>
+        <column type="attribute" key="OptionExpression" name="{Options}"/>
+        <column type="computed" key="DerivativesAndModules" name="{Derivatives / Modules}"/>
+        <column type="attribute" key="UnmodifiedLength" name="{Unmodified Length}" numerical-precision="0.01"/>
+        <column type="attribute" key="ModifiedLength" name="{Modified Length}" numerical-precision="0.01"/>
+        <column type="attribute" key="Weight" name="{Weight}" numerical-precision="0.01"/>
+        <column type="attribute" key="MulticoreNote" name="{Note}"/>
+        <column type="computed" key="Wires" name="{Wires}"/>
+    </tables>
+</report>

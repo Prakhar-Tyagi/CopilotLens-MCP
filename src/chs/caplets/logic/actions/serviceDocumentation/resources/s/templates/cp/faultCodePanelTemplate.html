@@ -1,0 +1,23 @@
+<div class="detailContent">
+    <div id="systemFaultCodesLoadArea" style="overflow: auto; " class="panel_content">
+        <table id="searchResults" class="faultTableStyle auto-fault-codes">
+            <tbody>
+            <tr style="background-color: #CCDDFF;" class="header auto-fault-codes-header">
+                <td id="objectName"><%= mentor.publisher.languageTranslator.localize("FaultCodeObjectNameColumnTitle") %></td>
+                <td id="systemName"><%= mentor.publisher.languageTranslator.localize("FaultCodeSystemColumnTitle") %></td>
+            </tr>
+            <% _.each(items, function(item) {%>
+                <% var objectById = mentor.publisher.project.getObjectById(item.get('systemId')); %>
+                <tr data-id="<%=item.cid%>" class="auto-fault-codes-row">
+                    <td class="clickable-column"><%= Utils.translate(item.get('objectName')) %><span></span></td>
+                    <td class="clickable-multivalued">
+                        <%= (objectById) ? objectById.mainText + ':' + Utils.translate(objectById.subText) :
+                        Utils.translate(item.get('designName')) %>, <%= Utils.translate(item.get('diagramName'))
+                        %><span></span>
+                    </td>
+                </tr>
+            <% });%>
+            </tbody>
+        </table>
+    </div>
+</div>

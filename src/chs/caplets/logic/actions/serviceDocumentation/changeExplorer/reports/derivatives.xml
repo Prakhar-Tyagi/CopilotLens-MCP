@@ -1,0 +1,32 @@
+<report name="Derivatives" summary-included="true">
+    <tables name="Derivatives"
+            apply-to="derivative"
+            types="modified added removed"
+            sorted-by="{Name}">
+        <!--
+            Allowed column types - attribute, property, computed
+
+            Accepted 'computed' types - ApplicableOptions
+        -->
+        <column type="attribute" key="Name" name="{Name}"/>
+        <column type="attribute" key="PartNumber" name="{Part Number}"/>
+        <column type="attribute" key="Revision" name="{Revision}"/>
+        <column type="attribute" key="ShortDescription" name="{Short Description}"/>
+        <column type="attribute" key="ReleaseLevel" name="{Release Level}"/>
+        <column type="computed" key="ApplicableOptions" name="{Applicable Options}"/>
+    </tables>
+    <tables name="Options"
+            apply-to="option"
+            types="modified added removed unmodified"
+            sorted-by="{Name}">
+        <!--
+            Allowed column types - attribute, property, computed
+
+            Accepted 'computed' types - Folders, Includes, Excludes
+        -->
+        <column type="attribute" key="Name" name="{Name}"/>
+        <column type="computed" key="Folders" name="{Folder}"/>
+        <column type="computed" key="Includes" name="{Includes}"/>
+        <column type="computed" key="Excludes" name="{Excludes}"/>
+    </tables>
+</report>

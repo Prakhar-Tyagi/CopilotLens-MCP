@@ -1,0 +1,18 @@
+<div id="changeReport" class="tables panel_content">
+    <%_.each(sections, function(section){%>
+    <%if(section.attributes.count !== 0){%>
+    <div id="<%=section.id%>" class="section">
+        <div class="section-header">
+            <span class="expand-section"><img src="images/ico_arrow_down.gif"></span>
+            <span class="collapse-section" style="display: none"><img src="images/ico_arrow_right.gif"></span>
+        <span class="change-header">
+            <%=Utils.translate(section.title)%> <% if (section.attributes.count) { %> - <%=section.attributes.count%> <% } %>
+        </span>
+        </div>
+        <div class="change-table">
+
+        </div>
+    </div>
+    <%}%>
+    <%}); %>
+</div>

@@ -1,0 +1,32 @@
+<% if(items.length){ %>
+	<% if(showTitle){ %>
+	<div class="titlebar auto-list-header">
+		<span class="headingCount">
+			<span class="headingCountNumber auto-item-count-label"><%=items.length%>/<%=totalItems%></span>
+		</span>
+		<span class="headerText auto-title-label"><%=title%></span>
+	</div>
+	<% } %>
+	<% if (expand) { %>
+		<% _.each(items, function(item) {%>
+		<div class="listItem auto-item <% if(item.get('isLocal')) { %> custom-configuration <% } %>"
+			 data-id="<%=item.id%>"
+			 data-type="configuration"
+			 data-value="<%=item.escape('value')%>"
+			 data-name="<%=item.escape('name')%>"
+			 data-diagramflag="<%=item.get('diagramflag')%>"
+			 data-customtooltiparraylength="<%=item.get('customtooltiparraylength')%>"
+			 data-customtooltip-0="<%=item.escape('customtooltip-0')%>">
+			<span class="mainText auto-title-label" style="cursor: pointer;"
+				  data-type="configuration" data-value="<%=item.escape('value')%>" data-name="<%=item.escape('name')%>"
+				  data-diagramflag="<%=item.get('diagramflag')%>"
+				  data-customtooltiparraylength="<%=item.get('customtooltiparraylength')%>"
+				  data-customtooltip-0="<%=item.escape('customtooltip-0')%>"><%=item.escape("name")%></span>
+			<% if(item.get('isLocal')) { %>
+			<span class="delete-config" customtooltip-0="<%=item.escape('customtooltip-0')%>"
+				  data-value="<%= mentor.publisher.languageTranslator.localize('DeleteConfiguration') %>"></span>
+			<% } %>
+		</div>
+		<% });%>
+	<% } %>
+<% } %>

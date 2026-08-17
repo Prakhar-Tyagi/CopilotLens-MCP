@@ -1,0 +1,56 @@
+<div id="fault-objects-table-header-container" class="pointer-events-none">
+    <div class='header pointer-events-none margin-bottom-ten'>
+        <div class='title' id='fault-objects-table-title'><%=
+            localize('TroubleshootingPanel.ObjectsTable.Title') %>
+        </div>
+    </div>
+</div>
+<div class="collapsable-section">
+    <div id="scrollableFaultObjectTable">
+        <table class="tableFixHead commonFaultTableStyle auto-fault-object-table">
+            <thead>
+            <tr class="commonFaultHeader auto-fault-object-table-header">
+                <th class="sortable-column" data-column-index="1" id='fault-objects-table-type-column-title'>
+                    <%= localize('TroubleshootingPanel.ObjectsTable.Type')%> <span class="sort-indicator"><%=getSortIndicator(1)%></span>
+                </th>
+                <th class="sortable-column" data-column-index="2" id='fault-objects-table-component-column-title'>
+                    <%= localize('TroubleshootingPanel.ObjectsTable.Component')%> <span class="sort-indicator"><%=getSortIndicator(2)%></span>
+                </th>
+                <th class="sortable-column" data-column-index="3" id='fault-objects-table-description-column-title'>
+                    <%= localize('TroubleshootingPanel.ObjectsTable.Description')%> <span class="sort-indicator"><%=getSortIndicator(3)%></span>
+                </th>
+                <th class="sortable-column" data-column-index="4" id='fault-objects-table-codes-column-title'>
+                    <%= localize('TroubleshootingPanel.ObjectsTable.Codes')%> <span class="sort-indicator"><%=getSortIndicator(4)%></span>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <% if (contentInfoKey !== null) { %>
+            <tr class="auto-empty-fault-object-table-row">
+                <td colspan="4" class="text-align-center">
+                    <p class="fault-objects-table-content-info"><%= localize(contentInfoKey) %></p>
+                </td>
+            </tr>
+            <% } %>
+            <% _.each(commonObjects, function (object, index) { %>
+            <tr class="auto-fault-object-table-row fault-object-table-row">
+                <td class="clickable-column" data-id="<%= object.id %>"><span data-id="<%= object.id %>"><%= localize(object.type) %></span>
+                </td>
+                <td class="clickable-column">
+                    <span data-id="<%= object.id %>" id="<%= object.id %>"><%= object.column2Value %></span></td>
+                <td class="clickable-column" data-id="<%= object.id %>"><span data-id="<%= object.id %>"><%= mentor.publisher.LanguageFilteredProject.translateQuickCode(object.column3Value)%></span>
+                </td>
+                <td class="clickable-column" data-id="<%= object.id %>"><% _.each(object.codes,function(code,index){ var
+                    codeString=index==object.codes.length-1?code[0]:code[0]+",";
+                    if(code.length==2 && code[1]=="ActiveCode") { %>
+                    <span class="activeCode" data-id="<%= object.id %>"><%=codeString%></span>
+                    <% }else {%>
+                    <span class="passiveCode" data-id="<%= object.id %>"><%=codeString%></span>
+                    <% }}) %>
+                </td>
+            </tr>
+            <% }) %>
+            </tbody>
+        </table>
+    </div>
+</div>

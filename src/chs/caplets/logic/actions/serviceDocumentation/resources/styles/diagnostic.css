@@ -1,0 +1,206 @@
+#systemDiagnosticLoadArea > * {
+    margin: auto;
+    width: 96%;
+}
+
+#systemDiagnosticLoadArea * {
+    font-size: 14px;
+}
+
+#systemDiagnosticLoadArea .note {
+    color: #c58000;
+    font-style: italic;
+    list-style-type: none;
+    margin: 3px 10px;
+}
+
+#systemDiagnosticLoadArea .yes {
+    color: #00a213;
+}
+
+#systemDiagnosticLoadArea .no {
+    color: #db0707;
+}
+
+#systemDiagnosticLoadArea table {
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+#systemDiagnosticLoadArea td {
+    border: thin solid gray;
+    padding: 5px;
+    margin: 5px;
+    text-align: left;
+    width: 25%;
+    vertical-align: top;
+}
+
+#systemDiagnosticLoadArea td.left {
+    padding: 10px;
+}
+
+#systemDiagnosticLoadArea .number {
+    color: white;
+    background: black;
+    font-size: 12px;
+    padding: 4px 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px #0073ff;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    display: inline-block;
+}
+
+#systemDiagnosticLoadArea > header {
+    display: flex;
+    height: auto;
+    margin: 40px auto 10px auto;
+    justify-content: space-between;
+}
+
+
+#systemDiagnosticLoadArea > header > div.title {
+    height: auto;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 700;
+    flex-basis: 200%;
+}
+
+#systemDiagnosticLoadArea > header > div.folder {
+    height: auto;
+    text-align: right;
+    font-size: 18px;
+    font-weight: 700;
+    flex-basis: 100%;
+}
+
+#systemDiagnosticLoadArea h4.proc {
+    margin-left: 10px;
+    display: inline;
+}
+
+#systemDiagnosticLoadArea p.bold {
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+#systemDiagnosticLoadArea td.middle {
+    width: 55%;
+}
+
+#systemDiagnosticLoadArea td.result {
+    vertical-align: bottom;
+    width: 20%;
+}
+
+#systemDiagnosticLoadArea .image img {
+    width: 300px;
+    box-shadow: 2px 2px 6px 1px gray;
+}
+
+#systemDiagnosticLoadArea .image {
+    padding: 10px;
+    font-style: italic;
+    text-align: center;
+}
+
+#systemDiagnosticLoadArea .image .caption {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+#systemDiagnosticLoadArea .caption {
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+}
+
+#systemDiagnosticLoadArea a {
+    margin: 0 3px;
+}
+
+#systemDiagnosticLoadArea a:hover {
+    color: red;
+}
+
+#systemDiagnosticLoadArea a:visited {
+    color: blue;
+}
+
+#systemDiagnosticLoadArea .goto {
+    color: white;
+    cursor: pointer;
+}
+
+#systemDiagnosticLoadArea .goto:hover {
+    background: red;
+}
+
+#systemDiagnosticLoadArea .goto > a {
+    color: white;
+    font-style: normal;
+    text-decoration: none;
+    cursor: hand;
+    margin: 0;
+}
+
+#systemDiagnosticLoadArea ul {
+    margin-top: 0;
+}
+
+#systemDiagnosticLoadArea .left h4 {
+    display: inline;
+    margin: 10px;
+}
+
+#systemDiagnosticLoadArea .right > ul {
+    margin: 2px;
+    padding: 2px;
+}
+
+#systemDiagnosticLoadArea .right li {
+    margin: 10px 2px;
+}
+
+#systemDiagnosticLoadArea .right > ul > li {
+    list-style: none;
+    text-align: center;
+}
+
+#systemDiagnosticLoadArea td:nth-child(3) .result-description {
+    background: lightgray;
+    border-radius: 2px;
+    box-shadow: 0 0 1px 0 #0073ff;
+    line-height: 1.5em;
+    margin: 5px 0;
+}
+
+#systemDiagnosticLoadArea tr:nth-child(even) {
+    background-color: rgba(230, 230, 240, 0.5);
+}
+
+#systemDiagnosticLoadArea tr:nth-child(odd) {
+    background-color: #FFF;
+}
+
+#systemDiagnosticLoadArea ol.instructions {
+    counter-reset: instructionCounter;
+}
+
+#systemDiagnosticLoadArea ol.instructions li:not(.note) {
+    counter-increment:instructionCounter;
+    list-style:none;
+}
+
+#systemDiagnosticLoadArea ol.instructions li:not(.note):before {
+    content:counter(instructionCounter) ".";
+}
+
+#systemDiagnosticLoadArea ol.instructions li.note:before {
+    content:"\a0\a0\a0\a0\a0\a0";
+}

@@ -1,0 +1,97 @@
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["DimensionEditHandle"] = factory();
+	else
+		root["DimensionEditHandle"] = factory();
+})(window, function() {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./js/SGO/DimensionEditHandle.module_temp.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./js/SGO/DimensionEditHandle.module_temp.js":
+/*!***************************************************!*\
+  !*** ./js/SGO/DimensionEditHandle.module_temp.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n//© 2016 SIEMENS PRODUCT LIFECYCLE MANAGEMENT SOFTWARE INC\n\n\n\n/**\n * @class DimensionEditHandle SGO Object\n * @classdesc Represents the DimensionEditHandle SGO Object for the PLMVisWeb Viewer.<br><br>\n */\n\nvar DimensionEditHandle = function ( color, enableDrag, visible, size, checkTextFn ) { //NOSONAR\n\n\t// Private variables\n\tvar _object = null,\n\t\t_scene = null,\n\t\t_camera = null,\n\t\t_viewer = null,\n\n\t\t// Default variables to set\n\t\t_width = size ? size.width : 8,\n\t\t_height = size ? size.height : 8,\n\t\t_positionX = 0,\n\t\t_positionY = 0,\n\n\t\t// Event variables\n\t\t_mouseDownHandler = null,\n\t\t_mouseUpHandler = null,\n\t\t_mouseMoveHandler = null,\n\t\t_resizeHandler = null,\n\n\t\t// User-defined variables\n\t\t_dirty = false,\n\t\t_mouseDown = false,\n\n\t\t_checkTextFn = checkTextFn,\n\t\t_controlPointInfo,\n\t\t_manager,\n\t\t_mouseVector = new THREE.Vector3(),\n\t\t_intersectVector = new THREE.Vector3();\n\n\tvar _DimensionEditHandle = function () {\n\n\t\t_createObject( color );\n\t\t_createScene();\n\t\t_createEventVariables.call( this );\n\n\t\tthis.name = \"DimensionEditHandle\";\n\t\tthis.original = _object;\n\t\tthis.scene = _scene;\n\t\tthis.camera = _camera;\n\t\tthis.size = { width: _width, height: _height };\n\t\tthis.position = { x: _positionX, y: _positionY };\n\t\tthis.boundingBox = new THREE.Box3().setFromObject( _object );\n\t\tthis.boundingSphere = new THREE.Sphere();\n\t\tthis.boundingBox.getBoundingSphere( this.boundingSphere );\n\t\tthis.visible = visible;\n\t\tthis.onTop = true;\n\n\t\tthis.front = true;\n\t\tthis.original.userData.ignoreRenderMode = true;\n\t};\n\n\t_DimensionEditHandle.prototype = {\n\t\tconstructor: _DimensionEditHandle\n\t};\n\n\tObject.defineProperties( _DimensionEditHandle.prototype, {\n\n\t\tcamera: {\n\t\t\tget: function () {\n\t\t\t\treturn _camera;\n\t\t\t},\n\n\t\t\tset: function ( camera ) {\n\t\t\t\t_camera = camera;\n\t\t\t}\n\t\t},\n\n\t\tscene: {\n\t\t\tget: function () {\n\t\t\t\treturn _scene;\n\t\t\t},\n\n\t\t\tset: function ( scene ) {\n\t\t\t\t_scene = scene;\n\t\t\t}\n\t\t},\n\n\t\tviewer: {\n\t\t\tget: function () {\n\t\t\t\treturn _viewer;\n\t\t\t},\n\t\t\tset: function ( viewer ) {\n\t\t\t\t_viewer = viewer;\n\n\t\t\t\tif ( _viewer ) {\n\t\t\t\t\tthis.setPosition( _positionX, _positionY );\n\t\t\t\t\t_viewer.draw();\n\n\t\t\t\t\tif ( enableDrag ) {\n\t\t\t\t\t\tvar inputManager = _viewer.getInputManager();\n\t\t\t\t\t\tif ( inputManager ) {\n\t\t\t\t\t\t\tinputManager.addEventListener( PLMVisWeb.InputManager.EventTypes.Down, _mouseDownHandler, 0 );\n\t\t\t\t\t\t\tinputManager.addEventListener( PLMVisWeb.InputManager.EventTypes.Up, _mouseUpHandler, 0 );\n\t\t\t\t\t\t\tinputManager.addEventListener( PLMVisWeb.InputManager.EventTypes.Move, _mouseMoveHandler, 0 );\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t},\n\n\t\tvisible: {\n\t\t\tget: function () {\n\t\t\t\treturn _object.visible;\n\t\t\t},\n\n\t\t\tset: function ( value ) {\n\t\t\t\t_object.visible = value;\n\t\t\t}\n\t\t},\n\n\t\tmanager: {\n\t\t\tget: function () {\n\t\t\t\treturn _manager;\n\t\t\t},\n\n\t\t\tset: function ( manager ) {\n\t\t\t\t_manager = manager;\n\t\t\t}\n\t\t},\n\n\t\tcontrolPointInfo: {\n\t\t\tget: function () {\n\t\t\t\treturn _controlPointInfo;\n\t\t\t},\n\n\t\t\tset: function ( controlPointInfo ) {\n\t\t\t\t_controlPointInfo = controlPointInfo;\n\t\t\t}\n\t\t}\n\n\t} );\n\n\tfunction _getViewCamera ( viewer ) {\n\t\tvar camInfo = viewer.getCameraInfo();\n\t\tif ( viewer.getCameraMode() === PLMVisWeb.CameraMode.PERSPECTIVE ) {\n\t\t\tvar pCamera = new THREE.PerspectiveCamera( camInfo.perspective.fov, camInfo.perspective.aspect, camInfo.perspective.near, camInfo.perspective.far );\n\t\t\tpCamera.position.fromArray( camInfo.perspective.pos );\n\t\t\tpCamera.up.fromArray( camInfo.perspective.up );\n\t\t\tpCamera.lookAt( new THREE.Vector3().fromArray( camInfo.perspective.tgt ) );\n\t\t\tpCamera.updateMatrixWorld();\n\t\t\treturn pCamera;\n\t\t}\n\t\telse {\n\t\t\tvar oCamera = new THREE.OrthographicCamera( camInfo.orthographic.left, camInfo.orthographic.right, camInfo.orthographic.top,\n\t\t\t\tcamInfo.orthographic.bottom, camInfo.orthographic.near, camInfo.orthographic.left );\n\t\t\toCamera.position.fromArray( camInfo.orthographic.pos );\n\t\t\toCamera.up.fromArray( camInfo.orthographic.up );\n\t\t\toCamera.lookAt( new THREE.Vector3().fromArray( camInfo.orthographic.tgt ) );\n\t\t\toCamera.updateMatrixWorld();\n\t\t\treturn oCamera;\n\t\t}\n\t};\n\n\n\tfunction _createObject ( color ) {\n\t\t_object = new THREE.Object3D();\n\t\tvar material = new THREE.MeshPhongMaterial( { color: color ? color : 0xff0000 } );\n\n\t\t//  _width / 4\n\t\tvar geometry = new THREE.SphereGeometry( _width / 5, 20, 20 );\n\t\tvar obj = new THREE.Mesh( geometry, material );\n\n\t\t_object.add( obj );\n\t}\n\n\tfunction _createScene () {\n\t\t_scene = new THREE.Scene();\n\t\t_camera = new THREE.OrthographicCamera( _width * -0.25, _width * 0.25, _height * 0.25, _height * -0.25, -100, 100 );\n\n\n\t\t// add subtle ambient lighting\n\t\tvar ambientLight = new THREE.AmbientLight( 0x292929 );\n\t\t_scene.add( ambientLight );\n\n\t\tvar dlight1 = new THREE.DirectionalLight( 0xffffff, 0.7 );\n\t\tdlight1.position.set( -100, 100, 100 );\n\t\t_scene.add( dlight1 );\n\n\t\tvar dlight2 = new THREE.DirectionalLight( 0xffffff, 0.7 );\n\t\tdlight2.position.set( 10, -100, -80 );\n\t\t_scene.add( dlight2 );\n\n\t\tvar dlight3 = new THREE.DirectionalLight( 0xffffff, 0.7 );\n\t\tdlight3.position.set( 100, 0, 0 );\n\t\t_scene.add( dlight3 );\n\n\t\t_scene.add( _camera );\n\t\t_scene.add( _object );\n\t}\n\n\tfunction _createEventVariables () {\n\t\t_resizeHandler = function resize () {\n\t\t\t// this.setPosition( _positionX, _positionY );\n\t\t\t// _viewer.draw();\n\t\t}.bind( this );\n\n\t\t_mouseDownHandler = this.mouseDown.bind( this );\n\t\t_mouseUpHandler = this.mouseUp.bind( this );\n\t\t_mouseMoveHandler = this.mouseMove.bind( this );\n\t}\n\n\n\t// Only used for outline SGO inset viewport\n\t_DimensionEditHandle.prototype.renderOutline = function ( renderer ) {\n\t\trenderer.setScissorTest( true );\n\t\trenderer.setScissor(\n\t\t\t_positionX - _width / 2,\n\t\t\t_positionY - _height / 2,\n\t\t\t_width,\n\t\t\t_height );\n\t\trenderer.setClearColor( new THREE.Color( 0x00FF00, 1.0 ) ); // border color\n\t\trenderer.clearColor(); // clear color buffer\n\t};\n\n\t/**\n\t * Defines how to render the DimensionEditHandle\n\t *\n\t * @function render\n\t * @memberof SceneGraphObject.prototype\n\t *\n\t */\n\t_DimensionEditHandle.prototype.render = function ( renderer, camInfo ) {\n\t\t// this.renderOutline( renderer );\n\n\t\trenderer.setViewport(\n\t\t\t_positionX - _width / 2,\n\t\t\t_positionY - _height / 2,\n\t\t\t_width,\n\t\t\t_height\n\t\t);\n\n\t\tvar camPos = new THREE.Vector3().fromArray( camInfo.perspective.pos );\n\n\t\tvar tgt = new THREE.Vector3().fromArray( camInfo.perspective.tgt );\n\t\tcamPos.sub( tgt );\n\t\tcamPos.normalize();\n\n\t\tif ( this.boundingSphere ) {\n\t\t\tcamPos.setLength( this.boundingSphere.radius );\n\t\t}\n\t\telse {\n\t\t\tcamPos.setLength( 50 );\n\t\t}\n\n\t\t_camera.position.copy( camPos );\n\t\t_camera.up.fromArray( camInfo.perspective.up );\n\t\t_camera.lookAt( _scene.position );\n\n\n\t\tthis.updatePosition();\n\n\t\trenderer.render( _scene, _camera );\n\t};\n\n\t/**\n\t * Removes attached events\n\t *\n\t * @function removeEvents\n\t * @memberof DimensionEditHandle.prototype\n\t *\n\t */\n\t_DimensionEditHandle.prototype.removeEvents = function () {\n\t\tif ( _viewer ) {\n\t\t\tvar inputManager = _viewer.getInputManager();\n\t\t\tinputManager.removeEventListener( PLMVisWeb.InputManager.EventTypes.Down, _mouseDownHandler );\n\t\t\tinputManager.removeEventListener( PLMVisWeb.InputManager.EventTypes.Up, _mouseUpHandler );\n\t\t\tinputManager.removeEventListener( PLMVisWeb.InputManager.EventTypes.Move, _mouseMoveHandler );\n\t\t\twindow.removeEventListener( \"resize\", _resizeHandler );\n\t\t}\n\t};\n\n\t/**\n\t * Repositions the DimensionEditHandle.\n\t *\n\t * @function setPosition\n\t * @memberof DimensionEditHandle.prototype\n\t *\n\t * @param {Number} x - horizontal position in pixels from the bottom left of the viewport.\n\t * @param {Number} y - vertical position in pixels from the bottom left of the viewport.\n\t */\n\t_DimensionEditHandle.prototype.setPosition = function ( x, y ) {\n\t\t_positionX = x;\n\t\t_positionY = y;\n\t\tthis.position.x = x;\n\t\tthis.position.y = y;\n\t};\n\n\t/**\n\t * Queries the position of the DimensionEditHandle.\n\t *\n\t * @function getPosition\n\t * @memberof DimensionEditHandle.prototype\n\t *\n\t * @returns {Number[]} represents the X (0) and Y (1) coordinates as measured from the bottom left of the viewport.\n\t */\n\t_DimensionEditHandle.prototype.getPosition = function () {\n\t\treturn this.position;\n\t};\n\n\t/**\n\t * Sets the size of the DimensionEditHandle.\n\t *\n\t * @function setSize\n\t * @memberof DimensionEditHandle.prototype\n\t *\n\t * @param {Number} w - a number used to set the width of the DimensionEditHandle render area.\n\t   * @param {Number} h - a number used to set the height of the DimensionEditHandle render area.\n\t */\n\t_DimensionEditHandle.prototype.setSize = function ( w, h ) {\n\t\t_width = w;\n\t\t_height = h;\n\t\tthis.size.width = w;\n\t\tthis.size.height = h;\n\t};\n\n\t/**\n\t * Queries the size of the DimensionEditHandle.\n\t *\n\t * @function getSize\n\t * @memberof DimensionEditHandle.prototype\n\t *\n\t * @returns {Object} an object that contains the height and width (each as a number) of the DimensionEditHandle render area.\n\t */\n\t_DimensionEditHandle.prototype.getSize = function () {\n\t\treturn this.size;\n\t};\n\n\t/**\n\t * Sets whether the DimensionEditHandle is rendered on top of or behind the scene geometry.\n\t *\n\t * @function setOnTop\n\t * @memberof DimensionEditHandle.prototype\n\t *\n\t * @params {Boolean} onTop - true if on top, false if behind.\n\t */\n\t_DimensionEditHandle.prototype.setOnTop = function ( onTop ) {\n\t\tif ( this.onTop !== onTop || this.onTop === undefined ) {\n\t\t\tthis.onTop = onTop;\n\t\t\tif ( onTop ) {\n\t\t\t\tthis.front = true;\n\t\t\t\tthis.back = false;\n\t\t\t}\n\t\t\telse {\n\t\t\t\tthis.back = true;\n\t\t\t\tthis.front = false;\n\t\t\t}\n\t\t\tif ( _viewer ) {\n\t\t\t\t_viewer.renderOrderSGO( this );\n\t\t\t}\n\t\t}\n\t};\n\n\t/**\n\t * Queries whether the DimensionEditHandle is rendered on top of or behind the scene geometry.\n\t *\n\t * @function getOnTop\n\t * @memberof DimensionEditHandle.prototype\n\t *\n\t * @returns {Boolean} true if on top, false if behind.\n\t */\n\t_DimensionEditHandle.prototype.getOnTop = function () {\n\t\treturn this.onTop;\n\t};\n\n\t_DimensionEditHandle.prototype._isMouseOver = function ( event ) {\n\t\t//\n\t};\n\n\n\t_DimensionEditHandle.prototype.getControlPointPosition = function () {\n\t\tif ( !_controlPointInfo ) { return; }\n\n\t\tvar pointTypes = [ { pointType: _controlPointInfo.pointType, side: _controlPointInfo.side } ];\n\t\tvar controlPoints = _manager.getControlPoints( _controlPointInfo.dimensionId, pointTypes );\n\n\t\tif ( controlPoints ) {\n\t\t\treturn controlPoints[ 0 ].value;\n\t\t}\n\t};\n\n\t_DimensionEditHandle.prototype.updatePosition = function () {\n\t\tif ( !_controlPointInfo ) { return; }\n\n\t\t// check on ArrowLineStart\n\t\t// if text go outside extension line, should hide\n\t\tif (\n\t\t\t_controlPointInfo.pointType === 'ArrowLineStart' &&\n\t\t\t_checkTextFn ) {\n\t\t\tthis.visible = _checkTextFn();\n\t\t}\n\n\t\t// optimized for render\n\t\tif ( !this.visible ) { return; }\n\n\n\t\tvar point = this.getControlPointPosition();\n\t\tif ( point ) {\n\t\t\tvar position2d = this.viewer.projectModelPointToViewCoordinate( point[ 0 ], point[ 1 ], point[ 2 ] );\n\t\t\tthis.setPosition( position2d[ 0 ], position2d[ 1 ] );\n\t\t}\n\t};\n\n\n\t_DimensionEditHandle.prototype.mouseMove = function ( event ) {\n\t\tif ( !_mouseDown || !this.viewer || !_manager ) { return; }\n\t\tevent.override = true;\n\t\tthis.viewer.startRenderLoop();\n\n\t\tvar camera = _getViewCamera( this.viewer );\n\t\tvar viewerPlace = this.viewer.domElement;\n\n\t\t// Need to check event for touch or mouse.\n\t\tvar ptX, ptY;\n\t\tif ( event.touches && event.touches.length > 0 ) {\n\t\t\tptX = event.touches[ 0 ].pageX;\n\t\t\tptY = event.touches[ 0 ].pageY;\n\t\t}\n\t\telse {\n\t\t\tptX = event.offsetX;\n\t\t\tptY = event.offsetY;\n\t\t}\n\n\t\tvar pX = ( ptX / viewerPlace.width ) * 2 - 1;\n\t\tvar pY = - ( ptY / viewerPlace.height ) * 2 + 1;\n\n\t\t_mouseVector = new THREE.Vector3( pX, pY, 1 );\n\t\t_mouseVector.unproject( camera );\n\t\tvar raycaster = new THREE.Raycaster( camera.position, _mouseVector.clone().sub( camera.position ).normalize() );\n\t\tvar currentIntersectVector = new THREE.Vector3();\n\t\traycaster.ray.closestPointToPoint( _intersectVector, currentIntersectVector );\n\t\tvar diff = new THREE.Vector3().subVectors( currentIntersectVector, _intersectVector );\n\n\t\t// update current mouseVector\n\t\t_intersectVector = currentIntersectVector;\n\n\t\t// invoke manager's updatePosition\n\t\tvar params = {\n\t\t\tdragVector: diff.toArray(),\n\t\t\ttype: _controlPointInfo.pointType,\n\t\t\tside: _controlPointInfo.side,\n\t\t\tisControlPoint: true\n\t\t};\n\t\t_manager.updatePosition( _controlPointInfo.dimensionId, params );\n\t};\n\n\t_DimensionEditHandle.prototype.mouseUp = function ( event ) {\n\t\tif ( _mouseDown ) {\n\t\t\tevent.override = true;\n\t\t\tthis.viewer.stopRenderLoop();\n\t\t\t_mouseDown = false;\n\n\t\t\tif ( _controlPointInfo.pointType === 'ArrowHeadStart' ) {\n\t\t\t\tvar visible = _manager.isComponentVisible( _controlPointInfo.dimensionId, 'ArrowLine', _controlPointInfo.side );\n\t\t\t\t_manager.setComponentVisibility( _controlPointInfo.dimensionId, !visible, 'ArrowLine', _controlPointInfo.side );\n\t\t\t}\n\t\t}\n\t};\n\n\t_DimensionEditHandle.prototype.mouseDown = function ( event ) {\n\t\t// Need to check event for touch or mouse.\n\t\tvar ptX, ptY;\n\t\tif ( event.touches && event.touches.length > 0 ) {\n\t\t\tptX = event.touches[ 0 ].pageX;\n\t\t\tptY = event.touches[ 0 ].pageY;\n\t\t}\n\t\telse {\n\t\t\tptX = event.offsetX;\n\t\t\tptY = event.offsetY;\n\t\t}\n\n\t\tif ( _manager && this.intersect( ptX, ptY ) ) {\n\t\t\tevent.override = true;\n\t\t\t_mouseDown = true;\n\n\t\t\t_mouseVector.x = ptX;\n\t\t\t_mouseVector.y = ptY;\n\n\t\t\t// get corresponding model point\n\t\t\t_intersectVector = new THREE.Vector3().fromArray( this.getControlPointPosition() );\n\t\t}\n\t};\n\n\t/**\n\t * Get the intersect object.\n\t *\n\t * @function intersect\n\t * @memberof _DimensionEditHandle.prototype\n\t *\n\t * @param {Number} the click mouse poistion x\n\t * @param {Number} the click mouse poistion y\n\t */\n\t_DimensionEditHandle.prototype.intersect = function ( clientX, clientY ) {\n\t\tvar coordinateVector = new THREE.Vector3();\n\t\tcoordinateVector.set(\n\t\t\t2 * ( ( clientX - ( _positionX - _width / 2 ) ) / _width ) - 1,\n\t\t\t1 - 2 * ( ( clientY - ( _positionY - _height / 2 ) ) / _height ),\n\t\t\t1 );\n\n\t\tvar raycaster = new THREE.Raycaster();\n\t\traycaster.setFromCamera( coordinateVector, _camera );\n\t\tvar intersects = raycaster.intersectObject( _object, true );\n\t\tvar intersect;\n\t\tif ( intersects.length > 0 ) {\n\t\t\tintersect = intersects[ 0 ];\n\t\t}\n\t\treturn intersect;\n\t};\n\n\n\treturn new _DimensionEditHandle();\n};\n\nDimensionEditHandle.prototype = {\n\tconstructor: DimensionEditHandle,\n\t_name: \"DimensionEditHandle\"\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (DimensionEditHandle);\n\n\n//# sourceURL=webpack://DimensionEditHandle/./js/SGO/DimensionEditHandle.module_temp.js?");
+
+/***/ })
+
+/******/ })["default"];
+});

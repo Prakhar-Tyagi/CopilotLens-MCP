@@ -1,0 +1,22 @@
+<img src="images/CapitalServiceExplorer.png"
+     class="ApplicationLogo">
+<span class="ApplicationName">
+  Capital Service Explorer
+</span>
+<img id="home-logo" class="auto-home-logo" src="images/siemens-white.png">
+<div class="projects-button menu-button auto-projects-button click-target"
+     style="float: right;">
+</div>
+<img src="images/setting-lines.png"
+     srcset="images/setting-lines@2x.png 2x,
+             images/setting-lines@3x.png 3x"
+     class="setting-lines settings-button click-target auto-settings-button">
+<div id="reset-effectivity-search" class="clear clearImage auto-filter-reset-button"></div>
+<input autofocus type="text" id="effectivity-search"
+       value="<%= searchText %>"
+<% if(isEffectivityProj){ %>
+placeholder="<%= mentor.publisher.languageTranslator.localize('EffectivityProjectSearchTextPlaceHolder')%>"
+<%} else {%>
+placeholder="<%= mentor.publisher.languageTranslator.localize('NonEffectivityProjectSearchTextPlaceHolder')%>"
+<% } %>
+>

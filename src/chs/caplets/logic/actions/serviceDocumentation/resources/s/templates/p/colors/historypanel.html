@@ -1,0 +1,17 @@
+<div class="listPanel history-panel auto-list">
+    <div class="titlebar auto-list-header">
+        <span class="headerText auto-title-label"><%= mentor.publisher.languageTranslator.localize(resourceKeys.title) %></span>
+    </div>
+    <div class='cp-grid-container auto-list'>
+        <div class='cp-grid'>
+            <div class='cp-grid-row'>
+                <% colors.forEach(function (color) { %>
+                <div class='cp-grid-column cp-color-item-container'>
+                    <div class="cp-color-item auto-item" style='background-color: <%= color %>'></div>
+                </div>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+
+</div>

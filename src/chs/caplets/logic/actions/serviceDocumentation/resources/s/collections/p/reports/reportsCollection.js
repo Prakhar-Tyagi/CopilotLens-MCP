@@ -1,0 +1,30 @@
+/**
+ * This material contains trade secrets or otherwise confidential information owned by
+ * Siemens Industry Software Inc.or its affiliates (collectively, “SISW”), or its licensors.
+ * Access to and use of this information is strictly limited as set forth in the Customer’s
+ * applicable agreements with SISW.
+ *
+ * Copyright 2021 Siemens
+ */
+
+/*global define, Backbone, xmlDataLoader, objectFactoryImpl, mentor*/
+
+define("ReportsCollection", ["ReportsPopoverModel"],
+    function (packagesModel) {
+        "use strict";
+        var ReportsModel = Backbone.Model.extend(), ReportItems;
+        ReportItems = Backbone.Collection.extend({
+            model : ReportsModel,
+            comparator: function (item) {
+                return Utils.translatePlainText(item.get("mainText"));
+            },
+            fetch : function (model) {
+                this.reset(this.getData(model));
+            },
+            getData : function (data) {
+                return data;
+            }
+        });
+
+        return new ReportItems();
+    });

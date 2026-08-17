@@ -1,0 +1,839 @@
+<?xml version='1.0' ?>
+<!--
+ * Copyright 2011 Mentor Graphics Corporation. All Rights Reserved.
+ * <p>
+ * Recipients who obtain this code directly from Mentor Graphics use it solely
+ * for internal purposes to serve as example for customising Capital Enterprise Reporter.
+ * Recipients may  duplicate the code provided that all notices are fully reproduced with
+ * and remain in the code. No part of this code may be modified, reproduced,
+ * translated, used, distributed, disclosed or provided to third parties
+ * without the prior written consent of Mentor Graphics, except as expressly
+ * authorized above.
+ * <p>
+ * THE CODE IS MADE AVAILABLE "AS IS" WITHOUT WARRANTY OR SUPPORT OF ANY KIND.
+ * MENTOR GRAPHICS OFFERS NO EXPRESS OR IMPLIED WARRANTIES AND SPECIFICALLY
+ * DISCLAIMS ANY WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
+ * OR WARRANTY OF NON-INFRINGEMENT. IN NO EVENT SHALL MENTOR GRAPHICS OR ITS
+ * LICENSORS BE LIABLE FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING LOST PROFITS OR SAVINGS) WHETHER BASED ON CONTRACT, TORT
+ * OR ANY OTHER LEGAL THEORY, EVEN IF MENTOR GRAPHICS OR ITS LICENSORS HAVE BEEN
+ * ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+ * <p>
+ -->
+<entities>
+    <entity name='Connector Pin' class='com.mentor.chs.api.IXCavity'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='OptionExpression' type='String' displayName='{Option Expression}'/>
+        <attribute name='ShortDescription' type='String' displayName='{Short Description}'/>
+        <attribute name='Sealed' type='Boolean' displayName='{Sealed}'/>
+        <attribute name='Plugged' type='Boolean' displayName='{Plugged}'/>
+        <property name='Minimum Voltage' type='String' displayName='{V-Min}'/>
+    </entity>
+    <entity name='Abstract Cavity' class='com.mentor.chs.api.IXCavity'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='OptionExpression' type='String' displayName='{Option Expression}'/>
+        <attribute name='Sealed' type='Boolean' displayName='{Sealed}'/>
+        <attribute name='Plugged' type='Boolean' displayName='{Plugged}'/>
+        <property name='Minimum Voltage' type='String' displayName='{V-Min}'/>
+    </entity>
+    <entity name='Backshell Termination' class='com.mentor.chs.api.IXBackshellTermination'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='OptionExpression' type='String' displayName='{Option Expression}'/>
+        <attribute name='ShortDescription' type='String' displayName='{Short Description}'/>
+        <attribute name='Sealed' type='Boolean' displayName='{Sealed}'/>
+        <attribute name='Plugged' type='Boolean' displayName='{Plugged}'/>
+        <property name='Minimum Voltage' type='String' displayName='{V-Min}'/>
+    </entity>
+    <entity name='Connector' class='com.mentor.chs.api.IXConnector'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='OptionExpression' type='String' displayName='{Option Expression}'/>
+        <attribute name='PartNumber' type='String' displayName='{Part Number}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{Customer Part Number}'/>
+        <attribute name='CustomerName' type='String' displayName='{Customer Name}'/>
+        <attribute name='ColorDescription' type='String' displayName='{Color Description}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{Supplier Part Number}'/>
+        <attribute name='SupplierName' type='String' displayName='{Supplier Name}'/>
+        <attribute name='ShortDescription' type='String' displayName='{Short Description}'/>
+        <attribute name='Harness' type='String' displayName='{Harness}'/>
+        <attribute name='SealsRequired' type='Boolean' displayName='{Sealed}'/>
+        <attribute name='GreaseRequired' type='Boolean' displayName='{Greased}'/>
+        <attribute name='BackshellPlugRequired' type='Boolean' displayName='{Backshell Plugged}'/>
+        <attribute name='BackshellOrientation' type='String' displayName='{Backshell Orientation}'/>
+        <attribute name='DefaultTerminalMaterial' type='String' displayName='{Terminal Material}'/>
+        <attribute name='Function' type='String' displayName='{Function}'/>
+        <attribute name='Location' type='String' displayName='{Location}'/>
+    </entity>
+    <entity name='InlineConnector' class='com.mentor.chs.api.IXConnector'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='OptionExpression' type='String' displayName='{Option Expression}'/>
+        <attribute name='ColorDescription' type='String' displayName='{Color Description}'/>
+        <attribute name='PartNumber' type='String' displayName='{Part Number}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{Customer Part Number}'/>
+        <attribute name='CustomerName' type='String' displayName='{Customer Name}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{Supplier Part Number}'/>
+        <attribute name='SupplierName' type='String' displayName='{Supplier Name}'/>
+        <attribute name='ShortDescription' type='String' displayName='{Short Description}'/>
+        <attribute name='Harness' type='String' displayName='{Harness}'/>
+        <attribute name='SealsRequired' type='Boolean' displayName='{Sealed}'/>
+        <attribute name='GreaseRequired' type='Boolean' displayName='{Greased}'/>
+        <attribute name='DefaultTerminalMaterial' type='String' displayName='{Terminal Material}'/>
+        <attribute name='Function' type='String' displayName='{Function}'/>
+        <attribute name='Location' type='String' displayName='{Location}'/>
+    </entity>
+    <entity name='Interconnect Device' class='com.mentor.chs.api.IXInterconnectDevice'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='OptionExpression' type='String' displayName='{Option Expression}'/>
+        <attribute name='PartNumber' type='String' displayName='{Part Number}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{Customer Part Number}'/>
+        <attribute name='CustomerName' type='String' displayName='{Customer Name}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{Supplier Part Number}'/>
+        <attribute name='SupplierName' type='String' displayName='{Supplier Name}'/>
+        <attribute name='ShortDescription' type='String' displayName='{Short Description}'/>
+        <attribute name='Harness' type='String' displayName='{Harness}'/>
+        <attribute name='Function' type='String' displayName='{Function}'/>
+        <attribute name='Location' type='String' displayName='{Location}'/>
+    </entity>
+    <entity name='Ground Device' class='com.mentor.chs.api.IXGround'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='OptionExpression' type='String' displayName='{Option Expression}'/>
+        <attribute name='PartNumber' type='String' displayName='{Part Number}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{Customer Part Number}'/>
+        <attribute name='CustomerName' type='String' displayName='{Customer Name}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{Supplier Part Number}'/>
+        <attribute name='SupplierName' type='String' displayName='{Supplier Name}'/>
+        <attribute name='ShortDescription' type='String' displayName='{Short Description}'/>
+        <attribute name='Harness' type='String' displayName='{Harness}'/>
+        <attribute name='Function' type='String' displayName='{Function}'/>
+        <attribute name='Location' type='String' displayName='{Location}'/>
+    </entity>
+    <entity name='Device' class='com.mentor.chs.api.IXDevice'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='OptionExpression' type='String' displayName='{Option Expression}'/>
+        <attribute name='PartNumber' type='String' displayName='{Part Number}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{Customer Part Number}'/>
+        <attribute name='CustomerName' type='String' displayName='{Customer Name}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{Supplier Part Number}'/>
+        <attribute name='SupplierName' type='String' displayName='{Supplier Name}'/>
+        <attribute name='ShortDescription' type='String' displayName='{Short Description}'/>
+        <attribute name='Harness' type='String' displayName='{Harness}'/>
+        <property name='DC Res' type='String' displayName='{DC Resistance}'/>
+        <property name='V Out' type='String' displayName='{V-Out}'/>
+        <attribute name='Function' type='String' displayName='{Function}'/>
+        <attribute name='Location' type='String' displayName='{Location}'/>
+    </entity>
+    <entity name='Device Pin' class='com.mentor.chs.api.IXDevicePin'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='OptionExpression' type='String' displayName='{Option Expression}'/>
+        <attribute name='ShortDescription' type='String' displayName='{Short Description}'/>
+        <property name='Minimum Voltage' type='String' displayName='{V-Min}'/>
+        <attribute name='IMin' type='Float' displayName='{I Min}'/>
+        <attribute name='IMax' type='Float' displayName='{I Max}'/>
+        <attribute name='INominal' type='Float' displayName='{I Nominal}'/>
+        <attribute name='VMin' type='Float' displayName='{V Min}'/>
+        <attribute name='VNominal' type='Float' displayName='{V Nominal}'/>
+        <attribute name='TIMax' type='Float' displayName='{t IMax}'/>
+        <attribute name='MinWireCSA' type='Float' displayName='{Min Wire CSA}'/>
+        <attribute name='ContactMaterial' type='String' displayName='{Contact Material}'/>
+    </entity>
+    <entity name='Interconnect Conductor' class='com.mentor.chs.api.IXInterconnect'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='OptionExpression' type='String' displayName='{Option Expression}'/>
+        <attribute name='PartNumber' type='String' displayName='{Part Number}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{Customer Part Number}'/>
+        <attribute name='CustomerName' type='String' displayName='{Customer Name}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{Supplier Part Number}'/>
+        <attribute name='SupplierName' type='String' displayName='{Supplier Name}'/>
+        <attribute name='ShortDescription' type='String' displayName='{Short Description}'/>
+        <attribute name='Harness' type='String' displayName='{Harness}'/>
+        <attribute name='ColorDescription' type='String' displayName='{Wire Color}'/>
+        <attribute name='MaterialDescription' type='String' displayName='{Wire Material}'/>
+        <attribute name='WireSpec' type='String' displayName='{Wire Specification}'/>
+        <attribute name='WireCSA' type='Float' displayName='{Wire CSA}'/>
+        <attribute name='OutsideDiameter' type='Float' displayName='{Outside Diameter}'/>
+    </entity>
+    <entity name='Multicore' class='com.mentor.chs.api.IXMulticore'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='OptionExpression' type='String' displayName='{Option Expression}'/>
+        <attribute name='PartNumber' type='String' displayName='{Part Number}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{Customer Part Number}'/>
+        <attribute name='CustomerName' type='String' displayName='{Customer Name}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{Supplier Part Number}'/>
+        <attribute name='SupplierName' type='String' displayName='{Supplier Name}'/>
+        <attribute name='ShortDescription' type='String' displayName='{Short Description}'/>
+        <attribute name='Harness' type='String' displayName='{Harness}'/>
+        <attribute name='OutsideDiameter' type='Float' displayName='{Outside Diameter}'/>
+        <attribute name='OSColor' type='String' displayName='{OS Color}'/>
+        <attribute name='OSSpec' type='String' displayName='{OS Spec}'/>
+        <attribute name='SheathType' type='String' displayName='{Sheath Type}'/>
+        <attribute name='OSMaterial' type='String' displayName='{OS Material}'/>
+        <attribute name='MulticoreNote' type='String' displayName='{Multicore Note}'/>
+        <attribute name='CutBackValueEnd1' type='Float' displayName='{Cut Back Value End1}'/>
+        <attribute name='CutBackValueEnd2' type='Float' displayName='{Cut Back Value End2}'/>
+        <attribute name='ModuleCode' type='String' displayName='{Module Code}'/>
+        <attribute name='CustomerMulticoreName' type='String' displayName='{Customer Name}'/>
+    </entity>
+    <entity name='Overbraid' class='com.mentor.chs.api.IXOverbraid'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='OptionExpression' type='String' displayName='{Option Expression}'/>
+        <attribute name='PartNumber' type='String' displayName='{Part Number}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{Customer Part Number}'/>
+        <attribute name='CustomerName' type='String' displayName='{Customer Name}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{Supplier Part Number}'/>
+        <attribute name='SupplierName' type='String' displayName='{Supplier Name}'/>
+        <attribute name='ShortDescription' type='String' displayName='{Short Description}'/>
+        <attribute name='Harness' type='String' displayName='{Harness}'/>
+        <attribute name='OutsideDiameter' type='Float' displayName='{Outside Diameter}'/>
+        <attribute name='OSColor' type='String' displayName='{OS Color}'/>
+        <attribute name='OSSpec' type='String' displayName='{OS Spec}'/>
+        <attribute name='SheathType' type='String' displayName='{Sheath Type}'/>
+        <attribute name='OSMaterial' type='String' displayName='{OS Material}'/>
+        <attribute name='MulticoreNote' type='String' displayName='{Multicore Note}'/>
+        <attribute name='CutBackValueEnd1' type='Float' displayName='{Cut Back Value End1}'/>
+        <attribute name='CutBackValueEnd2' type='Float' displayName='{Cut Back Value End2}'/>
+        <attribute name='ModuleCode' type='String' displayName='{Module Code}'/>
+        <attribute name='CustomerMulticoreName' type='String' displayName='{Customer Name}'/>
+    </entity>
+    <entity name='Net' class='com.mentor.chs.api.IXNet'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='OptionExpression' type='String' displayName='{Option Expression}'/>
+        <attribute name='PartNumber' type='String' displayName='{Part Number}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{Customer Part Number}'/>
+        <attribute name='CustomerName' type='String' displayName='{Customer Name}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{Supplier Part Number}'/>
+        <attribute name='SupplierName' type='String' displayName='{Supplier Name}'/>
+        <attribute name='ShortDescription' type='String' displayName='{Short Description}'/>
+        <attribute name='Harness' type='String' displayName='{Harness}'/>
+        <attribute name='ColorDescription' type='String' displayName='{Wire Color}'/>
+        <attribute name='MaterialDescription' type='String' displayName='{Wire Material}'/>
+        <attribute name='WireSpec' type='String' displayName='{Wire Specification}'/>
+        <attribute name='WireCSA' type='Float' displayName='{Wire CSA}'/>
+        <attribute name='OutsideDiameter' type='Float' displayName='{Outside Diameter}'/>
+    </entity>
+    <entity name='Shield' class='com.mentor.chs.api.IXShield'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='OptionExpression' type='String' displayName='{Option Expression}'/>
+        <attribute name='PartNumber' type='String' displayName='{Part Number}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{Customer Part Number}'/>
+        <attribute name='CustomerName' type='String' displayName='{Customer Name}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{Supplier Part Number}'/>
+        <attribute name='SupplierName' type='String' displayName='{Supplier Name}'/>
+        <attribute name='ShortDescription' type='String' displayName='{Short Description}'/>
+        <attribute name='Harness' type='String' displayName='{Harness}'/>
+        <attribute name='ColorDescription' type='String' displayName='{Wire Color}'/>
+        <attribute name='MaterialDescription' type='String' displayName='{Wire Material}'/>
+        <attribute name='WireSpec' type='String' displayName='{Wire Specification}'/>
+        <attribute name='WireCSA' type='Float' displayName='{Wire CSA}'/>
+        <attribute name='OutsideDiameter' type='Float' displayName='{Outside Diameter}'/>
+        <attribute name='WireLength' type='Float' displayName='{Length}'/>
+        <attribute name='TerminalMaterialSpecEnd1' type='String' displayName='{Terminal Material Spec End1}'/>
+        <attribute name='TerminalMaterialSpecEnd2' type='String' displayName='{Terminal Material Spec End2}'/>
+        <attribute name='TerminalPartSpecEnd1' type='String' displayName='{Terminal Part Spec End1}'/>
+        <attribute name='TerminalPartSpecEnd2' type='String' displayName='{Terminal Part Spec End2}'/>
+        <attribute name='SealPartSpecEnd1' type='String' displayName='{Seal Part Spec End1}'/>
+        <attribute name='SealPartSpecEnd2' type='String' displayName='{Seal Part Spec End2}'/>
+    </entity>
+    <entity name='Splice' class='com.mentor.chs.api.IXSplice'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='OptionExpression' type='String' displayName='{Option Expression}'/>
+        <attribute name='PartNumber' type='String' displayName='{Part Number}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{Customer Part Number}'/>
+        <attribute name='CustomerName' type='String' displayName='{Customer Name}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{Supplier Part Number}'/>
+        <attribute name='SupplierName' type='String' displayName='{Supplier Name}'/>
+        <attribute name='ShortDescription' type='String' displayName='{Short Description}'/>
+        <attribute name='Harness' type='String' displayName='{Harness}'/>
+        <attribute name='BundleOffset' type='Float' displayName='{Position}'/>
+        <attribute name='InsulationType' type='String' displayName='{Insulation Type}'/>
+        <attribute name='SealsRequired' type='Boolean' displayName='{Sealed}'/>
+        <attribute name='Function' type='String' displayName='{Function}'/>
+        <attribute name='Location' type='String' displayName='{Location}'/>
+    </entity>
+    <entity name='Wire' class='com.mentor.chs.api.IXWire'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='OptionExpression' type='String' displayName='{Option Expression}'/>
+        <attribute name='PartNumber' type='String' displayName='{Part Number}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{Customer Part Number}'/>
+        <attribute name='CustomerName' type='String' displayName='{Customer Name}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{Supplier Part Number}'/>
+        <attribute name='SupplierName' type='String' displayName='{Supplier Name}'/>
+        <attribute name='ShortDescription' type='String' displayName='{Short Description}'/>
+        <attribute name='Harness' type='String' displayName='{Harness}'/>
+        <attribute name='ColorDescription' type='String' displayName='{Wire Color}'/>
+        <attribute name='MaterialDescription' type='String' displayName='{Wire Material}'/>
+        <attribute name='WireSpec' type='String' displayName='{Wire Specification}'/>
+        <attribute name='WireCSA' type='Float' displayName='{Wire CSA}'/>
+        <attribute name='OutsideDiameter' type='Float' displayName='{Outside Diameter}'/>
+        <attribute name='WireLength' type='Float' displayName='{Length}'/>
+        <attribute name='TerminalMaterial' type='String' displayName='{Terminal Material Code}'/>
+        <attribute name='WireNote' type='String' displayName='{Wire Note}'/>
+        <attribute name='TerminalMaterialSpecEnd1' type='String' displayName='{Terminal Material Spec End1}'/>
+        <attribute name='TerminalMaterialSpecEnd2' type='String' displayName='{Terminal Material Spec End2}'/>
+        <attribute name='TerminalPartSpecEnd1' type='String' displayName='{Terminal Part Spec End1}'/>
+        <attribute name='TerminalPartSpecEnd2' type='String' displayName='{Terminal Part Spec End2}'/>
+        <attribute name='SealPartSpecEnd1' type='String' displayName='{Seal Part Spec End1}'/>
+        <attribute name='SealPartSpecEnd2' type='String' displayName='{Seal Part Spec End2}'/>
+    </entity>
+    <entity name='Highway' class='com.mentor.chs.api.IXHighway'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='OptionExpression' type='String' displayName='{Option Expression}'/>
+        <attribute name='PartNumber' type='String' displayName='{Part Number}'/>
+        <attribute name='PartAssigned' type='Boolean' displayName='{Part Assigned}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{Customer Part Number}'/>
+        <attribute name='CustomerName' type='String' displayName='{Customer Name}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{Supplier Part Number}'/>
+        <attribute name='SupplierName' type='String' displayName='{Supplier Name}'/>
+        <attribute name='ShortDescription' type='String' displayName='{Short Description}'/>
+        <attribute name='Harness' type='String' displayName='{Harness}'/>
+    </entity>
+    <entity name='Single Line' class='com.mentor.chs.api.IXSingleLine'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='OptionExpression' type='String' displayName='{Option Expression}'/>
+        <attribute name='PartNumber' type='String' displayName='{Part Number}'/>
+        <attribute name='PartAssigned' type='Boolean' displayName='{Part Assigned}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{Customer Part Number}'/>
+        <attribute name='CustomerName' type='String' displayName='{Customer Name}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{Supplier Part Number}'/>
+        <attribute name='SupplierName' type='String' displayName='{Supplier Name}'/>
+        <attribute name='ShortDescription' type='String' displayName='{Short Description}'/>
+        <attribute name='Harness' type='String' displayName='{Harness}'/>
+    </entity>
+    <entity name='Ring Terminal' class='com.mentor.chs.api.IXRingTerminal'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='OptionExpression' type='String' displayName='{Option Expression}'/>
+        <attribute name='PartNumber' type='String' displayName='{Part Number}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{Customer Part Number}'/>
+        <attribute name='CustomerName' type='String' displayName='{Customer Name}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{Supplier Part Number}'/>
+        <attribute name='SupplierName' type='String' displayName='{Supplier Name}'/>
+        <attribute name='ShortDescription' type='String' displayName='{Short Description}'/>
+        <attribute name='Harness' type='String' displayName='{Harness}'/>
+        <attribute name='PlugsRequired' type='Boolean' displayName='{Plugs Required}'/>
+        <attribute name='SealsRequired' type='Boolean' displayName='{Sealed}'/>
+        <attribute name='GreaseRequired' type='Boolean' displayName='{Greased}'/>
+        <attribute name='Function' type='String' displayName='{Function}'/>
+        <attribute name='Location' type='String' displayName='{Location}'/>
+    </entity>
+    <entity name='Bundle'
+            class='com.mentor.chs.api.IXBundle'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='ShortDescription' type='String' displayName='{Short Description}'/>
+        <attribute name='OptionExpression' type='String' displayName='{Option Expression}'/>
+        <attribute name='NumberOfWires' type='String' displayName='{NumberOfWires}'/>
+        <attribute name='NumberOfMulticores' type='String' displayName='{NumberOfMulticores}'/>
+        <attribute name='NameOverridden' type='String' displayName='{NameOverridden}'/>
+        <attribute name='GeneratedName' type='String' displayName='{GeneratedName}'/>
+        <attribute name='DefaultName' type='String' displayName='{DefaultName}'/>
+        <attribute name='MCadID' type='String' displayName='{MCadID}'/>
+        <attribute name='Length' type='String' displayName='{Length}'/>
+        <attribute name='LengthUserDefined' type='String' displayName='{LengthUserDefined}'/>
+        <attribute name='MaxBundleWidth' type='String' displayName='{MaxBundleWidth}'/>
+        <attribute name='MinBendRadius' type='String' displayName='{MinBendRadius}'/>
+        <attribute name='WidthWithInsulations' type='String' displayName='{WidthWithInsulations}'/>
+        <attribute name='MinimumLength' type='String' displayName='{MinimumLength}'/>
+        <attribute name='Width' type='String' displayName='{Width}'/>
+        <attribute name='Harness' type='String' displayName='{Harness}'/>
+        <attribute name='UserFunctionalModuleCodesExpression' type='String' displayName='{UserFunctionalModuleCodesExpression}'/>
+        <attribute name='GeneratedFunctionalModuleCodesExpression' type='String' displayName='{GeneratedFunctionalModuleCodesExpression}'/>
+        <attribute name='UserProductionModuleCodesExpression' type='String' displayName='{UserProductionModuleCodesExpression}'/>
+        <attribute name='GeneratedProductionModuleCodesExpression' type='String' displayName='{GeneratedProductionModuleCodesExpression}'/>
+    </entity>
+    <entity name='Clip' class='com.mentor.chs.api.IXClip'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='PartNumber' type='String' displayName='{PartNumber}'/>
+        <attribute name='PartAssigned' type='String' displayName='{PartAssigned}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{CustomerPartNumber}'/>
+        <attribute name='CustomerName' type='String' displayName='{CustomerName}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{SupplierPartNumber}'/>
+        <attribute name='SupplierName' type='String' displayName='{SupplierName}'/>
+        <attribute name='Quantity' type='String' displayName='{Quantity}'/>
+        <attribute name='Harness' type='String' displayName='{Harness}'/>
+        <attribute name='OptionExpression' type='String' displayName='{OptionExpression}'/>
+        <attribute name='NameOverridden' type='String' displayName='{NameOverridden}'/>
+        <attribute name='GeneratedName' type='String' displayName='{GeneratedName}'/>
+        <attribute name='DefaultName' type='String' displayName='{DefaultName}'/>
+        <attribute name='MCadID' type='String' displayName='{MCadID}'/>
+        <attribute name='Orientation' type='String' displayName='{Orientation}'/>
+        <attribute name='ClipType' type='String' displayName='{ClipType}'/>
+        <attribute name='OffsetClip' type='String' displayName='{OffsetClip}'/>
+        <attribute name='ClipMounting' type='String' displayName='{ClipMounting}'/>
+        <attribute name='BOMID' type='String' displayName='{BOMID}'/>
+        <attribute name='Assembly' type='String' displayName='{Assembly}'/>
+        <attribute name='IncludeOnBOM' type='String' displayName='{IncludeOnBOM}'/>
+        <attribute name='PartDescription' type='String' displayName='{PartDescription}'/>
+        <attribute name='ColorCode' type='String' displayName='{ColorCode}'/>
+        <attribute name='ColorDescription' type='String' displayName='{ColorDescription}'/>
+        <attribute name='UnitOfMeasure' type='String' displayName='{UnitOfMeasure}'/>
+        <attribute name='MaterialCode' type='String' displayName='{MaterialCode}'/>
+        <attribute name='MaterialDescription' type='String' displayName='{MaterialDescription}'/>
+        <attribute name='TypeCode' type='String' displayName='{TypeCode}'/>
+        <attribute name='TypeDescription' type='String' displayName='{TypeDescription}'/>
+        <attribute name='GroupName' type='String' displayName='{GroupName}'/>
+        <attribute name='ArchitecturalCost' type='String' displayName='{ArchitecturalCost}'/>
+        <attribute name='Weight' type='String' displayName='{Weight}'/>
+        <attribute name='UserFunctionalModuleCodesExpression' type='String' displayName='{UserFunctionalModuleCodesExpression}'/>
+        <attribute name='GeneratedFunctionalModuleCodesExpression' type='String' displayName='{GeneratedFunctionalModuleCodesExpression}'/>
+        <attribute name='UserProductionModuleCodesExpression' type='String' displayName='{UserProductionModuleCodesExpression}'/>
+        <attribute name='GeneratedProductionModuleCodesExpression' type='String' displayName='{GeneratedProductionModuleCodesExpression}'/>
+    </entity>
+    <entity name='Grommet' class='com.mentor.chs.api.IXGrommet'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='PartNumber' type='String' displayName='{PartNumber}'/>
+        <attribute name='PartAssigned' type='String' displayName='{PartAssigned}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{CustomerPartNumber}'/>
+        <attribute name='CustomerName' type='String' displayName='{CustomerName}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{SupplierPartNumber}'/>
+        <attribute name='SupplierName' type='String' displayName='{SupplierName}'/>
+        <attribute name='Quantity' type='String' displayName='{Quantity}'/>
+        <attribute name='Harness' type='String' displayName='{Harness}'/>
+        <attribute name='OptionExpression' type='String' displayName='{OptionExpression}'/>
+        <attribute name='NameOverridden' type='String' displayName='{NameOverridden}'/>
+        <attribute name='GeneratedName' type='String' displayName='{GeneratedName}'/>
+        <attribute name='DefaultName' type='String' displayName='{DefaultName}'/>
+        <attribute name='MCadID' type='String' displayName='{MCadID}'/>
+        <attribute name='Orientation' type='String' displayName='{Orientation}'/>
+        <attribute name='ClipType' type='String' displayName='{ClipType}'/>
+        <attribute name='OffsetClip' type='String' displayName='{OffsetClip}'/>
+        <attribute name='ClipMounting' type='String' displayName='{ClipMounting}'/>
+        <attribute name='BOMID' type='String' displayName='{BOMID}'/>
+        <attribute name='Assembly' type='String' displayName='{Assembly}'/>
+        <attribute name='IncludeOnBOM' type='String' displayName='{IncludeOnBOM}'/>
+        <attribute name='PartDescription' type='String' displayName='{PartDescription}'/>
+        <attribute name='ColorCode' type='String' displayName='{ColorCode}'/>
+        <attribute name='ColorDescription' type='String' displayName='{ColorDescription}'/>
+        <attribute name='UnitOfMeasure' type='String' displayName='{UnitOfMeasure}'/>
+        <attribute name='MaterialCode' type='String' displayName='{MaterialCode}'/>
+        <attribute name='MaterialDescription' type='String' displayName='{MaterialDescription}'/>
+        <attribute name='TypeCode' type='String' displayName='{TypeCode}'/>
+        <attribute name='TypeDescription' type='String' displayName='{TypeDescription}'/>
+        <attribute name='GroupName' type='String' displayName='{GroupName}'/>
+        <attribute name='ArchitecturalCost' type='String' displayName='{ArchitecturalCost}'/>
+        <attribute name='Weight' type='String' displayName='{Weight}'/>
+        <attribute name='UserFunctionalModuleCodesExpression' type='String' displayName='{UserFunctionalModuleCodesExpression}'/>
+        <attribute name='GeneratedFunctionalModuleCodesExpression' type='String' displayName='{GeneratedFunctionalModuleCodesExpression}'/>
+        <attribute name='UserProductionModuleCodesExpression' type='String' displayName='{UserProductionModuleCodesExpression}'/>
+        <attribute name='GeneratedProductionModuleCodesExpression' type='String' displayName='{GeneratedProductionModuleCodesExpression}'/>
+    </entity>
+    <entity name='OtherComponent' class='com.mentor.chs.api.IXOtherComponent'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='PartNumber' type='String' displayName='{PartNumber}'/>
+        <attribute name='PartAssigned' type='String' displayName='{PartAssigned}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{CustomerPartNumber}'/>
+        <attribute name='CustomerName' type='String' displayName='{CustomerName}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{SupplierPartNumber}'/>
+        <attribute name='SupplierName' type='String' displayName='{SupplierName}'/>
+        <attribute name='Quantity' type='String' displayName='{Quantity}'/>
+        <attribute name='Harness' type='String' displayName='{Harness}'/>
+        <attribute name='OptionExpression' type='String' displayName='{OptionExpression}'/>
+        <attribute name='NameOverridden' type='String' displayName='{NameOverridden}'/>
+        <attribute name='GeneratedName' type='String' displayName='{GeneratedName}'/>
+        <attribute name='DefaultName' type='String' displayName='{DefaultName}'/>
+        <attribute name='MCadID' type='String' displayName='{MCadID}'/>
+        <attribute name='Orientation' type='String' displayName='{Orientation}'/>
+        <attribute name='ClipType' type='String' displayName='{ClipType}'/>
+        <attribute name='OffsetClip' type='String' displayName='{OffsetClip}'/>
+        <attribute name='ClipMounting' type='String' displayName='{ClipMounting}'/>
+        <attribute name='BOMID' type='String' displayName='{BOMID}'/>
+        <attribute name='Assembly' type='String' displayName='{Assembly}'/>
+        <attribute name='IncludeOnBOM' type='String' displayName='{IncludeOnBOM}'/>
+        <attribute name='PartDescription' type='String' displayName='{PartDescription}'/>
+        <attribute name='ColorCode' type='String' displayName='{ColorCode}'/>
+        <attribute name='ColorDescription' type='String' displayName='{ColorDescription}'/>
+        <attribute name='UnitOfMeasure' type='String' displayName='{UnitOfMeasure}'/>
+        <attribute name='MaterialCode' type='String' displayName='{MaterialCode}'/>
+        <attribute name='MaterialDescription' type='String' displayName='{MaterialDescription}'/>
+        <attribute name='TypeCode' type='String' displayName='{TypeCode}'/>
+        <attribute name='TypeDescription' type='String' displayName='{TypeDescription}'/>
+        <attribute name='GroupName' type='String' displayName='{GroupName}'/>
+        <attribute name='ArchitecturalCost' type='String' displayName='{ArchitecturalCost}'/>
+        <attribute name='Weight' type='String' displayName='{Weight}'/>
+        <attribute name='UserFunctionalModuleCodesExpression' type='String' displayName='{UserFunctionalModuleCodesExpression}'/>
+        <attribute name='GeneratedFunctionalModuleCodesExpression' type='String' displayName='{GeneratedFunctionalModuleCodesExpression}'/>
+        <attribute name='UserProductionModuleCodesExpression' type='String' displayName='{UserProductionModuleCodesExpression}'/>
+        <attribute name='GeneratedProductionModuleCodesExpression' type='String' displayName='{GeneratedProductionModuleCodesExpression}'/>
+    </entity>
+    <entity name='Insulation' class='com.mentor.chs.api.IXInsulation'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='PartNumber' type='String' displayName='{PartNumber}'/>
+        <attribute name='PartAssigned' type='String' displayName='{PartAssigned}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{CustomerPartNumber}'/>
+        <attribute name='CustomerName' type='String' displayName='{CustomerName}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{SupplierPartNumber}'/>
+        <attribute name='SupplierName' type='String' displayName='{SupplierName}'/>
+        <attribute name='OptionExpression' type='String' displayName='{OptionExpression}'/>
+        <attribute name='NameOverridden' type='String' displayName='{NameOverridden}'/>
+        <attribute name='GeneratedName' type='String' displayName='{GeneratedName}'/>
+        <attribute name='DefaultName' type='String' displayName='{DefaultName}'/>
+        <attribute name='MCadID' type='String' displayName='{MCadID}'/>
+        <attribute name='Note' type='String' displayName='{Note}'/>
+        <attribute name='TypeCode' type='String' displayName='{TypeCode}'/>
+        <attribute name='Width' type='String' displayName='{Width}'/>
+        <attribute name='InsulationType' type='String' displayName='{InsulationType}'/>
+        <attribute name='Layer' type='String' displayName='{Layer}'/>
+        <attribute name='Thickness' type='String' displayName='{Thickness}'/>
+        <attribute name='NumberOfOverlaps' type='String' displayName='{NumberOfOverlaps}'/>
+        <attribute name='UnmodifiedLength' type='String' displayName='{UnmodifiedLength}'/>
+        <attribute name='DistanceBetweenItems' type='String' displayName='{DistanceBetweenItems}'/>
+        <attribute name='DistanceBetweenItemsPercentage' type='String' displayName='{DistanceBetweenItemsPercentage}'/>
+        <attribute name='LongestDistanceWithoutItem' type='String' displayName='{LongestDistanceWithoutItem}'/>
+        <attribute name='DistanceFromConnector' type='String' displayName='{DistanceFromConnector}'/>
+        <attribute name='Cutback' type='String' displayName='{Cutback}'/>
+        <attribute name='Convoluted' type='String' displayName='{Convoluted}'/>
+        <attribute name='Slit' type='String' displayName='{Slit}'/>
+        <attribute name='TubeFactor' type='String' displayName='{TubeFactor}'/>
+        <attribute name='TubeFactorType' type='String' displayName='{TubeFactorType}'/>
+        <attribute name='MaterialCode' type='String' displayName='{MaterialCode}'/>
+        <attribute name='ColorCode' type='String' displayName='{ColorCode}'/>
+        <attribute name='CalculationMethod' type='String' displayName='{CalculationMethod}'/>
+        <attribute name='JoinNumber' type='String' displayName='{JoinNumber}'/>
+        <attribute name='InsulatedLength' type='String' displayName='{InsulatedLength}'/>
+        <attribute name='IncludeOnBOM' type='String' displayName='{IncludeOnBOM}'/>
+        <attribute name='Assembly' type='String' displayName='{Assembly}'/>
+        <attribute name='PartDescription' type='String' displayName='{PartDescription}'/>
+        <attribute name='ColorDescription' type='String' displayName='{ColorDescription}'/>
+        <attribute name='UnitOfMeasure' type='String' displayName='{UnitOfMeasure}'/>
+        <attribute name='MaterialDescription' type='String' displayName='{MaterialDescription}'/>
+        <attribute name='TypeDescription' type='String' displayName='{TypeDescription}'/>
+        <attribute name='GroupName' type='String' displayName='{GroupName}'/>
+        <attribute name='BOMID' type='String' displayName='{BOMID}'/>
+        <attribute name='ArchitecturalCost' type='String' displayName='{ArchitecturalCost}'/>
+        <attribute name='Weight' type='String' displayName='{Weight}'/>
+        <attribute name='UserFunctionalModuleCodesExpression' type='String' displayName='{UserFunctionalModuleCodesExpression}'/>
+        <attribute name='GeneratedFunctionalModuleCodesExpression' type='String' displayName='{GeneratedFunctionalModuleCodesExpression}'/>
+        <attribute name='UserProductionModuleCodesExpression' type='String' displayName='{UserProductionModuleCodesExpression}'/>
+        <attribute name='GeneratedProductionModuleCodesExpression' type='String' displayName='{GeneratedProductionModuleCodesExpression}'/>
+    </entity>
+    <entity name='InsulationRun' class='com.mentor.chs.api.IXInsulationRun'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='InsulationCodeName' type='String' displayName='{Insulation Code Name}'/>
+        <attribute name='PartNumber' type='String' displayName='{PartNumber}'/>
+        <attribute name='PartAssigned' type='String' displayName='{PartAssigned}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{CustomerPartNumber}'/>
+        <attribute name='CustomerName' type='String' displayName='{CustomerName}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{SupplierPartNumber}'/>
+        <attribute name='SupplierName' type='String' displayName='{SupplierName}'/>
+        <attribute name='Quantity' type='String' displayName='{Quantity}'/>
+        <attribute name='Harness' type='String' displayName='{Harness}'/>
+        <attribute name='OptionExpression' type='String' displayName='{OptionExpression}'/>
+        <attribute name='NameOverridden' type='String' displayName='{NameOverridden}'/>
+        <attribute name='GeneratedName' type='String' displayName='{GeneratedName}'/>
+        <attribute name='DefaultName' type='String' displayName='{DefaultName}'/>
+        <attribute name='MCadID' type='String' displayName='{MCadID}'/>
+        <attribute name='Orientation' type='String' displayName='{Orientation}'/>
+        <attribute name='ClipType' type='String' displayName='{ClipType}'/>
+        <attribute name='OffsetClip' type='String' displayName='{OffsetClip}'/>
+        <attribute name='ClipMounting' type='String' displayName='{ClipMounting}'/>
+        <attribute name='BOMID' type='String' displayName='{BOMID}'/>
+        <attribute name='Assembly' type='String' displayName='{Assembly}'/>
+        <attribute name='IncludeOnBOM' type='String' displayName='{IncludeOnBOM}'/>
+        <attribute name='PartDescription' type='String' displayName='{PartDescription}'/>
+        <attribute name='ColorCode' type='String' displayName='{ColorCode}'/>
+        <attribute name='ColorDescription' type='String' displayName='{ColorDescription}'/>
+        <attribute name='UnitOfMeasure' type='String' displayName='{UnitOfMeasure}'/>
+        <attribute name='MaterialCode' type='String' displayName='{MaterialCode}'/>
+        <attribute name='MaterialDescription' type='String' displayName='{MaterialDescription}'/>
+        <attribute name='TypeCode' type='String' displayName='{TypeCode}'/>
+        <attribute name='TypeDescription' type='String' displayName='{TypeDescription}'/>
+        <attribute name='GroupName' type='String' displayName='{GroupName}'/>
+        <attribute name='ArchitecturalCost' type='String' displayName='{ArchitecturalCost}'/>
+        <attribute name='Weight' type='String' displayName='{Weight}'/>
+        <attribute name='UserFunctionalModuleCodesExpression' type='String' displayName='{UserFunctionalModuleCodesExpression}'/>
+        <attribute name='GeneratedFunctionalModuleCodesExpression' type='String' displayName='{GeneratedFunctionalModuleCodesExpression}'/>
+        <attribute name='UserProductionModuleCodesExpression' type='String' displayName='{UserProductionModuleCodesExpression}'/>
+        <attribute name='GeneratedProductionModuleCodesExpression' type='String' displayName='{GeneratedProductionModuleCodesExpression}'/>
+    </entity>
+    <entity name='BreakoutTape' class='com.mentor.chs.api.IXBreakoutTape'>
+        <attribute name='Name' displayName='{Name}'/>
+        <attribute name='PartNumber' displayName='{PartNumber}'/>
+        <attribute name='PartAssigned' displayName='{PartAssigned}'/>
+        <attribute name='CustomerPartNumber' displayName='{CustomerPartNumber}'/>
+        <attribute name='CustomerName' displayName='{CustomerName}'/>
+        <attribute name='SupplierPartNumber' displayName='{SupplierPartNumber}'/>
+        <attribute name='SupplierName' displayName='{SupplierName}'/>
+        <attribute name='OptionExpression' displayName='{OptionExpression}'/>
+        <attribute name='NameOverridden' displayName='{NameOverridden}'/>
+        <attribute name='GeneratedName' displayName='{GeneratedName}'/>
+        <attribute name='DefaultName' displayName='{DefaultName}'/>
+        <attribute name='MCadID' displayName='{MCadID}'/>
+        <attribute name='Note' displayName='{Note}'/>
+        <attribute name='TypeCode' displayName='{TypeCode}'/>
+        <attribute name='Width' displayName='{Width}'/>
+        <attribute name='InsulationType' displayName='{InsulationType}'/>
+        <attribute name='Layer' displayName='{Layer}'/>
+        <attribute name='Thickness' displayName='{Thickness}'/>
+        <attribute name='NumberOfOverlaps' displayName='{NumberOfOverlaps}'/>
+        <attribute name='UnmodifiedLength' displayName='{UnmodifiedLength}'/>
+        <attribute name='MaterialCode' displayName='{MaterialCode}'/>
+        <attribute name='ColorCode' displayName='{ColorCode}'/>
+        <attribute name='CalculationMethod' displayName='{CalculationMethod}'/>
+        <attribute name='JoinNumber' displayName='{JoinNumber}'/>
+        <attribute name='IncludeOnBOM' displayName='{IncludeOnBOM}'/>
+        <attribute name='Assembly' displayName='{Assembly}'/>
+        <attribute name='PartDescription' displayName='{PartDescription}'/>
+        <attribute name='ColorDescription' displayName='{ColorDescription}'/>
+        <attribute name='UnitOfMeasure' displayName='{UnitOfMeasure}'/>
+        <attribute name='MaterialDescription' displayName='{MaterialDescription}'/>
+        <attribute name='TypeDescription' displayName='{TypeDescription}'/>
+        <attribute name='GroupName' displayName='{GroupName}'/>
+        <attribute name='BOMID' displayName='{BOMID}'/>
+        <attribute name='ArchitecturalCost' displayName='{ArchitecturalCost}'/>
+        <attribute name='TurnsOnBranch' displayName='{TurnsOnBranch}'/>
+        <attribute name='InsulationCodeName' displayName='{InsulationCodeName}'/>
+        <attribute name='Weight' displayName='{Weight}'/>
+        <attribute name='UserFunctionalModuleCodesExpression' displayName='{UserFunctionalModuleCodesExpression}'/>
+        <attribute name='GeneratedFunctionalModuleCodesExpression' displayName='{GeneratedFunctionalModuleCodesExpression}'/>
+        <attribute name='UserProductionModuleCodesExpression' displayName='{UserProductionModuleCodesExpression}'/>
+        <attribute name='GeneratedProductionModuleCodesExpression' displayName='{GeneratedProductionModuleCodesExpression}'/>
+    </entity>
+    <entity name='SpotTape' class='com.mentor.chs.api.IXSpotTape'>
+        <attribute name='Name' displayName='{Name}'/>
+        <attribute name='PartNumber' displayName='{PartNumber}'/>
+        <attribute name='PartAssigned' displayName='{PartAssigned}'/>
+        <attribute name='CustomerPartNumber' displayName='{CustomerPartNumber}'/>
+        <attribute name='CustomerName' displayName='{CustomerName}'/>
+        <attribute name='SupplierPartNumber' displayName='{SupplierPartNumber}'/>
+        <attribute name='SupplierName' displayName='{SupplierName}'/>
+        <attribute name='OptionExpression' displayName='{OptionExpression}'/>
+        <attribute name='NameOverridden' displayName='{NameOverridden}'/>
+        <attribute name='GeneratedName' displayName='{GeneratedName}'/>
+        <attribute name='DefaultName' displayName='{DefaultName}'/>
+        <attribute name='MCadID' displayName='{MCadID}'/>
+        <attribute name='Note' displayName='{Note}'/>
+        <attribute name='TypeCode' displayName='{TypeCode}'/>
+        <attribute name='Width' displayName='{Width}'/>
+        <attribute name='InsulationType' displayName='{InsulationType}'/>
+        <attribute name='Layer' displayName='{Layer}'/>
+        <attribute name='Thickness' displayName='{Thickness}'/>
+        <attribute name='NumberOfOverlaps' displayName='{NumberOfOverlaps}'/>
+        <attribute name='UnmodifiedLength' displayName='{UnmodifiedLength}'/>
+        <attribute name='MaterialCode' displayName='{MaterialCode}'/>
+        <attribute name='ColorCode' displayName='{ColorCode}'/>
+        <attribute name='CalculationMethod' displayName='{CalculationMethod}'/>
+        <attribute name='JoinNumber' displayName='{JoinNumber}'/>
+        <attribute name='IncludeOnBOM' displayName='{IncludeOnBOM}'/>
+        <attribute name='Assembly' displayName='{Assembly}'/>
+        <attribute name='PartDescription' displayName='{PartDescription}'/>
+        <attribute name='ColorDescription' displayName='{ColorDescription}'/>
+        <attribute name='UnitOfMeasure' displayName='{UnitOfMeasure}'/>
+        <attribute name='MaterialDescription' displayName='{MaterialDescription}'/>
+        <attribute name='TypeDescription' displayName='{TypeDescription}'/>
+        <attribute name='GroupName' displayName='{GroupName}'/>
+        <attribute name='BOMID' displayName='{BOMID}'/>
+        <attribute name='ArchitecturalCost' displayName='{ArchitecturalCost}'/>
+        <attribute name='TurnsOnBranch' displayName='{TurnsOnBranch}'/>
+        <attribute name='InsulationCodeName' displayName='{InsulationCodeName}'/>
+        <attribute name='Weight' displayName='{Weight}'/>
+        <attribute name='UserFunctionalModuleCodesExpression' displayName='{UserFunctionalModuleCodesExpression}'/>
+        <attribute name='GeneratedFunctionalModuleCodesExpression' displayName='{GeneratedFunctionalModuleCodesExpression}'/>
+        <attribute name='UserProductionModuleCodesExpression' displayName='{UserProductionModuleCodesExpression}'/>
+        <attribute name='GeneratedProductionModuleCodesExpression' displayName='{GeneratedProductionModuleCodesExpression}'/>
+    </entity>
+    <entity name='MultiLocationComponent' class='com.mentor.chs.api.IXMultiLocationComponent'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='PartNumber' type='String' displayName='{Part Number}'/>
+        <attribute name='TypeCode' type='String' displayName='{Type Code}'/>
+        <attribute name='ColorCode' type='String' displayName='{Color Code}'/>
+        <attribute name='MaterialCode' type='String' displayName='{Material Code}'/>
+        <attribute name='Quantity' type='String' displayName='{Quantity}'/>
+        <attribute name='Weight' type='String' displayName='{Weight}'/>
+        <attribute name='Assembly' type='String' displayName='{Assembly}'/>
+        <attribute name='MCadID' type='String' displayName='{MCadID}'/>
+        <attribute name='PartAssigned' type='String' displayName='{PartAssigned}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{CustomerPartNumber}'/>
+        <attribute name='CustomerName' type='String' displayName='{CustomerName}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{SupplierPartNumber}'/>
+        <attribute name='SupplierName' type='String' displayName='{SupplierName}'/>
+        <attribute name='OptionExpression' type='String' displayName='{OptionExpression}'/>
+        <attribute name='NameOverridden' type='String' displayName='{NameOverridden}'/>
+        <attribute name='GeneratedName' type='String' displayName='{GeneratedName}'/>
+        <attribute name='DefaultName' type='String' displayName='{DefaultName}'/>
+        <attribute name='MultiLocationType' type='String' displayName='{MultiLocationType}'/>
+        <attribute name='BOMID' type='String' displayName='{BOMID}'/>
+        <attribute name='IncludeOnBOM' type='String' displayName='{IncludeOnBOM}'/>
+        <attribute name='PartDescription' type='String' displayName='{PartDescription}'/>
+        <attribute name='ColorDescription' type='String' displayName='{ColorDescription}'/>
+        <attribute name='UnitOfMeasure' type='String' displayName='{UnitOfMeasure}'/>
+        <attribute name='MaterialDescription' type='String' displayName='{MaterialDescription}'/>
+        <attribute name='TypeDescription' type='String' displayName='{TypeDescription}'/>
+        <attribute name='GroupName' type='String' displayName='{GroupName}'/>
+        <attribute name='ArchitecturalCost' type='String' displayName='{ArchitecturalCost}'/>
+        <attribute name='UserFunctionalModuleCodesExpression' type='String' displayName='{UserFunctionalModuleCodesExpression}'/>
+        <attribute name='GeneratedFunctionalModuleCodesExpression' type='String' displayName='{GeneratedFunctionalModuleCodesExpression}'/>
+        <attribute name='UserProductionModuleCodesExpression' type='String' displayName='{UserProductionModuleCodesExpression}'/>
+        <attribute name='GeneratedProductionModuleCodesExpression' type='String' displayName='{GeneratedProductionModuleCodesExpression}'/>
+    </entity>
+    <entity name='ReferenceNode' class='com.mentor.chs.api.IXReferenceNode'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='OptionExpression' type='String' displayName='{OptionExpression}'/>
+        <attribute name='NumberOfWires' type='String' displayName='{NumberOfWires}'/>
+        <attribute name='NumberOfMulticores' type='String' displayName='{NumberOfMulticores}'/>
+        <attribute name='NameOverridden' type='String' displayName='{NameOverridden}'/>
+        <attribute name='GeneratedName' type='String' displayName='{GeneratedName}'/>
+        <attribute name='DefaultName' type='String' displayName='{DefaultName}'/>
+        <attribute name='ShortDescription' type='String' displayName='{ShortDescription}'/>
+        <attribute name='RouteCode' type='String' displayName='{RouteCode}'/>
+        <attribute name='Marker' type='String' displayName='{Marker}'/>
+        <attribute name='Harness' type='String' displayName='{Harness}'/>
+        <attribute name='StartNodeOffset' type='String' displayName='{StartNodeOffset}'/>
+        <attribute name='ShortName' type='String' displayName='{ShortName}'/>
+        <attribute name='WidthWithInsulations' type='String' displayName='{WidthWithInsulations}'/>
+        <attribute name='Width' type='String' displayName='{Width}'/>
+        <attribute name='UserFunctionalModuleCodesExpression' type='String' displayName='{UserFunctionalModuleCodesExpression}'/>
+        <attribute name='GeneratedFunctionalModuleCodesExpression' type='String' displayName='{GeneratedFunctionalModuleCodesExpression}'/>
+        <attribute name='UserProductionModuleCodesExpression' type='String' displayName='{UserProductionModuleCodesExpression}'/>
+        <attribute name='GeneratedProductionModuleCodesExpression' type='String' displayName='{GeneratedProductionModuleCodesExpression}'/>
+    </entity>
+    <entity name='StructureNode' class='com.mentor.chs.api.IXStructureNode'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='OptionExpression' type='String' displayName='{OptionExpression}'/>
+        <attribute name='NumberOfWires' type='String' displayName='{NumberOfWires}'/>
+        <attribute name='NumberOfMulticores' type='String' displayName='{NumberOfMulticores}'/>
+        <attribute name='NameOverridden' type='String' displayName='{NameOverridden}'/>
+        <attribute name='GeneratedName' type='String' displayName='{GeneratedName}'/>
+        <attribute name='DefaultName' type='String' displayName='{DefaultName}'/>
+        <attribute name='ShortDescription' type='String' displayName='{ShortDescription}'/>
+        <attribute name='RouteCode' type='String' displayName='{RouteCode}'/>
+        <attribute name='Marker' type='String' displayName='{Marker}'/>
+        <attribute name='Harness' type='String' displayName='{Harness}'/>
+        <attribute name='PokeHome' type='String' displayName='{PokeHome}'/>
+        <attribute name='ShortName' type='String' displayName='{ShortName}'/>
+        <attribute name='WidthWithInsulations' type='String' displayName='{WidthWithInsulations}'/>
+        <attribute name='Width' type='String' displayName='{Width}'/>
+        <attribute name='UserFunctionalModuleCodesExpression' type='String' displayName='{UserFunctionalModuleCodesExpression}'/>
+        <attribute name='GeneratedFunctionalModuleCodesExpression' type='String' displayName='{GeneratedFunctionalModuleCodesExpression}'/>
+        <attribute name='UserProductionModuleCodesExpression' type='String' displayName='{UserProductionModuleCodesExpression}'/>
+        <attribute name='GeneratedProductionModuleCodesExpression' type='String' displayName='{GeneratedProductionModuleCodesExpression}'/>
+    </entity>
+    <entity name='AdditionalComponent' class='com.mentor.chs.api.IXAdditionalComponent'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='OptionExpression' type='String' displayName='{OptionExpression}'/>
+        <attribute name='PartNumber' type='String' displayName='{PartNumber}'/>
+        <attribute name='PartAssigned' type='String' displayName='{PartAssigned}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{CustomerPartNumber}'/>
+        <attribute name='CustomerName' type='String' displayName='{CustomerName}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{SupplierPartNumber}'/>
+        <attribute name='SupplierName' type='String' displayName='{SupplierName}'/>
+        <attribute name='Quantity' type='String' displayName='{Quantity}'/>
+        <attribute name='BOMID' type='String' displayName='{BOMID}'/>
+        <attribute name='IncludeOnBOM' type='String' displayName='{IncludeOnBOM}'/>
+        <attribute name='IncludeOnBOM' type='String' displayName='{Name}'/>
+        <attribute name='PartDescription' type='String' displayName='{PartDescription}'/>
+        <attribute name='ColorCode' type='String' displayName='{ColorCode}'/>
+        <attribute name='ColorDescription' type='String' displayName='{ColorDescription}'/>
+        <attribute name='UnitOfMeasure' type='String' displayName='{UnitOfMeasure}'/>
+        <attribute name='MaterialCode' type='String' displayName='{MaterialCode}'/>
+        <attribute name='MaterialDescription' type='String' displayName='{MaterialDescription}'/>
+        <attribute name='TypeCode' type='String' displayName='{TypeCode}'/>
+        <attribute name='TypeDescription' type='String' displayName='{TypeDescription}'/>
+        <attribute name='GroupName' type='String' displayName='{GroupName}'/>
+        <attribute name='ArchitecturalCost' type='String' displayName='{ArchitecturalCost}'/>
+        <attribute name='Weight' type='String' displayName='{Weight}'/>
+        <attribute name='UserFunctionalModuleCodesExpression' type='String' displayName='{UserFunctionalModuleCodesExpression}'/>
+        <attribute name='GeneratedFunctionalModuleCodesExpression' type='String' displayName='{GeneratedFunctionalModuleCodesExpression}'/>
+        <attribute name='UserProductionModuleCodesExpression' type='String' displayName='{UserProductionModuleCodesExpression}'/>
+        <attribute name='GeneratedProductionModuleCodesExpression' type='String' displayName='{GeneratedProductionModuleCodesExpression}'/>
+    </entity>
+    <entity name='Assembly' class='com.mentor.chs.api.IXAssembly'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='ShortDescription' type='String' displayName='{ShortDescription}'/>
+        <attribute name='Assembly' type='String' displayName='{Assembly}'/>
+        <attribute name='AssemblyType' type='String' displayName='{AssemblyType}'/>
+        <attribute name='OptionExpression' type='String' displayName='{OptionExpression}'/>
+        <attribute name='PartNumber' type='String' displayName='{PartNumber}'/>
+        <attribute name='PartAssigned' type='String' displayName='{PartAssigned}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{CustomerPartNumber}'/>
+        <attribute name='CustomerName' type='String' displayName='{CustomerName}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{SupplierPartNumber}'/>
+        <attribute name='SupplierName' type='String' displayName='{SupplierName}'/>
+        <attribute name='AnalysisModel' type='String' displayName='{AnalysisModel}'/>
+        <attribute name='BOMID' type='String' displayName='{BOMID}'/>
+        <attribute name='IncludeOnBOM' type='String' displayName='{IncludeOnBOM}'/>
+        <attribute name='IncludeOnBOM' type='String' displayName='{Name}'/>
+        <attribute name='PartDescription' type='String' displayName='{PartDescription}'/>
+        <attribute name='ColorCode' type='String' displayName='{ColorCode}'/>
+        <attribute name='ColorDescription' type='String' displayName='{ColorDescription}'/>
+        <attribute name='UnitOfMeasure' type='String' displayName='{UnitOfMeasure}'/>
+        <attribute name='MaterialCode' type='String' displayName='{MaterialCode}'/>
+        <attribute name='MaterialDescription' type='String' displayName='{MaterialDescription}'/>
+        <attribute name='TypeCode' type='String' displayName='{TypeCode}'/>
+        <attribute name='TypeDescription' type='String' displayName='{TypeDescription}'/>
+        <attribute name='GroupName' type='String' displayName='{GroupName}'/>
+        <attribute name='NameOverridden' type='String' displayName='{NameOverridden}'/>
+        <attribute name='DefaultName' type='String' displayName='{DefaultName}'/>
+        <attribute name='GeneratedName' type='String' displayName='{GeneratedName}'/>
+        <attribute name='Design' type='String' displayName='{Design}'/>
+        <attribute name='Harness' type='String' displayName='{Harness}'/>
+        <attribute name='DesignAbstraction' type='String' displayName='{DesignAbstraction}'/>
+        <attribute name='UserFunctionalModuleCodesExpression' type='String' displayName='{UserFunctionalModuleCodesExpression}'/>
+        <attribute name='GeneratedFunctionalModuleCodesExpression' type='String' displayName='{GeneratedFunctionalModuleCodesExpression}'/>
+        <attribute name='UserProductionModuleCodesExpression' type='String' displayName='{UserProductionModuleCodesExpression}'/>
+        <attribute name='GeneratedProductionModuleCodesExpression' type='String' displayName='{GeneratedProductionModuleCodesExpression}'/>
+    </entity>
+    <entity name='Fixture' class='com.mentor.chs.api.IXFixture'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='ShortDescription' type='String' displayName='{ShortDescription}'/>
+        <attribute name='PartAssigned' type='String' displayName='{PartAssigned}'/>
+        <attribute name='PartNumber' type='String' displayName='{PartNumber}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{CustomerPartNumber}'/>
+        <attribute name='CustomerName' type='String' displayName='{CustomerName}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{SupplierPartNumber}'/>
+        <attribute name='SupplierName' type='String' displayName='{SupplierName}'/>
+        <attribute name='TypeCode' type='String' displayName='{TypeCode}'/>
+        <attribute name='MaterialCode' type='String' displayName='{MaterialCode}'/>
+        <attribute name='ColorCode' type='String' displayName='{ColorCode}'/>
+        <attribute name='ShaftDiameter' type='String' displayName='{ShaftDiameter}'/>
+        <attribute name='MaximumBundleWidth' type='String' displayName='{MaximumBundleWidth}'/>
+        <attribute name='MinimumBundleWidth' type='String' displayName='{MinimumBundleWidth}'/>
+        <attribute name='MaxWireCount' type='String' displayName='{MaxWireCount}'/>
+        <attribute name='MinWireCount' type='String' displayName='{MinWireCount}'/>
+        <attribute name='BOMID' type='String' displayName='{BOMID}'/>
+        <attribute name='PartDescription' type='String' displayName='{PartDescription}'/>
+        <attribute name='ColorDescription' type='String' displayName='{ColorDescription}'/>
+        <attribute name='UnitOfMeasure' type='String' displayName='{UnitOfMeasure}'/>
+        <attribute name='MaterialDescription' type='String' displayName='{MaterialDescription}'/>
+        <attribute name='TypeDescription' type='String' displayName='{TypeDescription}'/>
+        <attribute name='GroupName' type='String' displayName='{GroupName}'/>
+    </entity>
+    <entity name='DeviceConnector' class='com.mentor.chs.api.IXDeviceConnector'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='OptionExpression' type='String' displayName='{Option Expression}'/>
+        <attribute name='PartNumber' type='String' displayName='{Part Number}'/>
+        <attribute name='CustomerPartNumber' type='String' displayName='{Customer Part Number}'/>
+        <attribute name='CustomerName' type='String' displayName='{Customer Name}'/>
+        <attribute name='ColorDescription' type='String' displayName='{Color Description}'/>
+        <attribute name='SupplierPartNumber' type='String' displayName='{Supplier Part Number}'/>
+        <attribute name='SupplierName' type='String' displayName='{Supplier Name}'/>
+        <attribute name='ShortDescription' type='String' displayName='{Short Description}'/>
+        <attribute name='Harness' type='String' displayName='{Harness}'/>
+        <attribute name='SealsRequired' type='Boolean' displayName='{Sealed}'/>
+        <attribute name='GreaseRequired' type='Boolean' displayName='{Greased}'/>
+    </entity>
+    <entity name='BackshellCavityDetail' class='com.mentor.chs.api.IXBackshellCavityDetail'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+    </entity>
+    <entity name='Backshell' class='com.mentor.chs.api.IXBackshell'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='Function' type='String' displayName='{Function}'/>
+        <attribute name='Location' type='String' displayName='{Location}'/>
+    </entity>
+    <entity name='BackshellTerminationTerminal' class='com.mentor.chs.api.IXBackshellTerminationTerminal'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+    </entity>
+    <entity name='BackshellTerminationSeal' class='com.mentor.chs.api.IXBackshellTerminationSeal'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+    </entity>
+    <entity name='BackshellTerminationPlug' class='com.mentor.chs.api.IXBackshellTerminationPlug'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+    </entity>
+    <entity name='SplicePin' class='com.mentor.chs.api.IXSplicePin'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+    </entity>
+    <entity name='Block' class='com.mentor.chs.api.IXBlock'>
+        <attribute name='Name' type='String' displayName='{Name}'/>
+        <attribute name='ShortDescription' type='String' displayName='{Short Description}'/>
+        <attribute name='Function' type='String' displayName='{Function}'/>
+        <attribute name='Location' type='String' displayName='{Location}'/>
+    </entity>
+    <entity name='Block Pin' class='com.mentor.chs.api.IXBlockPin'>
+        <attribute name='Name' type='String' displayName='Name'/>
+    </entity>
+</entities>

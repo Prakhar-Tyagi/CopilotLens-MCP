@@ -1,0 +1,15 @@
+<div class="change-reports">
+    <table class="grid-ui summary-grid">
+        <thead>
+        <tr>
+            <% _.each(cols, function(col) {%>
+            <th data-col="<%=col%>">
+                <span><%=Utils.translate(col)%></span>
+            </th>
+            <%});%>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>

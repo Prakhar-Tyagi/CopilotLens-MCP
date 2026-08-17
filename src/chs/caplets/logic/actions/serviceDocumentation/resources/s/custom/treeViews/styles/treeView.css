@@ -1,0 +1,174 @@
+/* CSS Tree menu styles */
+ol.tree {
+    padding: 0 0 0 20px;
+    /*width: 300px;*/
+    /* width: 90%; */
+    margin: 10px 0px 10px 0px;
+}
+
+#platform-grouped-list li {
+    position: relative;
+    margin-left: -15px;
+    /*margin-bottom: 2px;*/
+    list-style: none;
+    text-align: left;
+    min-height: 20px;
+    /*padding:3px;*/
+}
+
+ol.tree ol.folder {
+    padding-left: 10px;
+}
+
+li.file > span{
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 75%;
+}
+
+li.file a {
+    color: #fff;
+    display: block;
+}
+
+li.file a[href *= '.pdf'] {
+    background: url(../images/document.png) 0 0 no-repeat;
+}
+
+li.file a[href *= '.html'] {
+    background: url(../images/document.png) 0 0 no-repeat;
+}
+
+li.file a[href $= '.css'] {
+    background: url(../images/document.png) 0 0 no-repeat;
+}
+
+li.file a[href $= '.js'] {
+    background: url(../images/document.png) 0 0 no-repeat;
+}
+
+li input[type='checkbox'] {
+    position: absolute;
+    left: 0;
+    margin-left: 0;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+    height: 1em;
+    width: 1em;
+    top: 0;
+}
+
+li input + ol {
+    background: url(../images/toggle-small-expand.png) 40px 0px no-repeat, url(../images/folder-horizontal.png) 58px 0px no-repeat;
+    margin: -18px 0 0 -44px;
+    height: 1.4em;
+}
+
+li input:checked + ol {
+    background: url(../images/toggle-small.png) 40px 0px no-repeat, url(../images/folder-horizontal.png) 58px 0px no-repeat;
+    margin: -18px 0 0 -44px; /* 20px */
+    padding: 1.4em 0 0 82px;
+    height: auto;
+}
+
+li input + ol > li {
+    display: none;
+    margin-left: -14px;
+    padding: 1px 0px 1px 1px;
+}
+
+li label {
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 37px;
+    font-size: 14px;
+    text-overflow: ellipsis;
+
+    /* Required for text-overflow to do anything */
+    white-space: nowrap;
+    overflow: hidden;
+    min-height: 18px;
+}
+
+/*only root node*/
+.listPanel>.tree label {
+    max-width: calc(100% - 110px);
+}
+
+li.file {
+    margin-left: -6px !important;
+    background: url(../images/document.png) 0px 4px no-repeat;
+    /* padding-left: 21px; */
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+li input:checked + ol > li {
+    display: block;
+    margin: 0 0 0; /* 2px */
+}
+
+li input:checked + ol > li:last-child {
+    margin: 0 0 0; /* 1px */
+}
+
+.tree .popUp {
+    background-image: url("../images/inlinePopout.png");
+    background-position: right;
+    background-attachment: center center;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    float: right;
+    margin-left: 3px;
+    margin-right: 4px;
+    position: relative;
+    width: 15%;
+}
+
+.listPanel li.listItem {
+    padding: 3px 0px 0px 20px;
+    border-bottom: 0px;
+}
+
+li.highlight {
+    background: #eeee99;
+}
+
+span.expand-tree, span.collapse-tree {
+    display: inline-block;
+    float: right;
+    position: relative;
+    z-index: 10;
+    padding: 0px 2px;
+    width: 16px;
+    height: 16px;
+    margin-top: 3px;
+}
+
+span.expand-tree {
+    background: url("../images/icon-expand-all.svg") no-repeat;
+}
+
+span.collapse-tree {
+    background: url("../images/icon-collapse-all.svg") no-repeat;
+}
+
+span.expand-tree:hover, span.collapse-tree:hover {
+    cursor: pointer;
+}
+
+.folder-count {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: inline-block;
+    float: right;
+    margin-top: 2px;
+    margin-right: 6px;
+    padding: 0 3px 0 3px;
+}

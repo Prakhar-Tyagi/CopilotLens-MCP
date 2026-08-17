@@ -1,0 +1,25 @@
+<% if(listItems.length){ %>
+<% _.each(listItems, function(items) {%>
+<div class="listPanel <%=className%> auto-list">
+	<div class="titlebar auto-list-header">
+		<span class="headingCount">
+			<span class="headingCountNumber auto-item-count-label"><%=items.get("listItems").length%></span>
+		</span>
+		<span class="headerText auto-title-label"><%=mentor.publisher.languageTranslator.localize(items.get("title"))%></span>
+	</div>
+
+
+	<% _.each(items.get("listItems"), function(item) {%>
+	<div class="listItem auto-item" data-id="<%=item.mainText%>" list-id="<%=items.cid%>"
+	<% if(!items.get("expand")){ %> style="display: none;" <%}%>>
+	<span class="mainText auto-title-label"><%=Utils.translate(item.mainText)%></span>
+	<% if(showPopup){ %>
+	<span class="popUp auto-pop-out-button"></span>
+	<% } %>
+</div>
+<% });%>
+
+
+</div>
+<% });%>
+<% } %>

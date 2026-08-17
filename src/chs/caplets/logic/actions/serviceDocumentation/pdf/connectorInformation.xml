@@ -1,0 +1,7 @@
+<connector>
+	<attribute displayName="Connector Name" name="Name"/>    
+	<attribute displayName="Part Number" name="PartNumber"/> 		
+	<attribute displayName="Short Description" name="ShortDescription"/>    	
+	<custom displayName="Instances" name="Instances"/>    
+	<attribute displayName="Mates" name="Name" connected="true"/>    	
+</connector>

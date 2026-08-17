@@ -1,0 +1,32 @@
+<% if(items.length){ %>
+<div class="listPanel <%=className%> auto-list">
+    <% if(showTitle){ %>
+    <div class="titlebar auto-list-header">
+		<span class="headingCount">
+			<span class="headingCountNumber auto-item-count-label"><%=items.length%></span>
+		</span>
+        <span class="headerText auto-title-label"><%=title%></span>
+    </div>
+    <% } %>
+    <% _.each(items, function(item) {%>
+    <div class="listItem <%=item.isActive%> auto-item" data-id="<%=item.id || item.cid%>"
+    <% if(!expand){ %> style="display: none;" <%}%>>
+    <span class="mainText auto-title-label"><%=item.get("mainText")%></span>
+    <% if(showPopup){ %>
+    <span class="popUp auto-pop-out-button"></span>
+    <% } %>
+    <span class="subText auto-subtitle-label"><%=item.get("subText")%></span>
+</div>
+<% });%>
+
+<div class="listItem no_of_pages auto-item"  data-id="NoOfPages">
+    <div style="margin:auto;">
+        <span class="mainText auto-title-label" style="margin-right: 5px"><%=mentor.publisher.languageTranslator.localize('NumberOfPages')%></span>
+        <select id="noOfPagesToPrint" class="auto-page-count-picker">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="4">4</option>
+        </select>
+    </div>
+</div>
+<% } %>

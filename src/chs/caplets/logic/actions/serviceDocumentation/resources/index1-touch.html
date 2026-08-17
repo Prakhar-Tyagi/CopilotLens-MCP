@@ -1,0 +1,78 @@
+<!--
+  ~ Copyright 2021 Mentor Graphics Corporation
+  ~ All Rights Reserved
+  ~
+  ~ THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY
+  ~ INFORMATION WHICH IS THE PROPERTY OF MENTOR
+  ~ GRAPHICS CORPORATION OR ITS LICENSORS AND IS
+  ~ SUBJECT TO LICENSE TERMS.
+  -->
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <link rel="icon" class="applicationIcon" type="image/png" sizes="32x32" href="#APP_LOGO#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>#APP_TITLE#</title>
+    <script>
+        function host()
+        {
+            var hostname = window.location.host + "/";
+            return hostname;
+        }
+    </script>
+    <base href="host()">
+    <link href="s/libs/css/select2.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="styles/popup.css">
+    <link rel="stylesheet" type="text/css" title="reload" href="styles/layout.css">
+    <link rel="stylesheet" type="text/css" href="styles/faultCode.css">
+    <link rel="stylesheet" type="text/css" href="styles/diagnostic.css">
+    <link rel="stylesheet" type="text/css" href="styles/faults.css">
+    <link rel="stylesheet" type="text/css" href="styles/report.css">
+    <link rel="stylesheet" type="text/css" href="styles/alert.css">
+    <link rel="stylesheet" type="text/css" href="styles/listGroup.css">
+    <link rel="stylesheet" type="text/css" title="reload" href="styles/general.css">
+    <link rel="stylesheet" type="text/css" href="styles/toolbars.css">
+    <link rel="stylesheet" type="text/css" href="styles/detailArea.css">
+    <link rel="stylesheet" type="text/css" href="styles/home.css">
+    <link rel="stylesheet" type="text/css" href="styles/touch.css">
+    <link rel='stylesheet' type="text/css" href='styles/colorpalette.css'/>
+    <link rel="stylesheet" type="text/css" href="styles/custom.css">
+
+    <script>
+        var diagramAsSystemsFlow = true;
+    </script>
+
+
+</head>
+<body data-config="config.xml">
+<div id="eualContainer" class="screen">
+<span style='top:200px;left:200px'>
+<h3 style="font-size:20px; text-align:center; margin-top:200px;">
+    Loading, please wait...</h3>
+</span>
+    <div id="LoadMask" class="LoadMask" style="height:300px;padding-left:0"></div>
+</div>
+<div id="applicationArea" class="iesdApplication screen" style="display:none"></div>
+<div id="home-screen" class="screen"></div>
+<span class="tooltip">
+</span>
+<div id="modal-container"></div>
+</body>
+<script type="text/javascript" src="s/libs/jquery.js"></script>
+<script type="text/javascript" src="s/libs/underscore.js"></script>
+<script type="text/javascript" src="s/libs/backbone.js"></script>
+<script type="text/javascript" src="s/reWork/framework/restrictions.js"></script>
+<script type="text/javascript" src="s/app.js"></script>
+<script type="text/javascript" src="s/reWork/diagramsAsSystems.js"></script>
+<script>
+    $.getScript("s/utilities/3DViewerExtension.js", function () {
+        window.createCommand = function () {
+        };
+    });
+    $.getScript("s/3DViewer.js", function () {
+    });
+    document.querySelectorAll("link[title=reload]").forEach(link => link.href = link.href.replace(/\?.*|$/, "?" + Date.now()));
+</script>
+</html>

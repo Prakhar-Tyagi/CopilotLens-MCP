@@ -1,0 +1,21 @@
+<report name="Bundles" summary-included="true">
+    <tables name="Bundles"
+            apply-to="bundle"
+            types="modified added removed"
+            sorted-by="{Name}">
+        <!--
+            Allowed column types - attribute, property, computed
+
+            Accepted 'computed' types - DerivativesAndModules
+        -->
+        <column type="attribute" key="Name" name="{Name}"/>
+        <column type="attribute" key="Length" name="{Length}" numerical-precision="0.01"/>
+        <column type="attribute" key="Width" name="{Width}" numerical-precision="0.01"/>
+        <column type="attribute" key="WidthWithInsulations" name="{Width With Insulations}" numerical-precision="0.01"/>
+        <column type="attribute" key="NumberOfWires" name="{Number Of Wires}"/>
+        <column type="attribute" key="NumberOfMulticores" name="{Number Of Multicores}"/>
+        <column type="computed" key="Start" name="{Start}"/>
+        <column type="computed" key="End" name="{End}"/>
+        <column type="computed" key="Variant" name="{Variant}"/>
+    </tables>
+</report>

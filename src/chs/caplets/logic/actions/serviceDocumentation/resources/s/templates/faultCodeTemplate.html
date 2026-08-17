@@ -1,0 +1,30 @@
+<% if(items.length){ %>
+
+<!--
+  ~ Copyright 2021 Mentor Graphics Corporation
+  ~ All Rights Reserved
+  ~
+  ~ THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY
+  ~ INFORMATION WHICH IS THE PROPERTY OF MENTOR
+  ~ GRAPHICS CORPORATION OR ITS LICENSORS AND IS
+  ~ SUBJECT TO LICENSE TERMS.
+  -->
+
+<div class="titlebar auto-list-header">
+	<span class="headingCount" style="display: block; ">
+			<span class="headingCountNumber auto-item-count-label"><%=items.length%></span>
+	</span>
+    <span class="headerText auto-title-label"><%=title%></span>
+</div>
+<% _.each(items, function(item) {%>
+<div class="listItem auto-item" data-id="<%=item.id%>"
+     base-id="<%=item.get('systemId')%>" <% if(!expand){ %> style="display: none;" <%}%>>
+<span class="mainText auto-title-label"><%=Utils.translate(item.get("mainText"))%></span>
+<span class="collapseAll auto-collapse-list-button"
+	  title="<%=mentor.publisher.languageTranslator.localize('clicktocollapse')%>">[-]</span>
+<br>
+<span class="subText auto-subtitle-label"><%=Utils.translate(item.get("subText"))%></span>
+</div>
+<% });%>
+
+<% } %>

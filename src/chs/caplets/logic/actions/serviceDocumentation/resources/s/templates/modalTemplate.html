@@ -1,0 +1,19 @@
+<div class="modal-overlay">
+    <div class="modal-popup">
+        <div class="modal-header">
+            <label><%= _.escape(title) %></label>
+        </div>
+        <div class="modal-body">
+            <div class="<%= dialogFlag === 'error' ? 'icon error' : 'icon question' %>"></div>
+            <div class="message-body">
+                <p class="modal-message"><%= _.escape(message) %></p>
+                <p class="modal-implication"><%= _.escape(implication) %></p>
+                <p class="modal-guidance"><%= _.escape(guidance) %></p>
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="<%= primaryButton ? 'btn confirm' : 'btn confirm  hide-button' %>"><%=mentor.publisher.languageTranslator.localize(_.escape(primaryButton))%></button>
+            <button class="<%= secondaryButton ? 'btn cancel' : 'btn cancel  hide-button' %>"><%=mentor.publisher.languageTranslator.localize(_.escape(secondaryButton))%></button>
+        </div>
+    </div>
+</div>

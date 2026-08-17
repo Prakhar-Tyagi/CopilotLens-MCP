@@ -1,0 +1,69 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+
+**WARNING **  **WARNING **   **WARNING **
+Please do not directly use S1000D configuration files located in Capital Home/Publisher etc .  
+Files in these locations should be treated as samples. You must make a copy of these 
+configuration files and use them from an outside directory.
+
+Files located in capital home may be upgraded (and hence overwritten) during 
+future Capital release cycles.
+
+
+ * Copyright 2015 Mentor Graphics Corporation. All Rights Reserved.
+ * <p>
+ * Recipients who obtain this code directly from Mentor Graphics use it solely
+ * for internal purposes to serve as example Java web services.
+ * This code may not be used in a commercial distribution. Recipients may
+ * duplicate the code provided that all notices are fully reproduced with
+ * and remain in the code. No part of this code may be modified, reproduced,
+ * translated, used, distributed, disclosed or provided to third parties
+ * without the prior written consent of Mentor Graphics, except as expressly
+ * authorized above.
+ * <p>
+ * THE CODE IS MADE AVAILABLE "AS IS" WITHOUT WARRANTY OR SUPPORT OF ANY KIND.
+ * MENTOR GRAPHICS OFFERS NO EXPRESS OR IMPLIED WARRANTIES AND SPECIFICALLY
+ * DISCLAIMS ANY WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
+ * OR WARRANTY OF NON-INFRINGEMENT. IN NO EVENT SHALL MENTOR GRAPHICS OR ITS
+ * LICENSORS BE LIABLE FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING LOST PROFITS OR SAVINGS) WHETHER BASED ON CONTRACT, TORT
+ * OR ANY OTHER LEGAL THEORY, EVEN IF MENTOR GRAPHICS OR ITS LICENSORS HAVE BEEN
+ * ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+ * <p>
+-->
+
+
+
+
+<!--
+Make a  descriptive DMC .  This contains no connectivity  
+-->
+<maps>
+    <map independent='true'>
+        <target>
+            <path val= 'content'/>
+            <path val= 'description'/>
+        </target>
+        <source>
+            <path val='XLogicDiagram'/>
+        </source>
+        <copy target ='title' source = "@description" skipblank='Y'/>
+        <call target='levelledPara' source ='$self'/>
+    </map>
+    <map target  = 'levelledPara' source  = 'XLogicDesign'>
+        <copy target ='title' source = "@shortdescription" skipblank='Y'/>
+        <call target='figure' source ='$self'/>
+    </map>
+    <map target  = 'figure' source  = 'XLogicDesign'>
+        <copy target ='@xmlns' constant = 'http://www.Customer.com/XSD/customerApplication'/>
+        <copy target ='title' source = "@description" skipblank='Y'/>
+        <copy target ='@xxx' constant = 	"xxx"/>
+        <call target='graphic' source ='XLogicDiagram'/>
+    </map>
+    <map target ='graphic' source  = 'XLogicDiagram'>
+        <copy target ='@infoEntityIdent' source ="@icnRef"/>
+        <copy target ='@reproductionHeight' constant ="130mm"/>
+        <copy target ='@reproductionScale' constant ="1"/>
+    </map>
+</maps>
